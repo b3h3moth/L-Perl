@@ -1,9 +1,38 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
+use v5.10;
+
+#l'array si realizza con:
+#@array
+
+my @gatti;
+my @cani = qw(Luna Peppino Otto Gino Rocco Franco Bobby);
+my $tot_cani = @cani;
+say 'Ho '.@cani.' cani';
+say 'Ho '.@cani.' cani' if @cani;
+say 'Ho '.@gatti.' cani' if @gatti;
 
 #calcolo il numero di elementi dell'array
 my @caratteri = qw(a b c d e f g h k i j l m n o p q r s t u v w z);
 print "(non corretto) - Lunghezza array: ", length(@caratteri), "\n";
 my $len_arr = @caratteri;
 print "(    corretto) - Lunghezza array: ", $len_arr, "\n";
+
+#ulteriore metodo per calcolare la lunghezza
+my $len = scalar(@cani);
+say "Larray \@cani ha ".$len." elementi";
+
+my $primo_indice = 0;
+my $ultimo_indice = @cani - 1;
+#oppure, piu' elegante
+my $ultimo_indice2 = $#cani;
+
+say "primo indice: $primo_indice\n".
+    "      ultimo: $ultimo_indice\n".
+    "     ultimo#: $ultimo_indice2";
+
+say @cani." >@cani";
+
+#svuoto l'array
+@cani = ();
