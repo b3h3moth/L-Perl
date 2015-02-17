@@ -7,24 +7,19 @@ use Data::Dumper;
 
 #DIRETTIVE DI CICLO
 #Perl tratta i nomi for e foreach in modo interscambiabile
-foreach (1 .. 10)
+print "foreach\n";
+foreach (1 .. 5)
 {
     say "$_ * $_ = ", $_ * $_;
 }
 
 #forma postfissa
-#in questo caso $i assume un valore a ciascun ciclo, lo scope e' interno al loop
-say "$_ * $_ = ", $_ * $_ for 11 .. 15;
+print "\nForma postfissa\n";
+say "$_ * $_ = ", $_ * $_ for 6 .. 10;
 
 #con variabile
+print "\ncon variabile\n";
 for my $i (1 .. 5)
 {
     say "$i * $i = ", $i * $i;
 }
-
-#iterazione e aliasing
-#ossia modifica i valori in situ, sul posto
-my @numeri = (1 .. 10);
-print Dumper \@numeri;
-$_ **= 2 for @numeri;
-print Dumper \@numeri;
