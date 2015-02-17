@@ -23,3 +23,30 @@ for my $i (1 .. 5)
 {
     say "$i * $i = ", $i * $i;
 }
+
+#ITERAZIONE E ALIASING
+#ossia modifica i valori in situ, sul posto
+print "\nAliasing\n";
+my @numeri = (1 .. 10);
+$_ **= 2 for @numeri;
+print Dumper \@numeri;
+
+for (@numeri)
+{
+    $_ **= 2;
+    print "$_ ";
+}
+
+#CICLO STILE C
+print "\nCiclo stile C\n";
+for (my $i = 0; $i <= 5; $i += 1)
+{
+    say $i;
+}
+
+for (say 'Inizializzazione: ', my $x = 0;
+     say "Iterazione: $x" and $x < 5;
+     say 'Incremento: ' . $x++)
+ {
+     say "$x";
+ }
