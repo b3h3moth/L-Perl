@@ -25,9 +25,9 @@ while (@numeri)
 #esempio per far capire le differenze tra while e until
 my $i = 0;
 my $j = 0;
-print $i++ while $i <= 10; 
+print $i++ while $i <= 10;
 say '';
-print $j++ until $j > 10; 
+print $j++ until $j > 10;
 say '';
 
 #istruzioni di controllo del ciclo next e last
