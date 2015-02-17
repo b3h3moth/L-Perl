@@ -15,6 +15,7 @@ for (my $i = 1; $i <= 1000000; $i++) {
 
     if ($guess eq $pass) {
         print "$i: pass is $guess\n";
+        #for testing: change 'last' with 'next'
         last;
     }
 }
