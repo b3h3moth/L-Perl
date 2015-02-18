@@ -9,8 +9,6 @@ my $ref = \$os_name;
 
 say  "$ref"; #indirizzo di memoria
 say "$$ref";  #dereferenziazione, accede al valore a cui si riferisce
-              #concettualmente come i puntatori del C, fatte ovviamente le
-              #dovute eccezioni.
 
 #si modifica il valore
 sub invert {
