@@ -4,6 +4,9 @@ use strict;
 use v5.10;
 
 #istruzioni di controllo del ciclo next e last
+#next: fa ripartire il loop e aumenta  il valore del counter
+#redo: fa ripartire il loop ma non aumenta il valore del counter
+#last: termina il loop
 say 'istr controllo: next last redo';
 my @num = (6 .. 10);
 while (@num)
