@@ -23,7 +23,7 @@ $gusti{papi} = 'Limone';
     'albi', 'cioccolato'
 );
 
-#assegnamento utilizzando l'operatore fat comma => (rende più esplicito)
+#assegnamento utilizzando l'operatore '=>' (rende più esplicito)
 %gusti = (
     franco => 'amarena',
     gina   => 'panna'
@@ -41,7 +41,7 @@ print "$gusti{franco}\n";
 say "Ho il gusto preferito di luca " if exists $gusti{luca};
 say "Ho il gusto preferito di franco " if exists $gusti{franco};
 
-#una chiave potrebbe anche esistere ed essere undef, per cui e' possibile 
+#una chiave potrebbe anche esistere ed essere undef, per cui e' possibile
 #controllarla con defined
 my %indirizzi = (
     luca    => 'Campobasso',
@@ -54,14 +54,14 @@ my %indirizzi = (
 say "pallino vive a $indirizzi{pallino}" if exists $indirizzi{pallino}
                                          && defined $indirizzi{pallino};
 
-#ACCESSO ALLE CHIAVI, ITERAZIONI 
+#ACCESSO ALLE CHIAVI, ITERAZIONI
 #keys produce una lista di chiavi
 for my $chiave (keys %indirizzi)
 {
     say "Chiave: $chiave";
 }
 
-#values produce una lista di valori 
+#values produce una lista di valori
 for my $valore (values %indirizzi)
 {
     say "Valore: $valore";
