@@ -4,13 +4,13 @@ use strict;
 use v5.14;
 
 #L'operatore per i riferimenti è il backslash \
-my $os_name = 'OpenBSD';
+my $os_name = 'DSBnepO';
 my $ref = \$os_name;
 
-say  "$ref"; #indirizzo di memoria
-say "$$ref";  #dereferenziazione, accede al valore a cui si riferisce
+say " address memory: $ref";    #indirizzo di memoria
+say "default OS name: $$ref";   #dereferenziazione
 
-#si modifica il valore
+#modifica il valore
 sub invert {
      my $ref = shift;
      $$ref = reverse($$ref);
@@ -18,4 +18,12 @@ sub invert {
 
 invert(\$os_name);
 
-say "$os_name";
+say "The greatest OS is: $os_name";
+
+sub invert2 {
+    $_[0] = reverse $_[0];
+}
+
+my $os = 'SO ym si DSBnepO';
+invert2($os);
+say "$os";
