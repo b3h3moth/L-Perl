@@ -41,3 +41,12 @@ die "Inserire colore" if (@ARGV != 1);
 my $my_color = translate($tr_color);
 print "\n$tr_color in ITA: $my_color";
 
+#anonymous hash
+#si usano le graffe
+my $rif_city = {
+    'Roma'      => 'Italia',
+    'NY'        => 'USA',
+    'Madrid'    => 'Spagna',
+    'Parigi'    => 'Francia',
+    'Londra'    => 'UK'
+};
