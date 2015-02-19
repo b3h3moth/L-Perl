@@ -23,3 +23,9 @@ say " last card: $last_card";
 #sintassi alternativa (meno elegante)
 my $firstcard = $$rif[0];
 say "first card (alternative syntax): $firstcard";
+
+#anonymous array, ovvero un array che non è stato dichiarato
+#si racchiude tra parentesi quadre
+my $ref_colors = [qw(white red blu yellow black)];
+push $ref_colors, 'gray';
+say @$ref_colors;
