@@ -8,8 +8,14 @@ sub which_unix {
 }
 
 #reference operator '\' e function sigil '&'
-my $rif = \&which_unix;
+my $ref = \&which_unix;
 
-$rif->();
+$ref->();
 
 #&$rif; this works :)
+
+#anonymous functions
+#si usa la keyword 'sub' senza un nome
+my $new_ref = sub { say 'Information wants to be free'};
+
+$new_ref->();
