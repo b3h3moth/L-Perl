@@ -12,7 +12,7 @@ my $ref = \&which_unix;
 
 $ref->();
 
-#&$rif; this works :)
+#&$rif; works but it is not good!
 
 #anonymous functions
 #si usa la keyword 'sub' senza un nome
