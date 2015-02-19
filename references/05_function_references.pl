@@ -7,13 +7,13 @@ sub which_unix {
     say 'I\'m on OpenBSD 5.7, real UNIX OS';
 }
 
-#reference operator '\' e function sigil '&'
+#reference operator '\' piu' function sigil '&'
 my $ref = \&which_unix;
 
 $ref->();
 
 #&$rif; works but it is not good!
-
+#
 #anonymous functions
 #si usa la keyword 'sub' senza un nome
 my $new_ref = sub { say 'Information wants to be free'};
