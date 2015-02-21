@@ -13,6 +13,7 @@ my $characters = 0;
 while (my $line = <>) {
     $lines++;
     $characters += length($line);
+    #print "$line";
 }
 
 print "Lines: $lines\nCharacters: $characters\n";
