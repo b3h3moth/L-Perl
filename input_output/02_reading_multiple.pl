@@ -20,4 +20,4 @@ while (my $line = <>) {
     #print "$line";
 }
 
-print "Lines: $lines\nCharacters: $characters\n";
+print "Total lines: $lines\nTotal characters: $characters\n";
