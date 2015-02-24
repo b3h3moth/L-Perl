@@ -9,6 +9,7 @@ print "Getting file: $ARGV[0]\n";
 my $lines = 0;
 my $characters = 0;
 
+#si utilizza il 'file operator' <>
 while (my $line = <>) {
     $lines++;
     $characters += length($line);
