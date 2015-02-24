@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 
-#count characters and lines in a specified file on command line.
+#count characters and lines pf multiple file at once
 die "Usage: ./a.out <filename>\n" if (@ARGV != 2);
 print "Getting file: $ARGV[0]\n";
 
