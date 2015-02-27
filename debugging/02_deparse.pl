@@ -10,4 +10,15 @@ use B::Deparse;
 #
 #Uso:
 # perl -MO=Deparse, -p 02_deparse.pl
+
+#codice solo per verificare la correttezza del modulo, senza senso alcuno!
 my $num = 12 + 9 / 2 + 4 * 7 - 2*+2*+3**2+4/34**2-100;
+
+my %rubrica = (
+    'libro'     => { titolo     => '1984',
+                     autore     => 'Orwell' },
+    'film'      => { titolo     => 'Shining',
+                     regia      => 'Kubrick'}
+);
+
+say "$num";
