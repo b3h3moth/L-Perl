@@ -1,25 +1,28 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
+
+#SVG module is essential :-)
 use SVG;
 
-
-#create an SVG object 50x50 px
-my $first_svg = SVG->new(
-    width   =>      40,
-    heigth  =>      40
+#create an SVG object
+#hash values are width and heigth.
+my $svg_img = SVG->new(
+    width   =>      200,
+    heigth  =>      200
 );
 
-#add circle
-$first_svg->circle(
-    cx      =>      20,
-    cy      =>      20,
-    r       =>      18
+#draw a circle at position 100,100
+$svg_img->circle(
+    id      =>      'my circle',
+    cx      =>      100,
+    cy      =>      100,
+    r       =>      50
 );
 
 #render SVG object
-#output will be an XML file
-print $first_svg->xmlify;
+#xmlify method returns XML file
+print $svg_img->xmlify;
 
-#getting XML file
+#getting svg file
 #./01_intro.pl > first.svg
