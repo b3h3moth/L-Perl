@@ -3,6 +3,7 @@ use warnings;
 use strict;
 
 #SVG module is essential :-)
+#perl -MCPAN -e "install SVG"
 use SVG;
 
 #create an SVG object
