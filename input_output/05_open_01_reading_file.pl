@@ -11,9 +11,12 @@ my ($file) = @ARGV;
 #$file is the filename.
 open(INPUT_FILE, "< $file");
 
+#read the file from filehandle and store in $line
 while (my $line = <INPUT_FILE>) {
+    #uc function convert each line in upper-case
     $line = uc($line);
     print "$line";
 }
 
+#filehandle is closed
 close(INPUT_FILE);
