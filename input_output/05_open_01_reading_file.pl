@@ -2,13 +2,18 @@
 use warnings;
 use strict;
 
+#get file from command line
 my ($file) = @ARGV;
 
-open(IN, "< $file");
+#open the file for reading.
+#INPUT_FILE is the name of filehandle
+#< is the mode, in this case reading from the file
+#$file is the filename.
+open(INPUT_FILE, "< $file");
 
-while (my $line = <IN>) {
+while (my $line = <INPUT_FILE>) {
     $line = uc($line);
     print "$line";
 }
 
-close(IN);
+close(INPUT_FILE);
