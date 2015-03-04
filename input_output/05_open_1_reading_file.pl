@@ -13,8 +13,8 @@ open(INPUT, "< $filename");
 
 #read the file from filehandle and store in $line
 while (my $line = <INPUT>) {
-    #uc() function convert each line in upper-case
-    $line = uc($line);
+    #ucfirst() function convert each first character of line in upper-case
+    $line = ucfirst($line);
     print "$line";
 }
 
