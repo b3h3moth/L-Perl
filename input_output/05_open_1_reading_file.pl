@@ -2,6 +2,8 @@
 use warnings;
 use strict;
 
+#Older method
+
 #get file from command line
 my ($filename) = @ARGV;
 
@@ -29,3 +31,5 @@ close(INPUT);
 #open(INPUT, "pass.txt");
 #open(INPUT, "<", "$filename");
 #open(INPUT, "<", "pass.txt");
+
+
