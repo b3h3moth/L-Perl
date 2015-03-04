@@ -20,3 +20,12 @@ while (my $line = <INPUT_FILE>) {
 
 #filehandle is closed
 close(INPUT_FILE);
+
+#If I have a file called 'pass.txt' and his name is stored in a $file
+#variable, then all of the following do the same thing:
+#open(INPUT_FILE, "< $file");
+#open(INPUT_FILE, "<$file");
+#open(INPUT_FILE, "<pass.txt");
+#open(INPUT_FILE, "pass.txt");
+#open(INPUT_FILE, "<", "$file");
+#open(INPUT_FILE, "<", "pass.txt");
