@@ -3,7 +3,8 @@ use warnings;
 use strict;
 
 #count characters and lines in a specified file on command line.
-die "Usage: ./a.out <filename>\n" if (@ARGV != 1);
+die "Usage: ./prg.pl <filename>\n" if (@ARGV != 1);
+
 print "Getting file: $ARGV[0]\n";
 
 my $lines = 0;

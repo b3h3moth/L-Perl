@@ -3,7 +3,7 @@ use warnings;
 use strict;
 
 #count characters and lines pf multiple file at once
-die "Usage: ./a.out <filename1><filename2>\n" if (@ARGV != 2);
+die "Usage: ./prg.pl <filename1><filename2>\n" if (@ARGV != 2);
 
 my $ARGC = @ARGV;
 

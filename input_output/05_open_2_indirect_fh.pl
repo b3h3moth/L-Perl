@@ -2,13 +2,13 @@
 use warnings;
 use strict;
 
-#since version 5.6.0 we have different method: 'indirect filehandles'
+die "Usage: ./prg.pl <filename>\n" if (@ARGV != 1);
 
 #get file from command line
 my ($file) = @ARGV;
 
-die "Usage: ./prg.pl <filename>\n" if (@ARGV != 1);
 
+#since version 5.6.0 we have different method: 'indirect filehandles'
 open(my $input_file, "< $file");
 
 while (my $line = <$input_file>) {
