@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 
-#SINCE VERSION 5.6.0 WE HAVE DIFFERENT METHOD: 'indirect filehandles'
+#since version 5.6.0 we have different method: 'indirect filehandles'
 
 #get file from command line
 my ($file) = @ARGV;

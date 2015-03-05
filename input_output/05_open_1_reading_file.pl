@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 
-#OLDER METHOD
+#older method (pre version  5.6.0)
 
 #get file from command line
 my ($filename) = @ARGV;
