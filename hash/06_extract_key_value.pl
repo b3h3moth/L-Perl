@@ -1,89 +1,31 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
-use v5.10;
+use v5.14;
 
-#in alri linguaggi sono array associativi
-#scalare -> valore
-#si realizza con:
-my %gusti; #e' vuoto
-
-#$  singoli elemnti
-#{} chiave
-
-#ASSEGNAMENTO SINGOLO
-$gusti{luca} = 'Nocciola';
-$gusti{mamy} = 'Fior di latte';
-$gusti{albi} = 'Cioccolato';
-$gusti{papi} = 'Limone';
-$gusti{'gino'} = 'mela';
-$gusti{"pino"} = 'ananas';
-
-#multiple assignment, method 1
-%gusti = ('carla', 'bionda', 'francesca', 'mora', 'maria', 'rossa');
-#multiple assignment, method 2
-%gusti = (
-    'papi', 'limone',
-    'albi', 'cioccolato'
-);
-#in both cases the keys of hash are immediately followed by their respective
-#values
-
-#assegnamento utilizzando l'operatore '=>' (rende più esplicito)
-%gusti = (
-    franco => 'amarena',
-    gina   => 'panna'
-
+my %country_code = (
+    "france"        => "FR",
+    "italy"         => "IT",
+    "germany"       => "GE",
+    "england"       => "UK",
+    "united states" => "USA",
+    "russia"        => "RU"
 );
 
-#INDICIZZAZIONE
-#da notare che non ho usato un operatore di concatenazione, per cui l'ultimo
-#hash creato e' quello valido, gli altri sono stati sovrascritti
-print "$gusti{gina}\n";
-print "$gusti{franco}\n";
-
-#ESISTENZA CHIAVI HASH
-#meglio usare exists piuttosto che cercare sul valore associato ala chive
-say "Ho il gusto preferito di luca " if exists $gusti{luca};
-say "Ho il gusto preferito di franco " if exists $gusti{franco};
-
-delete $gusti{'franco'};    #remove a key/value pair
-%gusti = ();                #delete all of the key/value pairs from a hash
-
-#una chiave potrebbe anche esistere ed essere undef, per cui e' possibile
-#controllarla con defined
-my %indirizzi = (
-    luca    => 'Campobasso',
-    mamy    => 'Campobasso',
-    pinco   => 'Roma',
-    pallino => undef,
-    maria   => 'Mantova',
-);
-
-say "pallino vive a $indirizzi{pallino}" if exists $indirizzi{pallino}
-                                         && defined $indirizzi{pallino};
-
-#ACCESSO ALLE CHIAVI, ITERAZIONI
-#keys produce una lista di chiavi
-for my $chiave (keys %indirizzi)
+#extract keys
+for my $key (keys %country_code)
 {
-    say "Chiave: $chiave";
+    say "Chiave: $key";
 }
 
-#values produce una lista di valori
-for my $valore (values %indirizzi)
+#extract values
+for my $value (values %country_code)
 {
-    say "Valore: $valore";
+    say "value: $value";
 }
 
-#each produce una lista di due elementi con chiave:valore
-while (my ($destinatario, $indirizzo) = each %indirizzi)
+#extract key:value
+while (my ($country, $code) = each %country_code)
 {
-    say "$destinatario vive a $indirizzo";
+    say "$country vive a $code";
 }
-
-#$ 'dollar signs'   = scalar variable
-#@ 'at' symbol      = array
-#% 'percent' sign   = hash
-#@hash              = entire hash
-#$hash{'elem'}      = hash element
