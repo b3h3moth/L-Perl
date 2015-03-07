@@ -26,6 +26,8 @@ $gusti{"pino"} = 'ananas';
     'papi', 'limone',
     'albi', 'cioccolato'
 );
+#in both cases the keys of hash are immediately followed by their respective
+#values
 
 #assegnamento utilizzando l'operatore '=>' (rende più esplicito)
 %gusti = (
