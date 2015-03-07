@@ -16,6 +16,8 @@ $gusti{luca} = 'Nocciola';
 $gusti{mamy} = 'Fior di latte';
 $gusti{albi} = 'Cioccolato';
 $gusti{papi} = 'Limone';
+$gusti{'gino'} = 'mela';
+$gusti{"pino"} = 'ananas';
 
 #assegnamento multiplo
 %gusti = (
@@ -77,3 +79,4 @@ while (my ($destinatario, $indirizzo) = each %indirizzi)
 #@ 'at' symbol      = array
 #% 'percent' sign   = hash
 #@hash              = entire hash
+#$hash{'elem'}      = hash element
