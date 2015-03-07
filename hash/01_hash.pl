@@ -73,4 +73,7 @@ while (my ($destinatario, $indirizzo) = each %indirizzi)
     say "$destinatario vive a $indirizzo";
 }
 
-#SLICE
+#$ 'dollar signs'   = scalar variable
+#@ 'at' symbol      = array
+#% 'percent' sign   = hash
+#@hash              = entire hash
