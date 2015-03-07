@@ -47,6 +47,9 @@ print "$gusti{franco}\n";
 say "Ho il gusto preferito di luca " if exists $gusti{luca};
 say "Ho il gusto preferito di franco " if exists $gusti{franco};
 
+delete $gusti{'franco'};    #remove a key/value pair
+%gusti = ();                #delete all of the key/value pairs from a hash
+
 #una chiave potrebbe anche esistere ed essere undef, per cui e' possibile
 #controllarla con defined
 my %indirizzi = (
