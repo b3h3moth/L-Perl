@@ -19,7 +19,9 @@ $gusti{papi} = 'Limone';
 $gusti{'gino'} = 'mela';
 $gusti{"pino"} = 'ananas';
 
-#assegnamento multiplo
+#multiple assignement, method 1
+%gusti = ('carla', 'bionda', 'francesca', 'mora', 'maria', 'rossa');
+#multiple assignement, method 2
 %gusti = (
     'papi', 'limone',
     'albi', 'cioccolato'
