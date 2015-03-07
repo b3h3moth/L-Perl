@@ -12,3 +12,5 @@ my %my_hash; #empty
 #% 'percent' sign   = hash
 #@hash              = entire hash
 #$hash{'elem'}      = hash element
+
+print Dumper %my_hash;
