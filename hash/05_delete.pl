@@ -1,24 +1,26 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
-use v5.14;
-use Data::Dumper;
+use v5.10;
 
+delete $gusti{'franco'};    #remove a key/value pair
+%gusti = ();                #delete all of the key/value pairs from a hash
 
-my %country_code = (
-    "france"        => "FR",
-    "italy"         => "IT",
-    "germany"       => "GE",
-    "england"       => "UK",
-    "united states" => "USA",
-    "russia"        => "RU"
-);
+#ACCESSO ALLE CHIAVI, ITERAZIONI
+#keys produce una lista di chiavi
+for my $chiave (keys %indirizzi)
+{
+    say "Chiave: $chiave";
+}
 
-my $country = "germany";
+#values produce una lista di valori
+for my $valore (values %indirizzi)
+{
+    say "Valore: $valore";
+}
 
-delete $country_code{'france'};     #remove a key/value pair
-delete $country_code{$country};     #remove a key/value pair
-
-say Dumper \%country_code;
-
-%country_code = ();     #delete all of the key/value pairs from a hash
+#each produce una lista di due elementi con chiave:valore
+while (my ($destinatario, $indirizzo) = each %indirizzi)
+{
+    say "$destinatario vive a $indirizzo";
+}
