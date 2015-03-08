@@ -5,7 +5,9 @@ use Data::Dumper;
 use v5.14;
 
 #in older version of Perl these were also know as associative arrays
-my %my_hash; #empty
+
+#declare a new hash
+my %my_hash; #now is empty
 
 #$ 'dollar signs'   = scalar variable
 #@ 'at' symbol      = array
@@ -13,4 +15,5 @@ my %my_hash; #empty
 #@hash              = entire hash
 #$hash{'elem'}      = hash element
 
-print Dumper %my_hash;
+%my_hash = ('key', 'value');
+print Dumper \%my_hash;
