@@ -8,9 +8,17 @@ my $sequence = "AACTAGCGGATTCCAGACCGT";
 #matching operator m//
 #m//, individua un pattern da cercare nella stringa
 if ($sequence =~ m/GATTCCA/) {
-    print "found\n";
+    print "sequence found\n";
 } else {
-    print ("non found\n");
+    print "sequence not found\n";
+}
+
+my $str = "TAGCGGA";
+
+if ($sequence =~ m/$str/) {
+    print "found $str\n";
+} else {
+    print ("not found $str\n");
 }
 
 #se le stringhe non corrispondono, si usa !~
