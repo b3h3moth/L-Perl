@@ -13,7 +13,7 @@ print " after sorting: @data\n";
 @data = sort {$a cmp $b} @data;
 print "     after cmp: @data\n";
 
-#compare strings (warnings)
+#compare strings (warnings will appear)
 @data = sort {$a <=> $b} @data;
 print "     after <=>: @data\n";
 
