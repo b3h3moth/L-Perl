@@ -14,3 +14,7 @@ say "$str_1 ok" if ($str_1 =~ m/C|C++|AWK|Perl|Lua|Python|Lisp|Ruby/i);
 say "$str_2 ok" if ($str_2 =~ m/C|C++|AWK|Perl|Lua|Python|Lisp|Ruby/i);
 say "$str_3 not ok" if ($str_3 =~ m/C|C++|AWK|Perl|Lua|Python|Lisp|Ruby/i);
 
+my $sport = "footall";
+
+#use parentheses for grouping metacharacters
+say "I'm playing $sport" if ($sport =~ m/(foot|basket|roller|speed)ball/);
