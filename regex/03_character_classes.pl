@@ -21,4 +21,7 @@ if ($name =~ m/michel([ae]|le)/) { say "Italian name \'$name\' is very old"; }
 
 #negated character-classes
 #putting a caret symbol inside the square brackets
-say "I love to see $hobby" if ($hobby =~ m/[^aeiou]ovies/)
+say "I love to see $hobby" if ($hobby =~ m/[^aeiou]ovies/);
+
+if ("a" =~ m/[^aeiou]/) { say "Vowels accepted" }
+if ("b" =~ m/[^aeiou]/) { say "Consonants accepted" }
