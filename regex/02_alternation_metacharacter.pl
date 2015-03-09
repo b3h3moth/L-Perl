@@ -5,16 +5,14 @@ use v5.14;
 
 #how to create a pattern to match more than one string with '|', it's a pipe
 #or alternation metacharacter
+my $lang = "perl";
 
-my $str_1 = "perl";
-my $str_2 = "testperl";
-my $str_3 = "testper";
+say "$lang is awesome" if ($lang =~ m/C|C++|AWK|Perl|Lua|Python|Lisp|Ruby/i);
 
-say "$str_1 ok" if ($str_1 =~ m/C|C++|AWK|Perl|Lua|Python|Lisp|Ruby/i);
-say "$str_2 ok" if ($str_2 =~ m/C|C++|AWK|Perl|Lua|Python|Lisp|Ruby/i);
-say "$str_3 not ok" if ($str_3 =~ m/C|C++|AWK|Perl|Lua|Python|Lisp|Ruby/i);
-
-my $sport = "footall";
+my $sport = "football";
 
 #use parentheses for grouping metacharacters
-say "I'm playing $sport" if ($sport =~ m/(foot|basket|roller|speed)ball/);
+say "I like $sport" if ($sport =~ m/(foot|basket|roller|speed)ball/);
+
+my $name = "behemoth";
+say "My name is $name" if ($name =~ m/be(he|h3|re|ge)mo(a|h|y|o|t|z|)h/);
