@@ -15,5 +15,5 @@ if ($lang =~ m/[Pp]erl/) { say "I use $lang every day"; }
 if ($superhero =~ m/super[ -]man/) { say "but I'm not $superhero :)"; }
 if ($year =~ m/201[0123456789]/) { say "I hope $year will be good"; }
 
-#match michele, michela and michelle
+#grouping: match 'michele', 'michela' and 'michelle'
 if ($name =~ m/michel([ae]|le)/) { say "Italian name \'$name\' is very old"; }
