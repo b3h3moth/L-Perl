@@ -7,7 +7,9 @@ my $lang = "perl";
 my $superhero = "super-man";
 my $year = "1925";
 
-#character classes is a set of allowed characters
+#character classes is a set of allowed characters,
+#specifying one character to match into square brackets.
+
 if ($lang =~ m/[Pp]erl/) { say "I use $lang every day"; }
 if ($superhero =~ m/super[ -]man/) { say "but I'm not $superhero :)"; }
 if ($year =~ m/192[058]/) { say "$year"; }
