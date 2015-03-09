@@ -7,6 +7,7 @@ my $lang = "perl";
 my $superhero = "super-man";
 my $year = "2015";
 my $name = "michele";
+my $hobby = "movies";
 
 #character classes is a set of allowed characters,
 #specifying one character to match into square brackets.
@@ -17,3 +18,7 @@ if ($year =~ m/201[0123456789]/) { say "I hope $year will be good"; }
 
 #grouping: match 'michele', 'michela' and 'michelle'
 if ($name =~ m/michel([ae]|le)/) { say "Italian name \'$name\' is very old"; }
+
+#negated character-classes
+#putting a caret symbol inside the square brackets
+say "I love to see $hobby" if ($hobby =~ m/[^aeiou]ovies/)
