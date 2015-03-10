@@ -8,4 +8,4 @@ use File::Spec;
 #absolute path ending with a filename.
 my $path = File::Spec->catfile(qw{home behemoth docs books perl.pdf});
 
-print "$path\n";
+print "My pdf books path is: $path\n";
