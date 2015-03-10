@@ -4,6 +4,8 @@ use strict;
 
 #older method (pre version  5.6.0)
 
+die "Usage: prog.pl <filename>" if (@ARGV != 1);
+
 #get file from command line
 my ($filename) = @ARGV;
 
