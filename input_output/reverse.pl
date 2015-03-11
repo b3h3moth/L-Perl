@@ -5,7 +5,7 @@ use warnings;
 die "Usage: prog.pl <filename>\n" if (@ARGV != 1);
 
 #get input file
-open FILE, "<".$ARGV[0];
+open FILE, "<", $ARGV[0];
 my @lines = <FILE>;
 
 #print in reverse order
