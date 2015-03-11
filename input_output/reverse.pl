@@ -9,6 +9,7 @@ open FILE, "<", $ARGV[0];
 my @lines = <FILE>;
 
 #print in reverse order
+#first line will be latest, and viceversa
 for(my $i = scalar(@lines) - 1; $i >= 0; $i--) {
     print $lines[$i];
 }
