@@ -7,15 +7,16 @@ my $sequence = "AACTAGCGGATTCCAGACCGT";
 
 #'s///' when we want to substitute a pattern with a string
 #'s/match/replacement'
-$sequence =~ s/GATTCCA/_H_A_C_K_/;
-say "$sequence\n";
+say "Before: $sequence";
+$sequence =~ s/GATTCCA/_PERL_LANGUAGE_/;
+say " After: $sequence";
 
 my $url_one = "http://iloveperl.com";
 say "Before: $url_one";
 
 #with escaping is ok but there are better alternatives
 $url_one =~ s/http:\/\///;
-say "After: $url_one";
+say " After: $url_one";
 
 #alternatives are:
 #$url_one =~ s!http://!!;
@@ -25,4 +26,4 @@ say "After: $url_one";
 my $url_two = "http://www.perl.com";
 say "Before: $url_two";
 $url_two =~ s!http://!!;
-say "After: $url_two";
+say " After: $url_two";
