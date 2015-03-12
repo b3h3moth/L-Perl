@@ -10,8 +10,8 @@ my @gatti;
 my @cani = qw(Luna Peppino Otto Gino Rocco Franco Bobby);
 my $tot_cani = @cani;
 say 'Ho '.@cani.' cani';
-say 'Ho '.@cani.' cani' if @cani;
-say 'Ho '.@gatti.' cani' if @gatti;
+say 'Ripeto '.@cani.' cani' if @cani;
+say 'Ho '.@gatti.' gatti' if @gatti;
 
 #calcolo il numero di elementi dell'array
 my @caratteri = qw(a b c d e f g h k i j l m n o p q r s t u v w z);
@@ -21,11 +21,11 @@ print "(    corretto) - Lunghezza array: ", $len_arr, "\n";
 
 #ulteriore metodo per calcolare la lunghezza
 my $len = scalar(@cani);
-say "Larray \@cani ha ".$len." elementi";
+say "L'array \@cani ha ".$len." elementi";
 
 my $primo_indice = 0;
 my $ultimo_indice = @cani - 1;
-#oppure, piu' elegante
+#oppure, meno elegante
 my $ultimo_indice2 = $#cani;
 
 say "primo indice: $primo_indice\n".
@@ -36,3 +36,14 @@ say @cani." >@cani";
 
 #svuoto l'array
 @cani = ();
+
+#creo un array con l'operatore di intervallo '..'
+my @caratteri = 'a' .. 'z';
+
+#Lunghezza array - solo con gli array
+my $car_len = @caratteri;
+print "Length characters: $car_len\n";
+
+for (my $i =0; $i<$car_len; $i += 1) {
+    print $caratteri[$i], " ";
+}
