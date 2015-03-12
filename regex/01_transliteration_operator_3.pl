@@ -13,16 +13,3 @@ say "$sequence";
 my $url_one = "h00p://iloveperl.com";
 $url_one =~ tr/0/t/;
 say "$url_one";
-
-#with escaping is ok but there are better alternatives
-$url_one =~ s/http:\/\///;
-say "$url_one";
-
-#alternatives are:
-#$url_one =~ s!http://!!;
-#$url_one =~ s@http://@@;
-#$url_one =~ s#http://##;
-
-my $url_two = "http://www.perl.com";
-$url_two =~ s!http://!!;
-say "$url_two";

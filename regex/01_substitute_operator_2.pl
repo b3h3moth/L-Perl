@@ -1,27 +1,28 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
+use v5.14;
 
 my $sequence = "AACTAGCGGATTCCAGACCGT";
 
 #'s///' when we want to substitute a pattern with a string
 #'s/match/replacement'
 $sequence =~ s/GATTCCA/_H_A_C_K_/;
-print "$sequence\n";
-$sequence =~ tr/A/O/;
-print "$sequence\n";
+say "$sequence\n";
 
-my $text = "http://iloveperl.com";
-print "$text\n";
+my $url_one = "http://iloveperl.com";
+say "Before: $url_one";
 
-#con l'escaping e' fattibile, tuttavia vi sono alternative migliori
-$text =~ s/http:\/\///;
-print "$text\n";
-#le alternative sono:
-#$text =~ s!http://!!;
-#$text =~ s@http://@@;
-#$text =~ s#http://##;
+#with escaping is ok but there are better alternatives
+$url_one =~ s/http:\/\///;
+say "After: $url_one";
 
-my $texturl = "http://www.perl.com";
-$texturl =~ s!http://!!;
-print "$texturl\n";
+#alternatives are:
+#$url_one =~ s!http://!!;
+#$url_one =~ s@http://@@;
+#$url_one =~ s#http://##;
+
+my $url_two = "http://www.perl.com";
+say "Before: $url_two";
+$url_two =~ s!http://!!;
+say "After: $url_two";
