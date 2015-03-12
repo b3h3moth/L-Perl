@@ -5,8 +5,7 @@ use strict;
 my $sequence = "AACTAGCGGATTCCAGACCGT";
 
 #binding operator =~
-#matching operator m//
-#m//, individua un pattern da cercare nella stringa
+#matching operator 'm//' indicates that we are trying to match a string
 if ($sequence =~ m/GATTCCA/) {
     print "sequence found\n";
 } else {
