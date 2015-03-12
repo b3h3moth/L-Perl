@@ -22,9 +22,9 @@ if ($sequence =~ m/$str/) {
 
 #se le stringhe non corrispondono, si usa !~
 if ($sequence !~ m/GATTCCA/) {
-    die "sequence there isn't\n";
+    die "Found sequence\n";
 } else {
-    print ("found\n");
+    print ("not found\n");
 }
 
 # =~ m//    match
@@ -34,24 +34,4 @@ if ($sequence !~ m/GATTCCA/) {
 #       g = globally        s/T/U/g
 #       i = ignore case     s/T/U/i
 #                           s/T/U/gi
-# =~ tr///  transileteration
-
-$sequence =~ s/GATTCCA/_H_A_C_K_/;
-print "$sequence\n";
-$sequence =~ tr/A/O/;
-print "$sequence\n";
-
-my $text = "http://genomes2go.com";
-print "$text\n";
-
-#con l'escaping e' fattibile, tuttavia vi sono alternative migliori
-$text =~ s/http:\/\///;
-print "$text\n";
-#le alternative sono:
-#$text =~ s!http://!!;
-#$text =~ s@http://@@;
-#$text =~ s#http://##;
-
-my $texturl = "http://www.perl.com";
-$texturl =~ s!http://!!;
-print "$texturl\n";
+# =~ tr///  transliteration
