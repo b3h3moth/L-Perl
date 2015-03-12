@@ -10,18 +10,19 @@ my $sequence = "The perl prograxxing language is awesoxe";
 $sequence =~ tr/x/m/;
 say "$sequence";
 
-my $url_one = "hXXp://iloveperl.com";
-$url_one =~ tr/X/t/;
-print $url_one;
+my $url_one = "h00p://iloveperl.com";
+$url_one =~ tr/0/t/;
+say "$url_one";
 
-#con l'escaping e' fattibile, tuttavia vi sono alternative migliori
+#with escaping is ok but there are better alternatives
 $url_one =~ s/http:\/\///;
-print "$url_one\n";
-#le alternative sono:
+say "$url_one";
+
+#alternatives are:
 #$url_one =~ s!http://!!;
 #$url_one =~ s@http://@@;
 #$url_one =~ s#http://##;
 
 my $url_two = "http://www.perl.com";
 $url_two =~ s!http://!!;
-print "$url_two\n";
+say "$url_two";
