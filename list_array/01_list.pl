@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 
-#In perl si si hanno valori multipli di scalari tra parentesi e separati da
+#In perl se si hanno valori multipli di scalari tra parentesi e separati da
 #virgole, abbiamo una lista - list context.
 #sono le virgole che creano la lista non le parentesi
 
@@ -23,14 +23,3 @@ print "Lengths are: $len1 and $len2\n";
 #swapping values
 ($str1, $str2) = ($str2, $str1);
 print "Swapping: $str1 $str2\n";
-
-#array con l'operatore di intervallo ..
-my @caratteri = 'a' .. 'z';
-
-#Lunghezza array - solo con gli array
-my $car_len = @caratteri;
-print "Length characters: $car_len\n";
-
-for (my $i =0; $i<$car_len; $i += 1) {
-    print $caratteri[$i], " ";
-}
