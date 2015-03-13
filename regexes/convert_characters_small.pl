@@ -9,9 +9,3 @@ while (<>) {
     tr/[a-z]/[A-Z]/;
     print;
 }
-
-#Equivalent to the following example:
-# while (<>) {
-#     $_ =~ tr/[a-z]/[A-Z]/;
-#     print "$_";
-# }
