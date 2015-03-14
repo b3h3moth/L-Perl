@@ -39,4 +39,7 @@ say "O: $year" if ($year =~ m/[0-9]{2,4}/);   #true
 # '?' match 1 or 0 times
 # '*' match 0 or more time
 # '+' match 1 or more time
-say "P: best OS $bestos" if ($bestos =~ m/[a-z]*/); #always true
+my @strings = qw(aba abba abbba ebbro vino abito onlya onlyb beer wine a b);
+foreach my $str1 (@strings) {
+    say "matches $str1" if ($str1 =~ m/ab?/);
+}
