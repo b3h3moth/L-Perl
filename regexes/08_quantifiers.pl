@@ -6,7 +6,7 @@ use v5.14;
 #quantifiers metacharacters are useful to reproduce parts of a regex that we
 #want to repeat.
 
-#{n} occur exactly n times
+#{n} match exactly n times
 my $lang = "I looooove Perl";
 my $ok = "Ok!!!";
 my $string = "characters";
@@ -30,15 +30,13 @@ say "J:" if ($size =~ m/(s|m|l|y){2}/);       #false
 say "K: $phone_num" if ($phone_num =~ m/[0-9]{10}/); #true, matches 10 digits
 say "L: $phone_num" if ($phone_num =~ m/[0-9]{11}/); #false
 
-#{min, max} con be used to specify a minimum and maximum value
-#{min,}     con be used to specify a minimum value only
+#{min,}         match al least 'min' times
+#{min, max}     match al least 'min' but non mor than 'max' times
 say "M: $str 5+" if ($str =~ m/[a-z]{5,}/);   #true, match 5 or more letters
 say "N: $str 3,6" if ($str =~ m/[a-z]{3,6}/); #true, match betweeen 3 and 6
 say "O: $year" if ($year =~ m/[0-9]{2,4}/);   #true
 
-#there are three more quantifiers:
-# '?' match 0 or 1 time
+# '?' match 1 or 0 times
 # '*' match 0 or more time
 # '+' match 1 or more time
-say "P: best OS $bestos" if ($bestos =~ m/^[0-9]*/); #true
-say "Q: $bestos" if ($bestos =~ m/^d*/); #false
+say "P: best OS $bestos" if ($bestos =~ m/[a-z]*/); #always true
