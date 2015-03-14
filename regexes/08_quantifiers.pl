@@ -13,6 +13,7 @@ my $string = "characters";
 my $sport = "football";
 my $str = "abcdef";
 my $size = "xxxl";
+my $phone_num = "0874121619";
 
 say "A: $lang" if ($lang =~ m/o{5}/);     # true, matches 'ooooo'
 say "B:" if ($lang =~ m/o{6}/);           #false,
@@ -24,3 +25,4 @@ say "G: alphab.str" if ($str =~ m/[a-z]{6}/); #true, matches 6 alphab. letters
 say "H:" if ($str =~ m/[a-z]{7}/);            #false, matches 5 alphab. letters
 say "I: $size" if ($size =~ m/(s|m|l|x){3}/); #true, matches 3 x s|m|l|x
 say "J:" if ($size =~ m/(s|m|l|y){2}/);       #false
+say "K: $phone_num" if ($phone_num =~ m/[0-9]{10}/); #true, matches ten digits
