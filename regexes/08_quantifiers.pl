@@ -41,5 +41,9 @@ say "O: $year" if ($year =~ m/[0-9]{2,4}/);   #true
 # '+' match 1 or more time
 my @strings = qw(aba abba abbba ebbro vino abito onlya onlyb beer wine a b);
 foreach my $str1 (@strings) {
-    say "matches $str1" if ($str1 =~ m/ab?/);
+    say "m\/ab\?\/ matches $str1" if ($str1 =~ m/ab?/);
+}
+
+foreach my $str2 (@strings) {
+    say "m\/ab\+\/ matches $str2" if ($str2 =~ m/ab+/);
 }
