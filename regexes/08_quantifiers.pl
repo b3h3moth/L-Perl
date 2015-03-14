@@ -34,3 +34,8 @@ say "L: $phone_num" if ($phone_num =~ m/[0-9]{11}/); #false
 say "M: $str 5+" if ($str =~ m/[a-z]{5,}/);   #true, match 5 or more letters
 say "N: $str 3,6" if ($str =~ m/[a-z]{3,6}/); #true, match betweeen 3 and 6
 say "O: $year" if ($year =~ m/[0-9]{2,4}/);   #true
+
+#there are three more quantifiers:
+# '?' match 0 or 1 time
+# '*' match 0 or more time
+# '+' match 1 or more time
