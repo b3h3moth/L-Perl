@@ -15,6 +15,7 @@ my $str = "abcdef";
 my $size = "xxxl";
 my $phone_num = "0874121619";
 my $year = 1973;
+my $bestos = "unix";
 
 say "A: $lang" if ($lang =~ m/o{5}/);     #true
 say "B:" if ($lang =~ m/o{6}/);           #false,
@@ -39,3 +40,5 @@ say "O: $year" if ($year =~ m/[0-9]{2,4}/);   #true
 # '?' match 0 or 1 time
 # '*' match 0 or more time
 # '+' match 1 or more time
+say "P: best OS $bestos" if ($bestos =~ m/^[0-9]*/); #true
+say "Q: $bestos" if ($bestos =~ m/^d*/); #false
