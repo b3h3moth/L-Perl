@@ -27,3 +27,7 @@ say "I: $size" if ($size =~ m/(s|m|l|x){3}/); #true, matches 3 x s|m|l|x
 say "J:" if ($size =~ m/(s|m|l|y){2}/);       #false
 say "K: $phone_num" if ($phone_num =~ m/[0-9]{10}/); #true, matches ten digits
 say "L: $phone_num" if ($phone_num =~ m/[0-9]{11}/); #false
+
+#{min, max} con be used to specify a minimum and maximum value
+#{min,}     con be used to specify a minimum value only
+
