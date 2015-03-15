@@ -24,7 +24,7 @@ if ($sequence =~ /$str/) {
     say "D: not found";
 }
 
-#se le stringhe non corrispondono, si usa !~
+#if string and pattern doesn't match
 if ($sequence !~ m/GPERLE/) {
     say "E: found";
 } else {
