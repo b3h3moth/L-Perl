@@ -14,7 +14,8 @@ if ($sequence =~ m/GATTCCA/) {
 
 my $str = "TAGCGGA";
 
-if ($sequence =~ m/$str/) {
+#if you choose the forward slash at the delimiter, you may omit the initial m
+if ($sequence =~ /$str/) {
     print "found $str\n";
 } else {
     print ("not found $str\n");
