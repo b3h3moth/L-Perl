@@ -3,9 +3,10 @@ use warnings;
 use strict;
 use v5.14;
 
-
 $_ = 'this is a \\ backslash';
+
+#match backslash
 if (/\\/) {
     print;
-    say "\nIt matched";
+    say " matches";
 }
