@@ -3,6 +3,9 @@ use warnings;
 use strict;
 use v5.14;
 
+#A character class is a way of denoting a set of characters in such a way that
+#one character of the set is matched.
+
 my $lang = "perl";
 my $superhero = "super-man";
 my $year = "2015";
