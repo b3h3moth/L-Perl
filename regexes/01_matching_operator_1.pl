@@ -1,11 +1,12 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
+use v5.14;
 
 my $sequence = "AACTAGCGGATTCCAGACCGT";
 
+#pattern match operator 'm//' indicates that we are trying to match a string
 #binding operator =~
-#matching operator 'm//' indicates that we are trying to match a string
 if ($sequence =~ m/GATTCCA/) {
     print "sequence found\n";
 } else {
@@ -14,7 +15,7 @@ if ($sequence =~ m/GATTCCA/) {
 
 my $str = "TAGCGGA";
 
-#if you choose the forward slash at the delimiter, you may omit the initial m
+#if you choose the forward slash as the delimiter, you may omit the initial 'm'
 if ($sequence =~ /$str/) {
     print "found $str\n";
 } else {
