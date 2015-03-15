@@ -31,11 +31,6 @@ if ($sequence !~ m/GPERLE/) {
     say "F: not found";
 }
 
-# =~ m//    match
-# =~ //     match
-# !~ //     not match
-# =~ s///   substitution
-#       g = globally        s/T/U/g
-#       i = ignore case     s/T/U/i
-#                           s/T/U/gi
-# =~ tr///  transliteration
+#you may choose any pair (and few nonpairded) of delimiters to quote contents.
+say "G: works" if ($sequence =~ m<EVERY> );   #match EVERY   (pair)
+say "H:" if ($sequence =~ m,<EVERY>, ); #match <EVERY> (nonpaired)
