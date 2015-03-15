@@ -3,30 +3,32 @@ use warnings;
 use strict;
 use v5.14;
 
-my $sequence = "AACTAGCGGATTCCAGACCGT";
+my $sequence = "PROGRAMMINGPERLEVERYDAYISAWESOME";
 
 #pattern match operator 'm//' indicates that we are trying to match a string
-#binding operator =~
-if ($sequence =~ m/GATTCCA/) {
-    print "sequence found\n";
+#binding operator '=~' it tells Perl to match the pattern on the right
+#against the string on the left.
+if ($sequence =~ m/NGPER/) {
+    say "A: found";
 } else {
-    print "sequence not found\n";
+    say "B: not found";
 }
 
-my $str = "TAGCGGA";
+my $str = "PERL";
 
 #if you choose the forward slash as the delimiter, you may omit the initial 'm'
+# 'm//' and '//' are the same thing
 if ($sequence =~ /$str/) {
-    print "found $str\n";
+    say "C: found";
 } else {
-    print ("not found $str\n");
+    say "D: not found";
 }
 
 #se le stringhe non corrispondono, si usa !~
-if ($sequence !~ m/GATTCCA/) {
-    die "Found sequence\n";
+if ($sequence !~ m/GPERLE/) {
+    say "E: found";
 } else {
-    print ("not found\n");
+    say "F: not found";
 }
 
 # =~ m//    match
