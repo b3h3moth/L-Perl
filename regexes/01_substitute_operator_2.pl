@@ -6,7 +6,7 @@ use v5.14;
 my $sequence = "AACTAGCGGATTCCAGACCGT";
 
 #'s///' when we want to substitute a pattern with a string
-#'s/match/replacement'
+#'s/match/replacement/'
 say "Before: $sequence";
 $sequence =~ s/GATTCCA/_PERL_LANGUAGE_/;
 say " After: $sequence";
