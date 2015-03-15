@@ -8,8 +8,10 @@ use strict;
 
 #ottimo per evitare il fastidioso inserimento di quotature e virgole.
 my @skills = qw(C C++ Perl ASM InfoSec);
-#e' uguale a
+#it's equals to:
 #my @skill = ('C', 'C++', 'Perl', 'ASM', 'InfoSec');
+#
+#you may choose any pair of delimiters to quote contents.
 #
 #Posso utilizzare qualsiasi carattere alfanumerico al posto delle parentesi
 #tonde per delimitare gli argomenti.
