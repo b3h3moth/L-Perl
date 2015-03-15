@@ -7,7 +7,7 @@ my $puppy = "dog";
 my $dog = "sid";
 my $pass = "3s7";
 
-#'.' dot metacharacter stands for match any single character
+#'.' dot metacharacter stands for match any character but '\n'
 
 say "I love my $puppy" if ($puppy =~ m/d.g/);
 say "his name is $dog" if ($dog =~ m/^...$/); # exactly 3 characters
