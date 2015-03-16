@@ -22,7 +22,7 @@ use v5.14;
 
 my $name = "luca";
 my $alias = "mister behemoth";
-my $book = "the master and margarite";
+my $book = "count zero";
 my $string1 = " string";
 my $string2 = "string";
 my $year = "2015";
