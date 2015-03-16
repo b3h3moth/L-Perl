@@ -20,3 +20,11 @@ use v5.14;
 #[:upper:] any uppercase character ("[A-Z]");
 #[:word:]  Perl extension ("[A-Za-z0-9_]"), equivalent to "\w";
 #[:xdigit:] any hexadecimal digit ("[0-9a-fA-F]").
+
+my $string = "b3h3m0th";
+my $book = "perl programming";
+
+say "A: $string is alpha" if ($string =~ /[[:alpha:]]/);
+say "B: $string is alnum" if ($string =~ /[[:alnum:]]/);
+say "C: $string is ascii" if ($string =~ /[[:ascii:]]/);
+say "D: $book is blank" if ($book =~ /[[:blank:]]/);
