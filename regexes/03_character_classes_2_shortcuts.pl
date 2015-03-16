@@ -20,7 +20,15 @@ use v5.14;
 # The period '.' matches any character but "\n"
 ###############################################################################
 
-my $name = "behemoth";
-my $fullname = "mister behemoth";
-say "A: Hi $name" if ($name =~ /\w+/); # match a word
-say "B: $fullname" if ($fullname =~ /\w+\s+\w+/);
+my $name = "luca";
+my $alias = "mister behemoth";
+my $book = "the master and margarite";
+my $string1 = " string";
+my $string2 = "string";
+
+say "A: Hi $name" if ($name =~ /\w+/); #true, match a word
+say "B: $alias" if ($alias =~ /\w+\s+\w+/); #true, match word whitespace word
+say "C: $book" if ($book =~ /\w+\W+\w+/); #true, match word whitespace word
+say "D: " if ($string1 =~ /^\S/); #false, doesn't start with whitespace
+say "E: " if ($string2 =~ /^\S/); #true, doesn't start with whitespace
+say "F: " if ($string1 =~ /^(\w|\W)/); #true, start with words or whitespace
