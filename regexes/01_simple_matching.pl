@@ -16,3 +16,9 @@ $_ = 'this is a \\ backslash';
 if (/\\/) {
     say "B: pattern \/\\\/ found in string: $_";
 }
+
+#in this statement, Zero is a regex and the // enclosing /Zero/ tells Perl to
+#search a string for a match.
+my $book = "Zero history";
+
+say "C: it matches" if ($book =~ /Zero/);
