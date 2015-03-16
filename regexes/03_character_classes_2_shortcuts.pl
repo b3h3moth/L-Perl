@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
+use v5.14;
 
 #CHARACTER CLASS SHORTCUTS
 # \d is a digit and represents [0-9];
@@ -16,5 +17,10 @@ use strict;
 # \N is a character that isn't a newline.  Experimental;
 # \pP, \p{Prop} is a character that has the given Unicode property;
 # \PP, \P{Prop} is a character that doesn't have the Unicode property;
-
 # The period '.' matches any character but "\n"
+###############################################################################
+
+my $name = "behemoth";
+my $fullname = "mister behemoth";
+say "A: Hi $name" if ($name =~ /\w+/); # match a word
+say "B: $fullname" if ($fullname =~ /\w+\s+\w+/);
