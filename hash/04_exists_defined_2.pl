@@ -6,7 +6,7 @@ use v5.14;
 #Usage: ./$0 Italy Fr
 #   Code: It
 #Country: France
-die "Usage ./$0 <country><country two-letter code>\n" if @ARGV != 2;
+die "Usage $0 <country><country two-letter code>\n" if @ARGV != 2;
 
 my ($state, $code) = @ARGV;
 

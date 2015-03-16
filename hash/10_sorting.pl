@@ -5,7 +5,7 @@ use v5.10;
 
 my %count;
 
-die "Usage ./$0 <str 1><str 2><str 3>...<str N>\n" if (@ARGV < 4);
+die "Usage $0 <str 1><str 2><str 3>...<str N>\n" if (@ARGV < 4);
 
 #count each word
 foreach my $word (@ARGV) {
