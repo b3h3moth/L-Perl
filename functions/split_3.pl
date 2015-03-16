@@ -6,7 +6,10 @@ use strict;
 #- the pattern is assumed to be whitespace;
 #- $_ is used as the variable.
 
+die "Usage: prog.pl <filename>\n" if (@ARGV != 1);
+
 while (<>) {
     my @array = split;
+    #print the first string of each line delimited by whitespace
     print $array[0],"\n";
 }
