@@ -3,10 +3,10 @@ use warnings;
 use strict;
 use v5.14;
 
-#Usage: ./prog.pl Italy Fr
+#Usage: ./$0 Italy Fr
 #   Code: It
 #Country: France
-die "Usage ./prog.pl <country><country two-letter code>\n" if @ARGV != 2;
+die "Usage ./$0 <country><country two-letter code>\n" if @ARGV != 2;
 
 my ($state, $code) = @ARGV;
 

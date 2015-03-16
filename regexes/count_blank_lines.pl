@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 
-die "Usage: prog.pl <filename>\n" if (@ARGV != 1);
+die "Usage: $0 <filename>\n" if (@ARGV != 1);
 
 my ($file) = @ARGV;
 my $total_blank_lines = 0;

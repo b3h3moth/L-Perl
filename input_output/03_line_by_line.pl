@@ -3,7 +3,7 @@ use warnings;
 use strict;
 
 #reading file line by line
-#./prog.pl /etc/passwd
+#./$0 /etc/passwd
 while (my $line = <>) {
     print $line;
 }

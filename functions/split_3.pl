@@ -6,7 +6,7 @@ use strict;
 #- the pattern is assumed to be whitespace;
 #- $_ is used as the variable.
 
-die "Usage: prog.pl <filename>\n" if (@ARGV != 1);
+die "Usage: $0 <filename>\n" if (@ARGV != 1);
 
 while (<>) {
     my @array = split;
