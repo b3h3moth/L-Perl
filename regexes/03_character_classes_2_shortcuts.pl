@@ -25,10 +25,13 @@ my $alias = "mister behemoth";
 my $book = "the master and margarite";
 my $string1 = " string";
 my $string2 = "string";
+my $year = "2015";
 
 say "A: Hi $name" if ($name =~ /\w+/); #true, match a word
 say "B: $alias" if ($alias =~ /\w+\s+\w+/); #true, match word whitespace word
 say "C: $book" if ($book =~ /\w+\W+\w+/); #true, match word whitespace word
 say "D: " if ($string1 =~ /^\S/); #false, doesn't start with whitespace
-say "E: " if ($string2 =~ /^\S/); #true, doesn't start with whitespace
-say "F: " if ($string1 =~ /^(\w|\W)/); #true, start with words or whitespace
+say "E: true" if ($string2 =~ /^\S/); #true, doesn't start with whitespace
+say "F: true" if ($string1 =~ /^(\w|\W)/); #true, start with words or whitespace
+say "G: true" if ($year =~ /\d+/); #true, match a digit
+say "H: true" if ($name =~ /\D+/); #true, match a non digit
