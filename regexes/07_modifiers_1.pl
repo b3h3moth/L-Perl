@@ -12,7 +12,10 @@ use v5.14;
 #/x ignore unescaped whitespace.
 
 my $book = "The master and Margarita";
-my $author = "Bulgakov";
+my $author = "Author of:\n"." $book\n"."is Bulgakov";
 
 say "A: One of my favorite book is \'$book\'" if ($book =~ /^[a-z]/i); #true
 say "B: " if ($book =~ /^[a-z]/); #false
+
+say "C: $author" if ($author =~ /master.*bulgakov/si); #true
+say "D: " if ($author =~ /master.*bulgakov/s); #true
