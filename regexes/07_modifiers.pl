@@ -5,7 +5,8 @@ use v5.14;
 
 #A regular expression is one or more characters appended to the end of the regex
 #that modifies it:
-#/i do case insensitive pattern matching;
-#/s treat string as a single line;
-#/x ignore unescaped whitespace;
+#/g global matching;
+#/i do case-insensitive pattern matching;
 #/m treat a string as a multiple line;
+#/s treat string as a single line;
+#/x ignore unescaped whitespace.
