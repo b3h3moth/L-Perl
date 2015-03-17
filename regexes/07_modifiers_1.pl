@@ -8,7 +8,7 @@ use v5.14;
 #/g global matching;
 #/i do case-insensitive pattern matching;
 #/m treat a string as a multiple line;
-#/s treat string as a single line;
+#/s treat string as a single line, the dot '.' metacharacter matches \n.
 #/x ignore unescaped whitespace.
 
 my $book = "The master and Margarita";
