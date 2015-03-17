@@ -9,7 +9,9 @@ use v5.14;
 #/i do case-insensitive pattern matching;
 #/m treat a string as a multiple line;
 #/s treat string as a single line, the dot '.' metacharacter matches \n.
-#/x ignore unescaped whitespace and permit comments in pattern.
+#/x ignore unescaped whitespace and permit comments in pattern;
+#/p preserve the string matched such that ${^PREMATCH}, ${^MATCH}, and
+#   ${^POSTMATCH} are available for use after matching.
 
 my $book = "The master and Margarita";
 my $author = "Author of:\n"." $book\n"."is Bulgakov";
