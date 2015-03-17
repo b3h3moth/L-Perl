@@ -19,3 +19,9 @@ say "B: " if ($book =~ /^[a-z]/); #false
 
 say "C: $author" if ($author =~ /master.*bulgakov/si); #true
 say "D: " if ($author =~ /master.*bulgakov/s); #false
+
+$_ = $author;
+my @words = /(\S+)/g;
+while( /(\S+)/g ) {
+    print "E: $1\n";
+}
