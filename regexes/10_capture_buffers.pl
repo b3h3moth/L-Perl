@@ -13,3 +13,5 @@ if (m#^http://([^/]+)(.*)#) {
     say "host: $1";
     say "path: $2";
 }
+
+#these special variables will be only populated if the match succeeds
