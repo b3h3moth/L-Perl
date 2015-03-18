@@ -27,9 +27,19 @@ $_ = $author;
 my @words = /(\S+)/g;
 
 while( /(\S+)/g ) {
-    print "E: $1\n";
+    print "\$1: $1\n";
 }
 
 #/x allows you to add arbitrary whitespace to a pattern, in order to make it
 #easier to read
-
+my $cellphone = "(+039) 1234-567890";
+say "F: $cellphone" if ($cellphone =~ /
+                                      ^\(       # (
+                                      \+        # +
+                                      \d{3}     # 3 digits
+                                      \)        # )
+                                      \s        # whitespace
+                                      \d{4}     # 4 digits
+                                      -         # -
+                                      \d{6}     # 6 digits
+                                      /x);
