@@ -7,5 +7,5 @@ my $file = "/etc/passwd";
 open(INPUT, "<", "$file") or die "Err. open file: $!";
 
 while (my $line = <INPUT>) {
-    print "login: $1\n"  if ($line =~ /([a-z]+):/);
+    print "login: $1 $2 $3 $4 $5\n" if ($line =~ /(\w+):(\w+):(\d+):(\d+):(\w+|\s+|\h+):/);
 }
