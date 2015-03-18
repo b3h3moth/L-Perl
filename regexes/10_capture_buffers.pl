@@ -13,3 +13,5 @@ if (m#^http://([^/]+)(.*)#) {
     say "host: $1";
     say "path: $2";
 }
+
+#effective perl programming book's awesome
