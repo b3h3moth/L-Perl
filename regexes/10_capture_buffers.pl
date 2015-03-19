@@ -7,7 +7,9 @@ use v5.14;
 #known as capture buffers; each pair of parentheses in a regex captures what
 #its contents match and memorizes it in a capture variable.
 
-#These special variables will be only populated if the match succeeds.
+#These special variables will be only populated if the match succeeds,
+#unsuccessful match leave capture variables with the value they contained
+#before the evaluation.
 
 my $cellphone = "123-456-7890";
 
