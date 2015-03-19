@@ -20,6 +20,10 @@ if (m#^http://([^/]+)(.*)#) {
     say "path: $2"; #true, matches /index.html
 }
 
-my $movie = "Natural born killers, by Oliver Stone";
+#the '$+' special variable contains the value of the last non empty buffer
+say "special variable \$+: $+";
 
+my $movie = "Natural born killers, by Oliver Stone";
 say "$1" if ($movie =~ /\s([a-zA-Z]+),/); #true, matches killers
+
+say "special variable \$+: $+";
