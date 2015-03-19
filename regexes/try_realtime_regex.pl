@@ -8,3 +8,10 @@ my $string = "user:x:1000:1000:name surname:/home/user:/usr/bin/zsh";
 die "Usage: $0 <pattern>\n\nYou\'re working on /etc/passwd field\:\n$string"
 if (@ARGV != 1);
 
+my $pattern = @ARGV;
+
+if ($string =~ m/$pattern/) {
+    print "match\n";
+} else {
+    print "doesn't match\n";
+}
