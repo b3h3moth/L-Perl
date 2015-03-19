@@ -4,14 +4,14 @@ use strict;
 use v5.14;
 
 my $string = "user:x:1000:1000:name surname:/home/user:/usr/bin/zsh";
+say "String to match:\n$string\n";
 
-die "Usage: $0 <pattern>\n\nYou\'re working on /etc/passwd field\:\n$string"
-if (@ARGV != 1);
+die "Usage: $0 <pattern>\n" if (@ARGV != 1);
 
-my $pattern = @ARGV;
+my $pattern = $ARGV[0];
 
 if ($string =~ m/$pattern/) {
-    print "match\n";
+    print "\'$pattern\' matches\n";
 } else {
-    print "doesn't match\n";
+    print "\'$pattern\' doesn't match\n";
 }
