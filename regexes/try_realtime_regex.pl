@@ -10,8 +10,8 @@ die "Usage: $0 <pattern>\n" if (@ARGV != 1);
 
 my $pattern = $ARGV[0];
 
-if ($string =~ m/$pattern/) {
-    print "\'$pattern\' matches\n";
+if ($string =~ m/($pattern)/) {
+    print "\'$pattern\'=\'$1\' matches\n";
 } else {
     print "\'$pattern\' doesn't match\n";
 }
