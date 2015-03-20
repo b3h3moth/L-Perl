@@ -16,6 +16,9 @@ my $cellphone = "123-456-7890";
 say "A: $1 $2 $3" if ($cellphone =~ /([0-9]{3})-([0-9]{3})-([0-9]{4})/);
 #true, matches 123 456 7890
 
+#the last (full) successful pattern match
+say "Full match (\$1+\$2+\$3) = $&";
+
 $_ = 'http://www.perlmonks.org/index.html';
 
 if (m#^http://([^/]+)(.*)#) {
@@ -28,7 +31,6 @@ say "special variable \$+: $+";
 
 my $movie = "Natural born killers, by Oliver Stone";
 say "D: $1" if ($movie =~ /\s([a-zA-Z]+),/); #true, matches killers
-
 say "special variable \$+: $+";
 
 
