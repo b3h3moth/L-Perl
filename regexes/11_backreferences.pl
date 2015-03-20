@@ -19,5 +19,8 @@ say "B: word is: $1" if ($str =~ /(\w+) \g1/);
 #find two identical digits '11','22','33' etc...
 say "C: digit is: $1" if ($year =~ /(\d+)\g1/);
 
+my $text = "\'take\' a walk on the \"wild\" side";
+say "D: matching quote $&" if($text =~ /(['"]).*\1/);
+
 #$1,$2,$3 outside a regex
 #g1,g2,g3 inside a regex
