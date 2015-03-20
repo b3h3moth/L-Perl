@@ -4,6 +4,6 @@ use strict;
 use v5.14;
 
 
-my $str = "regular expression, 771133 how many pair pf characters are there?";
+my $str = "regular expression";
 
 say "A: $1" if ($str =~ /(.)\g1/);
