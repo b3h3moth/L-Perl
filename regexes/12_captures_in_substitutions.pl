@@ -14,8 +14,6 @@ if ($text =~ s/(\S+)\s+(\S+)/$2 $1/) {
     say " after: \'$text\'";
 }
 
-
-
 #second example
 
 my %HTML_entity = (
@@ -25,8 +23,6 @@ my %HTML_entity = (
     );
 
 my $html = '<html>you & me</html>';
-
-
 
 #converting HTML entity escaping
 if ($html =~ s/([&<>])/&$HTML_entity{$1};/g) {
