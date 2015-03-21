@@ -19,6 +19,7 @@ say "B: matches $&" if ($str =~ /(\w+) \g1/);
 #find two identical digits '11','22','33' etc...
 say "C: matches $&" if ($year =~ /(\d+)\g1/);
 
+#find words inside ',"
 my $text = "\'take\' a walk on the \"wild\" side";
 say "D: matches $&" if($text =~ /(['"]).*\1/);
 
