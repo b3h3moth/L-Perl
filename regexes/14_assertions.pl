@@ -19,23 +19,23 @@ my $text = "devel";
 my $text2 = "devel\ndevelopers\n";
 
 #\b
-say "A: " if ($str1 =~ /\bdevel\b/);   #false
+say "A:"    if ($str1 =~ /\bdevel\b/); #false
 say "B: $&" if ($str2 =~ /\bdevel\b/); #true
 say "C: $&" if ($str2 =~ /\b$text\b/); #true
 
 #\B
 say "D: $&" if ($text =~ /\Beve\B/);   #true
-say "E: $&" if ($text =~ /\Bdeve\B/);  #false
+say "E:"    if ($text =~ /\Bdeve\B/);  #false
 
 #\A
 say "F: $&" if ($str1 =~ /\Auni/);    #true
 say "G: $&" if ($text2 =~ /\Adev/);   #true
-say "H: $&" if ($text2 =~ /\Aeve/);   #false
+say "H:"    if ($text2 =~ /\Aeve/);   #false
 
 #\Z
 say "I: $&" if ($text2 =~ /ers\Z/);   #true
-say "J: $&" if ($text2 =~ /eve\Z/);   #false
+say "J:"    if ($text2 =~ /eve\Z/);   #false
 
 #\z
-say "K: $&" if ($text2 =~ /ers\z/);   #false
+say "K:"    if ($text2 =~ /ers\z/);   #false
 say "L: $&" if ($text =~ /vel\z/);    #true
