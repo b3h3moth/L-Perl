@@ -12,6 +12,7 @@ use v5.14;
 #\z match only at end of string;
 # $ usually means the same as \Z, match anywhere inside the string right in
 #   front of a newline;
+#\g match only at pos();
 #\G match only at pos().
 
 my $str1 = "unix developers";
