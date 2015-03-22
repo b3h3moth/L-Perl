@@ -5,10 +5,13 @@ use Test::More;
 use v5.14;
 
 #Framework for writing test scripts
+my $x = 10;
+my $y = 20;
 
-ok(1, 'it must be true');
-ok(0, 'it must be false');
-ok('a', 'it must be true');
-ok('', 'it must be false');
+ok($x <= $y, 'it should be true');
+ok(1, 'it should be true');
+ok(0, 'it should be false');
+ok('a', 'it should be true');
+ok('', 'it should be false');
 
 done_testing();
