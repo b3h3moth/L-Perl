@@ -14,6 +14,19 @@ use v5.14;
 
 my $str1 = "unix developers";
 my $str2 = "unix devel";
+my $text = "devel";
+my $text2 = "devel\ndevelopers";
 
-say "A: $&" if ($str1 =~ /\bdevel\b/);
-say "B: $&" if ($str2 =~ /\bdevel\b/);
+#\b
+say "A: " if ($str1 =~ /\bdevel\b/);   #false
+say "B: $&" if ($str2 =~ /\bdevel\b/); #true
+say "C: $&" if ($str2 =~ /\b$text\b/); #true
+
+#\B
+say "D: $&" if ($text =~ /\Beve\B/);   #true
+say "E: $&" if ($text =~ /\Bdeve\B/);  #false
+
+#\A
+say "F: $&" if ($str1 =~ /\Auni/);   #true
+say "G: $&" if ($text2 =~ /\Adev/);   #true, true
+
