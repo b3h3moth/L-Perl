@@ -16,7 +16,7 @@ use v5.14;
 my $str1 = "unix developers";
 my $str2 = "unix devel";
 my $text = "devel";
-my $text2 = "devel\ndevelopers";
+my $text2 = "devel\ndevelopers\n";
 
 #\b
 say "A: " if ($str1 =~ /\bdevel\b/);   #false
@@ -28,5 +28,14 @@ say "D: $&" if ($text =~ /\Beve\B/);   #true
 say "E: $&" if ($text =~ /\Bdeve\B/);  #false
 
 #\A
-say "F: $&" if ($str1 =~ /\Auni/);   #true
-say "G: $&" if ($text2 =~ /\Adev/);   #true, true
+say "F: $&" if ($str1 =~ /\Auni/);    #true
+say "G: $&" if ($text2 =~ /\Adev/);   #true
+say "H: $&" if ($text2 =~ /\Aeve/);   #false
+
+#\Z
+say "I: $&" if ($text2 =~ /ers\Z/);   #true
+say "J: $&" if ($text2 =~ /eve\Z/);   #false
+
+#\z
+say "K: $&" if ($text2 =~ /ers\z/);   #false
+say "L: $&" if ($text =~ /vel\z/);    #true
