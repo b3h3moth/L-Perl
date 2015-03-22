@@ -10,7 +10,8 @@ use v5.14;
 #\A match only at beginning of string;
 #\Z match only at end of string, or before newline at the end;
 #\z match only at end of string;
-# $ match anywhere inside the string right in front of a newline;
+# $ usually means the same as \Z, match anywhere inside the string right in
+#   front of a newline;
 #\G match only at pos().
 
 my $str1 = "unix developers";
@@ -39,3 +40,7 @@ say "J:"    if ($text2 =~ /eve\Z/);   #false
 #\z
 say "K:"    if ($text2 =~ /ers\z/);   #false
 say "L: $&" if ($text =~ /vel\z/);    #true
+
+# $
+say "M: $&" if ($text2 =~ /ers$/);   #true
+say "N:"    if ($text2 =~ /eve$/);   #false
