@@ -32,5 +32,3 @@ say "special variable \$+: $+";
 my $movie = "Natural born killers, by Oliver Stone";
 say "D: $1" if ($movie =~ /\s([a-zA-Z]+),/); #true, matches killers
 say "special variable \$+: $+";
-
-
