@@ -3,14 +3,13 @@ use warnings;
 use strict;
 use v5.14;
 
-#subroutine
-#sub is a key word to indicate subroutine
-#thene there's a name
-sub printout {
+#subroutine statement:
+#sub name { ... }
+sub subname {
     say "my first Perl subroutine";
 }
 
 #first call
-printout;
+subname;
 #second call
-printout();
+subname();
