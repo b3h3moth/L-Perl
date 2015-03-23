@@ -3,6 +3,9 @@ use warnings;
 use strict;
 use v5.14;
 
+#declaring
+sub subname;
+
 #subroutine statement:
 #sub name { ... }
 sub subname {
