@@ -11,3 +11,6 @@ my $email_list = 'bob@dylan.itjohn@from.ukluc@unix.uslarry@perl.org';
 while ($email_list =~ m/([\w\.]+@[\w\.]+\.(it|org|us|uk))/gi) {
     say "e-mail: $1";
 }
+
+#assign the result of the matching operator to an array, each array element
+#will contain an email address
