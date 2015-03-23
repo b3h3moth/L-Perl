@@ -3,8 +3,9 @@ use warnings;
 use strict;
 use v5.14;
 
-sub printout() {
+sub printout {
     say "my first Perl subroutine";
 }
 
 printout;
+printout();
