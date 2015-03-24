@@ -11,6 +11,9 @@ my $modules = `cat /etc/modules`;
 say $modules;
 
 my @passwd = `cat /etc/passwd`;
+
+say "first array element: $passwd[0]";
+
 #output returned as an array
 foreach my $line (@passwd) {
     print "$line";
