@@ -13,11 +13,10 @@ my $path = qx/which $command/;
 chomp($path);
 
 #$? special variable stores the exit status from any program you're running
-if ($?) {
-    print STDERR "Err.running: $command - (exit status: $?)\n";
-    #next line is the same thing
-    #print "Err.running: $command - (exit status: $?)\n";
+#$! special variable stores the current valure of the C errno variable
+if ($? < 0) {
+    print "Failed: (exit status: $!)\n";
 } else {
-    print STDOUT "$command: $path - (exit status: $?)\n";
+    print "Command ok\n";
 }
 
