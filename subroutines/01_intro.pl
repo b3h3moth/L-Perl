@@ -5,7 +5,7 @@ use v5.14;
 
 #subroutine called printKernelVersion
 sub printKernelVersion {
-    my $ker_ver = qx(uname -a);
+    my $ker_ver = qx(uname -v);
     return $ker_ver;
 }
 
