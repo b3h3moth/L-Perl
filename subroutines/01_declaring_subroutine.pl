@@ -20,3 +20,5 @@ sub Usage {
 }
 
 Usage();
+
+#function or subroutine is the same thing
