@@ -19,6 +19,7 @@ sub Usage {
     exit(0);
 }
 
+#invoking subroutine
 Usage();
 
 #function or subroutine is the same thing
