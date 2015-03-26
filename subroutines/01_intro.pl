@@ -3,16 +3,10 @@ use warnings;
 use strict;
 use v5.14;
 
-#declaring
-sub printKernelVersion;
-
-#subroutine statement:
-#sub name { ... }
+#subroutine called printKernelVersion
 sub printKernelVersion {
-    say "my first Perl subroutine";
+    my $ker_ver = qx(uname -a);
+    return $ker_ver;
 }
 
-#first call
-printKernelVersion;
-#second call
-printKernelVersion();
+say 'My kernel version is: '.printKernelVersion;
