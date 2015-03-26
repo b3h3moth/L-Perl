@@ -4,15 +4,15 @@ use strict;
 use v5.14;
 
 #declaring
-sub subname;
+sub printKernelVersion;
 
 #subroutine statement:
 #sub name { ... }
-sub subname {
+sub printKernelVersion {
     say "my first Perl subroutine";
 }
 
 #first call
-subname;
+printKernelVersion;
 #second call
-subname();
+printKernelVersion();
