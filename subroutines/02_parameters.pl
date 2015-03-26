@@ -24,7 +24,7 @@ sub configuration1 {
     my $http_server = shift;
     my $db_server = shift;
 
-    say "$os\n$mail_server\n$http_server\n$db_server";
+    say "A: $os\nA: $mail_server\nA: $http_server\nA: $db_server";
 }
 
 configuration1('OpenBSD','OpenSMTPD','apache','SQLite');
@@ -32,15 +32,15 @@ configuration1('OpenBSD','OpenSMTPD','apache','SQLite');
 #list of variables
 sub configuration2 {
     my ($os, $mail_server, $http_server, $db_server) = @_;
-    say "$os\n$mail_server\n$http_server\n$db_server";
+    say "B: $os\nB: $mail_server\nB: $http_server\nB: $db_server";
 }
 
-configuration1('Debian','exim4','nginx','MySQL');
+configuration2('Debian','exim4','nginx','MySQL');
 
 #array
 sub configuration3 {
     my (@array) = @_;
-    say "@array";
+    say "C: @array";
 }
 
 configuration3('FreeBSD','sendmail','http','MariaDB');
