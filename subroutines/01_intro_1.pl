@@ -9,3 +9,14 @@ use v5.14;
 #    body of function
 #    ...
 # }
+sub Usage {
+    say "How to use subroutines in Perl";
+    say "sub functioName {";
+    say "    body";
+    say "}";
+    say "bye";
+
+    exit(0);
+}
+
+Usage();
