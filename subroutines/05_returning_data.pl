@@ -14,7 +14,7 @@ sub sum{
 }
 
 my $num = sum(10, 15);
-say "$num";
+say "A: $num";
 
 #more concise
 sub summa {
@@ -23,5 +23,13 @@ sub summa {
     return $x + $y;
 }
 
-my $res = summa(19, 28);
-say "$res";
+my $res = summa(17, 28);
+say "B: $res";
+
+#really concise
+sub sum_total {
+    return $_[0] + $_[1];
+}
+
+my $result = sum_total(16, 14);
+say "C: $result";
