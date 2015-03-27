@@ -46,12 +46,9 @@ sub configuration3 {
 configuration3('FreeBSD','sendmail','http','MariaDB');
 
 my %italian_football_club = (
-    torino => 'juventus',
+    torino => 'torino',
     milano => 'milan',
     genova => 'genoa',
-    torino => 'torino',
-    milano => 'inter',
-    genova => 'sampdoria'
 );
 
 #hash assignment
@@ -64,3 +61,14 @@ sub print_club {
 }
 
 print_club(%italian_football_club);
+
+sub print_club_city {
+    my ($club_name, %club_city) = @_;
+
+    while (my ($name, $city) = each %club_city) {
+        next unless $city eq $name;
+        say "$name is a football team of $city";
+    }
+}
+
+print_club_city('torino', %italian_football_club);
