@@ -29,7 +29,7 @@ sub configuration1 {
 
 configuration1('OpenBSD','OpenSMTPD','apache','SQLite');
 
-#list of variables
+#list assignment
 sub configuration2 {
     my ($os, $mail_server, $http_server, $db_server) = @_;
     say "B: $os\nB: $mail_server\nB: $http_server\nB: $db_server";
@@ -37,7 +37,7 @@ sub configuration2 {
 
 configuration2('Debian','exim4','nginx','MySQL');
 
-#array
+#array assignment
 sub configuration3 {
     my (@array) = @_;
     say "C: @array";
