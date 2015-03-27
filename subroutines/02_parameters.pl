@@ -44,3 +44,23 @@ sub configuration3 {
 }
 
 configuration3('FreeBSD','sendmail','http','MariaDB');
+
+my %italian_football_club = (
+    torino => 'juventus',
+    milano => 'milan',
+    genova => 'genoa',
+    torino => 'torino',
+    milano => 'inter',
+    genova => 'sampdoria'
+);
+
+#hash assignment
+sub print_club {
+    my %club = @_;
+
+    while (my ($name, $city) = each %club) {
+        say "$name: $city";
+    }
+}
+
+print_club(%italian_football_club);
