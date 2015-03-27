@@ -29,7 +29,7 @@ sub configuration1 {
 
 configuration1('OpenBSD','OpenSMTPD','apache','SQLite');
 
-#list assignment
+#list assignment (much more clear)
 sub configuration2 {
     my ($os, $mail_server, $http_server, $db_server) = @_;
     say "B: $os\nB: $mail_server\nB: $http_server\nB: $db_server";
