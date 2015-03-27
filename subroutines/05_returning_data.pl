@@ -33,3 +33,6 @@ sub sum_total {
 
 my $result = sum_total(16, 14);
 say "C: $result";
+
+#if you don't need to store the returned value
+say 'D: '.sum(1,4).' '.summa(100,200).' '.sum_total(1987,2118);
