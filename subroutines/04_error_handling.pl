@@ -14,9 +14,15 @@ metaverso();
 
 sub metaverso {
     print_info_call();
+    print_info_call_arg();
 }
 
 sub print_info_call {
     my ($package, $filename, $line) = caller();
     say "Called from \'$package\' in \'$filename\' at \'$line\' line";
+}
+
+sub print_info_call_arg {
+    my ($package, $filename, $line, $sub) = caller(0);
+    say "\'$sub\' called from \'$package\' in \'$filename\' at \'$line\' line";
 }
