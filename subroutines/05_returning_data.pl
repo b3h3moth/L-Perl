@@ -16,3 +16,12 @@ sub sum{
 my $num = sum(10, 15);
 say "$num";
 
+#more concise
+sub summa {
+    my ($x, $y) = @_;
+
+    return $x + $y;
+}
+
+my $res = summa(19, 28);
+say "$res";
