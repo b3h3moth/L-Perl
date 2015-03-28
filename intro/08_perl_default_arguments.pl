@@ -12,3 +12,5 @@ while (<>) {
     #print "$_";
     #It's the same thing
 }
+
+# @_ default arguments
