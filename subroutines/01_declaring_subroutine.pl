@@ -20,6 +20,4 @@ sub Usage {
 }
 
 #invoking subroutine
-Usage();
-
-#function or subroutine is the same thing
+Usage(); # or &Usage; or Usage; or &Usage();
