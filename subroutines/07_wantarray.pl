@@ -14,7 +14,11 @@ use v5.14;
 sub which_context {
     my $context = wantarray();
 
-    return qw(list context) if $context;
+    return qw(List Context) if $context;
     say 'void context' unless defined $context;
     return 'scalar context' unless $context;
 }
+
+which_context();
+say my $scalar = which_context();
+say which_context();
