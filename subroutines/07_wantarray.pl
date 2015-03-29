@@ -11,7 +11,7 @@ use v5.14;
 #
 # - the undefined value if the context is looking for no value (void context).
 
-sub which_context {
+sub awareness_context {
     my $context = wantarray();
 
     return qw(List Context) if $context;
@@ -19,6 +19,6 @@ sub which_context {
     return 'scalar context' unless $context;
 }
 
-which_context();
-say my $scalar = which_context();
-say which_context();
+awareness_context();
+say my $scalar = awareness_context();
+say awareness_context();
