@@ -10,3 +10,11 @@ use v5.14;
 # - false if the context is looking for a scalar;
 #
 # - the undefined value if the context is looking for no value (void context).
+
+sub which_context {
+    my $context = wantarray();
+
+    return qw(list context) if $context;
+    say 'void context' unless defined $context;
+    return 'scalar context' unless $context;
+}
