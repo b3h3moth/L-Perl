@@ -11,5 +11,5 @@ $opinion->();
 
 
 my $login_name = 'behemoth';
-my $access = sub { print $login_name };
+my $access = sub { say $login_name };
 &$access();
