@@ -26,3 +26,6 @@ my @numbers = @fibonacci[-1,-3];
 foreach my $num (@numbers) {
     say 'B: '.$num;
 }
+
+#how to working with lists of sequential numbers
+my @num_list = (1..300);
