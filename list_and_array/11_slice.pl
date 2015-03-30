@@ -28,4 +28,8 @@ foreach my $num (@numbers) {
 }
 
 #how to working with lists of sequential numbers
-my @num_list = (1..300);
+my @number_list = (1..100);
+my @numlist = @number_list[0..9, 89..99];
+foreach my $n (@numlist) {
+    print "$n ";
+}
