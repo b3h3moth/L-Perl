@@ -9,3 +9,8 @@ use v5.14;
 my @football_club = ('Juventus','P.S.G.','Barcellona','RealMadrid','CB');
 my @fav_club = @football_club[0,4];
 say @fav_club;
+
+#It doesn't make sense to take a single-element slice, so, if you do this, you
+#get a warning (use warnings):
+
+
