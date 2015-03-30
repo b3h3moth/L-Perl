@@ -13,4 +13,7 @@ say @fav_club;
 #It doesn't make sense to take a single-element slice, so, if you do this, you
 #get a warning (use warnings):
 
+#my @club = @football_club[0];
 
+#Scalar value @football_club[0] better written as $football_club[0] at
+#./11_slice.pl │line 18.
