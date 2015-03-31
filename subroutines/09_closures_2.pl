@@ -14,3 +14,10 @@ sub fibonacci_series {
         return $fibonacci;
     };
 }
+
+my $iterator = fibonacci_series();
+
+for (1..25) {
+    my $fibonacci = $iterator->();
+    say "$fibonacci";
+}
