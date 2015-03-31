@@ -15,13 +15,15 @@ sub print_out {
         print "$salute, $target!\n";
     };
 
+    #return a closure
     return $newfunc;
 }
 
+#create a closure
 my $h = print_out("Hello");
 
 $h->("world");
-#&h("world");
+#&$h("world");
 
 #$x continues to refer to the value passed into print_out() despite "my $x"
 #having gone out of scope by the time the anonymous subroutine runs.
