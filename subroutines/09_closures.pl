@@ -19,3 +19,7 @@ sub print_out {
 my $h = print_out("Hello");
 
 &$h("world");
+
+#$x continues to refer to the value passed into print_out() despite "my $x"
+#having gone out of scope by the time the anonymous subroutine runs.
+#That's what a closure is all about.
