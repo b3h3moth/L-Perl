@@ -16,8 +16,6 @@ sub newprint {
     };
 }
 
-my $h = newprint("Howdy");
-my $g = newprint("Greetings");
+my $h = newprint("Hello");
 
 &$h("world");
-&$g("earthlings");
