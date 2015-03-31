@@ -8,17 +8,20 @@ use v5.14;
 #even when it's called outside the context.
 
 sub print_out {
-    my $x = shift;
+    my $salute = shift;
 
-    return sub {
-        my $y = shift;
-        print "$x, $y!\n";
+    my $newfunc = sub {
+        my $target = shift;
+        print "$salute, $target!\n";
     };
+
+    return $newfunc;
 }
 
 my $h = print_out("Hello");
 
-&$h("world");
+$h->("world");
+#&h("world");
 
 #$x continues to refer to the value passed into print_out() despite "my $x"
 #having gone out of scope by the time the anonymous subroutine runs.
