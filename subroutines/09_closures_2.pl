@@ -4,3 +4,13 @@ use strict;
 use v5.14;
 
 #closures example
+
+sub fibonacci_series {
+    my ($cur, $next) = (0,1);
+
+    return sub {
+        my $fibonacci = $cur;
+        ($cur, $next) = ($next, $cur + $next);
+        return $fibonacci;
+    };
+}
