@@ -7,7 +7,7 @@ use v5.14;
 #function in a particular lexical context, it pretends to run in that context
 #even when it's called outside the context.
 
-sub newprint {
+sub print_out {
     my $x = shift;
 
     return sub {
@@ -16,6 +16,6 @@ sub newprint {
     };
 }
 
-my $h = newprint("Hello");
+my $h = print_out("Hello");
 
 &$h("world");
