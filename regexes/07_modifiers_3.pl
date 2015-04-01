@@ -7,5 +7,5 @@ use v5.14;
 my $x = "Take a walk on the wild side (Lou Reed)";
 
 while ($x =~ /(\w+)/g) {
-    say "match \'$1\', ends at position: ", pos $x;
+    say "match \'$1\', ends at position: ", pos($x);
 }
