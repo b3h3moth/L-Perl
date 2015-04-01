@@ -23,7 +23,7 @@ my $unixOs = make_iterator (
     qw(OpenBSD FreeBSD Debian Arch Ubuntu DragonflyBSD Fedora)
 );
 
-say $languages->() for 1..5;
+say 'A: '.$languages->() for 1..5;
 
 #it's the same for loop as before with new lexical environment
-for (1..5) { say $unixOs->() }
+for (1..5) { say 'B: '.$unixOs->() }
