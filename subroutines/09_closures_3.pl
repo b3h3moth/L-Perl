@@ -16,7 +16,9 @@ sub make_iterator {
 }
 
 my $langs = make_iterator (
-    qw(Perl C C++ AWK Scheme Lisp Python Prolog)
+    qw(Perl C C++ AWK Scheme Lisp Python Prolog Haskell Scala Clojure)
 );
 
-say $langs->() for 1 .. 5;
+say $langs->() for 1 .. 8;
+#it's the same stuff
+#for (1 .. 8) { say $langs->() }
