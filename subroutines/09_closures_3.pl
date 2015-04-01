@@ -15,10 +15,15 @@ sub make_iterator {
     }
 }
 
-my $langs = make_iterator (
+my $languages = make_iterator (
     qw(Perl C C++ AWK Scheme Lisp Python Prolog Haskell Scala Clojure)
 );
 
-say $langs->() for 1 .. 8;
-#it's the same stuff
-#for (1 .. 8) { say $langs->() }
+my $unixOs = make_iterator (
+    qw(OpenBSD FreeBSD Debian Arch Ubuntu DragonflyBSD Fedora)
+);
+
+say $languages->() for 1..5;
+
+#it's the same for loop as before with new lexical environment
+for (1..5) { say $unixOs->() }
