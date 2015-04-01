@@ -6,3 +6,9 @@ use v5.14;
 #pos() function returns the offset of where the last 'm//g' search left off for
 #the variable in question; pos() directly accesses the location used by the
 #regexp engine to store the offset.
+
+my $song = 'Could you be loved (Bob Marley & The wailers)';
+
+while ($song =~ /(\w+)/g) {
+    say "$1 offset: ", pos($song);
+}
