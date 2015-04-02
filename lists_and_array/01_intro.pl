@@ -2,24 +2,30 @@
 use warnings;
 use strict;
 
-#In perl se si hanno valori multipli di scalari tra parentesi e separati da
-#virgole, abbiamo una lista - list context.
-#sono le virgole che creano la lista non le parentesi
+# A list is an ordered collection of scalars.
+# An array is a variable that contains a list.
 
-#lista di 5 valori, ciascuno assegnato a una variabile
-my ($x, $y, $z, $j, $k) = (1, 38.99, 'c', 0x1001, "stringa");
+# An array is an ordered list of scalars, accessed by the scalar's position in
+# the list. The list may contain numbers, strings, or a mixture of both.
+# It might also contain references to subarrays or subhashes.
+my ($x, $y, $z, $j, $k) = (1, 38.99, 'c', 0x1001, "str");
 print "$x $y $z $j $k\n";
 
-#OK, il primo va a buon fine
+# To assign a list value to an array, simply group the values together with a
+# set of parentheses:
+my @skill = ("perl", "c", "c++", "awk");
+
+# It's ok
 my ($a) = (1,2);
-#NO, ci sara' un warning, variabile uninitialized
+
+# warning, variable uninitialized
 my ($b,$c) = (3);
 print "$a $b $c\n";
 
-my ($str1, $str2) = ('sotto','zero');
+my ($str1, $str2) = ('list','array');
 my ($len1, $len2) = (length($str1), length($str2));
 print "Lengths are: $len1 and $len2\n";
 
-#swapping values
+# swapping values
 ($str1, $str2) = ($str2, $str1);
 print "Swapping: $str1 $str2\n";
