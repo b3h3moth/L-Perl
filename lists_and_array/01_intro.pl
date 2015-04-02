@@ -8,6 +8,10 @@ use strict;
 # An array is an ordered list of scalars, accessed by the scalar's position in
 # the list. The list may contain numbers, strings, or a mixture of both.
 # It might also contain references to subarrays or subhashes.
+
+# A list literal is a list of comma-separated values enclosed in parentheses.
+# These values form the elements of the list.
+
 my ($x, $y, $z, $j, $k) = (1, 38.99, 'c', 0x1001, "str");
 print "$x $y $z $j $k\n";
 
