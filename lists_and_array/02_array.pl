@@ -3,9 +3,6 @@ use warnings;
 use strict;
 use v5.10;
 
-#l'array si realizza con:
-#@array
-
 my @gatti;
 my @cani = qw(Luna Peppino Otto Gino Rocco Franco Bobby);
 my $tot_cani = @cani;
@@ -13,13 +10,13 @@ say 'Ho '.@cani.' cani';
 say 'Ripeto '.@cani.' cani' if @cani;
 say 'Ho '.@gatti.' gatti' if @gatti;
 
-#calcolo il numero di elementi dell'array
+# array length
 my @caratteri = qw(a b c d e f g h k i j l m n o p q r s t u v w z);
 print "(non corretto) - Lunghezza array: ", length(@caratteri), "\n";
 my $len_arr = @caratteri;
 print "(    corretto) - Lunghezza array: ", $len_arr, "\n";
 
-#ulteriore metodo per calcolare la lunghezza
+# array length
 my $len = scalar(@cani);
 say "L'array \@cani ha ".$len." elementi";
 
