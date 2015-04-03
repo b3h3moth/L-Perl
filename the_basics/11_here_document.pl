@@ -34,20 +34,23 @@ EOF
 # same as above, double-quoted quote
 print <<"EOF";
 My name is $name.
+
 EOF
 
 # single­quoted quote
 print <<'EOF';
 All things (e.g. a camel's journey through
-A needle's eye) are possible, it's true.
-But picture how the camel feels, squeezed out
-In one long bloody thread, from tail to snout.
-                                ­­ C.S. Lewis
+ A needle's eye) are possible, it's true.
+  But picture how the camel feels, squeezed out
+   In one long bloody thread, from tail to snout.
+                                                ­­ C.S. Lewis
+
 EOF
 
 # single­quoted quote
 print <<\EOF;
 Are you really $name?
+
 EOF
 
 # print next line 10 times (deprecated)
@@ -62,6 +65,7 @@ I love Perl!
 print <<`EOC`;
 echo aloha
 date
+
 EOC
 
 my $date = localtime();
@@ -69,12 +73,10 @@ my $kernel = qx(uname -v);
 chomp($kernel);
 
 my $sys = <<"EOF";
-Today is:
-$date
-
-I'm running on:
-$kernel
+Today is: $date
+I'm running on: $kernel
 bye
+
 EOF
 
 say "$sys";
