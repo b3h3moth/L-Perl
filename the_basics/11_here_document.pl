@@ -39,36 +39,41 @@ EOF
 
 # single­quoted quote
 print <<'EOF';
-     All things (e.g. a camel's journey through
-     A needle's eye) are possible, it's true.
-     But picture how the camel feels, squeezed out
-     In one long bloody thread, from tail to snout.
-                                      ­­ C.S. Lewis
-     EOF
-     print <<\EOF;      # another single­quoted quote
-     I could really use $100 about now.
-     EOF
-     print << x 10;     # print next line 10 times
-     The camels are coming! Hurrah! Hurrah!
-     print <<"" x 10; # the preferred way to write that
-     The camels are coming! Hurrah! Hurrah!
-     print <<`EOC`;     # execute commands
-     echo hi there
-     echo lo there
-     EOC
-     print <<"dromedary", <<"camelid";     # you can stack them
-     I said bactrian.
+All things (e.g. a camel's journey through
+A needle's eye) are possible, it's true.
+But picture how the camel feels, squeezed out
+In one long bloody thread, from tail to snout.
+                                ­­ C.S. Lewis
+EOF
+
+# another single­quoted quote
+print <<\EOF;
+are you really $name?
+EOF
+
+# print next line 10 times (deprecated)
+print << x 10;
+
+# the preferred way to write that
+print <<"" x 10;
+I love Perl!
+
+# execute commands
+print <<`EOC`;
+echo hello
+echo $name
+EOC
 
 my $date = localtime();
 my $kernel = qx(uname -v);
 chomp($kernel);
 
 #double quotes
-say <<"SYS"
+print <<EOF
 Today is:
 $date
 
 I'm running on:
 $kernel
 bye
-SYS
+EOF
