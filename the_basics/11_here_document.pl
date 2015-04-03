@@ -26,23 +26,19 @@ use v5.14;
 # The terminating string must appear by itself, unquoted and with no extra
 # whitespace on either side, on the terminating line.
 
+my $name = "behemoth";
 
-here document
-   So called because of a similar construct in
-   shells that pretends that the lines following
-   the command are a separate file to be fed to
-   the command, up to some terminating
-   string. In Perl, however, it's just a fancy form
-   of quoting.
+# same as earlier example
+print <<EOF;
+EOF
 
+# same as above, with explicit quotes
+print <<"EOF";
+My name is $name.
+EOF
 
-     print <<EOF;     # same as earlier example
-     The price is $Price.
-     EOF
-     print <<"EOF"; # same as above, with explicit quotes
-     The price is $Price.
-     EOF
-     print <<'EOF';     # single­quoted quote
+# single­quoted quote
+print <<'EOF';
      All things (e.g. a camel's journey through
      A needle's eye) are possible, it's true.
      But picture how the camel feels, squeezed out
