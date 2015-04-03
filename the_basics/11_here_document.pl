@@ -28,11 +28,10 @@ use v5.14;
 
 my $name = "behemoth";
 
-# same as earlier example
 print <<EOF;
 EOF
 
-# same as above, with explicit quotes
+# same as above, double-quoted quote
 print <<"EOF";
 My name is $name.
 EOF
@@ -46,30 +45,30 @@ In one long bloody thread, from tail to snout.
                                 ­­ C.S. Lewis
 EOF
 
-# another single­quoted quote
+# single­quoted quote
 print <<\EOF;
-are you really $name?
+Are you really $name?
 EOF
 
 # print next line 10 times (deprecated)
-print << x 10;
+print << x 5;
+deprecated
 
 # the preferred way to write that
-print <<"" x 10;
+print <<"" x 5;
 I love Perl!
 
 # execute commands
 print <<`EOC`;
-echo hello
-echo $name
+echo aloha
+date
 EOC
 
 my $date = localtime();
 my $kernel = qx(uname -v);
 chomp($kernel);
 
-#double quotes
-print <<EOF
+my $sys = <<"EOF";
 Today is:
 $date
 
@@ -77,3 +76,5 @@ I'm running on:
 $kernel
 bye
 EOF
+
+say "$sys";
