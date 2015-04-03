@@ -1,10 +1,10 @@
 #!/usr/bin/env perl
 
-# Solo i doppi apici " interpretano le variabili e i meta caratteri
-print 'Ciao, mondo!';
-print 'Ciao, mondo!\n';
 
-print "Ciao, mondo!\n";
+print 'Hello World!';
+print 'Hello World!\n';
+
+print "Hello World!\n";
 
 # variabile package di Perl 4, ormaI OBSOLETA, sempre globale
 $nome = 'luca';
@@ -13,5 +13,5 @@ $nome = 'luca';
 print "Ciao $nome\n";
 
 # variabili lessicali, hanno valore solo nel contesto in cui sono state scritte
-my $var = "Var lessicale"; 
+my $var = "Var lessicale";
 print "$var";
