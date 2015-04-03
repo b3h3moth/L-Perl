@@ -65,18 +65,19 @@ I love Perl!
 print <<`EOC`;
 echo aloha
 date
-
 EOC
 
 my $date = localtime();
 my $kernel = qx(uname -v);
+my $mail = 'behemoth@autistici.org';
 chomp($kernel);
 
-my $sys = <<"EOF";
-Today is: $date
-I'm running on: $kernel
-bye
+# append few here documents
+my $full_text =<<BLOCK_1 . "$mail\n" . <<BLOCK_2;
+my kernel is $kernel
+contact me:
+BLOCK_1
+today's date is: $date
+BLOCK_2
 
-EOF
-
-say "$sys";
+say "$full_text";
