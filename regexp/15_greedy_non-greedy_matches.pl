@@ -20,5 +20,15 @@ done_testing();
 # By default the + and * quantifiers are greedy, they try to match as much of
 # the input string as possible. This is dangerous.
 #
-# If you want it to match the minimum number of times possible, follow the
-# quantifier with a '?'.
+# How can you see, greedy quantifiers start by matching everything at first:
+
+my $bsd = "My opinion is that OpenBSD is great";
+my $pat = qr/[Oo]pen.*great/;
+
+say "$&" if ($bsd =~ $pat);
+
+# If you want it to match the minimum number of times possible, the '?'
+# quantifier modifier turns a greedy-quantifier non-greedy:
+
+my $pattern = qr/[Oo]pen.*?great/;
+say "$&" if ($bsd =~ $pattern);
