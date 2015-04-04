@@ -3,7 +3,7 @@ use warnings;
 use strict;
 use v5.14;
 
-# Quantifiers are greedy by default and match the longest leftmost.  
+# Quantifiers are greedy by default and match the longest leftmost.
 
 #   Maximal Minimal Possessive Allowed range
 #   ------- ------- ---------- -------------
@@ -42,8 +42,8 @@ say "J:" if ($size =~ m/(s|m|l|y){2}/);       #false
 say "K: $phone_num" if ($phone_num =~ m/[0-9]{10}/); #true, matches 10 digits
 say "L: $phone_num" if ($phone_num =~ m/[0-9]{11}/); #false
 
-#{min,}         match al least 'min' times
-#{min, max}     match al least 'min' but non mor than 'max' times
+#{min,}         match at least 'min' times
+#{min, max}     match at least 'min' but non mor than 'max' times
 say "M: $str 5+" if ($str =~ m/[a-z]{5,}/);   #true, match 5 or more letters
 say "N: $str 3,6" if ($str =~ m/[a-z]{3,6}/); #true, match betweeen 3 and 6
 say "O: $year" if ($year =~ m/[0-9]{2,4}/);   #true
