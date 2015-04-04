@@ -29,13 +29,10 @@ use Test::More;
 #                a{n}? is equivalent to a{n} and is just there for notational
 #                consistency.
 
-my $bsd = "ilikeahotmeal";
-my $pat = qr/hot.*meal/;
+# there is a problem with greedy quantifiers
+my $str = 'The <B>Perl</B> language was written <B>by Larry Wall</B>';
+say "$str" if ($str =~ s#<B>(.*)</B>#$1#g);
 
-say "$&" if ($bsd =~ $pat);
-
-# If you want it to match the minimum number of times possible, the '?'
-# quantifier modifier turns a greedy-quantifier non-greedy:
-
-my $pattern = qr/hot.*?meal/;
-say "$&" if ($bsd =~ $pattern);
+# now is ok
+my $str1 = 'The <B>Perl</B> language was written <B>by Larry Wall</B>';
+say "$str1" if ($str1 =~ s#<B>(.*?)</B>#$1#g);
