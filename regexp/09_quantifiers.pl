@@ -5,15 +5,14 @@ use v5.14;
 
 # Quantifiers are greedy by default and match the longest leftmost.
 
-#   Maximal Minimal Possessive Allowed range
-#   ------- ------- ---------- -------------
-#   {n,m}   {n,m}?  {n,m}+     Must occur at least n times
-#                              but no more than m times
-#   {n,}    {n,}?   {n,}+      Must occur at least n times
-#   {n}     {n}?    {n}+       Must occur exactly n times
-#   *       *?      *+         0 or more times (same as {0,})
-#   +       +?      ++         1 or more times (same as {1,})
-#   ?       ??      ?+         0 or 1 time (same as {0,1})
+# Maximal Minimal Possessive Allowed range
+# ------- ------- ---------- -------------
+# {n,m}   {n,m}?  {n,m}+     Must occur at least n times but no more than m times
+# {n,}    {n,}?   {n,}+      Must occur at least n times
+# {n}     {n}?    {n}+       Must occur exactly n times
+# *       *?      *+         0 or more times (same as {0,})
+# +       +?      ++         1 or more times (same as {1,})
+# ?       ??      ?+         0 or 1 time (same as {0,1})
 
 # Quantifiers metacharacters are useful to reproduce parts of a regex that we
 # want to repeat.
@@ -43,7 +42,7 @@ say "K: $phone_num" if ($phone_num =~ m/[0-9]{10}/); #true, matches 10 digits
 say "L: $phone_num" if ($phone_num =~ m/[0-9]{11}/); #false
 
 #{min,}         match at least 'min' times
-#{min, max}     match at least 'min' but non mor than 'max' times
+#{min, max}     match at least 'min' times but no more than 'max' times
 say "M: $str 5+" if ($str =~ m/[a-z]{5,}/);   #true, match 5 or more letters
 say "N: $str 3,6" if ($str =~ m/[a-z]{3,6}/); #true, match betweeen 3 and 6
 say "O: $year" if ($year =~ m/[0-9]{2,4}/);   #true
