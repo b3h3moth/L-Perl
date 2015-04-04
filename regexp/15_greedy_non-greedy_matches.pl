@@ -31,8 +31,9 @@ use Test::More;
 
 # there is a problem with greedy quantifiers
 my $str = 'The <B>Perl</B> language was written <B>by Larry Wall</B>';
+my $new_str = $str;
+
 say "$str" if ($str =~ s#<B>(.*)</B>#$1#g);
 
 # now is ok
-my $str1 = 'The <B>Perl</B> language was written <B>by Larry Wall</B>';
-say "$str1" if ($str1 =~ s#<B>(.*?)</B>#$1#g);
+say "$new_str" if ($new_str =~ s#<B>(.*?)</B>#$1#g);
