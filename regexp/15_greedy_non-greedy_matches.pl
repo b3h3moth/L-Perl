@@ -4,31 +4,38 @@ use strict;
 use v5.14;
 use Test::More;
 
-# Regexp get more powerful through the use of regex quantifiers, they govern
-# how often a regex component may appear in a matching string.
-#
-# The simplest quantifier is 'the zero or one quantifier', or ?:
-
-my $text = qr/uni?x/;
-my $os = 'unx';
-
-like('unix', $text, "'unix' matches /uni?x/");
-like('unx', $text, "'unx' matches /uni?x/");
-
-done_testing();
-
 # By default the + and * quantifiers are greedy, they try to match as much of
 # the input string as possible. This is dangerous.
 #
-# How can you see, greedy quantifiers start by matching everything at first:
+# Greedy quantifiers start by matching everything at first: sometimes greed is
+# not good. At times, we would like quantifiers to match a minimal piece of
+# string, rather than a maximal piece.
+#
+# For this purpose, Larry Wall created the minimal match or non-greedy
+# quantifiers ??, *?, +?, and {}?.
+#
+# These are the usual quantifiers with a ? appended to them.
+#
+# They have the following meanings:
+# a??     means: match 'a' 0 or 1 times. Try 0 first, then 1;
+# a*?     means: match 'a' 0 or more times, any number of times, but as few
+#                times as possible;
+# a+?     means: match 'a' 1 or more times, at least once, but as few times as
+#                possible;
+# a{n,m}? means: match at least n times, not more than m times, as few times as
+#                possible
+# a{n,}?  means: match at least n times, but as few times as possible;
+# a{n}?   means: match exactly n times.  Because we match exactly n times,
+#                a{n}? is equivalent to a{n} and is just there for notational
+#                consistency.
 
-my $bsd = "My opinion is that OpenBSD is great";
-my $pat = qr/[Oo]pen.*great/;
+my $bsd = "ilikeahotmeal";
+my $pat = qr/hot.*meal/;
 
 say "$&" if ($bsd =~ $pat);
 
 # If you want it to match the minimum number of times possible, the '?'
 # quantifier modifier turns a greedy-quantifier non-greedy:
 
-my $pattern = qr/[Oo]pen.*?great/;
+my $pattern = qr/hot.*?meal/;
 say "$&" if ($bsd =~ $pattern);
