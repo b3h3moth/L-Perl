@@ -7,7 +7,7 @@ use v5.14;
 
 # Maximal Minimal Possessive Allowed range
 # ------- ------- ---------- -------------
-# {n,m}   {n,m}?  {n,m}+     Must occur at least n times but no more than m times
+# {n,m}   {n,m}?  {n,m}+    Must occur at least n times but no more than m times
 # {n,}    {n,}?   {n,}+      Must occur at least n times
 # {n}     {n}?    {n}+       Must occur exactly n times
 # *       *?      *+         0 or more times (same as {0,})
