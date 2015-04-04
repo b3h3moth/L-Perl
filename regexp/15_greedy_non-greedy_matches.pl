@@ -17,5 +17,8 @@ like('unx', $text, "'unx' matches /uni?x/");
 
 done_testing();
 
-# The + and * quantifiers are greedy: they try to match as much of the input
-# string as possible.
+# By default the + and * quantifiers are greedy, they try to match as much of
+# the input string as possible. This is dangerous.
+#
+# If you want it to match the minimum number of times possible, follow the
+# quantifier with a '?'.
