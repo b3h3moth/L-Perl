@@ -3,10 +3,22 @@ use warnings;
 use strict;
 use v5.14;
 
-#quantifiers metacharacters are useful to reproduce parts of a regex that we
-#want to repeat.
+# Quantifiers are greedy by default and match the longest leftmost.  
 
-#{n} match exactly n times
+#   Maximal Minimal Possessive Allowed range
+#   ------- ------- ---------- -------------
+#   {n,m}   {n,m}?  {n,m}+     Must occur at least n times
+#                              but no more than m times
+#   {n,}    {n,}?   {n,}+      Must occur at least n times
+#   {n}     {n}?    {n}+       Must occur exactly n times
+#   *       *?      *+         0 or more times (same as {0,})
+#   +       +?      ++         1 or more times (same as {1,})
+#   ?       ??      ?+         0 or 1 time (same as {0,1})
+
+# Quantifiers metacharacters are useful to reproduce parts of a regex that we
+# want to repeat.
+
+# {n} match exactly n times
 my $lang = "I looooove Perl";
 my $ok = "Ok!!!";
 my $string = "characters";
