@@ -3,9 +3,17 @@ use warnings;
 use strict;
 use v5.14;
 
-# $_ The default parameter for a lot of functions.
+# '$_' The default variable is a parameter for a lot of functions.
+foreach (1..3) { say "$_"; }
 
-# $. Holds the current record or line number of the file handle that was last read. It is read-only and will be reset to 0 when the file handle is closed.
+# '$.' Holds the current line number for the last filehandle accessed.
+open (my $input_file, '<', "/etc/modules") or die("Cannot open file\n");
+
+while (my $line = <$input_file>) {
+    print "$. - $line";
+}
+
+close($input_file);
 
 # $/ Holds the input record separator. The record separator is usually the newline character. However, if $/ is set to an empty string, two or more newlines in the input file will be treated as one.
 
