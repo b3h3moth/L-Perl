@@ -48,126 +48,61 @@ use strict;
 
 # $] Holds a string that identifies which version of Perl you are using. When used in a numeric context, it will be equal to the version number plus the patch level divided by 1000.
 
-$"
+# $" This is the separator used between list elements when an array variable is interpolated into a double-quoted string. Normally, its value is a space character.
 
--- This is the separator used between list elements when an array variable is interpolated into a double-quoted string. Normally, its value is a space character.
+# $; Holds the subscript separator for multidimensional array emulation. Its use is beyond the scope of this book.
 
-$;
+# $! When used in a numeric context, holds the current value of errno. If used in a string context, will hold the error string associated with errno.
 
--- Holds the subscript separator for multidimensional array emulation. Its use is beyond the scope of this book.
+# $@ Holds the syntax error message, if any, from the last eval() function call.
 
-$!
+# $< This UNIX-based variable holds the read uid of the current process.
 
--- When used in a numeric context, holds the current value of errno. If used in a string context, will hold the error string associated with errno.
+# $> This UNIX-based variable holds the effective uid of the current process.
 
-$@
+# $) This UNIX-based variable holds the read gid of the current process. If the process belongs to multiple groups, then $) will hold a string consisting of the group names separated by spaces.
 
--- Holds the syntax error message, if any, from the last eval() function call.
+# $: Holds a string that consists of the characters that can be used to end a word when word-wrapping is performed by the ^ report formatting character. Normally, the string consists of the space, newline, and dash characters.
 
-$<
+# $^D Holds the current value of the debugging flags. For more information.
 
--- This UNIX-based variable holds the read uid of the current process.
+# $^F Holds the value of the maximum system file description. Normally, it's set to 2. The use of this variable is beyond the scope of this book.
 
-$>
+# $^I Holds the file extension used to create a backup file for the in-place editing specified by the -i command line option. For example, it could be equal to ".bak."
 
--- This UNIX-based variable holds the effective uid of the current process.
+# $^L Holds the string used to eject a page for report printing.
 
-$)
+# $^P This variable is an internal flag that the debugger clears so it will not debug itself.
 
--- This UNIX-based variable holds the read gid of the current process. If the process belongs to multiple groups, then $) will hold a string consisting of the group names separated by spaces.
+# $^T Holds the time, in seconds, at which the script begins running.
 
-$:
+# $^W Holds the current value of the -w command line option.
 
--- Holds a string that consists of the characters that can be used to end a word when word-wrapping is performed by the ^ report formatting character. Normally, the string consists of the space, newline, and dash characters.
+# $^X Holds the full pathname of the Perl interpreter being used to run the current script.
 
-$^D
+# $ARGV Holds the name of the current file being read when using the diamond operator (<>).
 
--- Holds the current value of the debugging flags. For more information.
+# @ARGV This array variable holds a list of the command line arguments. You can use $#ARGV to determine the number of arguments minus one.
 
-$^F
+# @F This array variable holds the list returned from autosplit mode. Autosplit mode is associated with the -a command line option.
 
--- Holds the value of the maximum system file description. Normally, it's set to 2. The use of this variable is beyond the scope of this book.
+# @Inc This array variable holds a list of directories where Perl can look for scripts to execute. The list is mainly used by the require statement.
 
-$^I
+# %Inc This hash variable has entries for each filename included by do or require statements. The key of the hash entries are the filenames, and the values are the paths where the files were found.
 
--- Holds the file extension used to create a backup file for the in-place editing specified by the -i command line option. For example, it could be equal to ".bak."
+# %ENV This hash variable contains entries for your current environment variables. Changing or adding an entry affects only the current process or a child process, never the parent process. See the section "Example: Using the %ENV Variable" later in this chapter.
 
-$^L
+# %SIG This hash variable contains entries for signal handlers. For more information about signal handlers
 
--- Holds the string used to eject a page for report printing.
+# _ This file handle (the underscore) can be used when testing files. If used, the information about the last file tested will be used to evaluate the new test.
 
+# DATA This file handle refers to any data following __END__.
 
+# STDERR This file handle is used to send output to the standard error file. Normally, this is connected to the display, but it can be redirected if needed.
 
-$^P
+# STDIN This file handle is used to read input from the standard input file. Normally, this is connected to the keyboard, but it can be changed.
 
--- This variable is an internal flag that the debugger clears so it will not debug itself.
-
-$^T
-
--- Holds the time, in seconds, at which the script begins running.
-
-$^W
-
--- Holds the current value of the -w command line option.
-
-$^X
-
--- Holds the full pathname of the Perl interpreter being used to run the current script.
-
-$ARGV
-
--- Holds the name of the current file being read when using the diamond operator (<>).
-
-@ARGV
-
--- This array variable holds a list of the command line arguments. You can use $#ARGV to determine the number of arguments minus one.
-
-@F
-
--- This array variable holds the list returned from autosplit mode. Autosplit mode is associated with the -a command line option.
-
-@Inc
-
--- This array variable holds a list of directories where Perl can look for scripts to execute. The list is mainly used by the require statement.
-
-
-
-%Inc
-
--- This hash variable has entries for each filename included by do or require statements. The key of the hash entries are the filenames, and the values are the paths where the files were found.
-
-%ENV
-
--- This hash variable contains entries for your current environment variables. Changing or adding an entry affects only the current process or a child process, never the parent process. See the section "Example: Using the %ENV Variable" later in this chapter.
-
-%SIG
-
--- This hash variable contains entries for signal handlers. For more information about signal handlers
-
-_
-
--- This file handle (the underscore) can be used when testing files. If used, the information about the last file tested will be used to evaluate the new test.
-
-DATA
-
--- This file handle refers to any data following __END__.
-
-STDERR
-
--- This file handle is used to send output to the standard error file. Normally, this is connected to the display, but it can be redirected if needed.
-
-STDIN
-
--- This file handle is used to read input from the standard input file. Normally, this is connected to the keyboard, but it can be changed.
-
-STDOUT
-
--- This file handle is used to send output to the standard output file. Normally, this is the display, but it can be changed.
-
-
-
-
-
+# STDOUT This file handle is used to send output to the standard output file. Normally, this is the display, but it can be changed.
 
 #The default (scalar) variable is '$_'
 
