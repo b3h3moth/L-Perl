@@ -39,5 +39,7 @@ say "$str" if ($str =~ s#<B>(.*)</B>#$1#g);
 say "$new_str" if ($new_str =~ s#<B>(.*?)</B>#$1#g);
 
 my $string ='xrockxrooooockxroooooooooooockrocks';
-# non-greedy
+# greedy
 say $1 if ($string =~ /(xr.*ck)/);
+# non-greedy
+say $1 if ($string =~ /(xr.*?ck)/);
