@@ -15,7 +15,7 @@ while (my $line = <$input_file>) {
 
 close($input_file);
 
-# $/ Holds the input record separator. The record separator is usually the newline character. However, if $/ is set to an empty string, two or more newlines in the input file will be treated as one.
+# $/ Holds the input record separator, usually the newline character.
 
 # $, The output separator for the print() function. Nor-mally, this variable is an empty string. However, setting $, to a newline might be useful if you need to print each element in the parameter list on a separate line.
 
