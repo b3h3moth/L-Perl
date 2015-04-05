@@ -100,6 +100,7 @@ close($input_file);
 # %Inc This hash variable has entries for each filename included by do or require statements. The key of the hash entries are the filenames, and the values are the paths where the files were found.
 
 # %ENV This hash variable contains entries for your current environment variables. Changing or adding an entry affects only the current process or a child process, never the parent process. See the section "Example: Using the %ENV Variable" later in this chapter.
+say "$ENV{HOME}";
 
 # %SIG This hash variable contains entries for signal handlers. For more information about signal handlers
 
