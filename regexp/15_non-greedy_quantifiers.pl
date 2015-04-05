@@ -33,13 +33,13 @@ my $str = 'The <B>Perl</B> language was written <B>by Larry Wall</B>';
 my $new_str = $str;
 
 # there is a problem with greedy quantifiers
-say "$str" if ($str =~ s#<B>(.*)</B>#$1#g);
+say "A: $str" if ($str =~ s#<B>(.*)</B>#$1#g);
 
 # now is ok
-say "$new_str" if ($new_str =~ s#<B>(.*?)</B>#$1#g);
+say "A: $new_str" if ($new_str =~ s#<B>(.*?)</B>#$1#g);
 
-my $string ='xrockxrooooockxroooooooooooockrocks';
+my $string ='xrockxrooockxroooooooockrocks';
 # greedy
-say $1 if ($string =~ /(xr.*ck)/);
+say "B: $1" if ($string =~ /(r.*ck)/);
 # non-greedy
-say $1 if ($string =~ /(xr.*?ck)/);
+say "B: $1" if ($string =~ /(r.*?ck)/);
