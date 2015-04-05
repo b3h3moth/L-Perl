@@ -43,3 +43,6 @@ my $string = 'xrockxroockzrooockxroooock';
 say "B: $1" if ($string =~ /(r.*ck)/);
 # non-greedy
 say "B: $1" if ($string =~ /(r.*?ck)/);
+
+# greedy
+say "C: $1" if ($string =~ /(r.+ck)/);
