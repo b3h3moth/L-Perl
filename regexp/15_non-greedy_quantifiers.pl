@@ -29,11 +29,13 @@ use Test::More;
 #                a{n}? is equivalent to a{n} and is just there for notational
 #                consistency.
 
-# there is a problem with greedy quantifiers
 my $str = 'The <B>Perl</B> language was written <B>by Larry Wall</B>';
 my $new_str = $str;
 
+# there is a problem with greedy quantifiers
 say "$str" if ($str =~ s#<B>(.*)</B>#$1#g);
 
 # now is ok
 say "$new_str" if ($new_str =~ s#<B>(.*?)</B>#$1#g);
+
+
