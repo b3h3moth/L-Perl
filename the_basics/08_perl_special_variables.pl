@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
+use v5.14;
 
 # $_ The default parameter for a lot of functions.
 
@@ -96,24 +97,19 @@ use strict;
 
 # _ This file handle (the underscore) can be used when testing files. If used, the information about the last file tested will be used to evaluate the new test.
 
-# DATA This file handle refers to any data following __END__.
-
 # STDERR This file handle is used to send output to the standard error file. Normally, this is connected to the display, but it can be redirected if needed.
 
 # STDIN This file handle is used to read input from the standard input file. Normally, this is connected to the keyboard, but it can be changed.
 
 # STDOUT This file handle is used to send output to the standard output file. Normally, this is the display, but it can be changed.
 
-#The default (scalar) variable is '$_'
-
-#smallest echo program :-)
-while (<>) {
-    #each line is assigned to $_
-    print;
-
-    #print "$_";
-    #It's the same thing
-}
-
-# @_ default arguments
-# @ARGV default command-line arguments
+# 'DATA' This file handle refers to any data following __END__.
+my @lines = <DATA>;
+foreach (@lines) { print $_; }
+__END__
+Do you understand
+why this
+example is
+at the bottom
+of the program?
+I hope...yes :)
