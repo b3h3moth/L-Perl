@@ -13,3 +13,5 @@ use v5.14;
 # $' The string following whatever was matched by the last successful pattern
 #    match (the text to the right)
 
+my $text = 'leftabcdefghiright';
+say "$`:$&:$'" if ($text =~ /def/);
