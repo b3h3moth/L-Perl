@@ -1,4 +1,4 @@
-package FirstModule;
+package First;
 
 use warnings;
 use strict;
@@ -12,8 +12,10 @@ use strict;
 
 sub reverse_string {
     my $text = $_[0];
-    my $text = reverse shift;
+    $text = reverse shift;
 
     return $text;
 }
 
+# because a library must return true
+1;
