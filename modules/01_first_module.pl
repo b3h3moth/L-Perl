@@ -1,9 +1,9 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
+use First; # module name
 
-use FirstModule;
+die ("Usage: $0 <string>\n") if (@ARGV != 1);
 
-my $text = "giulia ti scoperei a dovere";
-
-my $new_text = reverse_string($text);
+# routine from module is called (prepend the package name)
+print First::reverse_string($ARGV[0]);
