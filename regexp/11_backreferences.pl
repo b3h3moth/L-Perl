@@ -3,9 +3,12 @@ use warnings;
 use strict;
 use v5.14;
 
-#backreferences are simply matching variables that can be used inside a regexp,
-#they are strictly associated with matching variables $1, $2, $3, etc. (outside
-#a regex), backreferences are g1, g2, g3, etc..
+# Backreferences are simply matching variables that can be used inside a regexp.
+#
+# Grouped patterns are stored in the special variables $1, $2, etc., these
+# variables can be used outside of the regex. However, you can also refer to
+# any matches from grouped patterns inside a regex by using something called
+# backreferences.
 
 my $str = "perl regular expression expression regexp regex RegEX RE";
 my $year = "1233456779";
