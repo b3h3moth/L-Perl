@@ -40,10 +40,10 @@ close($input_file);
 # $? Holds the status of the last pipe close, back-quote string, or system() function.
 
 # $& Holds the string that was matched by the last successful pattern match.
-
 # $` Holds the string that preceded whatever was matched by the last successful pattern match.
-
 # $' Holds the string that followed whatever was matched by the last successful pattern match.
+my $text = 'PerlLanguageProgramming';
+say "$`_$&_$'" if ($text =~ /[Ll]anguage/);
 
 # $+ Holds the string matched by the last bracket in the last successful pattern match. For example, the statement /Fieldname: (.*)|Fldname: (.*)/ && ($fName = $+); will find the name of a field even if you don't know which of the two possible spellings will be used.
 
