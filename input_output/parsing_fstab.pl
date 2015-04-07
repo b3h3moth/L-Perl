@@ -3,6 +3,7 @@ use warnings;
 use strict;
 use diagnostics;
 
+# file to pars
 my $filename = '/etc/fstab';
 
 open(my $fh, '<', $filename)
