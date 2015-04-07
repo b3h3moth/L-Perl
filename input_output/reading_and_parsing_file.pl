@@ -13,7 +13,7 @@ while ( my $line = <$spies_to_espy> ) {
 
     #my ($name, $case_number, $description ) = split /\W/, $line;
     #print "$name ($case_number): $description\n";
-    print "$1\n" if ($line =~ /^UUID=(\w{8})/);
+    print "$1\n" if ($line =~ /^UUID=(\w{8}-\w{4})/);
 }
 
 close($spies_to_espy) or die "Could not close `$filename': $!";
