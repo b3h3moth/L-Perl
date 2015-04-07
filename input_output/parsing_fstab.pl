@@ -20,4 +20,4 @@ while ( my $line = <$fh> ) {
 }
 
 close($fh)
-    or die "Could not close `$filename': $!";
+    or die "Could not close '$filename': $!";
