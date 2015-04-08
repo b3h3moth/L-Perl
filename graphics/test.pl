@@ -19,3 +19,5 @@ for my $face (@faces) {
     print $face->{height}, "\n";
     print $face->{weigth}, "\n";
 }
+
+@faces = detect_objects($cascade, $file);
