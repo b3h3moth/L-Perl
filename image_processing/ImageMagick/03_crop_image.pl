@@ -8,7 +8,7 @@ my $image  = Image::Magick->new;
 
 my $filename = 'eve.jpg';
 my $file_copy;
-($file_copy = $filename) =~ s/^\w{3}/copy/;
+($file_copy = $filename) =~ s/^.+\./crop\./;
 
 open(IMAGE, $filename);
 $image->Read(file=>\*IMAGE);
