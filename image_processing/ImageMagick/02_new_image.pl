@@ -7,8 +7,19 @@ use Image::Magick;
 # instantiate an image object
 my $image  = Image::Magick->new;
 # with size
-my $image2 = Image::Magick->new(size=>'200x200');
+# my $image2 = Image::Magick->new(size=>'200x200');
 
-# finally, destroying it
+my $filename = 'eve.jpg';
+
+open(IMAGE, $filename);
+$image->Read(file=>\*IMAGE);
+
+
+
+
+
+# finally, destroying object
 undef $image;
-undef $image2;
+
+# close filehandle
+close(IMAGE);
