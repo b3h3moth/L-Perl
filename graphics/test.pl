@@ -11,6 +11,11 @@ my $file = '/home/behemoth/wallpaper/leopardo.jpg';
 
 my $detector = Image::ObjectDetect->new($cascade);
 
-@faces= $detector->detect($file);
+my @faces= $detector->detect($file);
 
-
+for my $face (@faces) {
+    print $face->{x}, "\n";
+    print $face->{y}, "\n";
+    print $face->{height}, "\n";
+    print $face->{weigth}, "\n";
+}
