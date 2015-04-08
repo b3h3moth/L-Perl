@@ -8,7 +8,7 @@ my $image  = Image::Magick->new;
 
 my $filename = 'eve.jpg';
 my $file_copy;
-($file_copy = $filename) =~ s/^\w{3}/copy/;
+($file_copy = $filename) =~ s/^.+\./scale\./;
 
 open(IMAGE, $filename);
 $image->Read(file=>\*IMAGE);
@@ -16,7 +16,7 @@ $image->Read(file=>\*IMAGE);
 # scale an image
 $image->Scale(geometry=>'800x600');
 
-# make a scaled image
+# make scaled image
 $image->Write($file_copy);
 
 undef $image;
