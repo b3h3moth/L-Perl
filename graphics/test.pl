@@ -10,3 +10,7 @@ my $cascade = 'file.xml';
 my $file = '/home/behemoth/wallpaper/leopardo.jpg';
 
 my $detector = Image::ObjectDetect->new($cascade);
+
+@faces= $detector->detect($file);
+
+
