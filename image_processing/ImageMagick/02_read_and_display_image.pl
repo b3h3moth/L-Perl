@@ -6,7 +6,7 @@ use Image::Magick;
 
 # instantiate an image object
 my $image  = Image::Magick->new;
-# with size
+# or with size
 # my $image2 = Image::Magick->new(size=>'200x200');
 
 my $filename = 'eve.jpg';
@@ -17,8 +17,8 @@ my $file_copy;
 open(IMAGE, $filename);
 $image->Read(file=>\*IMAGE);
 
-# make a copy
-$image->Write($file_copy);
+# display an image
+$image->Display();
 
 # finally, destroying object
 undef $image;
