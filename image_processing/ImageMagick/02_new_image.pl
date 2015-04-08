@@ -10,13 +10,15 @@ my $image  = Image::Magick->new;
 # my $image2 = Image::Magick->new(size=>'200x200');
 
 my $filename = 'eve.jpg';
+my $file_copy;
+($file_copy = $filename) =~ s/^\w{3}/copy/;
 
+# read an image
 open(IMAGE, $filename);
 $image->Read(file=>\*IMAGE);
 
-
-
-
+# make a copy
+$image->Write($file_copy);
 
 # finally, destroying object
 undef $image;
