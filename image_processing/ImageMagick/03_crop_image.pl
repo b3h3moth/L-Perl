@@ -17,7 +17,8 @@ my $file_copy;
 open(IMAGE, $filename);
 $image->Read(file=>\*IMAGE);
 
-$image->Crop(geometry=>'100x100');
+# crop an image
+$image->Crop(geometry=>'200x200');
 
 # make an image
 $image->Write($file_copy);
