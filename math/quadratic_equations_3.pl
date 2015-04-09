@@ -1,7 +1,10 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
+Muse warnings;
+use strict;
 use Benchmark;
+
+# Compute the larger root of a quadratic polynomial
 sub quadratic {
- # Compute the larger root of a quadratic polynomial
 my ($a, $b, $c) = @_;
 return (-$b + sqrt($b*$b - 4*$a * $c)) / 2*$a;
 }
