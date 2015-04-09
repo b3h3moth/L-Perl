@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-Muse warnings;
+use warnings;
 use strict;
 use Benchmark;
 
