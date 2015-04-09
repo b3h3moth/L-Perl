@@ -11,6 +11,6 @@ sub AUTOLOAD{
 
     # print arguments
     local $" = ', ';
-    say "I'm in AUTOLOAD(@_)";
+    say "AUTOLOAD(@_), subroutine \'$AUTOLOAD\' doesn\'t exist!";
 }
 
