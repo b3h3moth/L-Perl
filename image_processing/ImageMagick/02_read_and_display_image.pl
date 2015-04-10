@@ -9,7 +9,10 @@ my $image  = Image::Magick->new;
 # or with size
 # my $image2 = Image::Magick->new(size=>'200x200');
 
-my $filename = 'eve.jpg';
+die ("Usage: $0 <img> (to display)\n") if (@ARGV != 1);
+
+my $filename = $ARGV[0];
+chomp($filename);
 
 # read an image
 open(IMAGE, $filename);
