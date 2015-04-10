@@ -26,4 +26,15 @@ my $city = ['torino','londra','madrid','genova'];
 
 my @club_and_city = ( $club, $city );
 
-say $club_and_city[0][0].' =  '.$club_and_city[1][0];
+say $club_and_city[0][0].':'.$club_and_city[1][0];
+
+# Fourth method:
+my @music = (
+    ['AC DC', 'Nirvana', 'Bob Marley', 'Metallica'],
+    ['Rock','Grunge','Reggae','Metal'],
+);
+
+say $music[0][0].':'.$music[1][0];
+say $music[0][1].':'.$music[1][1];
+say $music[0][2].':'.$music[1][2];
+say $music[0][3].':'.$music[1][3];
