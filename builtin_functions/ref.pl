@@ -22,11 +22,16 @@ my $scalar = 'perl';
 my %hash = ('lang' => 'perl');
 
 my $ref_scalar = \$scalar;
+my $ref_hash = \%hash;
 
 if (ref($ref_scalar) eq 'SCALAR') {
     say $ref_scalar.' is a reference to scalar';
 } elsif (ref($ref_scalar) eq '') {
-    say $ref_scalar.' is not a reference';
+    say 'It\'s not a scalar reference';
 }
 
-ref = \%hash;
+if (ref($ref_hash) eq 'HASH') {
+    say $ref_hash.' is a reference to hash';
+} elsif (ref($ref_hash) eq '') {
+    say 'It\'s not an hash reference';
+}
