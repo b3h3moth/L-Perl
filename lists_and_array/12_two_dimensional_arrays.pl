@@ -1,4 +1,11 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
-use v5.14;
+
+# How to create two-dimensional array.
+
+my @men = ('marco','franco','luca','claudio');
+my @women = ('clara','francesca','giada','giulia');
+
+# first method: by using array references.
+
