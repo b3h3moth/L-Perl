@@ -14,3 +14,4 @@ my $ref_women = \@women;
 
 my @men_and_women = ( $ref_men, $ref_women );
 
+say $men_and_women[0][0].' loves '.$men_and_women[1][0];
