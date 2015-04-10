@@ -19,6 +19,8 @@ use v5.14;
 # Regexp.
 
 my $scalar = 'perl';
+my %hash = ('lang' => 'perl');
+
 my $ref_scalar = \$scalar;
 
 if (ref($ref_scalar) eq 'SCALAR') {
@@ -26,3 +28,5 @@ if (ref($ref_scalar) eq 'SCALAR') {
 } elsif (ref($ref_scalar) eq '') {
     say $ref_scalar.' is not a reference';
 }
+
+ref = \%hash;
