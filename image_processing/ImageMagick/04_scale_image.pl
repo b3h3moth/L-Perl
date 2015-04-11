@@ -6,8 +6,8 @@ use Image::Magick;
 
 my $image  = Image::Magick->new;
 
-my $file_copy;
-($file_copy = $filename) =~ s/^.+\./scale\./;
+my $file_output;
+($file_output = $filename) =~ s/^.+\./scale\./;
 
 open(IMAGE, $filename);
 $image->Read(file=>\*IMAGE);
@@ -16,7 +16,7 @@ $image->Read(file=>\*IMAGE);
 $image->Scale(geometry=>'800x600');
 
 # make scaled image
-$image->Write($file_copy);
+$image->Write($file_output);
 
 undef $image;
 close(IMAGE);
