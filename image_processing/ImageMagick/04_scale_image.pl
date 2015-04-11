@@ -11,9 +11,9 @@ my $image  = Image::Magick->new;
 my $file_input = $ARGV[0];
 
 my $file_output;
-($file_output = $filename) =~ s/^.+\./scale\./;
+($file_output = $file_input) =~ s/^.+\./scale\./;
 
-open(IMAGE, $filename);
+open(IMAGE, $file_input);
 $image->Read(file=>\*IMAGE);
 
 # scale an image
