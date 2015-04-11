@@ -6,7 +6,6 @@ use Image::Magick;
 
 my $image  = Image::Magick->new;
 
-my $filename = 'eve.jpg';
 my $file_copy;
 ($file_copy = $filename) =~ s/^.+\./copy\./;
 
