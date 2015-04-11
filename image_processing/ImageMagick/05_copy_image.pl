@@ -9,10 +9,11 @@ my $image  = Image::Magick->new;
 die("Usage: $0 <input img> (scale)\n") if (@ARGV != 1);
 
 my $file_input = $ARGV[0];
-my $file_copy;
-($file_copy = $filename) =~ s/^.+\./copy\./;
 
-open(IMAGE, $filename);
+my $file_copy;
+($file_copy = $file_input) =~ s/^.+\./copy\./;
+
+open(IMAGE, $file_input);
 $image->Read(file=>\*IMAGE);
 
 # make a copy
