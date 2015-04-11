@@ -6,6 +6,8 @@ use Image::Magick;
 
 my $image  = Image::Magick->new;
 
+die("Usage: $0 <input img> (scale)\n") if (@ARGV != 1);
+
 my $file_copy;
 ($file_copy = $filename) =~ s/^.+\./copy\./;
 
