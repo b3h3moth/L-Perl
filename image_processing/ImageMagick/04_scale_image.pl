@@ -4,6 +4,8 @@ use strict;
 use v5.14;
 use Image::Magick;
 
+die("Usage: $0 <input img> (scale)\n") if (@ARGV != 1);
+
 my $image  = Image::Magick->new;
 
 my $file_output;
