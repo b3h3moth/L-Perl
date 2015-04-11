@@ -4,9 +4,9 @@ use strict;
 use v5.14;
 use Image::Magick;
 
-my $image  = Image::Magick->new;
-
 die ("Usage: $0 <input img> (crop)>\n") if (@ARGV != 1);
+
+my $image  = Image::Magick->new;
 
 my $file_input = $ARGV[0];
 (my $file_output = $file_input) =~ s/^.+\./crop\./;
