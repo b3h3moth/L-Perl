@@ -10,14 +10,14 @@ die("Usage: $0 <input img> (scale)\n") if (@ARGV != 1);
 
 my $file_input = $ARGV[0];
 
-my $file_copy;
-($file_copy = $file_input) =~ s/^.+\./copy\./;
+my $file_output;
+($file_output = $file_input) =~ s/^.+\./copy\./;
 
 open(IMAGE, $file_input);
 $image->Read(file=>\*IMAGE);
 
 # make a copy
-$image->Write($file_copy);
+$image->Write($file_output);
 
 undef $image;
 close(IMAGE);
