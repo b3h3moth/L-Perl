@@ -22,5 +22,7 @@ $image->Scale(geometry=>'800x600');
 # make scaled image
 $image->Write($file_output);
 
+say 'input img: '.$file_input."\n".'output img (scaled): '.$file_output;
+
 undef $image;
 close(IMAGE);
