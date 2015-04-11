@@ -8,6 +8,8 @@ die("Usage: $0 <input img> (scale)\n") if (@ARGV != 1);
 
 my $image  = Image::Magick->new;
 
+my $file_input = $ARGV[0];
+
 my $file_output;
 ($file_output = $filename) =~ s/^.+\./scale\./;
 
