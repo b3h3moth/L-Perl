@@ -17,3 +17,8 @@ foreach my $row (@tab) {
         print "$column\n";
     }
 }
+
+# csv file is:
+# genova, milano, torino, venezia
+# roma, napoli, firenze, bologna
+# palermo, catania, perugia, lecce
