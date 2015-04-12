@@ -13,3 +13,6 @@ say 'nero in English is: '.$ref_hash->{nero};
 
 # dereference entire hash with '%' prefix
 say %$ref_hash;
+
+my @it_colors = keys %{$ref_hash};
+say @it_colors;
