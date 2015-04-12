@@ -6,6 +6,7 @@ use v5.14;
 # Make anonymous hash simply substitute curly bracket for the parentheses; this
 # produces a hash which has no name, but which is referenced by the variable
 # $ref_hash.
-my $ref_hash = {uno => 1, due => 2};
+my $ref_hash = {nero => 'black', bianco => 'white', => arancione => 'orange'};
 
 # dereference with '->' operator:
+
