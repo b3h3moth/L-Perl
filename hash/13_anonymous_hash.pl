@@ -16,8 +16,13 @@ say %$ref_hash;
 
 # dereference only keys
 my @it_colors = keys %{$ref_hash};
-say @it_colors;
+
+for my $colori (@it_colors) {
+    say "$colori";
+}
 
 # dereference only values
 my @en_colors = values %{$ref_hash};
-say @en_colors;
+for my $colors (@en_colors) {
+    say "$colors";
+}
