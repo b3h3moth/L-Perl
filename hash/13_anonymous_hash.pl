@@ -28,3 +28,7 @@ my @en_colors = values %{$ref_hash};
 for my $colors (@en_colors) {
     say "$colors";
 }
+
+foreach my $col (keys %$ref_hash) {
+    say "$col in english is \'$ref_hash->{$col}\'";
+}
