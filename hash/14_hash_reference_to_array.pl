@@ -3,10 +3,14 @@ use warnings;
 use strict;
 use v5.14;
 
-# hash reference
-my $record = { name => 'luca', email => 'my@mail.com'};
+my @record = (
+    { name => 'luca', email => 'luca@mluca.com'},
+    { name => 'gino', email => 'gino@gino.com'},
+    { name => 'paola', email => 'paol@paola.com'},
+    { name => 'carla', email => 'carla@carla.com'},
+    { name => 'giusy', email => 'giusy@giusy.com'},
+);
 
-# to add a hash reference to an array, push it on:
-my @database;
-push @database, $record;
-# @database is an array, each element is an hash reference
+foreach my $rec (@record) {
+    say "$rec->{name}:$rec->{email}";
+}
