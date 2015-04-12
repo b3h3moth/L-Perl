@@ -11,4 +11,5 @@ my $ref_hash = {nero => 'black', bianco => 'white', => arancione => 'orange'};
 # dereference with '->' operator:
 say 'nero in English is: '.$ref_hash->{nero};
 
+# dereference entire hash with '%' prefix
 say %$ref_hash;
