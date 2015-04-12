@@ -11,3 +11,4 @@ my $ref_hash = {nero => 'black', bianco => 'white', => arancione => 'orange'};
 # dereference with '->' operator:
 say 'nero in English is: '.$ref_hash->{nero};
 
+say %$ref_hash;
