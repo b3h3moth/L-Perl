@@ -29,6 +29,8 @@ for my $colors (@en_colors) {
     say "$colors";
 }
 
+# loop entire hash
 foreach my $col (keys %$ref_hash) {
     say "$col in english is \'$ref_hash->{$col}\'";
 }
+
