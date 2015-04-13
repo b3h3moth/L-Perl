@@ -17,4 +17,6 @@ Books:
   by chromatic 
   Covers Perl 5.16
 
-
+- Unix and Perl to the Rescue! (Cambridge University Press, 2012)
+  by Keith Brandam, Ian Korf
+  Covers Perl 5.14
