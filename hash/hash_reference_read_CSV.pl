@@ -17,7 +17,7 @@ while (<>) {
 }
 
 foreach my $rec (@db) {
-    say $rec->{name};
+    say "$rec->{name}\tfrom $rec->{city}\ttel: $rec->{tel}";
 }
 
 # csv file is:
