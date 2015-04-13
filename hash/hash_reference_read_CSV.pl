@@ -20,4 +20,8 @@ foreach my $rec (@db) {
     say "$rec->{name}\tfrom $rec->{city}\ttel: $rec->{tel}";
 }
 
-# csv file is:
+# file.csv:
+# luca, New York, 123490,
+# gina, Rome, 786756,
+# pino, Madrid, 7867,
+# maria, Firenze, 6790890
