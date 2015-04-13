@@ -9,9 +9,10 @@ use v5.14;
 # position of the first occurrence of substring in string.
 #
 # The index() function has an optional third argument that indicates the
-# starting position from which it should start looking.
+# starting position from which it should start looking, if position is omitted,
+# starts searching from the beginning of the string.
 #
-#
+# If the substring is not found, index() returns -1.
 my $string = 'The Perl language programming by Larry Wall';
 my $substr = 'ming';
 
