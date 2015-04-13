@@ -12,5 +12,6 @@ use v5.14;
 my $singer = 'bob marley';
 my $text = 'acab';
 
-say "I love $singer" if ($singer =~ /bob (?=marley)/);
-say "1.3.1.2." if ($text =~ /ac(?=ab)/);
+say "A: I love $singer" if ($singer =~ /bob\s?(?=marley)/);
+say "B: 1.3.1.2." if ($text =~ /ac(?=ab)/);
+say "C: get up stand up ... " if ($singer =~ /bob\s?(?!geldof)/);
