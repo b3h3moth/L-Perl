@@ -25,3 +25,6 @@ Books:
   by Randal L. Schwartz, brian d foy, and Tom Phoenix
   Covers Perl 5.14
 
+- Effective Perl Programming, Second Edition (Addison Wesley, 2010)
+  by Joseph N. Hall, Joshua A. McAdams, Brian d foy
+  Covers Perl 5.10
