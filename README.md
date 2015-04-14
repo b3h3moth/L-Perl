@@ -28,3 +28,6 @@ Books:
 - Effective Perl Programming, Second Edition (Addison Wesley, 2010)
   by Joseph N. Hall, Joshua A. McAdams, Brian d foy
   Covers Perl 5.10
+
+- Higher-Order Perl (Elsevier, 2005)
+  by Mark Jason Dominus
