@@ -21,3 +21,5 @@ if ((my $result = rindex($string, $substr)) != -1) {
 } else {
     say 'the substring was not found';
 }
+# Note: Even though rindex() searches through the string from right to left,
+# the first character of the string is still the leftmost character.
