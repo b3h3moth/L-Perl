@@ -11,3 +11,13 @@ use v5.14;
 # is exactly the same as for index().
 #
 # It returns ­1 if the substring is not found.
+
+my $string = "get up stand up, stand up for your rights";
+my $substr = "up";
+
+if ((my $result = rindex($string, $substr)) != -1) {
+    say $string;
+    say 'the substring was found at (r)index: '."$result";
+} else {
+    say 'the substring was not found';
+}
