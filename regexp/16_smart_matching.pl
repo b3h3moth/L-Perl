@@ -11,4 +11,10 @@ use v5.20.1;
 my $x = 10;
 my $y = 20;
 
-say 'A: doesn\'t match' if ($x ~~ $y);
+say "A:" unless ($x ~~ $y);
+
+my $str = '20 years old';
+say "B:" if ($str ~~ $y);
+
+my $re = qr/old/;
+say "C: $&" if ($str ~~ $re);
