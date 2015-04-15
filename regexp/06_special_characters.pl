@@ -3,7 +3,7 @@ use warnings;
 use strict;
 use v5.14;
 
-#to match special characters use backslah before the special character.
+# To match a literal instance of a metacharacter, escape it with a backslash \
 my $eng_actor = "Mr. Bean";
 my $or = "a|b";
 my $home = "/home/behemoth";
