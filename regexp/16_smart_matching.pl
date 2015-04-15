@@ -3,8 +3,11 @@ use warnings;
 use strict;
 use v5.20.1;
 
+# This feature is experimental.
+
 # The smart match operator '~~' compares two operands and returns a true value
 # if they match.
+
 my $left_operand;
 my $right_operand;
 
