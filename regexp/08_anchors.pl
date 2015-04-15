@@ -1,14 +1,23 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
-use v5.14;
+use v5.20.1;
+
+# Anchors
+# ^     Match string start (or line, if /m is used)
+# $     Match string end (or line, if /m is used) or before newline
+# \b    Match word boundary (between \w and \W)
+# \B    Match except at word boundary (between \w and \w or \W and \W)
+# \A    Match string start (regardless of /m)
+# \Z    Match string end (before optional newline)
+# \z    Match absolute string end
+# \G    Match where previous m//g left off
+# \K    Keep the stuff left of the \K, don't include it in $&
 
 my $game = "football";
 my $login = "s89287j";
 my $lang = "Perl";
 my $empty = "";
-
-#anchors
 
 #pattern matches from the beginning of the string '^'
 say "I like to play $game - ^1" if ($game =~ m/^foot/);  #true
