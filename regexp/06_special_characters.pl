@@ -4,6 +4,31 @@ use strict;
 use v5.14;
 
 # To match a literal instance of a metacharacter, escape it with a backslash \
+
+# Escape sequences:
+# \a       Alarm (beep)
+# \e       Escape
+# \f       Formfeed
+# \n       Newline
+# \r       Carriage return
+# \t       Tab
+# \037     Char whose ordinal is the 3 octal digits, max \777
+# \o{2307} Char whose ordinal is the octal number, unrestricted
+# \x7f     Char whose ordinal is the 2 hex digits, max \xFF
+# \x{263a} Char whose ordinal is the hex number, unrestricted
+# \cx      Control-x
+# \N{name} A named Unicode character or character sequence
+# \N{U+263D} A Unicode character by hex ordinal
+
+# \l  Lowercase next character
+# \u  Titlecase next character
+# \L  Lowercase until \E
+# \U  Uppercase until \E
+# \F  Foldcase until \E
+# \Q  Disable pattern metacharacters until \E
+# \E  End modification
+
+
 my $eng_actor = "Mr. Bean";
 my $or = "a|b";
 my $home = "/home/behemoth";
