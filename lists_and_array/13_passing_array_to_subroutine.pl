@@ -6,7 +6,12 @@ use v5.14;
 my @names_a = qw(luca alberto guido giusy);
 my @names_b = qw(giusy franco claudia giovanna);
 
-compare_array(\@names_a, \@names_b);
+if (compare_array(\@names_a, \@names_b) == 0) {
+    say 'compare_array() returns 0, true';
+} else {
+    say 'compare_array() returns 0, false';
+}
+
 
 sub compare_array {
     my ($arr1, $arr2) = @_;
