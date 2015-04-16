@@ -2,13 +2,15 @@
 use warnings;
 use strict;
 use v5.14;
+use Data::Dumper;
 
 my @names_a = qw(luca franco giovanni angela pino alberto guido giusy maria);
 my @names_b = qw(giusy franco claudia giovanna maurizio guido mario maria);
 
 my @array_test = compare_array(\@names_a, \@names_b);
+my $len_arr = @array_test;
 
-say @array_test;
+print Dumper \@array_test;
 
 sub compare_array {
     my ($arr1, $arr2) = @_;
