@@ -11,11 +11,10 @@ sub compare_array {
 
     foreach my $elem1 (@arr1) {
         foreach my $elem2 (@arr2) {
-            if ($arr1[$elem1] eq $arr2[$elem2]) {
+            if ($elem1 eq $elem2) {
                 say 'uguali';
             }
         }
     }
 }
-
-
+compare_array(\@names, \@country);
