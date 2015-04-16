@@ -3,8 +3,8 @@ use warnings;
 use strict;
 use v5.14;
 
-my @names_a = qw(l alberto guido giusy);
-my @names_b = qw(italy france greece spain hollan);
+my @names_a = qw(luca alberto guido giusy);
+my @names_b = qw(giusy franco claudia giovanna);
 
 compare_array(\@names_a, \@names_b);
 
@@ -15,7 +15,9 @@ sub compare_array {
         for (my $y=0; $y < @$arr2; $y++) {
             #say "$arr1->[$x] = $arr2->[$y]";
             if ($arr1->[$x] eq $arr2->[$y]) {
-                say 'equal';
+                return 0;
+            } else {
+                return -1;
             }
         }
     }
