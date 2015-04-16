@@ -10,10 +10,9 @@ sub compare_array {
     my (@arr1, @arr2) = @_;
 
     foreach my $elem1 (@arr1) {
+            say @$elem1;
         foreach my $elem2 (@arr2) {
-            if ($elem1 eq $elem2) {
-                say 'uguali';
-            }
+            say @$elem2;
         }
     }
 }
