@@ -30,7 +30,7 @@ print Dumper \%hash_test;
 
 sub compare_hash {
     my ($arr1, $arr2) = @_;
-    my @result;
+    my %result;
 
     for (my $x=0; $x < @$arr1; $x++) {
         for (my $y=0; $y < @$arr2; $y++) {
@@ -42,5 +42,5 @@ sub compare_hash {
         }
     }
 
-    return @result;
+    return %result;
 }
