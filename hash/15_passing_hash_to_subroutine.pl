@@ -28,16 +28,21 @@ my %hash_test = compare_hash(\%hash_club_a, \%hash_club_b);
 
 print Dumper \%hash_test;
 
+# returns equals hash
 sub compare_hash {
-    my ($arr1, $arr2) = @_;
+    my ($rif_a, $rif_b) = @_;
     my %result;
 
-    for (my $x=0; $x < @$arr1; $x++) {
-        for (my $y=0; $y < @$arr2; $y++) {
+    my $rifa = keys %$rif_a;
+    my $rifb = keys %$rif_b;
+    say "$rifa:$rifb";
+    exit;
+    for (my $x=0; $x < @$rif_a; $x++) {
+        for (my $y=0; $y < @$rif_b; $y++) {
             # useful for debugging purpose, compare each array element
-            # say "$arr1->[$x] = $arr2->[$y]";
-            if ($arr1->[$x] eq $arr2->[$y]) {
-                push(@result, $arr1->[$x]);
+            # say "$rif_a->[$x] = $rif_b->[$y]";
+            if ($rif_a->[$x] eq $rif_b->[$y]) {
+                push(@result, $rif_a->[$x]);
             }
         }
     }
