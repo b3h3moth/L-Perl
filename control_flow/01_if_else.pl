@@ -19,7 +19,6 @@ if ($name eq 'luca' && $surname eq 'suriano') {
     say "Ma ciao";
 }
 
-#sia unless sia if hanno la direttiva else
 if ($name eq 'lucas') {
     say "hey ciao";
 } else {
