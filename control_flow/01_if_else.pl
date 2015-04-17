@@ -19,9 +19,6 @@ if ($name eq 'luca' && $surname eq 'suriano') {
     say "Ma ciao";
 }
 
-#unless forma negata di if
-say "Non sei luca" unless $name eq 'luca';
-
 #sia unless sia if hanno la direttiva else
 if ($name eq 'lucas') {
     say "hey ciao";
