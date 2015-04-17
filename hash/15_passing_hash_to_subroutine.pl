@@ -20,9 +20,12 @@ my %hash_club_b = (
     juventus    => 'torino'
 );
 
-my %hash_test = compare_hash(\%hash_club_a, \%hash_club_b);
+if (compare_hash(\%hash_club_a, \%hash_club_b) != 0) {
+    say "hashes are different";
+} else {
+    say "Equals";
+}
 
-print Dumper \%hash_test;
 
 # returns equals hash
 sub compare_hash {
@@ -32,14 +35,8 @@ sub compare_hash {
     while (my ($club_a, $country_a) = each $rif_a) {
         while (my ($club_b, $country_b) = each $rif_b) {
             if ($club_a eq $club_b) {
-                %result = ( "$club_a" => "$country_a" );
+                return 0;
             }
         }
     }
-
-    while (my ($club, $paese) = sort each %result) {
-        say "$club $paese";
-    }
-
-    return %result;
 }
