@@ -40,3 +40,5 @@ sub compare_hash {
         }
     }
 }
+
+# test with exists() function
