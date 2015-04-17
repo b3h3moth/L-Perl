@@ -29,13 +29,13 @@ sub compare_hash {
     my ($rif_a, $rif_b) = @_;
     my %result;
 
-    #while (my ($club_a, $country_a) = sort each $rif_a) {
-    #    while (my ($club_b, $country_b) = sort each $rif_b) {
-    #        if ($club_a eq $club_b) {
-    #            %result = ( $club_a => $country_a);
-    #        }
-    #    }
-    #}
+    while (my ($club_a, $country_a) = sort each $rif_a) {
+        while (my ($club_b, $country_b) = sort each $rif_b) {
+            if ($club_a eq $club_b) {
+                say $club_a;
+            }
+        }
+    }
 
     return %result;
 }
