@@ -24,7 +24,9 @@ my %hash_club_b = (
     dinamo      => 'kiev'
 );
 
-compare_hash(\%hash_club_a, \%hash_club_b);
+my %hash_test = compare_hash(\%hash_club_a, \%hash_club_b);
+
+print Dumper \%hash_test;
 
 sub compare_hash {
     my ($arr1, $arr2) = @_;
