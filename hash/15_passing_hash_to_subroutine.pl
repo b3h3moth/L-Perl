@@ -32,9 +32,13 @@ sub compare_hash {
     while (my ($club_a, $country_a) = sort each $rif_a) {
         while (my ($club_b, $country_b) = sort each $rif_b) {
             if ($club_a eq $club_b) {
-                say $club_a;
+                %result = ( "$club_a" => "$country_a" );
             }
         }
+    }
+
+    while (my ($club, $paese) = sort each %result) {
+        say "$club $paese";
     }
 
     return %result;
