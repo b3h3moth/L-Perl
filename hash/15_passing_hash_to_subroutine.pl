@@ -14,7 +14,7 @@ my %hash_club_a = (
     chelsea     => 'londra'
 );
 
-my %hash_club_a = (
+my %hash_club_b = (
     atletico    => 'madrid',
     barca       => 'barcellona',
     lazio       => 'roma',
