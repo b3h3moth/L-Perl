@@ -1,9 +1,7 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
-use v5.10;
-use Test::More;
-use Data::Dumper;
+use v5.14;
 
 my $name = 'luca';
 my $surname = 'suriano';
