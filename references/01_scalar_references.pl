@@ -48,3 +48,9 @@ sub invert2 {
 my $os = 'SO ym si DSBnepO';
 invert2($os);
 say "$os";
+
+sub invert3 {
+    my $str = @_;
+    return reverse($$ref);
+}
+say invert3($os);
