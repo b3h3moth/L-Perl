@@ -49,9 +49,11 @@ my $os = 'SO ym si DSBnepO';
 invert2($os);
 say "D: $os";
 
+my $sequence = 'AAABBBCCCDDD';
+
 sub invert3 {
-    my $str = $_[0];
-    $$ref = reverse($$ref);
+    my $str = @_;
+    reverse($$str);
 }
-say $os;
-say 'E: '.invert2($os);
+
+say 'E: '.invert3($os);
