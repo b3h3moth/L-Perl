@@ -28,8 +28,8 @@ say $$globref;
 my $os_name = 'DSBnepO';
 my $ref = \$os_name;
 
-say " address memory: $ref";    #address memory
-say "default OS name: $$ref";   #dereference
+say "A:  address memory: $ref";    #address memory
+say "B: default OS name: $$ref";   #dereference
 
 #modifica il valore
 sub invert {
@@ -39,7 +39,7 @@ sub invert {
 
 invert(\$os_name);
 
-say "The greatest OS is: $os_name";
+say "C: The greatest OS is: $os_name";
 
 sub invert2 {
     $_[0] = reverse $_[0];
@@ -47,10 +47,11 @@ sub invert2 {
 
 my $os = 'SO ym si DSBnepO';
 invert2($os);
-say "$os";
+say "D: $os";
 
 sub invert3 {
-    my $str = @_;
-    return reverse($$ref);
+    my $str = $_[0];
+    $$ref = reverse($$ref);
 }
-say invert3($os);
+say $os;
+say 'E: '.invert2($os);
