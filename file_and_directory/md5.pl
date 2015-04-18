@@ -11,4 +11,9 @@ die("Usage: $0 <filename>\n") if (@ARGV != 1);
 my ($infile) = $ARGV[0];
 
 open(FILE, '<', "$infile") or die("Can't open file \'$infile\': $!\n");
+
+my $result = Digest::MD5->new->addfile(*FILE)->hexdigest;
+
+say $result;
+
 close(FILE);
