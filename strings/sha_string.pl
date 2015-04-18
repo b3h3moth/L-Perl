@@ -17,3 +17,6 @@ say 'sha1_babase644: '.$result;
 undef $result;
 $result = sha256($text);
 say 'sha1_sha256: '.$result;
+undef $result;
+my $results = sha384_hex($text);
+say 'sha384_hex: '.$results;
