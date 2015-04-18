@@ -21,3 +21,6 @@ say 'sha1_sha256: '.$digest4;
 
 my $digest4 = sha384_hex($text);
 say 'sha384_hex: '.$digest4;
+
+my $digest5 = sha512_base64($text);
+say 'sha512_base64: '.$digest5;
