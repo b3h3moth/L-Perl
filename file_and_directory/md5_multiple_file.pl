@@ -20,3 +20,6 @@ for my $file (@infile) {
     
     close(FILE);
 }
+
+# works well also with: 
+# ./md5_multiple_file.pl *
