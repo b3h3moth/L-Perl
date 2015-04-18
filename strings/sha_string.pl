@@ -13,4 +13,7 @@ $result = sha1_hex($text);
 say 'sha1_hex: '.$result;
 undef $result;
 $result = sha1_base64($text);
-say 'sha1_base64: '.$result;
+say 'sha1_babase644: '.$result;
+undef $result;
+$result = sha256($text);
+say 'sha1_sha256: '.$result;
