@@ -40,4 +40,5 @@ if ($opt{p}) {
     exit;
 }
 
+# Any other arguments that were specified on the command line.
 say "Other arguments were: @ARGV";
