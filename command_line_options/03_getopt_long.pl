@@ -25,8 +25,8 @@ GetOptions(
     "flag"      => \$flag,
     
     # how to associate arguments with particular options:
-    "number=i"  => \$number,
-    "string=s"  => \$string,
+    "number=i"  => \$number, # 'i' = integer
+    "string=s"  => \$string, # 's' = string
 
     "version"   => sub {print "1.0\n"; exit},
     "help"      => sub {print $usage; exit},
