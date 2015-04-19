@@ -14,11 +14,12 @@ Options:
 --string <string>
 ";
 
-# variables that will correspond to each of the possible command-line options.
+# Variables that will correspond to each of the possible command-line options.
 my $flag;
 my $number;
 my $string;
 
+# GetOptions() function to parse the specified command-line options.
 GetOptions(
     "flag"      => \$flag,
     "number=i"  => \$number,
