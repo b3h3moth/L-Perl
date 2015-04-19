@@ -4,6 +4,7 @@ use strict;
 use v5.14;
 use Getopt::Std;
 
+# Getopt::Std is used for single-character options
 my $usage = "Usage: $0 [options] <arguments...>
 
 Options:
