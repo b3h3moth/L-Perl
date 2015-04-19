@@ -20,10 +20,14 @@ my $number;
 my $string;
 
 # GetOptions() function to parse the specified command-line options.
+
 GetOptions(
     "flag"      => \$flag,
+    
+    # how to associate arguments with particular options:
     "number=i"  => \$number,
     "string=s"  => \$string,
+
     "version"   => sub {print "1.0\n"; exit},
     "help"      => sub {print $usage; exit},
 );
