@@ -19,7 +19,10 @@ Options:
 die $usage unless @ARGV;
 
 my %opt;
-
+# The string 'hvp:' specifies that there are four options: -h, -v, and -p. 
+# The colon following p indicates that -p expects an additional argument. 
+#
+# The other options do not take arguments.
 getopts('hvp:', \%opt);
 
 if ($opt{h}) {
