@@ -37,3 +37,5 @@ if ($string) {
 if ($number) {
     print "number set: $number\n";
 }
+
+print "Other arguments were: @ARGV\n";
