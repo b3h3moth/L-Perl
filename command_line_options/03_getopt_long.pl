@@ -14,6 +14,7 @@ Options:
 --string <string>
 ";
 
+# variables that will correspond to each of the possible command-line options.
 my $flag;
 my $number;
 my $string;
