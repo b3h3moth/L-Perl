@@ -20,9 +20,14 @@ die $usage unless @ARGV;
 
 my %opt;
 
-getopts('hv:', \%opt);
+getopts('hvp:', \%opt);
 
-if ($opt{h}) {print $usage; exit}
+if ($opt{h}) {
+    print $usage; 
+    exit;
+}
+
 if ($opt{v}) {print "version 1.0\n"; exit}
+if ($opt{p}) {print "version 1.0\n"; exit}
 
 say "Other arguments were: @ARGV";
