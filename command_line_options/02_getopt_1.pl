@@ -5,6 +5,8 @@ use v5.14;
 use Getopt::Std;
 
 # Getopt::Std is used for single-character options
+
+# options supported by the program
 my $usage = "Usage: $0 [options] <arguments...>
 
 Options:
@@ -12,6 +14,8 @@ Options:
 -v version
 ";
 
+# the die() function on line 12 will print the usage message only if the 
+# program is not given any arguments on the command line. 
 die $usage unless @ARGV;
 
 my %opt;
