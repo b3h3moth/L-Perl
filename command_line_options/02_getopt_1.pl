@@ -30,7 +30,14 @@ if ($opt{h}) {
     exit;
 }
 
-if ($opt{v}) {print "version 1.0\n"; exit}
-if ($opt{p}) {print "version 1.0\n"; exit}
+if ($opt{v}) {
+    print "Version basics 0.1\n"; 
+    exit;
+}
+
+if ($opt{p}) {
+    print "Parameter is: $opt{p}\n"; 
+    exit;
+}
 
 say "Other arguments were: @ARGV";
