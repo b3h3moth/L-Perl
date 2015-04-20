@@ -14,3 +14,9 @@ for (say '     Init: ', my $x = 0;
  {
      say "$x";
  }
+
+my @unix = qw(OpenBSD FreeBSD NetBSD HPUX GNU/Linux Solaris);
+
+for (my $x=0; $x<@unix; $x++) {
+    say $unix[$x];
+}
