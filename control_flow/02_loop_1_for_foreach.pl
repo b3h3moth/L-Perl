@@ -16,25 +16,25 @@ say "B: $_ * $_ = ", $_ * $_ for 6 .. 10;
 
 for my $i (1 .. 5)
 {
-    say "$i * $i = ", $i * $i;
+    say "C: $i * $i = ", $i * $i;
 }
 
 my @numbers = (1..5);
 for (@numbers)
 {
     $_ **= 2;
-    say "C: $_ ";
+    say "D: $_ ";
 }
 
 for (1..5) {
-    say "D: $_";
+    say "E: $_";
 }
 
 my @skill = qw(perl c c++ awk zsh bash python sed);
 for (@skill) {
-    say "E: $_";
+    say "F: $_";
 }
 
 foreach (@skill) {
-    say "F: $_";
+    say "G: $_";
 }
