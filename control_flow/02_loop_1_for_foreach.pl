@@ -1,52 +1,31 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
-use v5.10;
+use v5.14;
 use Test::More;
 use Data::Dumper;
 
-#DIRETTIVE DI CICLO
-#Perl tratta i nomi for e foreach in modo interscambiabile
-print "foreach\n";
+# foreach loop
 foreach (1 .. 5)
 {
-    say "$_ * $_ = ", $_ * $_;
+    say "A: $_ * $_ = ", $_ * $_;
 }
 
-#forma postfissa
-print "\nForma postfissa\n";
-say "$_ * $_ = ", $_ * $_ for 6 .. 10;
+# postfix 
+say "B: $_ * $_ = ", $_ * $_ for 6 .. 10;
 
-#con variabile
-print "\ncon variabile\n";
 for my $i (1 .. 5)
 {
     say "$i * $i = ", $i * $i;
 }
 
-#ITERAZIONE E ALIASING
-#ossia modifica i valori in situ, sul posto
-print "\nAliasing\n";
-my @numeri = (1 .. 10);
-$_ **= 2 for @numeri;
-print Dumper \@numeri;
-
-for (@numeri)
+my @numbers = (1..5);
+for (@numbers)
 {
     $_ **= 2;
-    print "$_ ";
+    say "C: $_ ";
 }
 
-#CICLO STILE C
-print "\nCiclo stile C\n";
-for (my $i = 0; $i <= 5; $i += 1)
-{
-    say $i;
+for (1..5) {
+    say "D: $_";
 }
-
-for (say 'Inizializzazione: ', my $x = 0;
-     say "Iterazione: $x" and $x < 5;
-     say 'Incremento: ' . $x++)
- {
-     say "$x";
- }
