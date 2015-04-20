@@ -32,5 +32,9 @@ for (1..5) {
 
 my @skill = qw(perl c c++ awk zsh bash python sed);
 for (@skill) {
-    say "$_";
+    say "E: $_";
+}
+
+foreach (@skill) {
+    say "F: $_";
 }
