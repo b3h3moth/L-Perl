@@ -29,3 +29,8 @@ for (@numbers)
 for (1..5) {
     say "D: $_";
 }
+
+my @skill = qw(perl c c++ awk zsh bash python sed);
+for (@skill) {
+    say "$_";
+}
