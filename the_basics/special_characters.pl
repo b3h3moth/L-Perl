@@ -13,6 +13,7 @@ use v5.14;
 # \L lowercase all folowing character until \E
 # \u uppercase next character
 # \U uppercase all folowing character until \E
-my $text = "\lPerl";
-my $name = "\ul\Uuca";
-say $text.' '.$name;
+my $name = "\LBEHEMOTH";
+my $text = "\\\t\umy name is \u\'$name\', \ui \"\Ulove\E\" \uper\lL\t\\";
+
+say $text;
