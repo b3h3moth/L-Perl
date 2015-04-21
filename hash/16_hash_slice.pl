@@ -13,5 +13,8 @@ my %colors = (
 );
 
 # To initialize multiple elements of a hash at once:
-@colors{qw(gr cy ma re)} = (1) x 4;
+@colors{qw(green cyan red gray violet)} = (0) x 5 ;
 
+while (my($key, $value) = sort each %colors) {
+    say $key."\t".$value;
+}
