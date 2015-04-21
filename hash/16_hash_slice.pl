@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
+use diagnostics;
 use v5.14;
 
 # A slice is a way to select a few elements of an array, list, or hash instead 
@@ -19,6 +20,12 @@ my %student = (
 my @arr1 = ($student{"carla"}, $student{"luca"}, $student{"maria"});
 
 say join ' => ', @arr1;
+
+# get keys and values
+my @keys = keys %student;
+my @values = values %student;
+say "Students are: ".join ', ', @keys;
+say "      ID are: ".join ', ', @values;
 
 # To initialize multiple elements of a hash at once:
 @student{qw(mario pina clara lucia iris)} = (101010) x 5 ;
