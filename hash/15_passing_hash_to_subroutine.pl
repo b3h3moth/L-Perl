@@ -24,8 +24,10 @@ if ($result != 0) {
     say "Equals";
 }
 
-
-# returns equals hash
+# This example is only for educational purpose, it had been better with hash
+# idioms. Now it is not a good Perl program!
+#
+# compare_hash() returns equals hash
 sub compare_hash {
     my ($rif_a, $rif_b) = @_;
     my %result;
