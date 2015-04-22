@@ -3,6 +3,10 @@ use warnings;
 use strict;
 use v5.14;
 
+# Because each key exists only once in a hash, assigning the same key to a hash
+# multiple times stores only the most recent value associated with that key.
+# This behavior is useful, for example, to find unique elements of a list.
+
 my %stuff = (
     A => 189,
     nome => 'luca',
