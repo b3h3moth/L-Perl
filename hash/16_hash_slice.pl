@@ -39,3 +39,8 @@ my %club_it = ( juventus => 'torino', milan => 'milano' );
 my %club_en = ( chelsea => 'london', mancity => 'manchester' );
 
 @club_it{ keys %club_en} = values %club_en;
+
+# print each key/value
+while (my($key, $value) = sort each %club_it) {
+    say $key."\t".$value;
+}
