@@ -38,5 +38,7 @@ my %stuff = (
 # find and print unique elements
 my @elem = keys %stuff;
 undef @stuff{ @elem };
+# Using undef with a hash slice sets the values of the hash to undef. 
+# This idiom is the cheapest way to perform set operations with a hash.
 my @unique = keys %stuff;
 say join ', ',@unique;
