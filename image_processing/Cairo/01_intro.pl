@@ -17,13 +17,17 @@ my $surface = Cairo::ImageSurface->create('argb32', 100, 100);
 # Create a drawing context. Cairo::Context is the main object.
 my $cr = Cairo::Context->create($surface);
 
+# green strip
 # Create a rectangle (x, y, width, height)
-$cr->rectangle (0, 0, 34, 100);
-
+$cr->rectangle (0, 0, 33, 100);
 # Set the colour of the firt stripe (Red, Green, Blue)
 $cr->set_source_rgb (0, 25, 0);
-
 # Fill the rectangle
+$cr->fill;
+
+# white strip
+$cr->rectangle (33, 0, 34, 100);
+$cr->set_source_rgb (1, 1, 1);
 $cr->fill;
 
 #$cr->show_page;
