@@ -31,6 +31,7 @@ my %stuff = (
     B => 89,
 );
 
+# find and print unique elements
 my @elem = keys %stuff;
 undef @stuff{ @elem };
 my @unique = keys %stuff;
