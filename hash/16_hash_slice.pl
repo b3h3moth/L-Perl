@@ -42,5 +42,5 @@ my %club_en = ( chelsea => 'london', mancity => 'manchester' );
 
 # print each key/value
 while (my($key, $value) = sort each %club_it) {
-    say $key."\t".$value;
+    say $key.':'.$value;
 }
