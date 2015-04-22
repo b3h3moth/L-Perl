@@ -3,7 +3,7 @@ use warnings;
 use strict;
 use v5.14;
 
-my %hash = (
+my %stuff = (
     A => 189,
     nome => 'luca',
     arsenal => 'londra',
@@ -31,3 +31,7 @@ my %hash = (
     B => 89,
 );
 
+my @elem = keys %stuff;
+undef @stuff{ @elem };
+my @unique = keys %stuff;
+say join ', ',@unique;
