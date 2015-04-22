@@ -33,3 +33,9 @@ say "      ID are: ".join ', ', @values;
 while (my($key, $value) = sort each %student) {
     say $key."\t".$value;
 }
+
+# merge two hash
+my %club_it = ( juventus => 'torino', milan => 'milano' );
+my %club_en = ( chelsea => 'london', mancity => 'manchester' );
+
+@club_it{ keys %club_en} = values %club_en;
