@@ -8,6 +8,8 @@ use Cairo;
 # It supports multiple output targets, including PNG, PDF and SVG.  
 # Cairo produces identical output on all those targets.
 my $surface = Cairo::ImageSurface->create ('argb32', 100, 100);
+
+# Cairo::Context is the main object.
 my $cr = Cairo::Context->create ($surface);
 
 $cr->rectangle (10, 10, 40, 40);
