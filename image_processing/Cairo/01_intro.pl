@@ -9,6 +9,7 @@ use Cairo;
 # Cairo produces identical output on all those targets.
 
 # Scope of the program is to create Italian Flag.
+my $italian_flag = 'italia.png';
 
 # Create a drawing surface, it's 100x100
 my $surface = Cairo::ImageSurface->create('argb32', 100, 100);
@@ -19,10 +20,13 @@ my $cr = Cairo::Context->create($surface);
 # Create a rectangle (x, y, width, height)
 $cr->rectangle (0, 0, 34, 100);
 
-# Set the colours of the firt stripe (green)
-$cr->set_source_rgb (10, 105, 25);
+# Set the colour of the firt stripe (Red, Green, Blue)
+$cr->set_source_rgb (0, 25, 0);
+
+# Fill the rectangle
 $cr->fill;
 
-$cr->show_page;
+#$cr->show_page;
 
-$surface->write_to_png ('output.png');
+# Write the surface to the png file
+$surface->write_to_png ($italian_flag);
