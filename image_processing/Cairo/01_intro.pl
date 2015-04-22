@@ -4,6 +4,9 @@ use strict;
 use v5.14;
 use Cairo;
 
+# Cairo provides Perl bindings for the 2D vector graphics library cairo.  
+# It supports multiple output targets, including PNG, PDF and SVG.  
+# Cairo produces identical output on all those targets.
 my $surface = Cairo::ImageSurface->create ('argb32', 100, 100);
 my $cr = Cairo::Context->create ($surface);
 
