@@ -30,6 +30,11 @@ $cr->rectangle (33, 0, 34, 100);
 $cr->set_source_rgb (1, 1, 1);
 $cr->fill;
 
+# red strip
+$cr->rectangle (67, 0, 33, 100);
+$cr->set_source_rgb (1, 0, 0);
+$cr->fill;
+
 #$cr->show_page;
 
 # Write the surface to the png file
