@@ -11,9 +11,9 @@ use v5.14;
 # grep EXPRESSION, LIST;
 
 # firstss method ith BLOCK
-my @list = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-my @new_list = grep {$_ > 5} @list,;
+my @numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+my @greater_five = grep {$_ > 5} @numbers;
 
-for my $elem (@new_list) {
+for my $elem (@greater_five) {
     print "$elem ";
 }
