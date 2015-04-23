@@ -14,7 +14,7 @@ use v5.14;
 my @integers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 my @greater_five = grep {$_ > 5} @integers;
 
-say join(', ', @greater_five);
+say 'A: '.join(', ', @greater_five);
 
 # get list from words that start with vowels, then print the result
 my @song = qw(no woman no cry
@@ -23,10 +23,10 @@ my @song = qw(no woman no cry
               Oba observing the 'ypocrites);
 my @words = grep {/^[aeiou]/i} @song;
 
-say join(', ', @words);
+say 'B: '.join(', ', @words);
 
 # get sorted list from numbers greater equals to 15, then print the result
 my @numbers = (1, -9, 15, 18.9, -64, 4, 2.3, 7, -5, 16, 28.8, 2.4, 0, 83, -2);
 my @result = sort { $a <=> $b } grep { $_ >= 10 } @numbers;
 
-say join ', ', @result;
+say 'C: '.join ', ', @result;
