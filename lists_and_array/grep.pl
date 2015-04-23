@@ -17,3 +17,12 @@ my @greater_five = grep {$_ > 5} @numbers;
 for my $elem (@greater_five) {
     print "$elem ";
 }
+
+my @song = qw(no woman no cry
+              said I remember when we used to sit
+              in the government yard in Trenchtown
+              Oba observing the 'ypocrites);
+my @words = grep {/^[aeiou]/i} @song;
+
+say join(', ', @words);
+
