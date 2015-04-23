@@ -12,7 +12,7 @@ use v5.14;
 
 # firstss method ith BLOCK
 my @list = qw(1 2 3 4 5 6 7 8 9 10);
-my @new_list = grep { $_ > 5} @list;
+my @new_list = grep {$_ > 5} @list;
 
 for my $elem (@new_list) {
     print "$elem ";
