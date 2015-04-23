@@ -10,13 +10,10 @@ use v5.14;
 # grep BLOCK       LIST;
 # grep EXPRESSION, LIST;
 
-# firstss method ith BLOCK
 my @numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 my @greater_five = grep {$_ > 5} @numbers;
 
-for my $elem (@greater_five) {
-    print "$elem ";
-}
+say join(', ', @greater_five);
 
 my @song = qw(no woman no cry
               said I remember when we used to sit
