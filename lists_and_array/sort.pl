@@ -2,6 +2,10 @@
 use warnings;
 use strict;
 
+# sort LIST
+# sort BLOCK LIST
+# sort SUBNAME LIST
+#
 my @data = qw(31 BSD linux 3  OpenBSD 1973 0 unix freeBSD kernel 69 48 25);
 print "before sorting: @data\n";
 
