@@ -15,3 +15,5 @@ use List::Util qw(reduce);
 # undef is returned. If @list only contains one element then that element is 
 # returned and BLOCK is not executed.
 
+my $foo = reduce { $a > $b ? $a : $b } 1..10;
+
