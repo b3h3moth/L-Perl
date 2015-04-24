@@ -44,8 +44,8 @@ print "   num. descending: @numbers\n";
 
 # Compare string
 @data = sort {$a <=> $b} @data;
-print "         after <=>: @data\n";
+print "   compare strings: @data\n";
 
 # Compare mix strings and numbers
 @data = sort {$a <=> $b or $a cmp $b} @data;
-print "after <=>orcmp: @data\n";
+print "   strings OR num.: @data\n";
