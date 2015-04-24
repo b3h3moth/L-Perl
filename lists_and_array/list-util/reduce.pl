@@ -2,6 +2,7 @@
 use warnings;
 use strict;
 use v5.14;
+use List::Util qw(reduce);
 
 # $result = reduce { BLOCK } @list
 #
@@ -13,3 +14,4 @@ use v5.14;
 # Returns the result of the last call to the BLOCK. If @list is empty then 
 # undef is returned. If @list only contains one element then that element is 
 # returned and BLOCK is not executed.
+
