@@ -16,6 +16,10 @@ use List::Util qw(reduce);
 # returned and BLOCK is not executed.
 
 # how to get maximum
-my $max = reduce { $a > $b ? $a : $b } 2..28;
+my $max = reduce { $a > $b ? $a : $b } 25..75;
 say $max;
+
+# how to get minimum
+my $min = reduce { $a > $b ? $b : $a } 25..75;
+say $min;
 
