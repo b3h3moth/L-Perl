@@ -17,9 +17,9 @@ use List::Util qw(reduce);
 
 # how to get maximum
 my $max = reduce { $a > $b ? $a : $b } 25..75;
-say $max;
+say "max: $max";
 
 # how to get minimum
 my $min = reduce { $a > $b ? $b : $a } 25..75;
-say $min;
+say "min: $min";
 
