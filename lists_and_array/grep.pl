@@ -3,12 +3,12 @@ use warnings;
 use strict;
 use v5.14;
 
+# grep BLOCK       LIST;
+# grep EXPRESSION, LIST;
+# 
 # The grep builtin takes a list and produces another list of all values 
 # matching grep's criteria. In scalar context, returns the number of times the 
 # expression was true.
-#
-# grep BLOCK       LIST;
-# grep EXPRESSION, LIST;
 
 # get list from numbers greater than 5, then print the result
 my @integers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
