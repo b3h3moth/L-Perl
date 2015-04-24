@@ -12,6 +12,7 @@ print substr($quote,26,3), "\n";
 print substr($quote,30,6), "\n";
 print substr($quote,37,9), "\n";
 print substr($quote,47,5), "\n";
+
 #string replacement
 substr($quote,47,5) = "Figa!";
 print $quote, "\n";
