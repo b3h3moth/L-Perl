@@ -12,7 +12,7 @@ use strict;
 # integer less than, equal to, or greater than 0, depending on how the elements
 # of the list are to be ordered.
 
-my @data = qw(31 BSD linux 3  OpenBSD 1973 0 unix freeBSD kernel 69 48 25);
+my @data = qw(j BSD linux 3  OpenBSD 1973 Gnu unix freeBSD kernel 69 arch 25);
 print "before sorting: @data\n";
 
 # Sorting lexically
@@ -22,6 +22,10 @@ print " after sorting: @data\n";
 # Sorting with explicit sort routine
 @data = sort {$a cmp $b} @data;
 print "     after cmp: @data\n";
+
+# Sorting with case-insensitively
+@data = sort {uc($a) cmp uc($b)} @data;
+print "case-insensitively: @data\n";
 
 #compare strings (warnings will appear)
 @data = sort {$a <=> $b} @data;
