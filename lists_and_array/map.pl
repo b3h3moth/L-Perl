@@ -14,5 +14,7 @@ use v5.14;
 # returns the total number of elements so generated.
 
 # convert lowercase characters to uppercase characters
-my @lower = (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s);
+my @lower = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm');
 my @upper = map { uc } @lower;
+
+say join ', ',@upper;
