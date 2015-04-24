@@ -12,15 +12,14 @@ use strict;
 # integer less than, equal to, or greater than 0, depending on how the elements
 # of the list are to be ordered.
 
-# Sorting lexically
 my @data = qw(31 BSD linux 3  OpenBSD 1973 0 unix freeBSD kernel 69 48 25);
 print "before sorting: @data\n";
 
-#basic alphanumerical sort
+# Sorting lexically
 @data = sort @data;
 print " after sorting: @data\n";
 
-#compare alphabetic
+# Sorting with explicit sort routine
 @data = sort {$a cmp $b} @data;
 print "     after cmp: @data\n";
 
