@@ -4,6 +4,7 @@ use strict;
 use v5.14;
 use List::Util qw(sum);
 
+# sum() returns the numerical sum of all the elements of the list
 my @greater_five = qw(1 2 3 4 5);
 my @greater_six = qw(6 7 8 9 10);
 
