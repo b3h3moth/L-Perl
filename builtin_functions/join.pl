@@ -3,7 +3,7 @@ use warnings;
 use strict;
 use v5.14;
 
-# join(expr, list)
+# join EXPR, LIST
 # Joins the separate strings of list into a single string with fields separated
 # by the value of expr, and returns that new string.
 
