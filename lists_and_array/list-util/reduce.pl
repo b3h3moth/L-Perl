@@ -15,6 +15,7 @@ use List::Util qw(reduce);
 # undef is returned. If @list only contains one element then that element is 
 # returned and BLOCK is not executed.
 
-my $result = reduce { $a > $b ? $a : $b } 1..10;
-say $result;
+# how to get maximum
+my $max = reduce { $a > $b ? $a : $b } 2..28;
+say $max;
 
