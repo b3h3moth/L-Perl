@@ -27,6 +27,10 @@ print "     after cmp: @data\n";
 @data = sort {uc($a) cmp uc($b)} @data;
 print "case-insensitively: @data\n";
 
+# Sorting with reversed order
+@data = sort {$b cmp $a} @data;
+print " reverse order: @data\n";
+
 #compare strings (warnings will appear)
 @data = sort {$a <=> $b} @data;
 print "     after <=>: @data\n";
