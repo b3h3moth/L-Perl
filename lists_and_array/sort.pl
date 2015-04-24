@@ -15,16 +15,16 @@ use strict;
 my @data = qw(j BSD linux 3  OpenBSD 1973 Gnu unix freeBSD kernel 69 arch 25);
 my @numbers = qw(2 9 35 4 100 8 0 27 9 73 48 4 2 73 10 6 102 374 8 3 742);
 
-print "before sorting: @data\n";
-print "before sorting: @numbers\n";
+print "    before sorting: @data\n";
+print "    before sorting: @numbers\n";
 
 # Sorting lexically
 @data = sort @data;
-print " after sorting: @data\n";
+print "     after sorting: @data\n";
 
 # Sorting with explicit sort routine
 @data = sort {$a cmp $b} @data;
-print "     after cmp: @data\n";
+print "         after cmp: @data\n";
 
 # Sorting with case-insensitively
 @data = sort {uc($a) cmp uc($b)} @data;
@@ -32,15 +32,15 @@ print "case-insensitively: @data\n";
 
 # Sorting with reversed order
 @data = sort {$b cmp $a} @data;
-print " reverse order: @data\n";
+print "     reverse order: @data\n";
 
  # sort numerically ascending
 @data = sort {$a <=> $b} @numbers;
-print " num. ascending: @data\n";
+print "    num. ascending: @data\n";
 
 # sort numerically descending
 @data = sort {$b <=> $a} @data;
-print " num. descending: @numbers\n";
+print "   num. descending: @numbers\n";
 
 
 #compare strings (warnings will appear)
