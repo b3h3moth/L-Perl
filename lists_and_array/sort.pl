@@ -13,7 +13,10 @@ use strict;
 # of the list are to be ordered.
 
 my @data = qw(j BSD linux 3  OpenBSD 1973 Gnu unix freeBSD kernel 69 arch 25);
+my @numbers = qw(2 9 35 4 100 8 0 27 9 73 48 4 2 73 10 6 102 374 8 3 742);
+
 print "before sorting: @data\n";
+print "before sorting: @numbers\n";
 
 # Sorting lexically
 @data = sort @data;
@@ -30,6 +33,15 @@ print "case-insensitively: @data\n";
 # Sorting with reversed order
 @data = sort {$b cmp $a} @data;
 print " reverse order: @data\n";
+
+ # sort numerically ascending
+@data = sort {$a <=> $b} @numbers;
+print " num. ascending: @data\n";
+
+# sort numerically descending
+@data = sort {$b <=> $a} @data;
+print " num. descending: @numbers\n";
+
 
 #compare strings (warnings will appear)
 @data = sort {$a <=> $b} @data;
