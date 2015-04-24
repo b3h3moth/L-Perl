@@ -34,21 +34,18 @@ print "case-insensitively: @data\n";
 @data = sort {$b cmp $a} @data;
 print "     reverse order: @data\n";
 
- # sort numerically ascending
+ # Sorting numerically ascending
 @data = sort {$a <=> $b} @numbers;
 print "    num. ascending: @data\n";
 
-# sort numerically descending
+# Sorting numerically descending
 @data = sort {$b <=> $a} @data;
 print "   num. descending: @numbers\n";
 
-
-#compare strings (warnings will appear)
+# Compare string
 @data = sort {$a <=> $b} @data;
-print "     after <=>: @data\n";
+print "         after <=>: @data\n";
 
-no warnings;
-#compare mix strings and numbers
+# Compare mix strings and numbers
 @data = sort {$a <=> $b or $a cmp $b} @data;
 print "after <=>orcmp: @data\n";
-use warnings;
