@@ -14,11 +14,17 @@ use v5.14;
 my $text = "Perl is one the best languages to manage UNIX systems";
 my $perl_version = 5.20;
 
-say "A: on strings" if ($text ~~ /perl/i);
-say "B: on numbers" if ($perl_version ~~ 5.20);
+say "A: strings" if ($text ~~ /perl/i);
+say "B: numbers" if ($perl_version ~~ 5.20);
 
 my @italian_names = qw(mario luca gabriele michele maria lucia giovanni);
 my @english_names = qw(mario luca gabriele michele maria lucia giovanni);
 
 # The arrays have the same elements
-say "C: on array" if (@italian_names ~~ @english_names);
+say "C: array" if (@italian_names ~~ @english_names);
+
+my @ita_football_team = qw(juventus milan inter roma lazio napoli palermo);
+my @eng_football_team = qw(juventus milan inter roma lazio napoli palermo);
+
+# The arrays have the same elements
+say "D: hash" if (@ita_football_team ~~ @eng_football_team);
