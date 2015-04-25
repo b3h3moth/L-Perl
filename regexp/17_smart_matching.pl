@@ -11,16 +11,8 @@ use v5.14;
 # so it keeps you from doing too much typing.
 # Returns a true value if operands match.
 
-my $text = 'perl';
-say "Perl is the best textuage to manage UNIX systems" if ($text ~~ /perl/i);
+my $text = "Perl is one the best languages to manage UNIX systems";
+my $perl_version = 5.20;
 
-my $x = 10;
-my $y = 20;
-
-say "A:" unless ($x ~~ $y);
-
-my $str = '20 years old';
-say "B:" if ($str ~~ $y);
-
-my $re = qr/old/;
-say "C: $&" if ($str ~~ $re);
+say "A: on strings" if ($text ~~ /perl/i);
+say "B: on numbers" if ($perl_version ~~ 5.20);
