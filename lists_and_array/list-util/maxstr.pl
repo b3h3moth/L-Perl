@@ -8,8 +8,8 @@ use List::Util qw(maxstr);
 # Treats all the entries in the list as strings and returns the highest string
 # as defined by the gt (greater than) operator. If the list is empty then undef
 # is returned.
-my @numbers = qw(take 12 a 23 walk 34 on 45 the 56 wild 67 side 78 Lou Reed);
-my $max_str = maxstr @numbers;
+my @list = qw(take 12 a 23 walk 34 on 45 the 56 wild 67 side 78 Lou Reed);
+my $max_str = maxstr @list;
 
-say "list: ".join ', ',@numbers; 
+say "list: ".join ', ',@list; 
 say "highest string: $max_str";
