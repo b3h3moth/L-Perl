@@ -10,5 +10,6 @@ use List::Util qw(max);
 
 my @numbers = qw(827 47 10, 1 83 38 81 39 5 45 100 820 829 37 83 743 93 483);
 my $max_elem = max @numbers;
-say "List: ".join ', ',@numbers;
-say "max: $max_elem";
+
+say "list: ".join ', ',@numbers;
+say "highest value: $max_elem";
