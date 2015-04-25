@@ -11,8 +11,8 @@ use v5.14;
 # so it keeps you from doing too much typing.
 # Returns a true value if operands match.
 
-my $lang = 'perl';
-say "Perl is the best language to manage UNIX systems" if ($lang ~~ /perl/i);
+my $text = 'perl';
+say "Perl is the best textuage to manage UNIX systems" if ($text ~~ /perl/i);
 
 my $x = 10;
 my $y = 20;
