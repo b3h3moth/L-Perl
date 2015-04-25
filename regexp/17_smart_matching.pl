@@ -2,6 +2,7 @@
 use warnings;
 use strict;
 use v5.14;
+use List::Util qw(max);
 
 # The smart match operator ~~ looks at both of its operands and decides on its
 # own how it should compare them. If the operands look like numbers, it does a
@@ -28,3 +29,8 @@ my @eng_football_team = qw(juventus milan inter roma lazio napoli palermo);
 
 # The arrays have the same elements
 say "D: hash" if (@ita_football_team ~~ @eng_football_team);
+
+my @numbers = qw(1 2 3 5 8 13 21 34 55 89);
+my $result = max(@numbers);
+
+say "(@numbers) = $result" unless @numbers ~~ $result;
