@@ -16,3 +16,9 @@ my $perl_version = 5.20;
 
 say "A: on strings" if ($text ~~ /perl/i);
 say "B: on numbers" if ($perl_version ~~ 5.20);
+
+my @italian_names = qw(mario luca gabriele michele maria lucia giovanni);
+my @english_names = qw(mario luca gabriele michele maria lucia giovanni);
+
+# The arrays have the same elements
+say "C: on array" if (@italian_names ~~ @english_names);
