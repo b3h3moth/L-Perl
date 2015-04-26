@@ -1,7 +1,6 @@
-#!/usr/bin/env perl
-use warnings;
-use strict;
-use v5.14;
+package Person;
+
+# A class is a package, so the simplest class is just a package.
 
 # There are three rules to know about Perl's OOP:
 # 1) a class is a package;
