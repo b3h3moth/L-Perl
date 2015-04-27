@@ -9,10 +9,9 @@ my $dir = '/boot';
 # Open directory:
 opendir(my $dh, $dir) or die "Could not open $dir for reading: $!\n";
 
-# Read from $dh 'directory handle' into an array variable @contents:
-my @contents = readdir $dh;
-
+# Read from $dh 'directory handle' into a scalar variable $content:
 while (my $content = readdir $dh) {
+    # remove current directory '.' and parent directory '..':
     say $content;
 }
 
