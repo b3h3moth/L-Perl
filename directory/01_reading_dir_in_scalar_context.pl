@@ -16,7 +16,7 @@ use v5.14;
 # - close it with closedir() instead of close().
 
 # Directory I would like to read:
-my $dir = '/etc';
+my $dir = '/boot';
 
 # Open directory with opendir():
 opendir(my $dh, $dir) or die "Could not open $dir for reading: $!\n";
