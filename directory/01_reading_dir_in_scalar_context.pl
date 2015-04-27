@@ -15,4 +15,7 @@ use v5.14;
 # - read from it with readdir() instead of readline(); 
 # - close it with closedir() instead of close().
 
+my $dir = '/etc';
+
+opendir(my $dh, $dir) or die "Could not open $dir for reading: $!\n";
 
