@@ -4,19 +4,16 @@ use strict;
 use v5.14;
 
 # Directory I would like to read:
-my $dir = shift // '.';
+die ("Usage: $0 <dirname>\n") if (@ARGV != 1);
+my $dir = $ARGV[0];
 
 # Open directory:
 opendir(my $dh, $dir) or die "Could not open $dir for reading: $!\n";
 
-# Read from $dh 'directory handle' into a scalar variable $content:
+# Read from $dh 'directory handle';
 while (my $content = readdir $dh) {
     
-    # skip current directory '.' and parent directory '..':
-    if ($content eq '.' or $content eq '..') {
-        next;
-    }
-
+    # read only perl files
     next unless ($content =~ /\.pl$/);
     
     say $content;
