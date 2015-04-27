@@ -18,6 +18,6 @@ use v5.14;
 # directory I would like to read:
 my $dir = '/etc';
 
-
+# Open directory with opendir():
 opendir(my $dh, $dir) or die "Could not open $dir for reading: $!\n";
 
