@@ -22,3 +22,6 @@ my $dir = '/etc';
 opendir(my $dh, $dir) or die "Could not open $dir for reading: $!\n";
 
 # Once directory is opened I can use readdir() to read the content:
+while (readdir $dh) {
+    say $_;
+}
