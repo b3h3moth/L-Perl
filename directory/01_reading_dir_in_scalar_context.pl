@@ -25,3 +25,6 @@ opendir(my $dh, $dir) or die "Could not open $dir for reading: $!\n";
 while (readdir $dh) {
     say $_;
 }
+
+# Close directory handle:
+closedir($dh);
