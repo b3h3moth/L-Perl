@@ -8,14 +8,16 @@ use v5.14;
 #
 # opendir DIRHANDLE, EXPR
 # DIRHANDLE hold the directory handle, EXPR is relative or absolute path to the
-# directory.
+# directory. Returns true if successful, false otherwise.
 #
 # Directory handle works like a filehandle:
 # - open with opendir() instead of open();
 # - read from it with readdir() instead of readline(); 
 # - close it with closedir() instead of close().
 
+# directory I would like to read:
 my $dir = '/etc';
+
 
 opendir(my $dh, $dir) or die "Could not open $dir for reading: $!\n";
 
