@@ -15,9 +15,10 @@ use v5.14;
 # - read from it with readdir() instead of readline(); 
 # - close it with closedir() instead of close().
 
-# directory I would like to read:
+# Directory I would like to read:
 my $dir = '/etc';
 
 # Open directory with opendir():
 opendir(my $dh, $dir) or die "Could not open $dir for reading: $!\n";
 
+# Once directory is opened I can use readdir() to read the content:
