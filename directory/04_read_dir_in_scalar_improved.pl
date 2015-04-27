@@ -11,7 +11,12 @@ opendir(my $dh, $dir) or die "Could not open $dir for reading: $!\n";
 
 # Read from $dh 'directory handle' into a scalar variable $content:
 while (my $content = readdir $dh) {
-    # remove current directory '.' and parent directory '..':
+    
+    # skip current directory '.' and parent directory '..':
+    if ($content eq '.' or $content eq '..') {
+        next;
+    }
+    
     say $content;
 }
 
