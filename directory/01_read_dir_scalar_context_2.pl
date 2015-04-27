@@ -6,12 +6,12 @@ use v5.14;
 # Directory I would like to read:
 my $dir = '/boot';
 
-# Open directory with opendir():
+# Open directory:
 opendir(my $dh, $dir) or die "Could not open $dir for reading: $!\n";
 
-# Once directory is opened I can use readdir() to read the content:
-while (readdir $dh) {
-    say $_;
+# Read from $dh 'directory handle' into a scalar variable $content:
+while (my $content = readdir $dh) {
+    say $content;
 }
 
 # Close directory handle:
