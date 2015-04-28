@@ -17,9 +17,11 @@ while(my $file = readdir DH){
     # find only perl, C, C++, C header and perl modules
     next unless ($file =~ /\.(pl|c|h|cpp|pm)$/i);
     
-    # 
+    # add directory name to each file
     my $filename = "$dir/$file";
-    push(@files, $filename) if -T $filename;
+
+    # push each result into list
+    push(@files, $filename) if (-T $filename);
 }
 
 say @files;
