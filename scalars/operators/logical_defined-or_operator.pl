@@ -14,7 +14,9 @@ use strict;
 
 sub default_OS {
     my $os_name = shift // 'OpenBSD';
+    # It's the same of:
+    # my $os_name = shift @_ // 'OpenBSD';
 }
 
-my $os_name = default_OS();
+my $os_name = default_OS('Free');
 print "$os_name\n";
