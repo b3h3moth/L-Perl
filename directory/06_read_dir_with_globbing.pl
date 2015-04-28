@@ -24,4 +24,4 @@ while(my $file = readdir DH){
     push(@files, $filename) if (-T $filename);
 }
 
-say @files;
+say join "\n",@files;
