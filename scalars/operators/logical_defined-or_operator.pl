@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
+use v5.14;
 
 # Logical Defined-or operator //
 #
@@ -19,4 +20,4 @@ sub default_OS {
 }
 
 my $os_devel = default_OS();
-print "$os_devel\n";
+say $os_devel;
