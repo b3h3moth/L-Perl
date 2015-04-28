@@ -3,7 +3,8 @@ use warnings;
 use strict;
 
 # A scalar start with '$' sigil.
-# Variable types and their uses:
+
+#                                                Variable types and their uses:
 #  Type          Sigil  Example
 #  ----------------------------------------------------------------------------
 #  Scalar        $      $cents      An individual value (number or string)
