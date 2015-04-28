@@ -20,3 +20,8 @@ print substr($quote, 45, 6), "\n";
 # string replacement, replace 'doors' wih 'Jim morrison, The doors"
 substr($quote, 41, 23) = "Jim Morrison, The doors)";
 say $quote;
+
+# Replace string wherever possible within just the last 24 characters -1 of a 
+# string inside the parentheses:
+substr($quote, -24, -1) =~ s/,/ -/g;
+say $quote;
