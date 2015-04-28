@@ -15,7 +15,7 @@ use v5.14;
 # - read from it with readdir() instead of readline(); 
 # - close it with closedir() instead of close().
 
-# Directory I would like to read:
+# Directory to read:
 my $dir = '/boot';
 
 # Open directory with opendir():

@@ -3,7 +3,7 @@ use warnings;
 use strict;
 use v5.14;
 
-# Directory I would like to read:
+# Directory to read:
 my $dir = '/boot';
 
 # Open directory:
