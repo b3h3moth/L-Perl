@@ -19,5 +19,9 @@ sub default_OS {
     # my $os_devel = shift @_ // 'OpenBSD';
 }
 
-my $os_devel = default_OS();
-say $os_devel;
+my $work_station = default_OS('Debian GNU/Linux');
+my $server = default_OS();
+
+say "My workstation for every day use is $work_station";
+say "Server machine is: $server";
+say "I write code on $work_station and $server";
