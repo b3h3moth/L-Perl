@@ -13,10 +13,10 @@ use strict;
 # This is very useful for providing default values for variables. 
 
 sub default_OS {
-    my $os_name = shift // 'OpenBSD';
+    my $os_devel = shift // 'Debian GNU/Linux';
     # It's the same of:
-    # my $os_name = shift @_ // 'OpenBSD';
+    # my $os_devel = shift @_ // 'OpenBSD';
 }
 
-my $os_name = default_OS('Free');
-print "$os_name\n";
+my $os_devel = default_OS('Free');
+print "$os_devel\n";
