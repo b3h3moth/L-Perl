@@ -3,7 +3,7 @@ use warnings;
 use strict;
 use v5.14;
 
-# Directory I would like to read:
+# Directory to read given from command line argument:
 die ("Usage: $0 <dirname>\n") if (@ARGV != 1);
 my $dir = $ARGV[0];
 
