@@ -12,12 +12,24 @@ say "Which is you favorite programming language? ";
 
 given ($ARGV[0]) {
     when (/perl/i) {
-        print "I love Perl\n";
+        print "Good boy :)\n";
     }
     when (/C/i) {
-        print "I love C\n";
+        print "Old school, nice!\n";
+    }
+    when (/(C++|Cpp)/i) {
+        print "Do you like hard OOP? Yeah!\n";
+    }
+    when (/awk/i) {
+        print "I like programming UNIX too\n";
+    }
+    when (/python/i) {
+        print "Modern programming is good\n";
+    }
+    when (/C#/i) {
+        print "What? Only serious programmer please. \n";
     }
     default {
-        print "Are you a programmer?\n";
+        print "Hey, are you a programmer yes or not\n";
     }
 }
