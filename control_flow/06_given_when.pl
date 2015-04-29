@@ -9,29 +9,17 @@ use feature "switch";
 
 say "Which is you favorite programming language? ";
 
-while (1) {
-    my $fruit_name = <>;
-    chomp $fruit_name;
-    
-    given ($fruit_name) {
-        when (/arance?/) {
-            print "Mi piacciono le $fruit_name\n";
+given ($ARGV[0]) {
+        when (/perl?/i) {
+            print "I love Perl\n";
             last;
         }
-        when (/mele?/) {
-            print "Adoro le $fruit_name\n";
-            last;
-        }
-        when (/banane?/) {
-            print "Preferisco le $fruit_name\n";
-            last;
-        }
-        when (/ananas?/) {
-            print "Sono ghiotto di $fruit_name\n";
+        when (/c?/) {
+            print "I love C\n";
             last;
         }
         default {
-            print "Nom mangiare frutta fa male alla salute!!!\nRiprova: ";
+            print "I hope you are on Unix System: ";
         }
     }
 }
