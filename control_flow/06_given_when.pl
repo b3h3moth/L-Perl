@@ -11,16 +11,13 @@ use feature "switch";
 say "Which is you favorite programming language? ";
 
 given ($ARGV[0]) {
-        when (/perl/i) {
-            print "I love Perl\n";
-            last;
-        }
-        when (/c?/) {
-            print "I love C\n";
-            last;
-        }
-        default {
-            print "I hope you are on Unix System: ";
-        }
+    when (/perl/i) {
+        print "I love Perl\n";
+    }
+    when (/C/i) {
+        print "I love C\n";
+    }
+    default {
+        print "Are you a programmer?\n";
     }
 }
