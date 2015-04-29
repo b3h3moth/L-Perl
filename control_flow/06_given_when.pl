@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
+use v5.14;
 use feature "switch";
 
 # The given-when control structure allows you to run a block of code when the 
@@ -10,7 +11,7 @@ use feature "switch";
 say "Which is you favorite programming language? ";
 
 given ($ARGV[0]) {
-        when (/perl?/i) {
+        when (/perl/i) {
             print "I love Perl\n";
             last;
         }
