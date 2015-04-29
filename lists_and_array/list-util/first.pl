@@ -2,6 +2,7 @@
 use warnings;
 use strict;
 use v5.14;
+use List::Util qw(first);
 
 # first { BLOCK } LIST
 # 
