@@ -7,7 +7,8 @@ use List::Util qw(first);
 # first { BLOCK } LIST
 # 
 # It returns  the first element of LIST that satisfies the condition specified
-# in the BLOCK.
+# in the BLOCK. first() evaluates BLOCK setting $_ to each element of LIST in
+# turn.
 
 # get the first number > $value
 my $value = 400;
