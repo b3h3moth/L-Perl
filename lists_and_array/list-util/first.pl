@@ -8,3 +8,9 @@ use List::Util qw(first);
 # 
 # It returns  the first element of LIST that satisfies the condition specified
 # in the BLOCK.
+
+# get the first number > $value
+my $value = 400;
+my @numbers = qw(440 820 370 620 10 800 700 300 700 200 50 720 840 240 720 80);
+my $results = first {$_ > $value} @numbers;
+say join ', ',$results;
