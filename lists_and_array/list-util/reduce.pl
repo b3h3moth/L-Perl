@@ -4,7 +4,7 @@ use strict;
 use v5.14;
 use List::Util qw(reduce);
 
-# reduce { BLOCK } @list
+# reduce { BLOCK } LIST
 #
 # Reduces @list by calling BLOCK in a scalar context multiple times, setting 
 # $a and $b each time. The first call will be with $a and $b set to the first 
