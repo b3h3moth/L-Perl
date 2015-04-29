@@ -3,8 +3,9 @@ use warnings;
 use strict;
 use feature "switch";
 
-
-#given/when a' analogo allo switch/case di altri linguaggi.
+# The given-when control structure allows you to run a block of code when the 
+# argument to given satisfies a condition, it is Perl's equivalent to C's 
+# switch statement.
 
 print "Quale frutto?: ";
 
