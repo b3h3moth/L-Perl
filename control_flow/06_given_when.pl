@@ -7,7 +7,7 @@ use feature "switch";
 # argument to given satisfies a condition, it is Perl's equivalent to C's 
 # switch statement.
 
-print "Quale frutto?: ";
+say "Which is you favorite programming language? ";
 
 while (1) {
     my $fruit_name = <>;
