@@ -7,8 +7,8 @@ my @cards = qw(A 1 2 3 4 5 6 7 8 9 10 J Q K );
 my $rif = \@cards;
 
 #Si accede all'intero array con '@'
-my $count_cards = @$rif;
-my @backup_cards = @$rif;
+my $count_cards = @{$rif};
+my @backup_cards = @{$rif};
 
 say "          tot cards: $count_cards";
 say "backup (copy) array: @backup_cards";
