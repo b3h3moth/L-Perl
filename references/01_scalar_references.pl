@@ -3,8 +3,8 @@ use warnings;
 use strict;
 use v5.14;
 
-#You can create a reference to any named variable or subroutine with a
-#backslash '\' operator. This operator works like the & operator C-ANSI.
+# You can create a reference to any named variable or subroutine with a
+# backslash '\' operator. This operator works like the '&' C-ANSI operator.
 
 my $foo = 'perl';
 
