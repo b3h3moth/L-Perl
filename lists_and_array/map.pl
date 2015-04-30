@@ -24,3 +24,5 @@ my @default = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
 my @increment = map { $_ + 1 } @default;
 
 say join ', ',@increment;
+
+# create hash
