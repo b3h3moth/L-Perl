@@ -2,9 +2,6 @@
 use warnings;
 use strict;
 use v5.14;
-use Data::Dumper;
-
-# Few people are on Minnow ship.
 
 sub check_required_items {
     my $who   = shift;
