@@ -23,6 +23,7 @@ say " last card: $last_card";
 #sintassi alternativa (meno elegante)
 my $firstcard = $$rif[0];
 say "first card (alternative syntax): $firstcard";
+say "third card: ${$rif}[2]";
 
 #anonymous array, ovvero un array che non è stato dichiarato
 #si racchiude tra parentesi quadre
