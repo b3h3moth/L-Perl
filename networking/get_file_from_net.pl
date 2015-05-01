@@ -5,7 +5,7 @@ use v5.14;
 use LWP::Simple;
 use Data::Dumper;
 
-# Retrieving files from internet
+# Retrieving csv files from internet and manage it
 
 #my $remote_url = 'http://www.openbsd.org/57.html';
 my $remote_url = 'http://bixsolutions.net/profiles.csv';
