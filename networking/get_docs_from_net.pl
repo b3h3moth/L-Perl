@@ -10,3 +10,12 @@ use LWP::Simple;
 my $remote_url = 'https://gnu.org/philosophy/philosophy.html';
 
 my $doc = get($remote_url) or die("Unable to fetch $remote_url\n");
+
+# count how many times 'gnu' word is mentioned:
+my $count;
+
+while ($doc =~ /gnu/gi) {
+    $count++;
+}
+
+say "gnu mentioned $count times";
