@@ -24,6 +24,7 @@ sub check_required_items {
         }
     }
 
+    # find any items missing during scan, push them into array @missing
     if (@missing) {
         print "adding @missing to @$items for $who\n";
         push @$items, @missing;
