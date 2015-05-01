@@ -18,4 +18,4 @@ while ($doc =~ /gnu/gi) {
     $count++;
 }
 
-say "gnu mentioned $count times";
+say "\'gnu\' mentioned $count times";
