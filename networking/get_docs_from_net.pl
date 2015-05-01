@@ -7,4 +7,6 @@ use LWP::Simple;
 # Usage of libwww-perl library.
 
 # get document specified by URL:
+my $remote_url = 'https://gnu.org/philosophy/philosophy.html';
 
+my $doc = get($remote_url) or die("Unable to fetch $remote_url\n");
