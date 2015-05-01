@@ -49,7 +49,5 @@ my @all_with_names = (
 );
 
 for my $person (@all_with_names) {
-    my $who = $$person[0];
-    my $provisions_ref = $$person[1];
-    check_required_items($who, $provisions_ref);
+    check_required_items(@$person);
 }
