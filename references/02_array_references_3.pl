@@ -23,6 +23,11 @@ sub check_required_items {
             print "$who is missing $item\n";
         }
     }
+
+    if (@missing) {
+        print "adding @missing to @$items for $who\n";
+        push @$items, @missing;
+    }
 }
 
 my @skipper = qw(blue_shirt hat jacket preserver sunscreen);
