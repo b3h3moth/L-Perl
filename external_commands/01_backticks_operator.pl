@@ -3,18 +3,18 @@ use warnings;
 use strict;
 use v5.14;
 
-#backticks operator '`' is a common way to run commands and capture the output
-#`command`
-
+# backticks operator '`' is a common way to run commands and capture the output
+# of `command`:
 my $modules = `cat /etc/modules`;
-#output returned as a string
+
+# output returned as a string
 say $modules;
 
+# print only first line
 my @passwd = `cat /etc/passwd`;
-
 say "first array element: $passwd[0]";
 
-#output returned as an array
+# output returned as an array
 foreach my $line (@passwd) {
     print "$line";
 }
