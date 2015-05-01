@@ -48,6 +48,8 @@ my @all_with_names = (
     \@prof_with_name
 );
 
-check_required_items('gillian', \@gillian);
-check_required_items('skipper', \@skipper);
-check_required_items('prof', \@prof);
+for my $person (@all_with_names) {
+    my $who = $$person[0];
+    my $provisions_ref = $$person[1];
+    check_required_items($who, $provisions_ref);
+}
