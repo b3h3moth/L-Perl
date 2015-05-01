@@ -40,6 +40,14 @@ my @gillian_with_name = ('Gillian'=> \@gillian;
 my @prof = qw(sunscreen water_bottle slide_rule batteries radio);
 my @prof_with_name = ('Prof'=> \@prof;
 
+# We have three elements in @all_with_names, each of which is a reference to an
+# array with two elements: the name and its initial provisions.
+my @all_with_names = (
+    \@skipper_with_name,
+    \@gillian_with_name,
+    \@prof_with_name
+);
+
 check_required_items('gillian', \@gillian);
 check_required_items('skipper', \@skipper);
 check_required_items('prof', \@prof);
