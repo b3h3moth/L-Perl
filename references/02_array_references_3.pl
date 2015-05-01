@@ -32,8 +32,13 @@ sub check_required_items {
 }
 
 my @skipper = qw(blue_shirt hat jacket preserver sunscreen);
+my @skipper_with_name = ('Skipper'=> \@skipper;
+
 my @gillian = qw(red_shirt hat lucky_socks water_bottle);
+my @gillian_with_name = ('Gillian'=> \@gillian;
+
 my @prof = qw(sunscreen water_bottle slide_rule batteries radio);
+my @prof_with_name = ('Prof'=> \@prof;
 
 check_required_items('gillian', \@gillian);
 check_required_items('skipper', \@skipper);
