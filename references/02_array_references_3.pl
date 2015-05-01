@@ -12,8 +12,13 @@ sub check_required_items {
     my %whos_items = map {$_,1} @$items;
 
     my @required = qw(preserver sunscreen water_bottle jacket);
+
+    # for every missing provision we push that provision onto an array, forcing
+    # the passenger co sonsider the item.
+    my @missing = ();
     
     for my $item (@required) {
+        # print if does not found in provision list
         unless ( $whos_items{$item} ) {
             print "$who is missing $item\n";
         }
