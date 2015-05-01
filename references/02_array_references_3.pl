@@ -9,7 +9,7 @@ sub check_required_items {
    
     # $items points to a different array, so the same code applies to different
     # arrays each time we invoke it.
-    my %whos_items = map {$_,1} @{$items};
+    my %whos_items = map {$_,1} @$items;
 
     my @required = qw(preserver sunscreen water_bottle jacket);
     
