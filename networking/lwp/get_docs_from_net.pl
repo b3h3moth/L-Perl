@@ -4,15 +4,18 @@ use strict;
 use v5.14;
 use LWP::Simple; # LWP - The World-Wide Web library for Perl
 
+# Count how many times 'gnu' word is mentioned into $content
+
 # get(URL)
 # get document specified by URL:
 my $remote_url = 'https://gnu.org/philosophy/philosophy.html';
+my $content = get($remote_url);
 
-my $content = get($remote_url) or die("Unable to fetch $remote_url\n");
+if (is_error($content)) {
+    die "Unable to fetch <$content>\n";
+}
 
-# count how many times 'gnu' word is mentioned:
 my $count;
-
 while ($content =~ /gnu/gi) {
     $count++;
 }
