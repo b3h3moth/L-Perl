@@ -14,16 +14,14 @@ if (is_error($remote_file)) {
     die "Unable to fetch <$remote_file>\n";
 }
 
-# split every line and store into an array
+# split the file line by line:
 my @data = split("\r\n", $remote_file);
 
-# copy first line into $data_line
+# remove and process the header line:
 my $data_line = shift(@data);
-
-# process header
 my @header = split(',', $data_line);
 
-# array for final results
+# empty array to hold information
 my @sample_data;
 
 foreach (@data) {
