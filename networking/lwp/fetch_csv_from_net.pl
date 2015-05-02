@@ -17,10 +17,10 @@ if (is_error($remote_file)) {
 # split every line and store into an array
 my @data = split("\r\n", $remote_file);
 
-# copy every array member into $data_line
+# copy first line into $data_line
 my $data_line = shift(@data);
 
-# process header, work with cvs data, split each comma ','
+# process header
 my @header = split(',', $data_line);
 
 # array for final results
