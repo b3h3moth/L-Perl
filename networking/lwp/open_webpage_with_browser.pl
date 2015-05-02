@@ -1,8 +1,7 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
-use v5.14;
-use LWP::Simple;
+use LWP::Simple; # LWP - The World-Wide Web library for Perl
 
 my $remote_url = 'http://www.openbsd.org/faq/upgrade57.html';
 my $filename = 'doc.html';
