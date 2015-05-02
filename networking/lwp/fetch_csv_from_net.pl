@@ -5,17 +5,25 @@ use v5.14;
 use LWP::Simple; # LWP - The World-Wide Web library for Perl
 use Data::Dumper;
 
-# Retrieving csv files from internet and manage it
+# Fetching csv files from internet and manage it
 
 my $remote_url = 'http://bixsolutions.net/profiles.csv';
-my $remote_file = get($remote_url) or die ("Unable to fetch file\n");
+my $remote_file = get($remote_url);
 
+if (is_error($remote_file)) {
+    die "Unable to fetch <$remote_file>\n";
+}
+
+# split every line and store into an array
 my @data = split("\r\n", $remote_file);
 
-# process header
+# copy every array member into $data_line
 my $data_line = shift(@data);
+
+# process header, work with cvs data, split each comma ','
 my @header = split(',', $data_line);
 
+# array for final results
 my @sample_data;
 
 foreach (@data) {
