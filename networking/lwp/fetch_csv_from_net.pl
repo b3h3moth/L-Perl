@@ -21,19 +21,23 @@ my @data = split("\r\n", $remote_file);
 my $data_line = shift(@data);
 my @header = split(',', $data_line);
 
-# empty array to hold information
+# empty array to hold sample information
 my @sample_data;
 
+# process the samples
 foreach (@data) {
     my @sample = split(",", $_);
 
     my %sample_hash;
 
+    # convert to an hash using @header array as the key:
     for (my $i=0; $i<scalar(@sample); $i++) {
         $sample_hash{$header[$i]} = $sample[$i];
     }
 
+    # put it into the @sample_data array as a reference:
     push (@sample_data, \%sample_hash);
 }
 
+# print resulting data structure:
 print Dumper (@sample_data);
