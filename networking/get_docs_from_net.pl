@@ -2,9 +2,7 @@
 use warnings;
 use strict;
 use v5.14;
-use LWP::Simple;
-
-# Usage of libwww-perl library.
+use LWP::Simple; # LWP - The World-Wide Web library for Perl
 
 # get(URL)
 # get document specified by URL:
