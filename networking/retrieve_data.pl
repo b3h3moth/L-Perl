@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 use v5.14;
-use LWP::Simple;
+use LWP::Simple; # LWP - The World-Wide Web library for Perl
 
 # Get a web page and retrieve the length of the content in bytes
 
