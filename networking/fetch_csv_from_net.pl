@@ -2,12 +2,11 @@
 use warnings;
 use strict;
 use v5.14;
-use LWP::Simple;
+use LWP::Simple; # LWP - The World-Wide Web library for Perl
 use Data::Dumper;
 
 # Retrieving csv files from internet and manage it
 
-#my $remote_url = 'http://www.openbsd.org/57.html';
 my $remote_url = 'http://bixsolutions.net/profiles.csv';
 my $remote_file = get($remote_url) or die ("Unable to fetch file\n");
 
@@ -32,5 +31,3 @@ foreach (@data) {
 }
 
 print Dumper (@sample_data);
-
-exit;
