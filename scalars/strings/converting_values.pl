@@ -12,5 +12,5 @@ my $result_number_conversion = ord($character);
 say "$character:$result_number_conversion";
 
 foreach ('a' .. 'z') {
-    say ord($_);
+    say "ASCII $_ = ".ord($_);
 }
