@@ -6,6 +6,8 @@ use List::MoreUtils qw(apply);
 
 # apply BLOCK LIST;
 # Applies BLOCK to each item in LIST and returns a list of the values after 
-# BLOCK has been applied. In scalar context, the last element is returned.  
-# This function is similar to map but will not modify the elements of the 
-# input list.
+# BLOCK has been applied.
+my @numbers = qw (5 10 15 20 25);
+my @multiples = apply { $_ *= 2 } @numbers;
+
+say join ', ',@multiples;
