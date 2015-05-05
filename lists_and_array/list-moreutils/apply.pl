@@ -2,6 +2,7 @@
 use warnings;
 use strict;
 use v5.14;
+use List::MoreUtils qw(apply);
 
 # apply BLOCK LIST;
 # Applies BLOCK to each item in LIST and returns a list of the values after 
