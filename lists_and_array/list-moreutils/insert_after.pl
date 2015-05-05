@@ -8,5 +8,7 @@ use List::MoreUtils qw(insert_after);
 # Inserts VALUE after the first item in LIST for which the criterion in BLOCK 
 # is true.
 my @band = qw(Bob & the wailers);
+say 'before: '.join ' ',@band;
+
 insert_after { $_ eq "Bob" } "Marley" => @band;
-say join ' ',@band;
+say ' after: '.join ' ',@band;
