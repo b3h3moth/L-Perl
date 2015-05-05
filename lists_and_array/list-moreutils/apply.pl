@@ -8,6 +8,7 @@ use List::MoreUtils qw(apply);
 # Applies BLOCK to each item in LIST and returns a list of the values after 
 # BLOCK has been applied.
 my @numbers = qw (5 10 15 20 25);
-my @multiples = apply { $_ *= 2 } @numbers;
+say join ', ',@numbers;
 
+my @multiples = apply { $_ *= 2 } @numbers;
 say join ', ',@multiples;
