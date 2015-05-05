@@ -6,7 +6,7 @@ use List::Util qw(any);
 use constant MAX_NUM => 10;
 
 # any { BLOCK } LIST;
-# It evalutes BLOCK, setting $_ to each element of LIST in turn. It Returns
+# It evalutes BLOCK, setting $_ to each element of LIST in turn. It returns
 # true if any elements makes the BLOCK return a true value, false otherwise.
 my @numbers = qw(4 2 3 6 11 8 23 7 41 5 98 9 101 10);
 say join ', ',@numbers;
