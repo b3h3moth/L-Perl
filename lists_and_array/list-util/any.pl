@@ -21,5 +21,5 @@ say join ', ',@strings;
 if ( any { length($_) > MAX_NUM } @strings ) {
     say 'At least one string is greater than '.MAX_NUM;
 } else {
-    say 'OPS ... there are not strings greater than '.MAX_NUM;
+    say 'OPS ... any string is not greater than '.MAX_NUM;
 }
