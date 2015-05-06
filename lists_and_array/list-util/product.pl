@@ -6,3 +6,6 @@ use List::Util qw(product);
 
 # product LIST;
 # It returns the numerical product of all the elements in @list.
+my @numbers = qw(10 10);
+my $num = product @numbers;
+say $num;
