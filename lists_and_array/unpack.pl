@@ -9,3 +9,7 @@ use v5.14;
 #
 # The TEMPLATE is a sequence of characters that give the order and type of
 # values: perldoc -f unpack (template characters table).
+my $string = 'Perla orientale';
+
+my @list = unpack "A4", $string;
+say 'I Love ',@list;
