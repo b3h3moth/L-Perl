@@ -8,7 +8,8 @@ use v5.14;
 # according to the TEMPLATE, and returns this string.
 # 
 # The TEMPLATE is a sequence of characters that give the order and type of 
-# values.
+# values: perldoc -f pack (template characters table).
+
 my @list = qw(OpenBSD is my favorite OS);
 say '  LIST: '.join ', ',@list;
 
