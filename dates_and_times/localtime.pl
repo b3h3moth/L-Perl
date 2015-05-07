@@ -13,3 +13,6 @@ use v5.14;
 # ($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) = 
 # localtime(time);
 
+# Today is:
+my ($day, $month, $year) = (localtime)[3,4,5];
+say "$day $month $year";
