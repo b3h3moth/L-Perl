@@ -9,5 +9,9 @@ use v5.14;
 # needing to use the full package name.
 
 package Bsd;
+
 our $version = 'OpenBSD 5.7 is out (1st May 2015)';
-$BSD::version = 'OpenBSD 5.7 is out (1st May 2015)';
+say $version;
+
+$Bsd::version = 'OpenBSD 5.7';
+say $Bsd::version;
