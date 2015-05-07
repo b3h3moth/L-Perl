@@ -15,4 +15,5 @@ use v5.14;
 
 # Today is:
 my ($day, $month, $year) = (localtime)[3,4,5];
-say "$day $month $year";
+say "just localtime(): $year $month $day";
+printf("The current date is: %04d %02d %02d\n", $year+1900, $month+1, $day);
