@@ -8,3 +8,12 @@ use v5.14;
 # It scopes the value of a package variable or list of package variables to the
 # current file, block, or eval. Any changes made to 'localized' variables 
 # inside of that scope are forgotten outside of that scope.
+
+$BSD::version = 5;
+
+{
+    local $BSD::version = 7;
+    say $BSD::version;
+}
+
+say $BSD::version;
