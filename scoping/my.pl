@@ -8,3 +8,5 @@ use v5.14;
 # It declares the listed variables to be local to the enclosing block, file, 
 # or 'eval'. If more than one value is listed, the list must be placed in
 # parentheses.
+
+my $name = 'behemoth';
