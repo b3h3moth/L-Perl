@@ -1,4 +1,4 @@
-package Unix::Utilities
+package Unix::Utilities;
 
 use warnings;
 use strict;
@@ -30,3 +30,5 @@ sub get_hostname {
     my $host = gethostbyname();
     return $host;
 }
+
+1;
