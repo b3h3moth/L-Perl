@@ -7,5 +7,6 @@ use v5.14;
 use lib 'lib';
 use Unix::Utilities;
 
-my $os_host = Unix::Utilities::get_hostname;
-say $os_host;
+my $os_host = Unix::Utilities::get_hostname();
+my $id = Unix::Utilities::get_id();
+say 'My host is '.$os_host.', my ID is '.$id;
