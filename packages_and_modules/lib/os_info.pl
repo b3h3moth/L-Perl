@@ -8,3 +8,4 @@ use lib 'lib';
 use Unix::Utilities;
 
 my $os_host = Unix::Utilities::get_hostname;
+say $os_host;
