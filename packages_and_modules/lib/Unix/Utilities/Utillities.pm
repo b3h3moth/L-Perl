@@ -26,3 +26,8 @@ use v5.14;
 # package named 'System::Unix::BSD::Kernel'.
 
 our $VERSION = 1.0;
+
+sub get_hostname {
+    my $host = gethostbyname();
+    return $host;
+}
