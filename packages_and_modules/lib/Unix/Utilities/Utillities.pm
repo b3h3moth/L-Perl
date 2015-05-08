@@ -1,5 +1,9 @@
 package Unix::Utilities
 
+use warnings;
+use strict;
+use v5.14;
+
 # A namespace is a place to organize logically related code and data, all 
 # subroutines and package variables declared in that namespace cannot be 
 # accessed outside of that namespace unless you prepend the package name to 
@@ -21,6 +25,3 @@ package Unix::Utilities
 # For example, a file called 'System/Unix/BSD/Kernel.pm' should contain a 
 # package named 'System::Unix::BSD::Kernel'.
 
-use warnings;
-use strict;
-use v5.14;
