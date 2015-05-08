@@ -17,6 +17,9 @@ Unix::Utilities
 # simply a file that contains one or more packages, although it's generally 
 # recommended to have one package per module.
 
+# It's also strongly recommended that module and package names correspond.
+# For example, a file called 'System/Unix/BSD/Kernel.pm' should contain a 
+# package named 'System::Unix::BSD::Kernel'.
 
 use warnings;
 use strict;
