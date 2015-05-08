@@ -2,7 +2,6 @@ package Unix::Utilities
 
 use warnings;
 use strict;
-use v5.14;
 
 # A namespace is a place to organize logically related code and data, all 
 # subroutines and package variables declared in that namespace cannot be 
