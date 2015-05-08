@@ -1,4 +1,22 @@
-# A package name is one or more identifiers separated by double colons.
+Unix::Utilities
+
+# A namespace is a place to organize logically related code and data, all 
+# subroutines and package variables declared in that namespace cannot be 
+# accessed outside of that namespace unless you prepend the package name to 
+# them or if the package "exports" the subroutines to other packages. This 
+# allows you to reuse names in different namespaces without worrying about
+# collision.
+# 
+# A package name is one or more identifiers separated by double colons. 
+# By convention, a module starts his name with uppercase letter. By convention,
+# this module should correspond to a path and filename of 'Module.pm' and it 
+# should usually be located in a 'lib' directory (This example is 
+# lib/Unix/Utilities.pm).
+#
+# The .pm extension is what Perl uses to identify a given module. A module is 
+# simply a file that contains one or more packages, although it's generally 
+# recommended to have one package per module.
+
 
 use warnings;
 use strict;
