@@ -1,4 +1,4 @@
-Unix::Utilities
+package Unix::Utilities
 
 # A namespace is a place to organize logically related code and data, all 
 # subroutines and package variables declared in that namespace cannot be 
