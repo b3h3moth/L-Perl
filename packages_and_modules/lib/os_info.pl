@@ -7,4 +7,4 @@ use v5.14;
 use lib 'lib';
 use Unix::Utilities;
 
-my $os_host = Unix::Utilities::get_hostname();
+my $os_host = Unix::Utilities::get_hostname;
