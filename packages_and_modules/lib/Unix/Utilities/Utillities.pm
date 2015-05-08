@@ -25,3 +25,4 @@ use v5.14;
 # For example, a file called 'System/Unix/BSD/Kernel.pm' should contain a 
 # package named 'System::Unix::BSD::Kernel'.
 
+our $VERSION = 1.0;
