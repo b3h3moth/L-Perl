@@ -32,4 +32,9 @@ sub get_hostname {
     return $host;
 }
 
+sub get_id {
+    my $id = getlogin || getpwuid($<) || 'other';
+    return $id;
+}
+
 1;
