@@ -3,8 +3,8 @@ use warnings;
 use strict;
 use v5.14;
 
-#we need to create a block of codeand give it a name using 'sub' keyword
-# sub functionName {
+# We need to create a block of code and give it a name using 'sub' keyword:
+# sub function_name {
 #    ...
 #    body of function
 #    ...
@@ -19,5 +19,5 @@ sub Usage {
     exit(0);
 }
 
-#invoking subroutine
+# Invoking subroutine:
 Usage(); # or &Usage; or Usage; or &Usage();
