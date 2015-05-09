@@ -6,10 +6,10 @@ use v5.14;
 
 use lib 'lib';
 # Import functions by specifying their names in the import list:
-use Unix::Export qw(max_user get_hostname get_id);
+use Unix::Export qw(max_users get_hostname get_id);
 
-my $max_user = max_user();
+my $max_users = max_users();
 my $hostname = get_hostname();
 my $id = get_id();
 
-say "$max_user, $hostname, $id";
+say "$max_users, $hostname, $id";

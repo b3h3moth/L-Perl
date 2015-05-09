@@ -15,5 +15,5 @@ say 'My host is '.$os_host.', my ID is '.$id;
 say 'Module version: '.$Unix::Utilities::VERSION;
 
 # get value from subroutine (read only value);
-my $MAX_USER = Unix::Utilities::max_user();
+my $MAX_USER = Unix::Utilities::max_users();
 say 'Max user: '.$MAX_USER;

@@ -5,8 +5,8 @@ package Unix::Export;
 # Exporter.
 use base 'Exporter';
 
-# Functions max_user(), get_hostname() and get-id() can be exported:
-our @EXPORT_OK = qw(max_user get_hostname get_id);
+# Functions max_users(), get_hostname() and get-id() can be exported:
+our @EXPORT_OK = qw(max_users get_hostname get_id);
 our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
 use warnings;
@@ -16,7 +16,7 @@ use Sys::Hostname;
 our $VERSION = 1.0;
 
 
-sub max_user {
+sub max_users {
     10000;
 }
 

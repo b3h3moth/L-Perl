@@ -34,7 +34,7 @@ our $VERSION = 1.0;
 
 
 # Subroutine that encapsulates a value, better than using local():
-sub max_user {
+sub max_users {
     10000;
 }
 
