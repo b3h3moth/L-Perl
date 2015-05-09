@@ -2,8 +2,10 @@ package Unix::Utilities;
 
 # Would be annoying typing every time fully qualified function, so you can
 # export those functions calling code's namespace. The module for doing this is
-# Exporter:
+# Exporter.
 use base 'Exporter';
+
+# Functions max_user(), get_hostname() and get-id() can be exported:
 our @EXPORT_OK = qw(max_user get_hostname get_id);
 our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
