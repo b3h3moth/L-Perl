@@ -16,7 +16,8 @@ use Sys::Hostname;
 # - a module starts his name with uppercase letter;
 # - a module should correspond to a path and filename of 'Module.pm' and it
 #   should usually be located in a 'lib' directory. The path of this module is
-#   lib/Unix/Utilities.pm.
+#   lib/Unix/Utilities.pm;
+# - is strongly recommended to declare a module version number.
 #
 # The .pm extension is what Perl uses to identify a given module. A module is
 # simply a file that contains one or more packages, although it's generally
@@ -31,11 +32,11 @@ use Sys::Hostname;
 # declared with a package scope have uppercase identifiers.
 our $VERSION = 1.0;
 
-# Subroutine encapsulates a value, better than using local():
+
+# Subroutine that encapsulates a value, better than using local():
 sub max_user {
     10000;
 }
-
 
 sub get_hostname {
     my $host = hostname();
