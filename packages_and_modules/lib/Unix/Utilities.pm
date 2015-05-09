@@ -25,14 +25,11 @@ use Sys::Hostname;
 # It's also strongly recommended that module and package names correspond. For
 # example, a file called 'System/Unix/BSD/Kernel.pm' should contain a package 
 # named 'System::Unix::BSD::Kernel'.
-our $VERSION = 1.0;
 
 # Package variables with our() builtin are better than fully qualified package
 # variable like that '$Unix::Utilities::VARIABLE'. By convention, variables 
 # declared with a package scope have uppercase identifiers.
-our $GCC_VERSION = 4;
-our @USERS = qw(behemoth anon luca giusy);
-
+our $VERSION = 1.0;
 
 sub get_hostname {
     my $host = hostname();
