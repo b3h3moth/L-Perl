@@ -4,7 +4,6 @@ use strict;
 use diagnostics;
 use v5.14;
 
-# Import functions by specifying their names in the import list:
-
 use lib 'lib';
-use Unix::System;
+# Import functions by specifying their names in the import list:
+use Unix::System qw(max_user get_hostname get_id);
