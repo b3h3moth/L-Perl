@@ -1,4 +1,4 @@
-package Unix::Utilities;
+package Unix::Export;
 
 # Would be annoying typing every time fully qualified function, so you can
 # export those functions calling code's namespace. The module for doing this is
