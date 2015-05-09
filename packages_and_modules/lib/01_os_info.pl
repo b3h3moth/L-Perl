@@ -14,5 +14,6 @@ say 'My host is '.$os_host.', my ID is '.$id;
 # get package variable:
 say 'Module version: '.$Unix::Utilities::VERSION;
 
-# get value from subroutine:
-say 'Max user: '.Unix::Utilities::max_user();
+# get value from subroutine (read only value);
+my $MAX_USER = Unix::Utilities::max_user();
+say 'Max user: '.$MAX_USER;
