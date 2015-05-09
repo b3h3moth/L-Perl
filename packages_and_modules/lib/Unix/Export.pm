@@ -1,5 +1,8 @@
 package Unix::Export;
 
+use warnings;
+use strict;
+use Sys::Hostname;
 # Would be annoying typing every time fully qualified function, so you can
 # export those functions calling code's namespace. The module for doing this is
 # Exporter.
@@ -9,11 +12,8 @@ use base 'Exporter';
 our @EXPORT_OK = qw(max_users get_hostname get_id);
 our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
-use warnings;
-use strict;
-use Sys::Hostname;
-
-our $VERSION = 1.0;
+our $VERSION = '0.001';
+$VERSION = eval $VERSION;
 
 
 sub max_users {
