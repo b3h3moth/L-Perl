@@ -31,6 +31,12 @@ use Sys::Hostname;
 # declared with a package scope have uppercase identifiers.
 our $VERSION = 1.0;
 
+# Subroutine encapsulates a value, better than using local():
+sub max_user {
+    10000;
+}
+
+
 sub get_hostname {
     my $host = hostname();
     return $host;
