@@ -28,6 +28,12 @@ use Sys::Hostname;
 
 our $VERSION = 1.0;
 
+# Package variables with our() builtin are better than fully qualified package
+# variable like that $Unix::Utilities::NAME = 1;
+our $KERNEL_VERSION = 3;
+our $GCC_VERSION = 4;
+our @USERS = qw(behemoth anon luca giusy);
+
 sub get_hostname {
     my $host = hostname();
     return $host;
