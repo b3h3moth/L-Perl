@@ -30,8 +30,8 @@ use Sys::Hostname;
 # Package variables with our() builtin are better than fully qualified package
 # variable like that '$Unix::Utilities::VARIABLE'. By convention, variables 
 # declared with a package scope have uppercase identifiers.
-our $VERSION = 1.0;
-
+our $VERSION = '0.001';
+$VERSION = eval $VERSION;
 
 # Subroutine that encapsulates a value, better than using local():
 sub max_users {
