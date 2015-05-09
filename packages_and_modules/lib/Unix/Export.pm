@@ -1,5 +1,9 @@
 package Unix::Utilities;
 
+# Would be annoying typing every time fully qualified function, so you can
+# export those functions calling code's namespace. The module for doing this is
+# Exporter.
+
 use warnings;
 use strict;
 use Sys::Hostname;
