@@ -38,4 +38,6 @@ sub get_id {
     return $id;
 }
 
+# When you use a package, it must return a true value. If it does not, the use
+# fails at compile time. Putting a '1' at the end of the package solves this.
 1;
