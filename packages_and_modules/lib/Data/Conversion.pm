@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use diagnostics;
 use Exporter 'import';
-our @EXPORT_OK = qw(bytes_to_bit kbytes_to_byte mbytes_to_kbytes);
+our @EXPORT_OK = qw(byte_to_bit kbyte_to_byte mbyte_to_kbyte);
 our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
 our $VERSION = '0.001';
@@ -14,17 +14,17 @@ use constant   BYTE_PER_BIT => 8;
 use constant KBYTE_PER_BYTE => 1024;
 use constant MBYTE_PER_KBYTE => 1024;
 
-sub bytes_to_bit {
+sub byte_to_bit {
     my $bytes = shift;
     return ($bytes * BYTE_PER_BIT);
 }
 
-sub kbytes_to_byte {
+sub kbyte_to_byte {
     my $kb = shift;
     return ($kb * KBYTE_PER_BYTE);
 }
 
-sub mbytes_to_kbytes {
+sub mbyte_to_kbyte {
     my $mb = shift;
     return ($mb * MBYTE_PER_KBYTE);
 }
