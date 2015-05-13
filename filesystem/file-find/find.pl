@@ -13,6 +13,9 @@ use File::Find 'find';
 # For each directory found, it will chdir() into that directory and continue 
 # the search, invoking the &wanted function on each file or subdirectory in the
 # directory (just like ls -R recursive option).
+#
+# The wanted() function does whatever verifications you want on each file and 
+# directory.
 my $dir = '/etc';
 
 opendir(my $dh, $dir) or die "Could not open $dir for reading: $!\n";
