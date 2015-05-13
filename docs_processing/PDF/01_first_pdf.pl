@@ -13,5 +13,14 @@ my $page = $pdf->page();
 # Set the page size. Generally is simply A4, Letter, etc...
 $page->mediabox(400,200);
 
+# Add font
+my $font = $pdf->corefont('Verdana');
+
+# Add text to the page
+my $text = $page->text();
+$text->font($font, 18);
+$text->translate(20,180);
+$text->text("How to create PDF files with Perl");
+
 # Save file
 $pdf->saveas('empty.pdf');
