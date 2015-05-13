@@ -10,7 +10,7 @@ my $pdf = PDF::API2->new();
 # Add a blank page
 my $page = $pdf->page();
 
-# Set the page size;
+# Set the page size. Generally is simply A4, Letter, etc...
 $page->mediabox(400,200);
 
 # Save file
