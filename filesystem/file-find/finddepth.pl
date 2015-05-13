@@ -19,9 +19,9 @@ opendir(my $dh, $dir) or die "Could not open $dir for readinf\n";
 finddepth(\&print_dir, $dir);
 
 sub print_dir {
-
+    # Print only directory whose names begin with vowels followed by c,t,p.
     if ( -d ) {
-        print "$File::Find::name\n" if /^[aeiou][avcde]/;
+        print "$File::Find::name\n" if /^[aeiou][ctp]/;
     }
 }
 
