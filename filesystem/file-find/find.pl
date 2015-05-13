@@ -15,7 +15,12 @@ use File::Find 'find';
 # directory (just like ls -R recursive option).
 #
 # The wanted() function does whatever verifications you want on each file and 
-# directory.
+# directory. When wanted() is called:
+# - $_ is set to the current filename;
+# - $File::find:dir is set to the currend directory;
+# - $File::find:name is set to current filename "$File::find::dir/$_";
+# - run chdir() for each directory found.
+
 my $dir = '/etc';
 
 opendir(my $dh, $dir) or die "Could not open $dir for reading: $!\n";
