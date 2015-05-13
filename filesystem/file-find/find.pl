@@ -5,9 +5,14 @@ use v5.14;
 use File::Find 'find';
 
 # find(\&wanted,  @directories);
+# 
 # find() does a depth-first search over the given @directories in the order 
 # they are given. For each file or directory found, it calls the &wanted 
 # subroutine.
+# 
+# For each directory found, it will chdir() into that directory and continue 
+# the search, invoking the &wanted function on each file or subdirectory in the
+# directory (just like ls -R recursive option).
 my $dir = '/etc';
 
 opendir(my $dh, $dir) or die "Could not open $dir for reading: $!\n";
