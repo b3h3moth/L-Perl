@@ -13,8 +13,10 @@ my $dir = '/etc';
 opendir(my $dh, $dir) or die "Could not open $dir for reading: $!\n";
 
 find(\&print_dir, $dir);
+
 # Alternative syntax:
-# Find::Find::find(\&print_dir, $dir);
+#   Find::Find::find(\&print_dir, $dir);
+#   find(sub {say if -d}, $dir);
 
 sub print_dir {
     say if -d;
