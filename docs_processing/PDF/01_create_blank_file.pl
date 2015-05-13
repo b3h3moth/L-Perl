@@ -8,7 +8,10 @@ use PDF::API2;
 my $pdf = PDF::API2->new();
 
 # Add a blank page
-$pdf->page();
+my $page = $pdf->page();
+
+# Set the page size;
+$page->mediabox(400,200);
 
 # Save file
 $pdf->saveas('empty.pdf');
