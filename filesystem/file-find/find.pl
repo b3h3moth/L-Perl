@@ -33,8 +33,10 @@ find(\&print_dir, $dir);
 
 sub print_dir {
     # Print only directory whose names begin with vowels
-    if (-d $_) {
-        print "$File::Find::dir/$_\n" if /^[aeiou]/;
+    if ( -d ) {
+        print "$File::Find::name\n" if /^[aeiou]/;
+        # Or: 
+        # print "$File::Find::dir/$_\n" if /^[aeiou]/;
     }
 }
 
