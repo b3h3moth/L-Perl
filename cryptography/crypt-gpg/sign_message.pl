@@ -24,3 +24,10 @@ $gpg->debug();
 my $message = 'perl programming';
 
 my @encrypted = $gpg->encrypt($message, $mail);
+
+foreach (@encrypted) {
+    say $_;
+}
+
+my ($plaintext, $signature) = $gpg->verify(@encrypted);
+say $plaintext;
