@@ -13,7 +13,7 @@ my $input_file = 'clear_text.txt';
 my $encrypted_file = "$input_file.gpg";
 my $plaintext = 'Take a walk on the wild side (Lou Reed)';
 
-open(my $CLEARTEXT, ">> $input_file");
+open(my $CLEARTEXT, ">> $input_file") or die("Unable to write $input_file\n");
 print $CLEARTEXT $plaintext;
 close($CLEARTEXT);
 
@@ -28,8 +28,8 @@ $gpg->passphrase($passphrase);
 # Debug
 $gpg->debug();
 
-open(my $INPUT, "< $input_file");
-open(my $OUTPUT, "> $encrypted_file");
+open(my $INPUT, "< $input_file") or die("Unable to open $input_file\n"); 
+open(my $OUTPUT, "> $encrypted_file") or die("Unable to write $encrypted_file");
 
 my @encrypted = $gpg->encrypt($INPUT, $mail);
 
