@@ -11,8 +11,10 @@ my ($secret_key) = $secret_key_line =~ /.*\/(.*) /;
 my $passphrase = '1gl3wxba9f5r';
 my $input_file = 'clear_text.txt';
 my $encrypted_file = "$input_file.gpg";
+my $plaintext = 'Take a walk on the wild side (Lou Reed)';
 
-open(my $CLEARTEXT, "< $input_file");
+open(my $CLEARTEXT, ">> $input_file");
+print $CLEARTEXT $plaintext;
 close($CLEARTEXT);
 
 # Get new gpg object
