@@ -13,8 +13,6 @@ my $passphrase = '1gl3wxba9f5r';
 die("Usage: $0 <file to encrypt>") if (@ARGV != 1);
 
 my $input_file = $ARGV[0];
-chomp($input_file);
-
 my $encrypted_file = "$input_file.gpg";
 
 # Get new gpg object
@@ -29,6 +27,7 @@ $gpg->passphrase($passphrase);
 $gpg->debug();
 
 open(my $INPUT, "< $input_file") or die("Unable to open file\n");
+
 open(my $OUTPUT, ">> $encrypted_file") or die("Unable to write file\n");
 
 my @encrypted = $gpg->encrypt($INPUT, $mail);
