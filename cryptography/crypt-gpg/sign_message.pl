@@ -8,15 +8,16 @@ use Crypt::GPG;
 my $mail = 'behemoth@autistici.org';
 my $secret_key_line = qx/gpg --list-key $mail | grep pub/;
 my ($secret_key) = $secret_key_line =~ /.*\/(.*) /;
+my $passphrase = '1gl3wxba9f5r';
 
 # Get new gpg object
 my $gpg = new Crypt::GPG;
 # Path of gpg executable
 $gpg->gpgbin('/usr/bin/gpg');
 # Set ID of default secret key
-$gpg->secretkey('67FD0AE6');
+$gpg->secretkey($secret_key);
 # Set passphrase 
-$gpg->passphrase('1gl3wxba9f5r');
+$gpg->passphrase($passphrase);
 # Debug
 $gpg->debug();
 
