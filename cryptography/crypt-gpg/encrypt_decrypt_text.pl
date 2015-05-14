@@ -21,7 +21,7 @@ $gpg->passphrase($passphrase);
 # Debug
 $gpg->debug();
 
-my $message = 'perl programming';
+my $message = 'How to use Crypt:GPG to encrypt message - perl programming';
 
 my @encrypted = $gpg->encrypt($message, $mail);
 
