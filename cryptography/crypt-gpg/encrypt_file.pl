@@ -12,6 +12,9 @@ my $passphrase = '1gl3wxba9f5r';
 my $input_file = 'clear_text.txt';
 my $encrypted_file = "$input_file.gpg";
 
+open(my $CLEARTEXT, "< $input_file");
+close($CLEARTEXT);
+
 # Get new gpg object
 my $gpg = new Crypt::GPG;
 # Path of gpg executable
@@ -23,8 +26,8 @@ $gpg->passphrase($passphrase);
 # Debug
 $gpg->debug();
 
-open(my $INPUT, "< test.txt");
-open(my $OUTPUT, "> test.txt.gpg");
+open(my $INPUT, "< $input_file");
+open(my $OUTPUT, "> $encrypted_file");
 
 my @encrypted = $gpg->encrypt($INPUT, $mail);
 
