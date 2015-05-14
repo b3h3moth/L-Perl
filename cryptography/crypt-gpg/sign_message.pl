@@ -14,3 +14,6 @@ $gpg->secretkey('67FD0AE6');
 $gpg->passphrase('1gl3wxba9f5r');
 # Debug
 $gpg->debug();
+
+my $message = 'perl programming';
+my $mail = 'behemoth@autistici.org';
