@@ -4,6 +4,11 @@ use strict;
 use v5.14;
 use Crypt::GPG;
 
+# Config informations
+my $mail = 'behemoth@autistici.org';
+my $secret_key_line = qx/gpg --list-key $mail | grep pub/;
+my ($secret_key) = $secret_key_line =~ /.*\/(.*) /;
+
 # Get new gpg object
 my $gpg = new Crypt::GPG;
 # Path of gpg executable
@@ -16,7 +21,5 @@ $gpg->passphrase('1gl3wxba9f5r');
 $gpg->debug();
 
 my $message = 'perl programming';
-my $mail = 'behemoth@autistici.org';
 
 my @encrypted = $gpg->encrypt($message, 'behemoth@autistici.org');
-
