@@ -29,7 +29,7 @@ $gpg->passphrase($passphrase);
 $gpg->debug();
 
 open(my $INPUT, "< $input_file") or die("Unable to open file\n");
-open(my $OUTPUT, ">> $encrypted_file");
+open(my $OUTPUT, ">> $encrypted_file") or die("Unable to write file\n");
 
 my @encrypted = $gpg->encrypt($INPUT, $mail);
 
