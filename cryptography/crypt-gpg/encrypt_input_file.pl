@@ -13,7 +13,7 @@ my $passphrase = '1gl3wxba9f5r';
 die("Usage: $0 <file to encrypt>") if (@ARGV != 1);
 
 my $input_file = $ARGV[0];
-my $encrypted_file = "$input_file.gpg";
+my $output_file = "$input_file.gpg";
 
 # Get new gpg object
 my $gpg = new Crypt::GPG;
@@ -28,16 +28,16 @@ $gpg->debug();
 
 open(my $INPUT, "< $input_file") or die("Unable to open $input_file\n");
 
-open(my $OUTPUT, ">> $encrypted_file") or die("Unable to write $encrypted_file\n");
+open(my $OUTPUT, ">> $output_file") or die("Unable to write $output_file\n");
 
-my @encrypted = $gpg->encrypt($INPUT, $mail);
+my @output = $gpg->encrypt($INPUT, $mail);
 
-foreach (@encrypted) {
+foreach (@output) {
     print $OUTPUT $_;
 }
 
 say "Plaintext file: $input_file";
-say "Encrypted file: $encrypted_file";
+say "output file: $output_file";
 
 close($INPUT);
 close($OUTPUT);
