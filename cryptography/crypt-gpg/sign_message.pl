@@ -17,3 +17,6 @@ $gpg->debug();
 
 my $message = 'perl programming';
 my $mail = 'behemoth@autistici.org';
+
+my @encrypted = $gpg->encrypt($message, 'behemoth@autistici.org');
+
