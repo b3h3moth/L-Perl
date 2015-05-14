@@ -36,5 +36,8 @@ foreach (@encrypted) {
     print $OUTPUT $_;
 }
 
+say "Plaintext file: $input_file";
+say "Encrypted file: $encrypted_file";
+
 close($INPUT);
 close($OUTPUT);
