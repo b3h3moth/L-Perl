@@ -14,7 +14,3 @@ $gpg->secretkey('67FD0AE6');
 $gpg->passphrase('1gl3wxba9f5r');
 # Debug
 $gpg->debug();
-
-# Sign a message
-my $text = 'Perl programming';
-my $msg_sign = $gpg->sign($text);
