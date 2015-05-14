@@ -4,7 +4,7 @@ use strict;
 use v5.14;
 use Crypt::GPG;
 
-# Creates new object
+# Get new gpg object
 my $gpg = new Crypt::GPG;
 
 # Path of gpg executable
@@ -13,5 +13,10 @@ $gpg->gpgbin('/usr/bin/gpg');
 # Set ID of default secret key
 $gpg->secretkey('0x67FD0AE6');
 
-# Set passphrase
+# Set passphrase 
 $gpg->passphrase('1gl3wxba9f5r');
+
+# Sign a message
+my $text = 'Perl programming';
+my $msg_sign = $gpg->sign($text);
+say $msg_sign;
