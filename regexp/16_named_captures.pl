@@ -3,8 +3,8 @@ use warnings;
 use strict;
 use v5.14;
 
-# Perl 5.10 added named captures, which allow you to capture portions of matches from
-# applying a regular expression and access them later.
+# Perl 5.10 added named captures, which allow you to capture portions of
+# matches from applying a regular expression and access them later.
 #
 # To attach a name to a capturing group: (?<name>...) or (?'name'...):
 #
