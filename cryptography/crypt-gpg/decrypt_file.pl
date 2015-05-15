@@ -22,3 +22,4 @@ $gpg->passphrase($passphrase);
 $gpg->debug();
 
 open(my $INPUT, "< $input_file") or die("Unable to open $input_file\n");
+│open(my $OUTPUT, ">> $output_file") or die("Unable to write $output_file\n");
