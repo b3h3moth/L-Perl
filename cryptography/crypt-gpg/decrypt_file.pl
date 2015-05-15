@@ -20,3 +20,5 @@ $gpg->gpgbin('/usr/bin/gpg');
 $gpg->secretkey($secret_key);
 $gpg->passphrase($passphrase);
 $gpg->debug();
+
+open(my $INPUT, "< $input_file") or die("Unable to open $input_file\n");
