@@ -6,3 +6,4 @@ use Crypt::GPG;
 
 # Config informations:
 my $mail = 'behemoth@autistici.org';
+my $secret_key_line = qx/gpg --list-key $mail | grep pub/;
