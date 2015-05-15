@@ -16,3 +16,4 @@ my $input_file = $ARGV[0];
 my ($output_file) = $input_file =~ /^(.*)\./;
 
 my $gpg = new Crypt::GPG;
+$gpg->gpgbin('/usr/bin/gpg');
