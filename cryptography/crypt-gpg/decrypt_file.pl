@@ -13,3 +13,4 @@ my $passphrase = '1gl3wxba9f5r';
 die("Usage: $0 <file to encrypt>") if (@ARGV != 1);
 
 my $input_file = $ARGV[0];
+my ($output_file) = $input_file =~ /^(.*)\./;
