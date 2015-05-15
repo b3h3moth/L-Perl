@@ -21,15 +21,15 @@ $gpg->secretkey($secret_key);
 $gpg->passphrase($passphrase);
 $gpg->debug();
 
-open(my $CIPHERTEXT, "< $input_file") or die("Unable to open $input_file\n");
-my @decr=<$CIPHERTEXT>;
-close($CIPHERTEXT);
+open(CIPHERTEXT, "< $input_file") or die("Unable to open $input_file\n");
+my @decr=<CIPHERTEXT>;
+close(CIPHERTEXT);
 
 my ($message, $si) = $gpg->decrypt(\@decr);
 say $message;
 
-open(my $CLEARTEXT, ">> $output_file") or die("Unable to write $output_file\n");
+open(CLEARTEXT, ">> $output_file") or die("Unable to write $output_file\n");
 
-print $CLEARTEXT $cleartext;
+print CLEARTEXT $message;
 
-close($CLEARTEXT);
+close(CLEARTEXT);
