@@ -17,3 +17,6 @@ my ($output_file) = $input_file =~ /^(.*)\./;
 
 my $gpg = new Crypt::GPG;
 $gpg->gpgbin('/usr/bin/gpg');
+$gpg->secretkey($secret_key);
+$gpg->passphrase($passphrase);
+$gpg->debug();
