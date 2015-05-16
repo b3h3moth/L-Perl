@@ -9,7 +9,6 @@ my $surname = 'suriano';
 # postfix
 say "Ciao, Luca" if $name eq 'luca';
 
-#forma a blocco, richiede parentesi
 if ($name eq 'luca') {
     say "hey ciao";
 }
