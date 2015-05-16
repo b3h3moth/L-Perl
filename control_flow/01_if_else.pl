@@ -6,7 +6,7 @@ use v5.14;
 my $name = 'luca';
 my $surname = 'suriano';
 
-#forma postfissa per expr semplici
+# postfix
 say "Ciao, Luca" if $name eq 'luca';
 
 #forma a blocco, richiede parentesi
@@ -14,7 +14,6 @@ if ($name eq 'luca') {
     say "hey ciao";
 }
 
-#puo' contenere diverse sotto-expr
 if ($name eq 'luca' && $surname eq 'suriano') {
     say "Ma ciao";
 }
@@ -25,15 +24,15 @@ if ($name eq 'lucas') {
     say "Chi sei?";
 }
 
-#operatori condizionali positivi e negativi
-#ne - not equals
+# Conditional operator
+# ne - not equals
 if ($name ne 'luca') {
     say "chi?";
 } else {
     say "ho capito, ciao";
 }
 
-#1+ direttive elsif possono seguire if e precedere else
+# a lot of elsif branches
 if ($name eq 'lucsa') {
     say "hey ciao";
 } elsif ($name eq 'franco') {
