@@ -6,11 +6,11 @@ use Test::More;
 
 my $tempo_attuale = 'inverno';
 
-#operatore condizionale ternario
+# ternary conditional operator
 my $tempo_richiesto = $tempo_attuale ? 'estate' : 'primavera';
 print "$tempo_richiesto\n";
 
-#cortocircuiti
+# cortocircuiti
 say "Entrambi veri" if ok(1, 'sottoespressione uno')
                     && ok(1, 'sottoespressione due');
 done_testing();
