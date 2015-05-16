@@ -25,6 +25,7 @@ open(CIPHERTEXT, "< $input_file") or die("Unable to open $input_file\n");
 my @decr=<CIPHERTEXT>;
 close(CIPHERTEXT);
 
+# failed, this module doesn't work
 my ($message, $si) = $gpg->decrypt(\@decr);
 say $message;
 
