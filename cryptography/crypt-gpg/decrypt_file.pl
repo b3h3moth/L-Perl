@@ -29,7 +29,5 @@ my ($message, $si) = $gpg->decrypt(\@decr);
 say $message;
 
 open(CLEARTEXT, ">> $output_file") or die("Unable to write $output_file\n");
-
 print CLEARTEXT $message;
-
 close(CLEARTEXT);
