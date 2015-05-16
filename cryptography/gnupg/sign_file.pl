@@ -11,7 +11,7 @@ use constant PASSWD     => '1gl3wxba9f5r';
 my $gpg = new GnuPG();
 
 $gpg->sign( 
-    recipient   => [ USERID ],
+    recipient   => [ UNTRUSTED ],
     plaintext   => 'test.txt',
     output      => 'test.sig',
     armor       => 1,
