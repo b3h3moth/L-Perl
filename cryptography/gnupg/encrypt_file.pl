@@ -7,6 +7,7 @@ use GnuPG;
 use constant USERID     => 'behemoth@autistici.org';
 use constant UNTRUSTED  => 'Mister Behemoth';
 use constant PASSWD     => '1gl3wxba9f5r';
+
 my $gpg = new GnuPG();
 
 $gpg->encrypt( 
