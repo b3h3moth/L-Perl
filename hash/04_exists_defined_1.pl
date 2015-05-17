@@ -15,7 +15,7 @@ my %country_code = (
 
 say Dumper \%country_code;
 
-#if a key exists
+# if a key exists
 say "country code is: $country_code{'italy'}" if exists $country_code{'italy'};
-#if a key has a defined value
+# if a key has a defined value
 say "$country_code{'italy'} is defined" if defined $country_code{'italy'};
