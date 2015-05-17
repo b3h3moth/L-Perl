@@ -3,6 +3,7 @@ use warnings;
 use strict;
 use LWP::Simple; # LWP - The World-Wide Web library for Perl
 
+# Store webpage into $filename
 my $remote_url = 'http://www.openbsd.org/faq/upgrade57.html';
 my $filename = 'doc.html';
 
