@@ -1,4 +1,4 @@
 ## Scalars
 
-### Module Covered
+### List of modules covered
 * Scalar::Util
