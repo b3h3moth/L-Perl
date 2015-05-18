@@ -1,5 +1,5 @@
 ## Cryptography
 
-### Module covered
+### List of modules covered
 * Crypt::GPG
 * GnuPG
