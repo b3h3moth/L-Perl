@@ -31,3 +31,7 @@ Books:
 
 * Higher*Order Perl (Elsevier, 2005)
   by Mark Jason Dominus
+
+* Perl Testing; A Developer's noteboook (O'Reilly, 2005)
+ by chromatic, Ian Langworth
+Covers Perl 5.8
