@@ -5,7 +5,7 @@ package Person;
 # The extension of the class file is .pm;
 # Usually the name of the package is the same as the name of file;
 # Perl expects to see a true value '1' as the last thing in the package:
-# A program can add 'use Person;' and start using the class;
+# A program can add 'use PackageName;' and start using the class;
 # 
 # And:
 # - a class is a package;
