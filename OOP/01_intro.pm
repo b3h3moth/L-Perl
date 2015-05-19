@@ -1,4 +1,9 @@
-package Person;
+#!/usr/bin/env perl
+use warnings;
+use Country::Italy;
+use diagnostics;
+
+Country::Italy->speak;
 
 # Rules to know about OOP and Perl:
 # A class is a package, so the simplest class is just a package;
@@ -11,5 +16,3 @@ package Person;
 # - a class is a package;
 # - an object is a reference that knows its class;
 # - a method is a subroutine.
-
-1;
