@@ -1,3 +1,5 @@
+package Country;
+
 sub speak {
     my $class = shift;
     say "In ".$class." say ".$class->sound;
