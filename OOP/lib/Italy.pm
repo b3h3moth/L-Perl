@@ -1,10 +1,10 @@
-package Country::Italy;
+package Italy;
 
 use warnings;
 use strict;
 use v5.14;
 use Country;
-our @ISA = qw(Animal);
+our @ISA = qw(Country);
 
 sub sound { 'Ciao' };
 

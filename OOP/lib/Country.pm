@@ -1,4 +1,5 @@
 package Country;
+use v5.14;
 
 sub speak {
     my $class = shift;
@@ -8,3 +9,5 @@ sub speak {
 sub sound {
     die "You have to define class in a subclass";
 }
+
+1;
