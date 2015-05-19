@@ -1,7 +1,8 @@
 #!/usr/bin/env perl
 use warnings;
+use strict;
+
 use Country::Italy;
-use diagnostics;
 
 Country::Italy->speak;
 
