@@ -2,9 +2,9 @@
 use warnings;
 use strict;
 
-use Country::Italy;
+use Country;
 
-Country::Italy->speak;
+Italy->speak;
 
 # Rules to know about OOP and Perl:
 # A class is a package, so the simplest class is just a package;
