@@ -4,10 +4,11 @@ use warnings;
 use strict;
 use v5.14;
 
+sub sound { 'Ciao' };
+
 sub speak {
     my $class = shift;
-    say "a $class say Ciao";
+    say "In ".$class." say ".$class->sound;
 }
 
 1;
-
