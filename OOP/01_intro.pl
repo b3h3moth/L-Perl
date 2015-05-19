@@ -8,7 +8,7 @@ our @ISA = qw(Country);
 
 sub sound { "aioopop" }
 
-Italy->speak;
+Country::Italy->speak;
 
 # Rules to know about OOP and Perl:
 # A class is a package, so the simplest class is just a package;

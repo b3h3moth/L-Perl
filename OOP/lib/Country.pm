@@ -1,9 +1,8 @@
 package Country;
-use v5.14;
 
 sub speak {
     my $class = shift;
-    say "In ".$class." say ".$class->sound;
+    print "In $class say", $class->sound;
 }
 
 sub sound {
