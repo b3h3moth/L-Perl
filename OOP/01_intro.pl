@@ -2,7 +2,11 @@
 use warnings;
 use strict;
 
+use lib 'lib';
 use Country;
+our @ISA = qw(Country);
+
+sub sound { "aioopop" }
 
 Italy->speak;
 
