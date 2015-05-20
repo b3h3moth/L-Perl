@@ -23,3 +23,6 @@ foreach my $anim (@pasture) {
 Cow->speak;
 Horse->speak;
 Sheep->speak;
+
+my $beast = 'Sheep';
+$beast::speak;
