@@ -1,6 +1,8 @@
 package Sheep;
 
 use v5.14; # say()
+use Animal;
+our @ISA = qw(Animal);
 
 sub sound {
     'baaaaah'
