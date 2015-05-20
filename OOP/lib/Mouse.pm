@@ -10,7 +10,8 @@ sub sound {
 
 sub speak {
     my $class = shift;
-    Animal::speak($class);
+    #Animal::speak($class);
+    $class->SUPER::speak(@_);
     say "[ overriding ]";
 }
 
