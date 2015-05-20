@@ -7,6 +7,7 @@ use Cow;
 use Horse;
 use Sheep;
 
+# Called with full package name
 Cow::speak;
 Horse::speak;
 Sheep::speak;
