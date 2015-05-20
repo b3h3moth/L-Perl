@@ -1,6 +1,5 @@
 package Italy;
 
-use v5.14;
 use Country;
 our @ISA = qw(Country);
 
