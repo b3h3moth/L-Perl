@@ -19,4 +19,7 @@ foreach my $anim (@pasture) {
     &{$anim."::speak"};
 }
 
-# In Perl isn't a difference between a subroutine and a method
+# In Perl isn't a difference between a subroutine and a method:
+Cow->speak;
+Horse->speak;
+Sheep->speak;
