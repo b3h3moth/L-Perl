@@ -19,11 +19,13 @@ foreach my $beast (@pasture) {
     &{$beast."::speak"};
 }
 
-# In Perl isn't a difference between a subroutine and a method:
+# In Perl isn't a difference between a subroutine and a method.
+# Method invocation arrow.
 Cow->speak;
 Horse->speak;
 Sheep->speak;
 
+# without symbolic coderefs.
 foreach my $beast (@pasture) {
     $beast->speak;
 }
