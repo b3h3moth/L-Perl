@@ -2,7 +2,7 @@ package Mouse;
 
 use v5.14; # say()
 use Animal;
-our @ISA = qw(Animal); # inheritance
+use parent qw(Animal); # inheritance
 
 sub sound { 
     'squeak'
@@ -10,7 +10,7 @@ sub sound {
 
 sub speak {
     my $class = shift;
-    say "A $class goes ", $class->sound;
+    Animal::speak($class);
     say "[ overriding ]";
 }
 

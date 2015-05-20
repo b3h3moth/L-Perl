@@ -2,7 +2,7 @@ package Sheep;
 
 use v5.14; # say()
 use Animal;
-our @ISA = qw(Animal); # inheritance
+use parent qw(Animal); # inheritance
 
 sub sound {
     'baaaaah'

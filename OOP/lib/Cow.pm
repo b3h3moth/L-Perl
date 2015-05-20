@@ -2,7 +2,7 @@ package Cow;
 
 use v5.14; # say()
 use Animal;
-our @ISA = qw(Animal); # inheritance
+use parent qw(Animal); # inheritance
 
 sub sound { 
     'mooo'
@@ -10,7 +10,7 @@ sub sound {
 
 sub speak {
     my $class = shift;
-    say "A $class goes ", $class->sound;
+    Animal::speak($class);
 }
 
 1;
