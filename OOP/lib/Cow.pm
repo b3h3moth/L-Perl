@@ -8,9 +8,4 @@ sub sound {
     'mooo'
 }
 
-sub speak {
-    my $class = shift;
-    Animal::speak($class);
-}
-
 1;
