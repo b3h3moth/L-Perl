@@ -1,7 +1,8 @@
 package Horse;
 
 sub speak {
-    print "A Horse goes neigh\n";
+    my $class = shift;
+    print "A $class goes neigh\n";
 }
 
 1;

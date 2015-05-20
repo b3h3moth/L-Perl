@@ -1,7 +1,8 @@
 package Sheep;
 
 sub speak {
-    print "A Sheep goes baaah\n";
+    my $class = shift;
+    print "A $class goes baaah\n";
 }
 
 1;
