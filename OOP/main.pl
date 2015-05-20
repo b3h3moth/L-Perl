@@ -13,10 +13,10 @@ Horse::speak;
 Sheep::speak;
 
 my @pasture = qw(Cow Horse Sheep Sheep Cow Cow Horse Horse Sheep);
-foreach my $anim (@pasture) {
+foreach my $beast (@pasture) {
     no strict 'refs';
     # symbolic coderef dereferencing
-    &{$anim."::speak"};
+    &{$beast."::speak"};
 }
 
 # In Perl isn't a difference between a subroutine and a method:
@@ -24,5 +24,6 @@ Cow->speak;
 Horse->speak;
 Sheep->speak;
 
-my $beast = 'Sheep';
-$beast::speak;
+foreach my $beast (@pasture) {
+    $beast->speak;
+}
