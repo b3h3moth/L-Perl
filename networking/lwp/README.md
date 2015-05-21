@@ -2,4 +2,4 @@
 
 ### List of modules cobered:
 * LWP (libwwwperl)
-..* LWP::Simple
+  * LWP::Simple
