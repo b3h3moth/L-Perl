@@ -15,7 +15,7 @@ use v5.14;
 my $next_file = glob('*.pl');
 say "file: $next_file";
 
-# How to get list of 'perl' files, list context;
+# How to get list of 'perl' files, list context
 my @all_filenames = glob('*.pl');
 foreach (@all_filenames) {
     say "perl: $_";
