@@ -8,6 +8,7 @@ foreach (glob '*') {
     # remove current '.' and parent directory '..'
     # next if ($_ eq '.' or $_ eq '..');
 
+    # print out a column, 30 characters long
     print $_, " " x (30 - length($_));
 
     # check if filename is a directory
