@@ -9,13 +9,23 @@ foreach (glob '*') {
     # next if ($_ eq '.' or $_ eq '..');
 
     # trunc filename if greater than 30 characters
-    print $_, " " x (30 - length($_));
+    print $_, " " x (10 - length($_));
 
+    # check if filename is a directory
     print "-d" if -d $_;
+
+    # check if filename has read permission
     print "-r" if -r $_;
+
+    # check if filename has write permission
     print "-w" if -w $_;
+
+    # check if filename is executable
     print "-x" if -x $_;
+
+    # check if filename has other users permission
     print "-o" if -o $_;
+
     print "\t";
     print -s $_ if -r $_ and -f $_;
     print "\n";
