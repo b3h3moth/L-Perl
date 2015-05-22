@@ -21,6 +21,7 @@ foreach (@all_filenames) {
     say "perl: $_";
 }
 
+# How to get more than one pattern to glob
 my $etc_dir = '/etc/';
 foreach ( glob("$etc_dir*.rc  $etc_dir*.cache") ) {
     say $_;
