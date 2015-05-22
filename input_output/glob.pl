@@ -11,5 +11,6 @@ use v5.14;
 # 
 # Globbing: patterns to match files and directories.
 
+# How to get 'next file' in alphabetical order, in scalar context
 my $next_file = glob('*.pl');
 say "scalar context: $next_file";
