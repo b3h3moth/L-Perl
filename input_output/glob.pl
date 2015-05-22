@@ -13,4 +13,9 @@ use v5.14;
 
 # How to get 'next file' in alphabetical order, in scalar context
 my $next_file = glob('*.pl');
-say "scalar context: $next_file";
+say "file: $next_file";
+
+my @all_filenames = glob('*.pl');
+foreach (@all_filenames) {
+    say "perl: $_";
+}
