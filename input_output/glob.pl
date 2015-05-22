@@ -10,3 +10,6 @@ use v5.14;
 # undef when the list is exhausted. If EXPR is omitted, $_ is used. 
 # 
 # Globbing: patterns to match files and directories.
+
+my $next_file = glob('*.pl');
+say "scalar context: $next_file";
