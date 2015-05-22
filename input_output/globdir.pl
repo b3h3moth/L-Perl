@@ -8,8 +8,7 @@ foreach (glob '*') {
     # remove current '.' and parent directory '..'
     # next if ($_ eq '.' or $_ eq '..');
 
-    # trunc filename if greater than 30 characters
-    print $_, " " x (10 - length($_));
+    print $_, " " x (30 - length($_));
 
     # check if filename is a directory
     print "-d" if -d $_;
@@ -27,6 +26,9 @@ foreach (glob '*') {
     print "-o" if -o $_;
 
     print "\t";
+
+    # print out the file's size
     print -s $_ if -r $_ and -f $_;
+
     print "\n";
 }
