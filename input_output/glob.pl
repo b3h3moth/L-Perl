@@ -21,3 +21,7 @@ foreach (@all_filenames) {
     say "perl: $_";
 }
 
+my $etc_dir = '/etc/';
+foreach ( glob("$etc_dir*.rc  $etc_dir*.cache") ) {
+    say $_;
+}
