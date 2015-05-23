@@ -25,8 +25,8 @@ say $$hashref{HOME};
 say $$coderef;
 say $$globref;
 
-#The backslash operator can do more than produce a single reference. It will
-#generate a whole list of references if applied to a list.
+# The backslash operator can do more than produce a single reference. It will
+# generate a whole list of references if applied to a list.
 
 my $os_name = 'DSBnepO';
 my $ref = \$os_name;
@@ -34,7 +34,7 @@ my $ref = \$os_name;
 say "A:  address memory: $ref";    #address memory
 say "B: default OS name: $$ref";   #dereference
 
-#modifica il valore
+# change the value
 sub invert {
      my $ref = shift;
      $$ref = reverse($$ref);
