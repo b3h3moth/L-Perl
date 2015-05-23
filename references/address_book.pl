@@ -33,4 +33,9 @@ $address_book{$name} = {
     phone_number    => $phone_num,
 };
 
-say Dumper \%address_book;
+
+if (exists $address_book{$name}) {
+    say $name;
+    say $address_book{$name}{address};
+    say $address_book{$name}{phone_number};
+}
