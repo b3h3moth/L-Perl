@@ -46,3 +46,9 @@ foreach my $who (keys %address_book) {
     say $address_book{$who}{address};
     say $address_book{$who}{phone_number};
 }
+
+$address_book{"behemoth"} = {
+    address         => "Via Grazia Deledda",
+    phone_number    => 22222,
+    skills          => ["Perl", "C", "C++", "System Programming"],
+};
