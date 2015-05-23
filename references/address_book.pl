@@ -39,3 +39,9 @@ if (exists $address_book{$name}) {
     say $address_book{$name}{address};
     say $address_book{$name}{phone_number};
 }
+
+foreach my $who (keys %address_book) {
+    say $who;
+    say $address_book{$who}{address};
+    say $address_book{$who}{phone_number};
+}
