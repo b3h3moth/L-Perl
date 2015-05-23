@@ -40,6 +40,7 @@ if (exists $address_book{$name}) {
     say $address_book{$name}{phone_number};
 }
 
+# Print out every address
 foreach my $who (keys %address_book) {
     say $who;
     say $address_book{$who}{address};
