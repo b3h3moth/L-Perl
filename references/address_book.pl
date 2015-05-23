@@ -14,4 +14,7 @@ $address_book{"luca"} = {
     cellphone   => "1234556",
 };
 
-say $address_book{luca}{address};
+# say $address_book{luca}{address};
+
+print "name: ";
+chomp(my $name = <>);
