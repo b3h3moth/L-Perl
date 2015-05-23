@@ -16,6 +16,7 @@ $address_book{"luca"} = {
 
 # say $address_book{luca}{address};
 
+# Get address book's data
 print "        name: ";
 chomp(my $name = <>);
 
