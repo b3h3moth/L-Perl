@@ -52,3 +52,16 @@ $address_book{"behemoth"} = {
     phone_number    => 22222,
     skills          => ["Perl", "C", "C++", "System Programming"],
 };
+
+my $test = 'behemoth';
+
+if (exists $address_book{$test}) {
+    say $name;
+    say $address_book{$test}{address};
+    say $address_book{$test}{phone_number};
+    my @skills = @{$address_book{$test}{skills}};
+    say 'skills: ';
+    foreach (@skills) {
+        say '- ', $_;
+    }
+}
