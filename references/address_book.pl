@@ -2,6 +2,7 @@
 use warnings;
 use strict;
 use v5.14;
+use Data::Dumper;
 
 # How to achieve a tree-like data structure.
 
@@ -25,3 +26,9 @@ chomp(my $address = <>);
 
 print "phone_number: ";
 chomp(my $phone_num = <>);
+
+# add data into address book
+$address_book{$name} = {
+    address         => $address,
+    phone_number    => $phone_num,
+};
