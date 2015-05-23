@@ -16,7 +16,7 @@ my $coderef    = \sub {say 'hello'};
 my $globref    = \*STDOUT;
 
 # print out each reference
-say $$scalarref;
+say ${$scalarref};
 say $$constref;
 say $$arrayref[0]; #need one argument
 say $$hashref{HOME};
