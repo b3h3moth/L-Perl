@@ -27,7 +27,7 @@ chomp(my $address = <>);
 print "phone_number: ";
 chomp(my $phone_num = <>);
 
-# add data into address book
+# Add data into address book
 $address_book{$name} = {
     address         => $address,
     phone_number    => $phone_num,
