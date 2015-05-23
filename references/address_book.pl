@@ -10,11 +10,17 @@ my %address_book;
 
 # Basic structure
 $address_book{"luca"} = {
-    address     => "san lorenzo",
-    cellphone   => "1234556",
+    address         => "san lorenzo",
+    phone_number    => 111111,
 };
 
 # say $address_book{luca}{address};
 
-print "name: ";
+print "        name: ";
 chomp(my $name = <>);
+
+print "     address: ";
+chomp(my $address = <>);
+
+print "phone_number: ";
+chomp(my $phone_num = <>);
