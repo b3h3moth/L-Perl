@@ -3,6 +3,8 @@ use warnings;
 use strict;
 use v5.14;
 
+# In Perl, a reference is always a scalar.
+# 
 # You can create a reference to any named variable or subroutine with a
 # backslash '\' operator. This operator works like the '&' C-ANSI operator.
 
