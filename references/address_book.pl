@@ -55,6 +55,7 @@ $address_book{"behemoth"} = {
 
 my $test = 'behemoth';
 
+# Add new level
 if (exists $address_book{$test}) {
     say $name;
     say $address_book{$test}{address};
