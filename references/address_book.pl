@@ -32,3 +32,5 @@ $address_book{$name} = {
     address         => $address,
     phone_number    => $phone_num,
 };
+
+say Dumper \%address_book;
