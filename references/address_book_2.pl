@@ -44,3 +44,5 @@ foreach my $who (keys %address_book) {
         say "\t", $_;
     }
 }
+
+print Dumper \%address_book;
