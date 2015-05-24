@@ -47,6 +47,7 @@ foreach my $who (keys %address_book) {
     say $address_book{$who}{phone_number};
 }
 
+# Add new level
 $address_book{"behemoth"} = {
     address         => "Via Grazia Deledda",
     phone_number    => 22222,
@@ -55,7 +56,6 @@ $address_book{"behemoth"} = {
 
 my $test = 'behemoth';
 
-# Add new level
 if (exists $address_book{$test}) {
     say $test;
     say $address_book{$test}{address};
