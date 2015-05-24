@@ -34,6 +34,7 @@ $address_book{$name} = {
 };
 
 say "Single person:";
+say '-' x 50;
 
 # Print out a single person
 if (exists $address_book{$name}) {
@@ -43,6 +44,7 @@ if (exists $address_book{$name}) {
 }
 
 say "Every address:";
+say '-' x 50;
 
 # Print out every address
 foreach my $who (keys %address_book) {
@@ -59,6 +61,7 @@ $address_book{"behemoth"} = {
 };
 
 say "Every address with 'skills' if exists:";
+say '-' x 50;
 
 foreach my $who (keys %address_book) {
     next unless exists $address_book{$who}{skills};
