@@ -74,6 +74,6 @@ foreach my $who (keys %address_book) {
     say 'skills: ';
     
     foreach (@skills) {
-        say '- ', $_;
+        say "\t", $_;
     }
 }
