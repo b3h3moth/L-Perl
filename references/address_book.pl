@@ -33,12 +33,16 @@ $address_book{$name} = {
     phone_number    => $phone_num,
 };
 
+say "Sigle person:";
+
 # Print out a single person
 if (exists $address_book{$name}) {
     say $name;
     say $address_book{$name}{address};
     say $address_book{$name}{phone_number};
 }
+
+say "Every address:";
 
 # Print out every address
 foreach my $who (keys %address_book) {
@@ -53,6 +57,8 @@ $address_book{"behemoth"} = {
     phone_number    => 111222222,
     skills          => ["Perl", "C", "C++", "System Programming"],
 };
+
+say "Every address with 'skills' if exists:";
 
 foreach my $who (keys %address_book) {
     next unless exists $address_book{$who}{skills};
