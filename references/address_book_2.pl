@@ -9,7 +9,6 @@ use Data::Dumper;
 # Main address book hash
 my %address_book;
 
-
 # Get address book's data
 print "name: ";
 chomp(my $name = <>);
@@ -23,7 +22,7 @@ chomp(my $phone_num = <>);
 print "skills: ";
 chomp(my $tmp_skill = <>);
 
-my @skill = split " ",$tmp_skill;
+my @skill = split " ", $tmp_skill;
 
 $address_book{$name} = {
     address         => $address,
