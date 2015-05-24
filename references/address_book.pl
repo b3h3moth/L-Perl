@@ -21,7 +21,7 @@ $address_book{"luca"} = {
 print "name: ";
 chomp(my $name = <>);
 
-print "ddress: ";
+print "address: ";
 chomp(my $address = <>);
 
 print "phone_number: ";
