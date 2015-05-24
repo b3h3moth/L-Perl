@@ -57,7 +57,7 @@ my $test = 'behemoth';
 
 # Add new level
 if (exists $address_book{$test}) {
-    say $name;
+    say $test;
     say $address_book{$test}{address};
     say $address_book{$test}{phone_number};
     my @skills = @{$address_book{$test}{skills}};
