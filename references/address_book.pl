@@ -55,11 +55,12 @@ $address_book{"behemoth"} = {
 };
 
 foreach my $who (keys %address_book) {
-    say $test;
+    next unless exists $address_book{$who}{skills};
+    say $who;
     say $address_book{$who}{address};
     say $address_book{$who}{phone_number};
     
-    my @skills = @{$address_book{$test}{skills}};
+    my @skills = @{$address_book{$who}{skills}};
 
     say 'skills: ';
     
