@@ -33,7 +33,7 @@ $address_book{$name} = {
     phone_number    => $phone_num,
 };
 
-say "Sigle person:";
+say "Single person:";
 
 # Print out a single person
 if (exists $address_book{$name}) {
