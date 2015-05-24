@@ -1,4 +1,4 @@
-## Perl Special variables
+## Perl Special Variables
 
-### Part I
+### Part 1
 
