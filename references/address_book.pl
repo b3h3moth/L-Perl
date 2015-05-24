@@ -49,19 +49,20 @@ foreach my $who (keys %address_book) {
 
 # Add new level
 $address_book{"behemoth"} = {
-    address         => "Via Grazia Deledda",
-    phone_number    => 22222,
+    address         => "47th avenue",
+    phone_number    => 111222222,
     skills          => ["Perl", "C", "C++", "System Programming"],
 };
 
-my $test = 'behemoth';
-
-if (exists $address_book{$test}) {
+foreach my $who (keys %address_book) {
     say $test;
-    say $address_book{$test}{address};
-    say $address_book{$test}{phone_number};
+    say $address_book{$who}{address};
+    say $address_book{$who}{phone_number};
+    
     my @skills = @{$address_book{$test}{skills}};
+
     say 'skills: ';
+    
     foreach (@skills) {
         say '- ', $_;
     }
