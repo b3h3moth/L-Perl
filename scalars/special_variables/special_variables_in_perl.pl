@@ -3,6 +3,15 @@ use warnings;
 use strict;
 use v5.14;
 
+# Five special variables for page (I part)
+#
+# This page concerns: 
+# 1) $_
+# 2) $.
+# 3) $/
+# 4) $,
+# 5) $\
+
 # '$_' The default variable is a parameter for a lot of functions.
 foreach (1..3) { say "$_"; }
 
