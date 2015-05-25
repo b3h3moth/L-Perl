@@ -23,5 +23,6 @@ say '$four is a ', ref($four), " reference";
 bless($one, "Person");
 say '$one is a ', ref($one), " reference";
 
+# Change $two reference into Person::Man reference
 bless($two, "Person::Man");
 say '$two is a ', ref($two), " reference";
