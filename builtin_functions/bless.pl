@@ -33,3 +33,9 @@ say '$four is a ', ref($four), " reference";
 
 # Modification of a read-only value
 bless($three, "Animal::Mammal");
+
+__END__
+You've changed where Perl should look if any methods are called by the
+reference. At this stage you haven't even defined an Animal::Mammal package, 
+but that's OK because you're not going to call any methods yet, if you did, 
+they would surely fail.
