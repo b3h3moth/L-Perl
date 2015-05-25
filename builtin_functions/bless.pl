@@ -19,5 +19,6 @@ say '$two is a ', ref($two), " reference";
 say '$three is a ', ref($three), " reference";
 say '$four is a ', ref($four), " reference";
 
+# Change $one reference into Person reference
 bless($one, "Person");
 say '$one is a ', ref($one), " reference";
