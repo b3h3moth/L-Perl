@@ -24,4 +24,4 @@ bless($one, "Person");
 say '$one is a ', ref($one), " reference";
 
 bless($two, "Person::Man");
-say '$one is a ', ref($two), " reference";
+say '$two is a ', ref($two), " reference";
