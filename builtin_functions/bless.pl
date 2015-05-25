@@ -7,8 +7,9 @@ use v5.14;
 # bless REF,CLASSNAME
 # bless REF
 #
-# The bless() function takes a reference 'REF'  and turns it into an object. in the CLASSNAME package.
-# If CLASSNAME is omitted, the current package is used.
+# The bless() function takes a reference 'REF' and turns it into an object. It
+# changes the type of the reference. Instead of being an array reference or a 
+# hash reference, Perl now thinks of it as a Person1 reference.
 my $a = {};
 say '$a is a ', ref($a), " reference";
 
