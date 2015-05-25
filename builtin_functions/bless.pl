@@ -9,11 +9,13 @@ use v5.14;
 # The bless() function takes a reference 'REF' and turns it into an object. It
 # changes the type of the reference. Instead of being an array reference or a 
 # hash reference, Perl now thinks of it as a Person1 reference.
-my $a = {};
-say '$a is a ', ref($a), " reference";
+my $one = {};
+my $two = [];
+my $three = \1;
+my $four = \$three;
 
-bless($a, "Person1");
-say '$a is a ', ref($a), " reference";
+say '$one is a ', ref($one), " reference";
+say '$two is a ', ref($two), " reference";
+say '$three is a ', ref($three), " reference";
+say '$four is a ', ref($four), " reference";
 
-bless($a, "Animal::Vertebrate::Mammal");
-say '$a is a ', ref($a), " reference";
