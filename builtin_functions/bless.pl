@@ -28,7 +28,7 @@ bless($two, "Person::Man");
 say '$two is a ', ref($two), " reference";
 
 # Change $four reference into Animal::Mammal reference
-bless($four, "Animal::Mammal");
+bless($four, "Sport::Football::Europe::Italy");
 say '$four is a ', ref($four), " reference";
 
 # Modification of a read-only value
