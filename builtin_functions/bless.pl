@@ -30,4 +30,5 @@ say '$two is a ', ref($two), " reference";
 # Modification of a read-only value
 bless($three, "Animal::Mammal");
 
-
+bless($four, "Animal::Mammal");
+say '$four is a ', ref($four), " reference";
