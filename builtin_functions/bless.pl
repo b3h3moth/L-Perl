@@ -11,7 +11,7 @@ use v5.14;
 # hash reference, Perl now thinks of it as a Person1 reference.
 my $one = {};
 my $two = [];
-my $three = \1;
+my $three = \100;
 my $four = \$three;
 
 say '$one is a ', ref($one), " reference";
@@ -22,3 +22,4 @@ say '$four is a ', ref($four), " reference";
 # Change $one reference into Person reference
 bless($one, "Person");
 say '$one is a ', ref($one), " reference";
+
