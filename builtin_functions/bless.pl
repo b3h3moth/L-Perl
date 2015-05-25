@@ -19,3 +19,5 @@ say '$two is a ', ref($two), " reference";
 say '$three is a ', ref($three), " reference";
 say '$four is a ', ref($four), " reference";
 
+bless($one, "Person");
+say '$one is a ', ref($one), " reference";
