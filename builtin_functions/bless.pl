@@ -1,5 +1,4 @@
 #!/usr/bin/env perl
-package Test;
 use warnings;
 use strict;
 use v5.14;
