@@ -20,11 +20,18 @@ sub first_name {
     return $self->{firstname};
 }
 
-# Get lastname
-sub last_name {
+# Get nickname
+sub nickname {
     my $self = shift;
     
-    return $self->{lastname};
+    return $self->{nickname};
+}
+
+# Get address
+sub address {
+    my $self = shift;
+    
+    return $self->{address};
 }
 
 # Get country
@@ -40,6 +47,7 @@ sub occupation {
     
     return $self->{occupation};
 }
+
 1;
 __END__
 See main4.pl, how to call object methods
