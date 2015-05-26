@@ -4,9 +4,10 @@ use strict;
 
 # Providing attributes to class with the constructor
 sub new {
-    my $class = shift;
+    my $class = shift;      # The class name, passed as the first argument
     my $self = {@_};
     bless $self, $class;
+
     return $self;
 }
 
