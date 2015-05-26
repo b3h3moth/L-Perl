@@ -2,7 +2,9 @@ package Person3;
 
 use strict;
 
-# Providing attributes to class with the constructor
+# How to providing attributes to class with a constructor
+
+# The constructor
 sub new {
     my $class = shift;      # The class name, passed as the first argument
     my $self = {@_};        # Get arguments passed to new()
