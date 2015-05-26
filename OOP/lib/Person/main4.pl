@@ -8,9 +8,11 @@ my $person = Person4->new(
     firstname   => "mister",
     lastname    => "behemoth",
     address     => "5th avenue",
-    country     => "italy"
+    country     => "italy",
+    occupation  => "Developer"
 );
 
 say 'Firstname is: '.$person->first_name();
 say 'Lastname is: '.$person->last_name();
 say 'Country is: '.$person->country();
+say 'Occupation is: '.$person->occupation();
