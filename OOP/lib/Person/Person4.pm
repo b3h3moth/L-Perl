@@ -33,6 +33,13 @@ sub country {
     
     return $self->{country};
 }
+
+# Get occupation
+sub occupation {
+    my $self = shift;
+    
+    return $self->{occupation};
+}
 1;
 __END__
 See main4.pl, how to call object methods
