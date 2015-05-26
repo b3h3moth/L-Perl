@@ -2,7 +2,7 @@ package Person3;
 
 use strict;
 
-# How to providing attributes to class with a constructor
+# How to provide attributes to class with a constructor
 
 # The constructor
 sub new {
