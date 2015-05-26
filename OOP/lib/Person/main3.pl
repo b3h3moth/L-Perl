@@ -8,10 +8,9 @@ my $person_a = Person3->new("mister","behemoth","47th avenue","Italy");
 
 my $person_b = Person3->new(
     firstname   => "mister",
-    lastname    => "behemoth",
+    nickname    => "behemoth",
     address     => "5th avenue",
     country     => "Italy",
-    city        => "campobasso",
     occupation  => "Computer Scientist"
 );
 
