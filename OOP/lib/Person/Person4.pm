@@ -1,4 +1,4 @@
-package Person3;
+package Person4;
 
 use strict;
 
@@ -15,9 +15,9 @@ sub new {
 
 # get first_name
 sub first_name {
-    my $shelf = shift;
+    my $self = shift;
     
-    return $shelf->{lastname};
+    return $self->{firstname};
 }
 
 1;
