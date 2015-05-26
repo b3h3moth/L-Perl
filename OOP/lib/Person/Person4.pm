@@ -27,6 +27,12 @@ sub last_name {
     return $self->{lastname};
 }
 
+# Get country
+sub country {
+    my $self = shift;
+    
+    return $self->{country};
+}
 1;
 __END__
 See main4.pl, how to call object methods
