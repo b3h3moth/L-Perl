@@ -13,6 +13,13 @@ sub new {
     return $self;
 }
 
+# get first_name
+sub first_name {
+    my $shelf = shift;
+    
+    return $shelf->{lastname};
+}
+
 1;
 __END__
-See main3.pl, how to send attributes to this class
+See main4.pl, how to call object methods
