@@ -5,7 +5,7 @@ use strict;
 # Providing attributes to class with the constructor
 sub new {
     my $class = shift;      # The class name, passed as the first argument
-    my $self = {@_};
+    my $self = {@_};        # Get arguments passed to new()
     bless $self, $class;
 
     return $self;
