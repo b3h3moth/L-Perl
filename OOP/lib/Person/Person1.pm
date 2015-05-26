@@ -2,6 +2,8 @@ package Person1;
 
 use strict;
 
+# Basic class
+
 1;
 
 __END__
