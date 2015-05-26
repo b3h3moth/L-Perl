@@ -13,11 +13,18 @@ sub new {
     return $self;
 }
 
-# get first_name
+# Get firstname 
 sub first_name {
     my $self = shift;
     
     return $self->{firstname};
+}
+
+# Get lastname
+sub last_name {
+    my $self = shift;
+    
+    return $self->{lastname};
 }
 
 1;
