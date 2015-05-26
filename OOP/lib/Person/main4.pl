@@ -13,3 +13,4 @@ my $person = Person4->new(
 
 say 'Firstname is: '.$person->first_name();
 say 'Lastname is: '.$person->last_name();
+say 'Country is: '.$person->country();
