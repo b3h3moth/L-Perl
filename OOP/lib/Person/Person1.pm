@@ -2,7 +2,7 @@ package Person1;
 
 use strict;
 
-# Basic class
+# Basic (empty) class
 
 1;
 
