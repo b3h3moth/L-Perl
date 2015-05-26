@@ -31,7 +31,7 @@ say '$two is a ', ref($two), " reference";
 bless($four, "Sport::Football::Europe::Italy");
 say '$four is a ', ref($four), " reference";
 
-# Modification of a read-only value
+# Modification of a read-only value (warnings)
 bless($three, "Animal::Mammal");
 
 __END__
