@@ -2,8 +2,13 @@ package Person3;
 
 use strict;
 
-# Providing attributes to class
-
+# Providing attributes to class with the constructor
+sub new {
+    my $class = shift;
+    my $self = {@_};
+    bless $self, $class;
+    return $self;
+}
 
 1;
 __END__
