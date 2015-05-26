@@ -11,4 +11,5 @@ my $person = Person4->new(
     country     => "italy"
 );
 
-say 'First name is: '.$person->first_name();
+say 'Firstname is: '.$person->first_name();
+say 'Lastname is: '.$person->last_name();
