@@ -2,7 +2,9 @@ package Person2;
 
 use strict;
 
-# Make a constructor
+# How to make a constructor
+
+# The Constructor
 sub new {
     my $class = shift;       # The first thing passed is the class name
     my $self = {};           # Hash reference
