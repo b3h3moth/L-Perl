@@ -26,6 +26,10 @@ systems.
   by Randal L. Schwartz, brian d foy, and Tom Phoenix
   Covers Perl 5.14
 
+* Mastering Perl, Second Edition (O'Reilly, 2014)
+  by Brian d foy
+  Covers from Perl 5.10 to Perl v5.18
+
 * Effective Perl Programming, Second Edition (Addison Wesley, 2010)
   by Joseph N. Hall, Joshua A. McAdams, Brian d foy
   Covers Perl 5.10
