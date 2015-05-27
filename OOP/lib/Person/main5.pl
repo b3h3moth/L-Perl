@@ -17,3 +17,9 @@ say 'Nickname is: '.$person->nickname();
 say 'Address is: '.$person->address();
 say 'Country is: '.$person->country();
 say 'Occupation is: '.$person->occupation();
+
+$person->first_name("mister");
+$person->nickname("behemoth");
+$person->address("47th avenue");
+$person->country("usa");
+$person->occupation("admin");
