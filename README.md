@@ -40,3 +40,7 @@ systems.
 * Beginning Perl, Third edition (Apress, 2010)
   by James Lee with Simon Cozens
   Covers Perl 5.10
+
+* Beginning Perl (Wrox, 2012)
+  by Curtis "ovid" Poe
+  Covers Perl 5.8 and Perl 5.10
