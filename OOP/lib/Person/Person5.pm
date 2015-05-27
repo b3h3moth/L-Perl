@@ -7,37 +7,37 @@ use strict;
 # The constructor
 sub new {
     my $class = shift;      # The class name, passed as the first argument
-    my $self = {@_};        # Get arguments passed to new()
+    my $self = {@_};        # Get/Set arguments passed to new()
 
     bless $self, $class;
     return $self;
 }
 
-# Get firstname 
+# Get/Set firstname 
 sub first_name {
     my $self = shift;
     return $self->{firstname};
 }
 
-# Get nickname
+# Get/Set nickname
 sub nickname {
     my $self = shift;
     return $self->{nickname};
 }
 
-# Get address
+# Get/Set address
 sub address {
     my $self = shift;
     return $self->{address};
 }
 
-# Get country
+# Get/Set country
 sub country {
     my $self = shift;
     return $self->{country};
 }
 
-# Get occupation
+# Get/Set occupation
 sub occupation {
     my $self = shift;
     return $self->{occupation};
