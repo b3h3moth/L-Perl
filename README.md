@@ -39,4 +39,4 @@ systems.
 
 * Beginning Perl, Third edition (Apress, 2010)
   by James Lee with Simon Cozens
-  Cobers Perl 5.10
+  Covers Perl 5.10
