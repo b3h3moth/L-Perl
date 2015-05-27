@@ -23,3 +23,9 @@ $person->nickname("behemoth");
 $person->address("47th avenue");
 $person->country("usa");
 $person->occupation("admin");
+
+say "\ndefined Firstname to: ".$person->first_name();
+say 'defined Nickname to: '.$person->nickname();
+say 'defined Address to: '.$person->address();
+say 'defined Country to: '.$person->country();
+say 'defined Occupation to: '.$person->occupation();
