@@ -5,11 +5,11 @@ use v5.14;
 use Person5;
 
 my $person = Person5->new(
-    firstname   => "mister",
-    nickname    => "behemoth",
-    address     => "5th avenue",
-    country     => "italy",
-    occupation  => "Developer"
+    firstname   => "ciccio",
+    nickname    => "franchi",
+    address     => "piazza dante",
+    country     => "jamaica",
+    occupation  => "chef"
 );
 
 say 'Firstname is: '.$person->first_name();
