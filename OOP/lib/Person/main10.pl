@@ -4,9 +4,7 @@ use strict;
 use v5.14;
 use Person10;
 
-say 'Object Counter now is: '.Person10->head_count();
-
-my $object_a = Person10->new(
+my $record = Person10->new(
     firstname   => "mister",
     nickname    => "behemoth",
     address     => "7th avenue",
@@ -14,3 +12,6 @@ my $object_a = Person10->new(
     occupation  => "love girls"
 );
 
+say 'Object Counter now is: '.Person10->head_count();
+
+say $record->full_name();
