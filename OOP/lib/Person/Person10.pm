@@ -63,6 +63,11 @@ sub full_name {
     return $self->first_name().' '.$self->nickname();
 }
 
+sub self_test {
+    my $self = shift;
+    return $self;
+}
+
 1;
 __END__
 See main10.pl
