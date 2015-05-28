@@ -15,3 +15,5 @@ my $record = Person10->new(
 say 'Object Counter now is: '.Person10->head_count();
 
 say $record->full_name();
+
+say $record->self_test();
