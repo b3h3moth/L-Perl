@@ -57,6 +57,12 @@ sub every_record {
     return @object_created;
 }
 
+# Utility methods
+sub full_name {
+    my $self = shift;
+    return $self->first_name().' '.$self->nickname();
+}
+
 1;
 __END__
 See main10.pl
