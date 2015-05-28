@@ -4,12 +4,7 @@ use strict;
 
 # How to provide a class attribute. 
 
-# A class attribute is a package variable, an accessor method gets/sets the
-# value of that variable.
-
-# In this case I'll use a class attribute $record_counter to keep score of how
-# many times 'Person8' object will be created.
-
+# An array of object created
 my @everyone;
 
 # The constructor
@@ -18,7 +13,7 @@ sub new {
     my $self = {@_};        # Minimalist Get/Set arguments passed to new()
 
     bless $self, $class;
-    push @full_record, $self;
+    push @everyone, $self;
     return $self;
 }
 
