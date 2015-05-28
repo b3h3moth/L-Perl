@@ -5,7 +5,7 @@ use strict;
 # How to provide a class attribute. 
 
 # An array of object created
-my @everyone;
+my @object_created;
 
 # The constructor
 sub new {
@@ -13,7 +13,7 @@ sub new {
     my $self = {@_};        # Minimalist Get/Set arguments passed to new()
 
     bless $self, $class;
-    push @everyone, $self;
+    push @object_created, $self;
     return $self;
 }
 
@@ -49,11 +49,11 @@ sub occupation {
 
 # Class accessor methods
 sub head_count {
-    return scalar @everyone;
+    return scalar @object_created;
 }
 
 sub every_record {
-    return @everyone;
+    return @object_created;
 }
 
 1;
