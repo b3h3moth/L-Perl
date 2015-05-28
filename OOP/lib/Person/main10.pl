@@ -12,8 +12,8 @@ my $record = Person10->new(
     occupation  => "love girls"
 );
 
-say 'Object Counter now is: '.Person10->head_count();
+#say 'Object Counter now is: '.Person10->head_count();
+# say $record->full_name();
 
-say $record->full_name();
-
-say $record->self_test();
+$record->send_email('I have a dream', 
+                   'My Dream is that Juventus F.C. will win Champions League');
