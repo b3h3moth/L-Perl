@@ -16,4 +16,4 @@ my $record = Person10->new(
 # say $record->full_name();
 
 $record->send_email('I have a dream', 
-                   'My Dream is that Juventus F.C. will win Champions League');
+'Juventus F.C. will win Champions League next June 6th against Barcelona');
