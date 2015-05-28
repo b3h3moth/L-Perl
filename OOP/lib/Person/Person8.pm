@@ -13,7 +13,7 @@ sub new {
     my $self = {@_};        # Minimalist Get/Set arguments passed to new()
 
     bless $self, $class;
-    push @object_created, $self;
+    push @object_created, $self; # push every object into array
     return $self;
 }
 
