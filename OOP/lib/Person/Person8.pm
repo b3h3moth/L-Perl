@@ -48,6 +48,8 @@ sub occupation {
 }
 
 # Class accessor methods
+# Both are references, head_count() count how many objects will be created,
+# every_record() will be useful to get all record values.
 sub head_count {
     return scalar @object_created;
 }
