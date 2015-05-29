@@ -32,3 +32,8 @@ $today[1]++;
 $today[2] += 1900;
 my $today = join "-", @today;
 say $today;
+
+# What time is it?
+my @time = (localtime)[2,1,0];
+my $time = join ":", @time;
+say $time;
