@@ -4,6 +4,7 @@ use strict;
 
 # Full Person class
 
+# Class attributes
 my @object_created;
 
 # The constructor and initialization
@@ -74,6 +75,31 @@ sub print_every_record {
    }
 }
 
+sub send_email {
+    my $self = shift;
+    my $subject = shift;
+    my $body = shift;
+    my $email = $self->first_name().'@'.$self->nickname().'.org';
+    
+    my @date = (localtime)[3,4,5];
+    # fix data
+    $date[1]++;
+    $date[2] += 1900;
+    my $date = join "/", @date;
+
+    print <<"EOF";
+From: $email
+To: God
+
+$date
+
+$body
+
+Forza Juventus
+EOF
+
+    return $self;
+}
 
 1;
 __END__
