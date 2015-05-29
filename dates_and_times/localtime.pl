@@ -37,3 +37,7 @@ say $today;
 my @time = (localtime)[2,1,0];
 my $time = join ":", @time;
 say $time;
+
+# If EXPR is omitted, it uses the current time
+my $now = localtime();
+say $now;
