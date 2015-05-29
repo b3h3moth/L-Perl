@@ -64,19 +64,18 @@ sub every_record {
 }
 
 # Utility methods
-sub full_address {
+sub full_name {
     my $self = shift;
-    return $self->address().' '.$self->last_name();
+    return $self->first_name().' '.$self->last_name();
 }
 
 sub print_every_record {
     my $self = shift;
 
    foreach my $rec ($self->every_record()) {
-       print $self->head_count(),"\n";
-       print 'name: ', $rec->first_name, ' a.k.a.: ', $rec->nickname, "\n",
+       print 'name: ', $rec->first_name, ', a.k.a.: ', $rec->nickname, "\n",
            'country: ', $rec->country, ', address: ', $rec->address, "\n",
-           'occupation: ', $rec->occupation, "\n";
+           'occupation: ', $rec->occupation, "\n\n";
    }
 }
 
@@ -84,7 +83,7 @@ sub send_email {
     my $self = shift;
     my $subject = shift;
     my $body = shift;
-    my $email = $self->first_name().'@'.$self->nickname().'.org';
+    my $email = $self->full_name().'@'.$self->nickname().'.org';
     
     my @date = (localtime)[3,4,5];
     # fix data
@@ -93,7 +92,7 @@ sub send_email {
     my $date = join "/", @date;
 
     print <<"EOF";
-From: $email
+From: $self->full_name() <$email>
 To: God
 
 $date
