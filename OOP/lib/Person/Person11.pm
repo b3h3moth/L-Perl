@@ -2,9 +2,6 @@ package Person11;
 
 use strict;
 
-# How to add DESTROY() method for object destruction. Note that it is implicit
-# for Perl do itself.
-
 my @object_created;
 
 # The constructor and initialization
@@ -64,6 +61,13 @@ sub full_address {
     return $self->address().' '.$self->country();
 }
 
+sub print_every_record {
+    my $self = shift;
+
+    print 'My name is ', $self->first_name, ' a.k.a. ', $self->nickname,
+          ' I live in ', $self->country, ', at ', $self->address, "\nI am a ",
+          $self->occupation, "\n";
+}
 1;
 __END__
 See main11.pl
