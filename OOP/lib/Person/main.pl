@@ -5,9 +5,10 @@ use v5.14;
 use Person;
 
 my $person = Person->new(
-    firstname   => "mister",
+    firstname   => "luca",
+    lastname    => "suriano",
     nickname    => "behemoth",
-    address     => "7th avenue",
+    address     => "26th San Lorenzo avenue",
     country     => "Italy",
-    occupation  => "*nix sustem programmer"
+    occupation  => "*nix system programmer"
 );
