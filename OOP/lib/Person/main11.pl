@@ -9,8 +9,7 @@ my $record = Person11->new(
     nickname    => "behemoth",
     address     => "7th avenue",
     country     => "Italy",
-    occupation  => "sex machine"
+    occupation  => "*nix sustem programmer"
 );
 
-$record->address('Majorana avenue');
-say $record->full_address();
+$record->print_every_record();
