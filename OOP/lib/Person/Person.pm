@@ -66,7 +66,7 @@ sub every_record {
 # Utility methods
 sub full_address {
     my $self = shift;
-    return $self->address().' '.$self->country();
+    return $self->address().' '.$self->last_name();
 }
 
 sub print_every_record {
