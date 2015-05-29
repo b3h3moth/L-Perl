@@ -1,4 +1,4 @@
-#!/usr/bin/env perl
+/usr/bin/env perl
 use warnings;
 use strict;
 use v5.14;
@@ -9,7 +9,7 @@ my $record = Person11->new(
     nickname    => "behemoth",
     address     => "7th avenue",
     country     => "Italy",
-    occupation  => "*nix sustem programmer"
+    occupation  => "*nix system programmer"
 );
 
 $record->print_every_record();
