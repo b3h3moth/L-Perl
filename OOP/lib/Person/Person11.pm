@@ -64,10 +64,15 @@ sub full_address {
 sub print_every_record {
     my $self = shift;
 
-    print 'My name is ', $self->first_name, ' a.k.a. ', $self->nickname,
-          ' I live in ', $self->country, ', at ', $self->address, "\nI am a ",
-          $self->occupation, "\n";
+   foreach my $rec ($self->every_record()) {
+       print $self->head_count(),"\n";
+       print 'name: ', $rec->first_name, ' a.k.a.: ', $rec->nickname, "\n",
+           'country: ', $rec->country, ', address: ', $rec->address, "\n",
+           'occupation: ', $rec->occupation, "\n";
+   }
 }
+
+
 1;
 __END__
 See main11.pl
