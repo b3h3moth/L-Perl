@@ -29,6 +29,11 @@ sub first_name {
     $_[0]->{firstname};
 }
 
+sub last_name {
+    $_[0]->{lastname} = $_[1] if defined $_[1];
+    $_[0]->{lastname};
+}
+
 sub nickname {
     $_[0]->{nickname} = $_[1] if defined $_[1];
     $_[0]->{nickname};
