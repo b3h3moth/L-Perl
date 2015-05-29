@@ -19,11 +19,16 @@ say "just localtime(): $year $month $day";
 printf("The current date is: %04d/%02d/%02d\n", $year+1900, $month+1, $day);
 
 my @date = (localtime)[0..8];
+
+# print every element
 foreach (@date) {
-    say $_;
+    state $i = 0;
+    say $i++, ': ', $_;
 }
 
-$date[1]++;
-$date[2] += 1900;
-my $date = join "/", @date;
-say $date;
+# Today's date
+my @today = (localtime)[3,4,5];
+$today[1]++;
+$today[2] += 1900;
+my $today = join "-", @today;
+say $today;
