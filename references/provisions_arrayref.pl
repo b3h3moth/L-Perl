@@ -14,7 +14,7 @@ sub check_required_items {
     my @required = qw(preserver sunscreen water_bottle jacket);
 
     # for every missing provision we push that provision onto an array, forcing
-    # the passenger co sonsider the item.
+    # the passenger to consider the item.
     my @missing = ();
     
     for my $item (@required) {
