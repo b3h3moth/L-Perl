@@ -6,18 +6,18 @@ systems.
 
 ## List of great books about Perl
 
-* **Programming Perl**, *Fourth Edition* (``O'Reilly, 2012``)
+* **Programming Perl**, *Fourth Edition* (`O'Reilly, 2012`)
   * by *Tom Christiansen*, *brian d foy* & *Larry Wall*, with *Jon Orwant*
-  - ``Covers Perl 5.14``
+  - `Covers Perl 5.14`
 
-* **Learning Perl**, *Sixth Edition* (``O'Reilly, 2011``);
+* **Learning Perl**, *Sixth Edition* (`O'Reilly, 2011`);
   * by *Randal L. Schwartz*, *brian d foy*, and *Tom Phoenix*
-  * ``Covers Perl 5.14``
+  * `Covers Perl 5.14`
 
-* **Modern Perl**, (``Onyx Neon Press, 2014``)
+* **Modern Perl**, (`Onyx Neon Press, 2014`)
   * by *chromatic*
   * Ebook available for free
-  * ``Covers Perl 5.16``
+  * `Covers Perl 5.16`
 
 * **Unix and Perl to the Rescue!** (`Cambridge University Press, 2012`)
   * by *Keith Brandam*, *Ian Korf*
@@ -29,7 +29,7 @@ systems.
 
 * **Mastering Perl**, *Second Edition* (`O'Reilly, 2014`)
   * by *Brian d foy*
-  * `Covers Perl v5.10, Perl v5.18`
+  * `Covers Perl 5.10, Perl 5.18`
 
 * **Effective Perl Programming**, *Second Edition* (`Addison Wesley, 2010`)
   * by *Joseph N. Hall*, *Joshua A. McAdams*, *Brian d foy*
