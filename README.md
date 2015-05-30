@@ -31,9 +31,9 @@ systems.
   * by *Brian d foy*
   * `Covers Perl v5.10, Perl v5.18`
 
-* Effective Perl Programming, Second Edition (Addison Wesley, 2010)
-  * by Joseph N. Hall, Joshua A. McAdams, Brian d foy
-  * Covers Perl 5.10
+* **Effective Perl Programming**, *Second Edition* (`Addison Wesley, 2010`)
+  * by *Joseph N. Hall*, *Joshua A. McAdams*, *Brian d foy*
+  * `Covers Perl 5.10`
 
 * Higher Order Perl (Elsevier, 2005)
   * by Mark Jason Dominus
