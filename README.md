@@ -42,9 +42,9 @@ systems.
   * by *chromatic*, *Ian Langworth*
   * `Covers Perl 5.8`
 
-* Beginning Perl, Third edition (Apress, 2010)
-  * by James Lee with Simon Cozens
-  * Covers Perl 5.10
+* **Beginning Perl**, *Third edition* (`Apress, 2010`)
+  * by *James Lee* with *Simon Cozens*
+  * `Covers Perl 5.10`
 
 * Beginning Perl (Wrox, 2012)
   * by Curtis "ovid" Poe
