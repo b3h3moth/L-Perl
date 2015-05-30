@@ -35,11 +35,11 @@ systems.
   * by *Joseph N. Hall*, *Joshua A. McAdams*, *Brian d foy*
   * `Covers Perl 5.10`
 
-* Higher Order Perl (Elsevier, 2005)
-  * by Mark Jason Dominus
+* **Higher Order Perl** (`Elsevier, 2005`)
+  * by *Mark Jason Dominus*
 
 * Perl Testing; A Developer's noteboook (O'Reilly, 2005)
-  * by chromatic, Ian Langworth
+  * by *chromatic*, *Ian Langworth*
   * Covers Perl 5.8
 
 * Beginning Perl, Third edition (Apress, 2010)
