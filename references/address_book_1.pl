@@ -15,7 +15,7 @@ $address_book{"luca"} = {
     phone_number    => 303112233,
 };
 
-# say $address_book{luca}{address};
+#say "luca's address: ", $address_book{luca}{address};
 
 # Get address book's data
 print "name: ";
