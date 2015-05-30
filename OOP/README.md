@@ -2,7 +2,7 @@
 
 ### Classes for learning purpose
 * ``./lib``
-  * *Animal.pm*, *Cow.pm*, *Horse.pm*, *Mouse.pm*, *Sheep.pm*
+  * `Animal.pm`, *Cow.pm*, *Horse.pm*, *Mouse.pm*, *Sheep.pm*
     * tested by *main.pl*
 * ``./Person``
   * *PersonN.pm* (where N is an integer between 1 and 11)
