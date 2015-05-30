@@ -19,9 +19,9 @@ systems.
   * Ebook available for free
   * ``Covers Perl 5.16``
 
-* Unix and Perl to the Rescue! (Cambridge University Press, 2012)
-  * by Keith Brandam, Ian Korf
-  * Covers Perl 5.14
+* **Unix and Perl to the Rescue!** (`Cambridge University Press, 2012`)
+  * by *Keith Brandam*, *Ian Korf*
+  * `Covers Perl 5.14`
 
 * Intermediate Perl, Second Edition (O'Reilly, 2012)
   * by Randal L. Schwartz, brian d foy, and Tom Phoenix
