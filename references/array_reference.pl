@@ -7,6 +7,12 @@ my @colors = qw(blue red white black);
 # reference to the array
 my $aref = \@colors;
 
+# dereferencing
 my $first_color = $aref->[0];
-say $first_color;
+say 'First value is: ', $first_color;
 
+# how to copy values to another array and print every value
+my @copy_of_colors = @$aref;
+foreach (@copy_of_colors) {
+    say $_;
+}
