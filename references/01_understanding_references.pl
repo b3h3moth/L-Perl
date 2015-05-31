@@ -36,8 +36,6 @@ my $sub_ref_2        = \( numbers() );
 # List context, the reference is to the first value of numbers(), 5:
 my ($sub_ref_3)     = \( numbers() );
 
-
-
 # A reference on a list of values returns a list of references rather than a 
 # reference to a list:
 my $ref_list = \(1 .. 4);
