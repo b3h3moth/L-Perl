@@ -19,3 +19,7 @@ my $sub_ref        = \&hello;
 my $glob_ref       = \*STDOUT;
 my $array_elem_ref = \$colors[0];
 my $hash_elem_ref  = \$country{'hello'};
+
+# References to literal values are read-only
+my $decimal_ref  = \10;
+my $hex_ref      = \hex '0xF';
