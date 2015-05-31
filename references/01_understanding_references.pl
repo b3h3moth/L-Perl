@@ -40,11 +40,11 @@ my ($sub_ref_3)     = \( numbers() );
 # reference to a list:
 my $ref_list = \(1 .. 4);
 
-# The anonymous array creates an unnamed array in memory and returns a
+# The anonymous array (brackets) creates an unnamed array in memory and returns a
 # reference to it:
 my $array_ref_anon = [ 10 .. 15 ];
 
-# The anonymous hash creates an unnamed hash in memory and returns a
+# The anonymous hash (braces) creates an unnamed hash in memory and returns a
 # reference to it:
 my $hash_ref_anon = { login => 'behemoth', pass => 567 };
 
