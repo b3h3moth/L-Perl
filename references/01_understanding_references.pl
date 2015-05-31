@@ -23,3 +23,8 @@ my $hash_elem_ref  = \$country{'hello'};
 # References to literal values are read-only
 my $decimal_ref  = \10;
 my $hex_ref      = \hex '0xF';
+
+# A reference on a list of values returns a list of references rather than a 
+# reference to a list
+my @ref_list = \qw(1 2 3 4);
+
