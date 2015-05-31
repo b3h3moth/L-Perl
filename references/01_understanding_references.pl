@@ -39,3 +39,8 @@ my ($sub_ref_3)     = \( numbers() );
 # A reference on a list of values returns a list of references rather than a 
 # reference to a list:
 my $ref_list = \(1 .. 4);
+
+# The anonymous array creates an unnamed array in memory and returns a 
+# reference to it:
+my $array_ref_anon = [ 10 .. 15 ];
+
