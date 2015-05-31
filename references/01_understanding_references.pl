@@ -30,6 +30,8 @@ my $hex_ref      = \hex '0xF';
 # subroutine:
 my $sub_ref_1        = \(&numbers);
 
+# References to subroutines are sometimes called coderefs.
+
 # Scalar context, the reference is to the last value of numbers(), 10:
 my $sub_ref_2        = \( numbers() );
 
@@ -48,3 +50,5 @@ my $array_ref_anon = [ 10 .. 15 ];
 # reference to it:
 my $hash_ref_anon = { login => 'behemoth', pass => 567 };
 
+# A subroutine definition without a name returns a reference to an anonymous 
+# subroutine.
