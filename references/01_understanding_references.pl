@@ -51,4 +51,5 @@ my $array_ref_anon = [ 10 .. 15 ];
 my $hash_ref_anon = { login => 'behemoth', pass => 567 };
 
 # A subroutine definition without a name returns a reference to an anonymous 
-# subroutine.
+# subroutine:
+my $todays_date = sub { return localtime() };
