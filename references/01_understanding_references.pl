@@ -26,10 +26,15 @@ my $decimal_ref  = \10;
 my $hex_ref      = \hex '0xF';
 
 # References to subroutines.
-# With '&' we get back a CODE reference - CODE(0x102bbbd8) - to the print_year
+# With '&' we get back a CODE reference - CODE(0x102bbbd8) - to the numbers()
 # subroutine:
-my $sub_ref        = \(&print_year);
-say $sub_ref;
+my $sub_ref_1        = \(&numbers);
+
+# Scalar context, the reference is to the last value of numbers(), 10:
+my $sub_ref_2        = \( numbers() );
+
+# List context, the reference is to the first value of numbers(), 5:
+my ($sub_ref_3)     = \( numbers() );
 
 
 
