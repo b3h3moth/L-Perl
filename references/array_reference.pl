@@ -12,7 +12,7 @@ my $aref = \@colors;
 my $first_color = $aref->[0];
 say 'First value is: ', $first_color;
 
-# how to copy values to another array and print every value
+# copy values to another array by prepending it with the @ sign
 my @copy_of_colors = @$aref;
 foreach (@copy_of_colors) {
     say $_;
