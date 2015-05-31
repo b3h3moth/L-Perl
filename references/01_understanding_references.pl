@@ -52,4 +52,4 @@ my $hash_ref_anon = { login => 'behemoth', pass => 567 };
 
 # A subroutine definition without a name returns a reference to an anonymous 
 # subroutine:
-my $todays_date = sub { return localtime() };
+my $hello = sub { print 'have a nice day' };
