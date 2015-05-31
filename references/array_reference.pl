@@ -26,5 +26,6 @@ say 'Array length is: ', $array_len;
 
 # iterate (method 2)
 foreach my $i (0 .. $array_len) {
-    say $aref->[$i];
+    my $color = $aref->[$i];
+    say $color;
 }
