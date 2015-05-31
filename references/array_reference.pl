@@ -15,6 +15,16 @@ say 'First value is: ', $first_color;
 # copy values to another array by prepending it with the @ sign
 my @copy_of_colors = @$aref;
 
+# iterate over array reference (method 1)
 foreach (@copy_of_colors) {
     say $_;
+}
+
+# get array length with '$#'
+my $array_len = $#$aref;
+say 'Array length is: ', $array_len;
+
+# iterate (method 2)
+foreach my $i (0 .. $array_len) {
+    say $aref->[$i];
 }
