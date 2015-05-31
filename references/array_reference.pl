@@ -4,7 +4,8 @@ use strict;
 use v5.14;
 
 my @colors = qw(blue red white black);
-# reference to the array
+
+# To assign a reference to an array to a scalar, prepend it with a backslash
 my $aref = \@colors;
 
 # dereferencing
