@@ -8,23 +8,28 @@ use v5.14;
 my $year = 2015;
 my @colors = qw(red white blue);
 my %country = (Italy => "Rome", USA => "Washington", France => "Paris");
-sub hello { say 'hello' }
+sub numbers {
+    return 5 .. 10;
+}
 
 # The simplest way to create a reference is with the backslash operator '\'. It
 # works on any kind of variable name and hash/array elements
 my $scalar_ref     = \$year;
 my $array_ref      = \@colors;
 my $hash_ref       = \%country;
-my $sub_ref        = \&hello;
 my $glob_ref       = \*STDOUT;
 my $array_elem_ref = \$colors[0];
-my $hash_elem_ref  = \$country{'hello'};
+my $hash_elem_ref  = \$country{'print_year'};
 
 # References to literal values are read-only
 my $decimal_ref  = \10;
 my $hex_ref      = \hex '0xF';
 
+# References to subroutines
+my $sub_ref        = \&print_year;
+
+
+
 # A reference on a list of values returns a list of references rather than a 
 # reference to a list
-my @ref_list = \qw(1 2 3 4);
-
+my $ref_list = \(1 .. 4);
