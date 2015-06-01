@@ -11,15 +11,17 @@ my $year = 2015;
 my $scalar_ref = \$year;
 say 'A: reference to scalar: ', ${ $scalar_ref };
 my $next_year = ${ $scalar_ref } + 1;
-say 'B: next_year = ', $next_year;
+say 'A: next_year = ', $next_year;
 
 # Dereferencing array:
 my @colors = qw(red white blue);
 my $array_ref = \@colors;
-say @{ $array_ref };        # all list values
-say ${ $array_ref }[0];     # single element
+say 'B: reference to array: ', @{ $array_ref };        # all list values
+say 'B: single element: ', ${ $array_ref }[0];     # single element
 push @{ $array_ref }, qw(black green gray); # add elements to the list
+say 'B: new array: ', join ',', @{ $array_ref };
 
+# anonymous array
 my $ref_anon_array_1 = [ 1 .. 5 ];
 my $ref_anon_array_2 = [ 6 .. 10 ];
 
