@@ -59,3 +59,6 @@ say 'C: single hash value: ', ${$hash_ref}{'italy'};
 
 # How to get single value (Scalar form);
 say 'C: single hash value: ', $$hash_ref{'france'};
+
+# How to get single value (Arrow form);
+say 'C: single hash value: ', $hash_ref->{'spain'};
