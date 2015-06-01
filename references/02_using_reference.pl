@@ -50,7 +50,12 @@ say 'B: complex block produces: ', $num;
 # Dereferencing anonymous hash:
 my $hash_ref = { italy => 'rome', france => 'paris', spain => 'madrid' };
 say 'C: hash keys: ', join ', ', keys %{$hash_ref};
+
 # As well as scalars we can omitted the curly braces:
 say 'C: hash values: ', join ', ', values %{$hash_ref};
+
 # How to get single value (Canonical form);
 say 'C: single hash value: ', ${$hash_ref}{'italy'};
+
+# How to get single value (Scalar form);
+say 'C: single hash value: ', $$hash_ref{'france'};
