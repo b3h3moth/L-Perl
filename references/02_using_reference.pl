@@ -16,15 +16,17 @@ say 'A: next_year = ', $next_year;
 # Dereferencing array:
 my @colors = qw(red white blue);
 my $array_ref = \@colors;
-say 'B: reference to array: ', @{ $array_ref };        # all list values
-say 'B: single element: ', ${ $array_ref }[0];     # single element
-push @{ $array_ref }, qw(black green gray); # add elements to the list
-say 'B: new array: ', join ',', @{ $array_ref };
+say 'B: reference to array: ', @{ $array_ref };     # all list values
+say 'B: single element: ', ${ $array_ref }[0];      # single element
+push @{ $array_ref }, qw(black green gray);         # add elements to the list
+say 'B: new array: ', join ', ', @{ $array_ref };
 
-# anonymous array
+# Dereferencing anonymous array:
 my $ref_anon_array_1 = [ 1 .. 5 ];
 my $ref_anon_array_2 = [ 6 .. 10 ];
 
+say 'B: dereferencing an anonymous array 1: ', join ', ', @{$ref_anon_array_1};
+say 'B: Dereferencing an anonymous array 2: ', join ', ', @{$ref_anon_array_2};
 
 # The code inside the block can be complex.
 # How to set an ordinary scalar with few operations on the first element of the
