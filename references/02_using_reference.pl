@@ -47,4 +47,6 @@ my $num = ${
 }[0];
 say 'B: complex block produces: ', $num;
 
+# Dereferencing hash:
+my $hash_ref = { italy => 'rome', france => 'paris', spain => 'madrid' };
 
