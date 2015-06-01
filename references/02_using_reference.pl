@@ -47,6 +47,7 @@ my $num = ${
 }[0];
 say 'B: complex block produces: ', $num;
 
-# Dereferencing hash:
+# Dereferencing anonymous hash:
 my $hash_ref = { italy => 'rome', france => 'paris', spain => 'madrid' };
+say 'C: hash keys: ', join ', ', keys %{$hash_ref};
 
