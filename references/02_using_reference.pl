@@ -17,7 +17,7 @@ say 'A: next_year = ', $next_year;
 # Note that with scalar values the curly braces can be omitted:
 my $ref_scalaref = \$scalar_ref;
 say 'A: value of scalar reference: ', $$scalar_ref;
-say 'A: value of reference to reference: ', $$$ref_scalaref;
+say 'A: value of reference to reference: ', $$$ref_scalaref; # and so on ...
 
 # Dereferencing array:
 my @colors = qw(red white blue);
