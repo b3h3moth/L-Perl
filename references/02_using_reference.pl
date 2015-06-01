@@ -6,7 +6,7 @@ use v5.14;
 # Dereferencing uses the value that a reference points to, there are several 
 # different forms.
 
-# The basic form is to use a block ${ reference }, 
+# The basic form is to use a block:
 my $year = 2015;
 my $scalar_ref = \$year;
 say ${ $scalar_ref };
