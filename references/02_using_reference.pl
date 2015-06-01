@@ -25,8 +25,11 @@ say 'B: new array: ', join ',', @{ $array_ref };
 my $ref_anon_array_1 = [ 1 .. 5 ];
 my $ref_anon_array_2 = [ 6 .. 10 ];
 
-# The code inside the block can be complex:
-my $val = ${
+
+# The code inside the block can be complex.
+# How to set an ordinary scalar with few operations on the first element of the
+# array reference:
+my $num = ${
     my $i = shift $ref_anon_array_1;
     if ($i) {
         $ref_anon_array_1
@@ -34,5 +37,4 @@ my $val = ${
         $ref_anon_array_2
     }
 }[0];
-say $val;
-say join ',',@{$ref_anon_array_1};
+say 'B: complex block produces: ', $num;
