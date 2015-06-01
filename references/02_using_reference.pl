@@ -10,3 +10,5 @@ use v5.14;
 my $year = 2015;
 my $scalar_ref = \$year;
 say ${ $scalar_ref };
+my $next_year = ${ $scalar_ref } + 1;
+say $next_year;
