@@ -16,5 +16,6 @@ say $next_year;
 # Dereferencing array:
 my @colors = qw(red white blue);
 my $array_ref = \@colors;
-say @{ $array_ref };        # all list
+say @{ $array_ref };        # all list values
 say ${ $array_ref }[0];     # single element
+push @{ $array_ref }, qw(black green gray); # add elements to the list
