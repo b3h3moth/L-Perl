@@ -14,7 +14,7 @@ say 'A: reference to scalar: ', ${ $scalar_ref };
 my $next_year = ${ $scalar_ref } + 1;
 say 'A: next_year = ', $next_year;
 
-# Note that with scalar values the curly braces can be omitted.
+# Note that with scalar values the curly braces can be omitted:
 my $ref_scalaref = \$scalar_ref;
 say 'A: value of scalar reference: ', $$scalar_ref;
 say 'A: value of reference to reference: ', $$$ref_scalaref;
