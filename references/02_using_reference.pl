@@ -4,7 +4,8 @@ use strict;
 use v5.14;
 
 # Dereferencing uses the value that a reference points to, there are several 
-# different forms. The basic form is to use a block.
+# different forms. The basic form in scalar context is to use a block, with
+# the leading '$'.
 
 # Dereferencing ordinary scalar:
 my $year = 2015;
@@ -12,6 +13,11 @@ my $scalar_ref = \$year;
 say 'A: reference to scalar: ', ${ $scalar_ref };
 my $next_year = ${ $scalar_ref } + 1;
 say 'A: next_year = ', $next_year;
+
+# Note that with scalar values the curly braces can be omitted.
+my $ref_scalaref = \$scalar_ref;
+say 'A: value of scalar reference: ', $$scalar_ref;
+say 'A: value of reference to reference: ', $$$ref_scalaref;
 
 # Dereferencing array:
 my @colors = qw(red white blue);
@@ -40,3 +46,5 @@ my $num = ${
     }
 }[0];
 say 'B: complex block produces: ', $num;
+
+
