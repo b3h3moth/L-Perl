@@ -69,9 +69,19 @@ my $person->[1] = { firstname => 'luca', nickname => 'geek' };
 say 'C: cascade arrows: ', $person->[1]->{'firstname'};
 say 'C: cascade arrows (omit): ', $person->[1]{'nickname'};
 
+sub numbers{ return 5 .. 10 }
+# Dereferencing subroutines
+# scalar context:
+my $sub_ref_1 = \(numbers());
+say 'D: ref to subroutine (scalar context): ', ${$sub_ref_1}; # get 10
+# list context:
+my ($sub_ref_2) = \(numbers());
+say 'D: ref to subroutine (list context); ', ${$sub_ref_2}; # get 5
+
 my $s_ref = \2015;
 # Gei information with ref() about the type of object it points to:
-say 'D: ref $s_ref: ', ref $s_ref;
-say 'D: ref $ref_scalaref: ', ref $ref_scalaref;
-say 'D: ref $array_ref: ', ref $array_ref;
-say 'D: ref $hash_ref: ', ref $hash_ref;
+say 'E: ref $s_ref: ', ref $s_ref;
+say 'E: ref $ref_scalaref: ', ref $ref_scalaref;
+say 'E: ref $array_ref: ', ref $array_ref;
+say 'E: ref $hash_ref: ', ref $hash_ref;
+say 'E: ref $hash_ref: ', ref $hash_ref;
