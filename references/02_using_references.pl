@@ -70,17 +70,19 @@ say 'C: cascade arrows: ', $person->[1]->{'firstname'};
 say 'C: cascade arrows (omit): ', $person->[1]{'nickname'};
 
 sub numbers{ return 5 .. 10 }
-# Dereferencing subroutines
+# Dereferencing subroutines.
+# Dereferencing a subroutine reference calls the subroutine indirectly. We can
+# do that with prefix '&'.
 # scalar context:
-my $sub_ref_1 = \(numbers());
+my $sub_ref_1 = \&numbers();
 say 'D: subroutine reference (scalar context): ', ${$sub_ref_1}; # get 10
 
 # list context:
-my ($sub_ref_2) = \(numbers());
+my ($sub_ref_2) = \&numbers();
 say 'D: subroutine reference (list context); ', ${$sub_ref_2}; # get 5
 
-my $sub_ref = sub { say 'D: anon subroutine' };
-&$sub_ref();
+my $sub_ref_3 = sub { say 'D: anon subroutine' };
+&$sub_ref_3();
 
 my $s_ref = \2015;
 # Gei information with ref() about the type of object it points to:
