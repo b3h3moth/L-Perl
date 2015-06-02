@@ -2,6 +2,7 @@
 use warnings;
 use strict;
 use v5.14;
+use Data::Dumper;
 
 # Autovivifation
 # If you use a scalar with an undefined value as if it were a reference to
@@ -11,6 +12,8 @@ use v5.14;
 #
 # The following code creates an array of four elements and makes $ref a 
 # reference to it:
+my $ref;
 undef $ref;
-$ref->[3] = 'four';
+my $ref->[3] = 'four';
 
+say Dumper \$ref;
