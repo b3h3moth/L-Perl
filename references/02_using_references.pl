@@ -53,7 +53,17 @@ my $num = ${
 }[0];
 say 'B: complex block produces: ', $num;
 
-# Dereferencing anonymous hash:
+my %colors = (
+    nero => 'black',
+    bianco => 'white',
+    rosso => 'red',
+    giallo => 'yellow',
+    grigio => 'gray',
+    verde => 'green'
+);
+# Dereferencing hash
+my $hashref = \%colors;
+# anonymous hash:
 my $hash_ref = { italy => 'rome', france => 'paris', spain => 'madrid' };
 say 'C: hash keys: ', join ', ', keys %{$hash_ref};
 
