@@ -17,3 +17,7 @@ undef $ref;
 my $ref->[3] = 'four';
 
 say Dumper \$ref;
+
+my $animal;
+$animal->{mammal}[0]{dog}[4]{name} = 'sid';
+say Dumper \$animal;
