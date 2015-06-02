@@ -65,6 +65,6 @@ say 'C: single hash value: ', $hash_ref->{'spain'};
 
 # Cascade arrows. If on the left and right sides of an arrow are both 
 # subscripts [], you can omit the arrow:
-my $person->[1] = { firstname => 'francesca', nickname => 'fra' };
+my $person->[1] = { firstname => 'luca', nickname => 'geek' };
 say 'C: cascade arrows: ', $person->[1]->{'firstname'};
-say 'C: idem: ', $person->[1]{'nickname'};
+say 'C: cascade arrows (omit): ', $person->[1]{'nickname'};
