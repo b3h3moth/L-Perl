@@ -53,3 +53,27 @@ my $hash_ref_anon = { login => 'behemoth', pass => 567 };
 # A subroutine definition without a name returns a reference to an anonymous 
 # subroutine:
 my $hello = sub { print 'have a nice day' };
+
+# The backslash operator can do more than produce a single reference. It will
+# generate a whole list of references if applied to a list.
+
+my $os_name = 'DSBnepO';
+my $ref = \$os_name;
+
+# change the value
+sub invert {
+     my $ref = shift;
+     ${$ref} = reverse(${$ref});
+}
+
+invert(\$os_name);
+
+say "The greatest OS is: $os_name";
+
+sub invert2 {
+    $_[0] = reverse $_[0];
+}
+
+my $os = 'SO ym si DSBnepO';
+invert2($os);
+say $os;
