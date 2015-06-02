@@ -68,3 +68,10 @@ say 'C: single hash value: ', $hash_ref->{'spain'};
 my $person->[1] = { firstname => 'luca', nickname => 'geek' };
 say 'C: cascade arrows: ', $person->[1]->{'firstname'};
 say 'C: cascade arrows (omit): ', $person->[1]{'nickname'};
+
+my $s_ref = \2015;
+# Gei information with ref() about the type of object it points to:
+say 'D: ref $s_ref: ', ref $s_ref;
+say 'D: ref $ref_scalaref: ', ref $ref_scalaref;
+say 'D: ref $array_ref: ', ref $array_ref;
+say 'D: ref $hash_ref: ', ref $hash_ref;
