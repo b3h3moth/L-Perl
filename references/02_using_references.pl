@@ -54,30 +54,37 @@ my $num = ${
 say 'B: complex block produces: ', $num;
 
 my %colors = (
-    nero => 'black',
     bianco => 'white',
-    rosso => 'red',
     giallo => 'yellow',
-    grigio => 'gray',
     verde => 'green'
 );
 # Dereferencing hash
 my $hashref = \%colors;
+say 'C: hash keys: ', join ', ', keys %{$hashref};
+say 'C: hash values: ', join ', ', values %{$hashref};
+say 'C: all keys/values: ', join ', ', %{$hashref};
+my $tot_elements = %{$hashref};
+my $tot_keys = keys %{$hashref};
+my $tot_values = values %{$hashref};
+say 'C: total: ', $tot_elements;
+say 'C: total keys: ', $tot_keys;
+say 'C: total values: ', $tot_values;
+
 # anonymous hash:
 my $hash_ref = { italy => 'rome', france => 'paris', spain => 'madrid' };
-say 'C: hash keys: ', join ', ', keys %{$hash_ref};
+say 'C: anon hash keys: ', join ', ', keys %{$hash_ref};
 
 # As well as scalars we can omitted the curly braces:
-say 'C: hash values: ', join ', ', values %{$hash_ref};
+say 'C: anon hash values: ', join ', ', values %{$hash_ref};
 
 # How to get single value (Canonical form);
-say 'C: single hash value: ', ${$hash_ref}{'italy'};
+say 'C: anon single hash value: ', ${$hash_ref}{'italy'};
 
 # How to get single value (Scalar form);
-say 'C: single hash value: ', $$hash_ref{'france'};
+say 'C: anon single hash value: ', $$hash_ref{'france'};
 
 # How to get single value (Arrow form);
-say 'C: single hash value: ', $hash_ref->{'spain'};
+say 'C: anon single hash value: ', $hash_ref->{'spain'};
 
 # Cascade arrows. If on the left and right sides of an arrow are both 
 # subscripts [], you can omit the arrow:
