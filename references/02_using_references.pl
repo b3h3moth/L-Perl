@@ -62,3 +62,7 @@ say 'C: single hash value: ', $$hash_ref{'france'};
 
 # How to get single value (Arrow form);
 say 'C: single hash value: ', $hash_ref->{'spain'};
+
+my $person->[1] = { firstname => 'francesca', nickname => 'fra' };
+say 'C: cascade arrows: ', $person->[1]->{'firstname'};
+say 'C: idem: ', $person->[1]{'nickname'};
