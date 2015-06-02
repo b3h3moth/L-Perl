@@ -27,6 +27,12 @@ say 'B: single element: ', ${ $array_ref }[0];      # single element
 push @{ $array_ref }, qw(black green gray);         # add elements to the list
 say 'B: new array: ', join ', ', @{ $array_ref };
 
+my @cards = qw(A 1 2 3 4 5 6 7 8 9 10);
+# Automatically dereference reference
+my $rif_cards = \@cards;
+push $rif_cards, qw(J Q K);
+say 'B: ', join ', ', @{$rif_cards};
+
 # Dereferencing anonymous array:
 my $ref_anon_array_1 = [ 1 .. 5 ];
 my $ref_anon_array_2 = [ 6 .. 10 ];
