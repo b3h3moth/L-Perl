@@ -81,8 +81,12 @@ say 'D: subroutine reference (scalar context): ', ${$sub_ref_1}; # get 10
 my ($sub_ref_2) = \&numbers();
 say 'D: subroutine reference (list context); ', ${$sub_ref_2}; # get 5
 
-my $sub_ref_3 = sub { say 'D: anon subroutine' };
+my $sub_ref_3 = sub { 
+    my $args = shift // 'old';
+    say 'D: anon subroutine (', $args, ')';
+};
 &$sub_ref_3();
+$sub_ref_3->('better'); # better
 
 my $s_ref = \2015;
 # Gei information with ref() about the type of object it points to:
