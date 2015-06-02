@@ -73,10 +73,10 @@ sub numbers{ return 5 .. 10 }
 # Dereferencing subroutines
 # scalar context:
 my $sub_ref_1 = \(numbers());
-say 'D: ref to subroutine (scalar context): ', ${$sub_ref_1}; # get 10
+say 'D: subroutine reference (scalar context): ', ${$sub_ref_1}; # get 10
 # list context:
 my ($sub_ref_2) = \(numbers());
-say 'D: ref to subroutine (list context); ', ${$sub_ref_2}; # get 5
+say 'D: subroutine reference (list context); ', ${$sub_ref_2}; # get 5
 
 my $s_ref = \2015;
 # Gei information with ref() about the type of object it points to:
