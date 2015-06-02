@@ -3,7 +3,12 @@ use warnings;
 use strict;
 use IO::File;
 
-#>  empty file
-#>> append
-open my $output_fh, '>', 'file_output.txt';
-$output_fh->say('I\'m writing filehandle references on file');
+# How to write file with filehandle reference:
+open my $output_fh, '>', 'data.txt';
+
+my @date = (localtime)[3,4,5];
+$date[1]++;
+$date[2] += 1900;
+my $full_date = join '/', @date;
+
+$output_fh->say( $full_date );
