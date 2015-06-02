@@ -63,6 +63,8 @@ say 'C: single hash value: ', $$hash_ref{'france'};
 # How to get single value (Arrow form);
 say 'C: single hash value: ', $hash_ref->{'spain'};
 
+# Cascade arrows. If on the left and right sides of an arrow are both 
+# subscripts [], you can omit the arrow:
 my $person->[1] = { firstname => 'francesca', nickname => 'fra' };
 say 'C: cascade arrows: ', $person->[1]->{'firstname'};
 say 'C: idem: ', $person->[1]{'nickname'};
