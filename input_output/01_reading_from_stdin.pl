@@ -5,10 +5,11 @@ use v5.14;
 
 # Standard input can be read with <STDIN>.
 
-# Read the next line
+# Read the next line:
 # $line = <STDIN>;
 # chomp($line);
 
-# Same thing
+# Same thing:
 # chomp($line = <STDIN>);
+
 
