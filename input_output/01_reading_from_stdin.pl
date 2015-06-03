@@ -12,11 +12,11 @@ use v5.14;
 # Same thing:
 # chomp($line = <STDIN>);
 
-while (<STDIN>) {
-    say $_;
-}
-
 # Same thing;
 # while ( defined($_ = <STDIN>)) {
 #   say $_;
 # }
+
+while (<STDIN>) {
+    say $_;
+}
