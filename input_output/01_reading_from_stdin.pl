@@ -15,3 +15,8 @@ use v5.14;
 while (<STDIN>) {
     say $_;
 }
+
+# Same thing;
+# while ( defined($_ = <STDIN>)) {
+#   say $_;
+# }
