@@ -3,4 +3,4 @@ use warnings;
 use strict;
 use v5.14;
 
-# Read from standard input with <STDIN>
+# Standard input can be read with <STDIN>
