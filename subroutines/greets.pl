@@ -3,7 +3,7 @@ use warnings;
 use strict;
 use v5.14;
 
-#anonymous subroutines example
+# Anonymous subroutines example
 
 my %greets = (
 
