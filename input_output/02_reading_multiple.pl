@@ -2,8 +2,9 @@
 use warnings;
 use strict;
 
-#count characters and lines pf multiple file at once
-die "Usage: ./prg.pl <filename1><filename2>\n" if (@ARGV != 2);
+# Count characters/lines of multiple file at once
+
+die "Usage: ./prg.pl <filename 1><filename 2>\n" if (@ARGV != 2);
 
 my $ARGC = @ARGV;
 
