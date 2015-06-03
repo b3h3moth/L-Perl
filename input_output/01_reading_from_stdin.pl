@@ -12,4 +12,6 @@ use v5.14;
 # Same thing:
 # chomp($line = <STDIN>);
 
-
+while (<STDIN>) {
+    say $_;
+}
