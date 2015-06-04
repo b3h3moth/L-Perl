@@ -8,6 +8,8 @@ use strict;
 # Note that there are six special filehandle names in Perl, they are:
 # STDIN, STDOUT, STDERR, DATA, ARGV, ARGVOUT.
 
+# STDIN, STOUT, STDERR are automatically opened.
+
 die "Usage: $0 <filename>\n" if (@ARGV != 1);
 
 #get file from command line
