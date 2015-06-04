@@ -25,24 +25,27 @@ use strict;
 # open(CONFIG, '<',  'file');
 # open(MAIL,   '>',  'file');
 # open(LOG,    '>>', 'file');
-
+# 
+# You can specify an encoding:
+#   open(CONFIG, '<:encoding(UTF-8)',  'file');
+#   open(MAIL,   '>:encoding(ASCII)',  'file');
+#   open(LOG,    '>>:encoding(iso-8859-1), 'file');
+# or just:
+#   open(CONFIG, '<:utf-8',  'file');
 
 die "Usage: $0 <filename>\n" if (@ARGV != 1);
 
-#get file from command line
+# Get file from command line
 my ($filename) = @ARGV;
 
 open(INPUT, '<', "$filename");
 
-#read the file from filehandle and store in $line
+# Read the file from filehandle and store into $line
 while (my $line = <INPUT>) {
-    #ucfirst() function convert each first character of line in upper-case
+    # ucfirst() function converts each first character of line in upper-case
     $line = ucfirst($line);
     print "$line";
 }
 
-#filehandle is closed
+# Filehandle is closed
 close(INPUT);
-
-#If I have a file called 'pass.txt' and his name is stored in a $filename
-#variable, then all of the following do the same thing:
