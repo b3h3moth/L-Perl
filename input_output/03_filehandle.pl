@@ -2,7 +2,8 @@
 use warnings;
 use strict;
 
-#older method (pre version  5.6.0)
+# Filehandle is the name for an Input/Output connection between perl process
+# and the outside world.
 
 die "Usage: $0 <filename>\n" if (@ARGV != 1);
 
