@@ -38,7 +38,10 @@ die "Usage: $0 <filename>\n" if (@ARGV != 1);
 # Get file from command line
 my ($filename) = @ARGV;
 
-open(INPUT, '<', "$filename");
+# Check if the filename exists
+if ( ! open(INPUT, '<', "$filename")) {
+    die "Cannot open $filename: $!\n";
+}
 
 # Read the file from filehandle and store into $line
 while (my $line = <INPUT>) {
