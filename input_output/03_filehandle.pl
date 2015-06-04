@@ -3,7 +3,8 @@ use warnings;
 use strict;
 
 # Filehandle is the name for an Input/Output connection between perl process
-# and the outside world.
+# and the outside world. Larry Wall (Perl's creator) recomends to use all
+# uppercase letters in the name of filehandle.
 
 die "Usage: $0 <filename>\n" if (@ARGV != 1);
 
