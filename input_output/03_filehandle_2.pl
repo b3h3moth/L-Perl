@@ -11,6 +11,6 @@ if ( ! open(PASS, '>>', "$filename")) {
     die "Cannot open $filename: $!\n";
 }
 
-print PASS "test\n";
+print PASS "How to write some text\n";
 
 close(PASS);
