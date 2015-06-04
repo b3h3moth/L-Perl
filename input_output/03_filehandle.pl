@@ -49,3 +49,6 @@ while (my $line = <INPUT>) {
 
 # Filehandle is closed
 close(INPUT);
+
+# Get a list of all of encodings:
+# perl -MEncode -le "print for Encode->encodings(':all')"
