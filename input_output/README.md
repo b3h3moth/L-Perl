@@ -4,3 +4,4 @@
 
 * <STDIN>;
 * Diamond operator <>;
+* Filehandle;
