@@ -4,7 +4,9 @@ use strict;
 
 # Filehandle is the name for an Input/Output connection between perl process
 # and the outside world. Larry Wall (Perl's creator) recomends to use all
-# uppercase letters in the name of filehandle.
+# uppercase letters in the name of filehandle. 
+# Note that there are six special filehandle names in Perl, they are:
+# STDIN, STDOUT, STDERR, DATA, ARGV, ARGVOUT.
 
 die "Usage: $0 <filename>\n" if (@ARGV != 1);
 
