@@ -7,10 +7,11 @@ die "Usage: $0 <filename>\n" if (@ARGV != 1);
 
 my ($filename) = @ARGV;
 
-if ( ! open(PASS, '>>', "$filename")) {
+if ( ! open(PASS, '>', "$filename")) {
     die "Cannot open $filename: $!\n";
 }
 
-print PASS "How to write some text\n";
+select PASS;
+print "Using select() to write with filehandle\n";
 
 close(PASS);
