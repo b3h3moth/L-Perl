@@ -10,6 +10,19 @@ use strict;
 
 # STDIN, STOUT, STDERR are automatically opened.
 
+# To open a new filehanlde we can use open().
+# open a filehandle called INPUT to a file called 'file':
+# open(INPUT,  'file');
+# 
+# open a filename called 'file' as input to a filehandle called CONFIG:
+# open(CONFIG, '<file');
+#
+# open a filehandle called 'MAIL' for output to the new file called 'file':
+# open(MAIL,   '>file);
+#
+# open a filehandle called 'LOG' for appending to the file called 'file':
+# open(LOG,    '>>file);
+
 die "Usage: $0 <filename>\n" if (@ARGV != 1);
 
 #get file from command line
@@ -33,9 +46,3 @@ close(INPUT);
 
 #If I have a file called 'pass.txt' and his name is stored in a $filename
 #variable, then all of the following do the same thing:
-#open(INPUT, "< $filename");
-#open(INPUT, "<$filename");
-#open(INPUT, "<pass.txt");
-#open(INPUT, "pass.txt");
-#open(INPUT, "<", "$filename");
-#open(INPUT, "<", "pass.txt");
