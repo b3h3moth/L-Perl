@@ -8,7 +8,7 @@ die "Usage: ./prg.pl <input_filename>\n" if (@ARGV != 1);
 
 my ($input_file) = @ARGV;
 my $output_file;
-($output_file = $input_file) =~ s/.+\/$/reverse_/;
+($output_file = $input_file) =~ s/.+\//reverse_/;
 
 # Read file
 # set scalar filehandle (input):
