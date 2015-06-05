@@ -5,3 +5,5 @@
 * <STDIN>;
 * Diamond operator <>;
 * Filehandle;
+* glob();
+* select().
