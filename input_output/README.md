@@ -6,4 +6,5 @@
 * Diamond operator <>;
 * Filehandle;
 * glob();
-* select().
+* select();
+* scalar filehandle.
