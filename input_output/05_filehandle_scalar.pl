@@ -6,6 +6,7 @@ use strict;
 
 die "Usage: ./prg.pl <input_filename>\n" if (@ARGV != 1);
 
+# set scalar filehandle
 my ($input_file) = @ARGV;
 my $output_file = "reverse_$input_file";
 
