@@ -6,17 +6,18 @@ use strict;
 
 die "Usage: ./prg.pl <input_filename>\n" if (@ARGV != 1);
 
-# set scalar filehandle
 my ($input_file) = @ARGV;
 my $output_file = "reverse_$input_file";
 
 # Read file
+# set scalar filehandle (input):
 open(my $in, "< $input_file") or die "Err. reading $input_file. $!";
 
 # Write into file
+# set scalar filehandle (output):
 open(my $out, "> $output_file") or die "Err. reading $output_file. $!";
 
-# Always check if that files have been opened correctly
+# Always check if that files have been opened correctly:
 while (<$in>) {
     chomp;
     my $reverse = reverse $_;
@@ -25,4 +26,3 @@ while (<$in>) {
 
 close($input_file);
 close($output_file);
-
