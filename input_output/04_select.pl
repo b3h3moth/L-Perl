@@ -17,13 +17,20 @@ if ( ! open(FH, '>', "$filename")) {
 
 # print into STDOUT
 select STDOUT;
-print "Using select() to write into STDOUT\n";
+print "Using select() to write $filename into STDOUT\n";
 say "but I prefer to write into filehandle, How can I do? hey hey ...";
 
 # now print into filehandle FH
 select FH;
 
-print "cool, now $filename is not empty\n";
-say "yes but it's not so interesting";
+print "I'm not an empty file...";
+say "oh yes, but it's not so interesting";
 
-close(FH);
+
+# Generally is a good idea set it back to STDOUT. By default, the output to 
+# each filehandle is buffered. Setting the special variable '$|' to 1 will set
+# the currently selected filehandle to always flush the buffer after each
+# output operation:
+$| = 1;
+select STDOUT;
+say "cool :-)";
