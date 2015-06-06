@@ -8,3 +8,20 @@ use v5.14;
 # UNITCHECK.
 
 # BEGIN
+# A beging block is executed as soon as possible. You may have multiple BEGIN
+# blocks within a file, they will execute in order of definition.
+
+say "Listing of directory content:";
+
+my $find = qx/ls -l/;
+print $find;
+
+BEGIN {
+    chdir ('/home/behemoth/');
+    say "Do you like perl?";
+}
+
+
+BEGIN {
+    say "Yeah. I love it";
+}
