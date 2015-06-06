@@ -8,3 +8,5 @@ use v5.14;
 # UNITCHECK.
 
 # END
+# An END block is executed as late as possible, after perl has finished running
+# the program and just before the interpreter is being exited.
