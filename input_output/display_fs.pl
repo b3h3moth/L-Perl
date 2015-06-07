@@ -19,7 +19,9 @@ while(<MY_DF>)
         my $fsname = $myrec[5];
         # replaced / with _
         $fsname =~ s/\//_/g;
-        say $fsname;
+
+        my $logname = 'df'.$fsname.'.log';
+        say $logname;
     }
 }
 
