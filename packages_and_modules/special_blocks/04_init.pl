@@ -13,3 +13,19 @@ use v5.14;
 # INIT
 # INIT blocks are run just before the Perl runtime begins execution, in FIFO 
 # order.
+
+INIT {
+    say "This is the first INIT block";
+}
+
+CHECK {
+    say "This is the first CHECK block";
+}
+
+INIT {
+    say "This is the second INIT block";
+}
+
+CHECK {
+    say "This is the second CHECK block";
+}
