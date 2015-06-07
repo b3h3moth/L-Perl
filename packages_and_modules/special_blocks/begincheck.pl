@@ -14,7 +14,7 @@ INIT {
 }
 
 UNITCHECK {
-    say " 4.And therefore before any CHECK blocks.";
+    say "4. And therefore before any CHECK blocks.";
 }
   
 CHECK { 
