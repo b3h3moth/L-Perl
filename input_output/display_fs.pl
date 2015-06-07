@@ -15,7 +15,8 @@ while(<MY_DF>)
         my @myrec = split(" ", $_);
         # convert every data into MB
         my $free = int($myrec[3]/1024);
-        say $free;
+        # save directory fields
+        my $fsname = $myrec[5];
     }
 }
 
