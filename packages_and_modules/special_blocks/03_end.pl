@@ -11,14 +11,26 @@ use v5.14;
 # An END block is executed as late as possible, after perl has finished running
 # the program and just before the interpreter is being exited.
 
-say "A";
+say "0";
+
+END {
+    say "C";
+}
+
+say "0";
 
 END {
     say "B";
 }
 
-exit;
+say "0";
 
 END {
-    say "C";
+    say "A";
+}
+
+say "0";
+
+BEGIN {
+    exit;
 }
