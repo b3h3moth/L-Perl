@@ -12,7 +12,8 @@ while(<MY_DF>)
 {
     chomp;
     if (/^\/dev/) {
-        say $_;
+        my @myrec = split(" ", $_);
+        say @myrec;
     }
 }
 
