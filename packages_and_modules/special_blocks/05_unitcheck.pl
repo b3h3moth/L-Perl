@@ -13,3 +13,34 @@ use v5.14;
 # UNITCHECK
 # UNITCHECK blocks are run just after the unit which defined them has been 
 # compiled.
+
+
+say "First line";
+
+UNITCHECK {
+    say "first UNITCHECK";
+}
+
+CHECK {
+    say "first CHECK";
+}
+
+say "Second line";
+
+INIT {
+    say "first INIT";
+}
+
+UNITCHECK {
+    say "second UNITCHECK";
+}
+
+say "Third line";
+
+CHECK {
+    say "second CHECK";
+}
+
+INIT {
+    say "second INIT";
+}
