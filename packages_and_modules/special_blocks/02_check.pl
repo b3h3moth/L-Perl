@@ -14,3 +14,41 @@ use v5.14;
 # CHECK code blocks are run just after the initial Perl compile phase ends and
 # before the run time begins, in LIFO order. CHECK code blocks are used in the
 # Perl compiler suite to save the compiled state of the program.
+
+say "First line";
+
+UNITCHECK {
+    say "first UNITCHECK";
+}
+
+END {
+    say "first END";
+}
+
+CHECK {
+    say "first CHECK";
+}
+
+say "Second line";
+
+INIT {
+    say "first INIT";
+}
+
+UNITCHECK {
+    say "second UNITCHECK";
+}
+
+say "Third line";
+
+CHECK {
+    say "second CHECK";
+}
+
+INIT {
+    say "second INIT";
+}
+
+BEGIN { 
+    say "first BEGIN";
+}
