@@ -3,7 +3,7 @@ use warnings;
 use strict;
 use v5.14;
 
-my $varpath='/home/behemoth';
+my $varpath='/home/behemoth/';
 
 # get output of df -k
 open(MY_DF, " df -k |") or die "$0: couldn't get df: $!";
@@ -11,6 +11,14 @@ open(MY_DF, " df -k |") or die "$0: couldn't get df: $!";
 while(<MY_DF>)
 {
     chomp;
+    if (/^\/dev/) {
+        say $_;
+    }
+}
+
+close(MY_DF);
+
+__END__
     # /dev/
     if(/^\/dev\//) {
         my @myrec = split(" ", $_);
