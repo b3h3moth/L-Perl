@@ -7,4 +7,9 @@ use v5.14;
 # running program; these named code blocks are: BEGIN; CHECK; END; INIT; 
 # UNITCHECK.
 
+# UNITCHECK, CHECK and INIT code blocks are useful to catch the transition 
+# between the compilation phase and the execution phase of the main program.
+
 # UNITCHECK
+# UNITCHECK blocks are run just after the unit which defined them has been 
+# compiled.
