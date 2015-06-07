@@ -13,7 +13,9 @@ while(<MY_DF>)
     chomp;
     if (/^\/dev/) {
         my @myrec = split(" ", $_);
-        say @myrec;
+        # convert every data into MB
+        my $free = int($myrec[3]/1024);
+        say $free;
     }
 }
 
