@@ -17,6 +17,9 @@ while(<MY_DF>)
         my $free = int($myrec[3]/1024);
         # save directory fields
         my $fsname = $myrec[5];
+        # replaced / with _
+        $fsname =~ s/\//_/g;
+        say $fsname;
     }
 }
 
@@ -30,7 +33,6 @@ __END__
         
         #print "$myrec[5]: $myrec[4] $free MB free\n";
         my $fsname = $myrec[5];
-        $fsname =~ s/\//_/g;
         
         my $logname = "df_".$fsname.".log";
         open(MY_LOG, ">>$varpath/$logname") 
