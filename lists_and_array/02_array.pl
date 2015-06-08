@@ -9,7 +9,6 @@ my $tot_cani = @cani;
 say 'Ho '.@cani.' cani';
 say 'Ripeto '.@cani.' cani' if @cani;
 say 'Ho '.@gatti.' gatti' if @gatti;
-say '$#cani ', $#cani;
 
 # array length
 my @caratteri = qw(a b c d e f g h k i j l m n o p q r s t u v w z);
@@ -19,7 +18,8 @@ print "(    corretto) - Lunghezza array: ", $len_arr, "\n";
 
 # array length
 my $len = scalar(@cani);
-say "L'array \@cani ha ".$len." elementi";
+say "L'array \@cani ha ", $len, " elementi";
+say "L'array \@cani ha ", $#cani + 1, " elementi";
 
 my $primo_indice = 0;
 my $ultimo_indice = @cani - 1;
@@ -36,7 +36,7 @@ say @cani." >@cani";
 @cani = ();
 
 #creo un array con l'operatore di intervallo '..'
-my @caratteri = 'a' .. 'z';
+@caratteri = 'a' .. 'z';
 
 #Lunghezza array - solo con gli array
 my $car_len = @caratteri;
