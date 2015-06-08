@@ -15,11 +15,11 @@ my %opt;
 
 getopts('hvp:', \%opt);
 
-if ($opt{'d'} eq '') {
+if ($opt{d}) {
     usage();
 }
 
-open(DIR, " du -sk $opt_d\/\* |") or die "Cannot open dir: $!";
+open(DIR, " du -sk $opt{d}\/\* |") or die "Cannot open dir: $!";
 
 while (<DIR>) {
     chomp;
@@ -27,4 +27,8 @@ while (<DIR>) {
 }
 
 sub usage() {
+    say "Usage:";
+    say "$0 -d <dirname>\n";
+
+    exit;
 }
