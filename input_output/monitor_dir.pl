@@ -9,3 +9,10 @@ use File::HomeDir;
 
 my $path = File::HomeDir->my_home();
 
+getopt('d');
+
+if ($opt_d eq '') {
+    usage();
+}
+
+
