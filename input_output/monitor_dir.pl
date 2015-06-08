@@ -7,4 +7,5 @@ use File::HomeDir;
 
 # Display directory size
 
+my $path = File::HomeDir->my_home();
 
