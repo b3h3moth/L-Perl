@@ -9,6 +9,7 @@ my $tot_cani = @cani;
 say 'Ho '.@cani.' cani';
 say 'Ripeto '.@cani.' cani' if @cani;
 say 'Ho '.@gatti.' gatti' if @gatti;
+say '$#cani ', $#cani;
 
 # array length
 my @caratteri = qw(a b c d e f g h k i j l m n o p q r s t u v w z);
