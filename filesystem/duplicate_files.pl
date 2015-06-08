@@ -11,5 +11,16 @@ sub find_duplicate_files(@) {
     # Directory to search:
     my @dir_list = @_;
 
-    
+    if ($#dirlist < 0) {
+        return (undef);
+    }
 
+    my %files;
+
+    # Find files with the same size:
+    find(sub {
+            -f &&
+            push @{$files{(stat(_))[7]}}, File::Find::name()
+        }, @dir_list
+    );
+}
