@@ -2,16 +2,18 @@
 use warnings;
 use strict;
 use v5.14;
+use File::HomeDir;
 
-my $varpath='/home/behemoth';
+my $varpath = File::HomeDir->my_home();
 my $logname = 'df.log';
 
-# get output of df -k
+# get output from 'df -k |':
 open(MY_DF, " df -k |") or die "$0: couldn't get df: $!";
 
-while(<MY_DF>)
-{
+while(<MY_DF>) {
     chomp;
+    
+    # find '/dev':
     if (/^\/dev/) {
         my @myrec = split(" ", $_);
         # convert every data into MB
