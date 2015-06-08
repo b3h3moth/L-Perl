@@ -6,36 +6,36 @@ use File::HomeDir;
 
 # Display filesystem used space
 
-my $varpath = File::HomeDir->my_home();
+my $path = File::HomeDir->my_home();
 my $logname = 'df.log';
 
 # get output from 'df -k |':
-open(MY_DF, " df -k |") or die "$0: couldn't get 'df output': $!";
+open(DF, " df -k |") or die "$0: Couldn't get 'df output': $!";
 
-while(<MY_DF>) {
+while(<DF>) {
     chomp;
     
     # find '/dev':
     if (/^\/dev/) {
-        my @myrec = split(" ", $_);
+        my @record = split(" ", $_);
         # convert every data into MB
-        my $free = int($myrec[3]/1024);
+        my $free = int($record[3]/1024);
         # save directory fields
-        my $fsname = $myrec[5];
+        my $fsname = $record[5];
         # replaced / with _
         #$fsname =~ s/\//_/g;
 
         # Create logfile
         #my $logname = 'df'.$fsname.'.log';
-        open(MY_LOG, '>>', "$varpath/$logname") 
+        open(LOG, '>>', "$path/$logname") 
             or die "Can't open open $logname: $!";
         
-        say MY_LOG "$fsname $free MB";
-        close(MY_LOG);
+        say LOG "$fsname $free MB";
+        close(LOG);
 
     }
 }
 
-close(MY_DF);
+close(DF);
         
-say "$logname saved: $varpath/$logname";
+say "$logname saved: $path/$logname";
