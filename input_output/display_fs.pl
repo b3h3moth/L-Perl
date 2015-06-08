@@ -8,7 +8,7 @@ my $varpath = File::HomeDir->my_home();
 my $logname = 'df.log';
 
 # get output from 'df -k |':
-open(MY_DF, " df -k |") or die "$0: couldn't get df: $!";
+open(MY_DF, " df -k |") or die "$0: couldn't get 'df output': $!";
 
 while(<MY_DF>) {
     chomp;
