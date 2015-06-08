@@ -7,7 +7,8 @@ use File::HomeDir;
 
 # Display directory size
 
-my $path = File::HomeDir->my_home();
+#my $path = File::HomeDir->my_home();
+my $path = '/home/behemoth';
 my $usage = "Usage: $0 [options] <arguments...>
 
 Options:
@@ -24,9 +25,9 @@ if ($opt{d} eq '') {
     say $usage;
 }
 
-open(DIR, " du -sk $opt{d}\/home/behemoth/devel |") or die "Cannot open dir: $!";
+open(DIR, " du -sk $opt{d}$path |") or die "Cannot open dir: $!";
 
 while (<DIR>) {
     chomp;
-    say $_;
+    my @record = split
 }
