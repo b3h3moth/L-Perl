@@ -8,6 +8,11 @@ use File::HomeDir;
 # Display directory size
 
 my $path = File::HomeDir->my_home();
+my $usage = "Usage: $0 [options] <arguments...>
+
+Options:
+-d directory;
+";
 
 getopts('d');
 
@@ -15,20 +20,13 @@ my %opt;
 
 getopts('hvp:', \%opt);
 
-if ($opt{d}) {
-    usage();
+if ($opt{d} eq '') {
+    say $usage;
 }
 
-open(DIR, " du -sk $opt{d}\/\* |") or die "Cannot open dir: $!";
+open(DIR, " du -sk $opt{d}\/home/behemoth/devel |") or die "Cannot open dir: $!";
 
 while (<DIR>) {
     chomp;
     say $_;
-}
-
-sub usage() {
-    say "Usage:";
-    say "$0 -d <dirname>\n";
-
-    exit;
 }
