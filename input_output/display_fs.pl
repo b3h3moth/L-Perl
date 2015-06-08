@@ -4,6 +4,8 @@ use strict;
 use v5.14;
 use File::HomeDir;
 
+# Display filesystem used space
+
 my $varpath = File::HomeDir->my_home();
 my $logname = 'df.log';
 
