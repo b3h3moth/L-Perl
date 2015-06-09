@@ -23,6 +23,11 @@ sub find_duplicate_files(@) {
         }, @dir_list
     );
 
-    # Resulting list
+    # Resulting list:
     my @result = ();
+
+    # check md5 for every file:
+
 }
+
+my @dups = find_duplicate_files(@ARGV);
