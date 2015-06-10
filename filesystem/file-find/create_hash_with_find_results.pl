@@ -21,4 +21,6 @@ sub create_hash {
     push @{$hash{(stat(_))[7]}}, $File::Find::name if -f;
 }
 
-say Dumper \%hash;
+while (my ($filesize, $filename) = each %hash) {
+    say "$filesize: @{$filename}";
+}
