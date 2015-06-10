@@ -10,17 +10,18 @@ use File::Find;
 
 my %hash;
 
-my $dir = '/var/www';
+#my $dir = '/var/www';
+my @dir = (@ARGV);
 
-# Find all hash inside $dir directory and push into hash:
+# Find all files inside $dir and push every files into hash:
 # hash keys = file size;
-# hash values = filename.
-find( \&create_hash, $dir );
+# hash values = filenames.
+find( \&create_hash, @dir );
 
 sub create_hash {
     push @{$hash{(stat(_))[7]}}, $File::Find::name if -f;
 }
 
 while (my ($filesize, $filename) = each %hash) {
-    say "$filesize: @{$filename}";
+    say "$filesize:\t@{$filename}";
 }
