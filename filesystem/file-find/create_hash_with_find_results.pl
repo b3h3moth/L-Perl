@@ -8,14 +8,15 @@ use File::Find;
 # How to create an hash whose keys is the file size and whose values are 
 # their names.
 
-my %files;
+my %hash;
 
 my $dir = '/var/www';
 
-# Find all files inside 
+# Find all hash inside $dir directory and push into hash
 find( sub {
-        push @{$files{(stat(_))[7]}}, $File::Find::name
+        -f &&
+        push @{$hash{(stat(_))[7]}}, $File::Find::name
     }, $dir
 );
 
-say Dumper \%files;
+say Dumper \%hash;
