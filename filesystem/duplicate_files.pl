@@ -31,17 +31,16 @@ sub find_duplicate_files(@) {
 	# Resulting list
     my @result = ();
 
-    # Loop through list of files by size and check md5 for every files
+    # Loop through list of files by size and check md5 for each file
     foreach my $size (keys %files) {
         # skip any entries where there's only one file in the name list
         if ($#{$files{$size}} < 1) {
             next;
         }
         
-        my %md5;	# MD5 -> file name array hash
+        my %md5;	
 
-	    # Loop through each file of this size and 
-	    # compute the MD5 sum
+	    # Loop through each file of this size and compute the MD5 sum
 	    foreach my $cur_file (@{$files{$size}}) {
             # Open the file.  Skip the files we can't open
             open(FILE, $cur_file) or next;
