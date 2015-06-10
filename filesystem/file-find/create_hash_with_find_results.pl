@@ -10,11 +10,12 @@ use File::Find;
 
 my %files;
 
-my @dir_list = @ARGV;
+my $dir = '~';
 
+# Find all files inside 
 find( sub {
         push @{$files{(stat(_))[7]}}, $File::Find::name
-    }, @dir_list
+    }, $dir
 );
 
 say Dumper \%files;
