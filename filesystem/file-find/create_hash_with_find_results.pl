@@ -12,7 +12,9 @@ my %hash;
 
 my $dir = '/var/www';
 
-# Find all hash inside $dir directory and push into hash, whose key 
+# Find all hash inside $dir directory and push into hash:
+# hash keys = file size;
+# hash values = filename.
 find( sub {
         -f &&
         push @{$hash{(stat(_))[7]}}, $File::Find::name
