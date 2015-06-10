@@ -50,6 +50,7 @@ sub find_duplicate_files(@) {
                 }, $cur_file;
            close (FILE);
        }
+
 	   # Now check for any duplicates in the MD5 hash
 	    foreach my $hash (keys %md5) {
 	        if ($#{$md5{$hash}} >= 1) {
