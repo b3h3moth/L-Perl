@@ -14,7 +14,7 @@ use Data::Dumper;
 # reference to it:
 my $ref;
 undef $ref;
-my $ref->[3] = 'four';
+$ref->[3] = 'four';
 
 say Dumper \$ref;
 
