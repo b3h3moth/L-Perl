@@ -10,7 +10,7 @@ use File::Find;
 
 my %files;
 
-my $dir = '~';
+my $dir = '/var/www';
 
 # Find all files inside 
 find( sub {
