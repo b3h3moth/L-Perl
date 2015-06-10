@@ -17,8 +17,8 @@ use File::Find 'find';
 # The wanted() function does whatever verifications you want on each file and 
 # directory. When wanted() is called:
 # - $_ is set to the current filename;
-# - $File::find:dir is set to the currend directory;
-# - $File::find:name is set to current filename "$File::find::dir/$_";
+# - $File::Find:dir is set to the currend directory;
+# - $File::Find:name is set to current filename "$File::Find::dir/$_";
 # - run chdir() for each directory found.
 
 my $dir = '/etc';
