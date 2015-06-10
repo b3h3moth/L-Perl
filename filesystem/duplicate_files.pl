@@ -17,7 +17,10 @@ sub find_duplicate_files(@) {
         return (undef);
     }
 
-    my %files;	# Files indexed by size 
+    # Hash %files:
+    # - key is the file size;
+    # - vakue is an array containing the filenames.
+    my %files;
 
     # Go through the file tree and find all 
     # files with a similar size
