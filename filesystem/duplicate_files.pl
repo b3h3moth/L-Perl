@@ -8,14 +8,13 @@ use Digest::MD5;
 # find_duplicate_files(@dir_list) -- Return an array containing a list of 
 # duplicate files.
 
-sub find_duplicate_files(@)
-{
+sub find_duplicate_files(@) {
     # The list of directories to search
     my @dir_list = @_;
 
     # If nothing there, return nothing
     if ($#dir_list < 0) {
-	return (undef);
+        return (undef);
     }
 
     my %files;	# Files indexed by size 
