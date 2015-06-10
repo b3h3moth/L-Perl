@@ -31,9 +31,9 @@ sub find_duplicate_files(@) {
 	# Resulting list
     my @result = ();
 
-    # Now loop through list of files by size and see
-    # if the md5 is the same for any of them
+    # Loop through list of files by size and check md5 for every files
     foreach my $size (keys %files) {
+        # skip any entries where there's only one file in the name list
         if ($#{$files{$size}} < 1) {
             next;
         }
