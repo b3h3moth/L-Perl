@@ -4,11 +4,11 @@ use warnings;
 use File::Find;
 use Digest::MD5;
 
-###########################################################
-# find_dups(@dir_list) -- Return an array containing a list
-#	of duplicate files.
-###########################################################
-sub find_dups(@)
+# (Wicked Cool Perl Script)
+# find_duplicate_files(@dir_list) -- Return an array containing a list of 
+# duplicate files.
+
+sub find_duplicate_files(@)
 {
     # The list of directories to search
     my @dir_list = @_;
@@ -59,7 +59,7 @@ sub find_dups(@)
     return @result
 }
 
-my @dups = find_dups(@ARGV);
+my @dups = find_duplicate_files(@ARGV);
 
 foreach my $cur_dup (@dups) {
     print "Duplicates\n";
