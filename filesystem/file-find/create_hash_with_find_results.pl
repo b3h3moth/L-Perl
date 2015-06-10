@@ -8,6 +8,8 @@ use File::Find;
 # How to create an hash whose key is the file size and whose value is an array
 # containing their filenames.
 
+die "Usage: $0 <directory>\n" if (@ARGV < 1);
+
 my %hash;
 
 #my $dir = '/var/www';
