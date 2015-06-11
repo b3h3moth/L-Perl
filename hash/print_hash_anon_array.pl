@@ -17,7 +17,7 @@ my %hash = (
 #my $total_hash_keys = keys %hash;
 #my $total_hash_values = values %hash;
 
-foreach my $size (keys %hash) {
+foreach my $size (sort keys %hash) {
     # skip value with array numbers less than 
     if ( $#{$hash{$size}} < 0 ) {
         next;
