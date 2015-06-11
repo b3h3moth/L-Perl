@@ -25,7 +25,8 @@ foreach my $size (keys %hash) {
 
     my %md5;
 
-    # 
+    # Open each file and calculate its MD5 checksum, then add checksum and 
+    # filename into hash %md5.
     foreach my $current_file (@{$hash{$size}}) {
         open(FILE, $current_file) or next;
         binmode(FILE);
