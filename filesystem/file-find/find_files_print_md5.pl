@@ -20,7 +20,7 @@ find( sub {
 
 # Check if the hash of arrays (%hash) has two element at least.
 foreach my $size (keys %hash) {
-    if ( $#{$hash{$size}} < 1 ) {
+    if ( $#{$hash{$size}} < 0 ) {
         next;
     }
 
@@ -28,13 +28,13 @@ foreach my $size (keys %hash) {
 
     # Open each file and calculate its MD5 checksum, then add checksum and 
     # filename into hash %md5.
-    foreach my $current_file (@{$hash{$size}}) {
-        open(FILE, $current_file) or next;
+    foreach my $cur_file (@{$hash{$size}}) {
+        open(FILE, $cur_file) or next;
         binmode(FILE);
         # Add elements into hash:
         #   key: md5 checksum
         # value: filenames
-        push @{$md5{Digest::MD5->new->hexdigest()}}, $current_file;
+        push @{$md5{Digest::MD5->new->addfile(*FILE)->hexdigest()}}, $cur_file;
 
         close(FILE);
     }
