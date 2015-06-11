@@ -13,9 +13,9 @@ my %hash = (
     10 => undef
 );
 
-my $len_arrayref = scalar( @{$hash{43}} );
-my $total_hash_keys = keys %hash;
-my $total_hash_values = values %hash;
+#my $len_arrayref = scalar( @{$hash{43}} );
+#my $total_hash_keys = keys %hash;
+#my $total_hash_values = values %hash;
 
 foreach my $size (keys %hash) {
     if ( $#{$hash{$size}} < 1 ) {
