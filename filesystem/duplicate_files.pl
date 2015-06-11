@@ -1,73 +1,61 @@
 #!/usr/bin/env perl
-use strict;
 use warnings;
+use strict;
+use v5.14;
+use Data::Dumper;
 use File::Find;
 use Digest::MD5;
 
-# (Wicked Cool Perl Script)
-# find_duplicate_files(@dir_list)
-# Return an array containing a list of duplicate files.
+# How to create an hash whose keys is the file size and whose values are 
+# their names.
 
-sub find_duplicate_files(@) {
-    # The list of directories to search
-    my @dir_list = @_;
+my %hash;
 
-    # If nothing there, return nothing
-    if ($#dir_list < 0) {
-        return (undef);
+my @dir_list = (@ARGV);
+
+find( sub {
+        push @{$hash{(stat(_))[7]}}, $File::Find::name if -f;
+    }, @dir_list
+);
+
+# Check if the hash of arrays (%hash) has two element at least.
+foreach my $size (keys %hash) {
+    if ( $#{$hash{$size}} < 0 ) {
+        next;
     }
 
-    # Hash %files:
-    # - key is the file size;
-    # - vakue is an array containing the filenames.
-    my %files;
+    my %md5;
 
-    # Go through the file tree and find all files with a similar size
-    find( sub {
-            -f && push @{$files{(stat(_))[7]}}, $File::Find::name
-        }, @dir_list 
-    );
+    # Open each file and calculate its MD5 checksum, then add checksum and 
+    # filename into hash %md5.
+    foreach my $cur_file (@{$hash{$size}}) {
+        open(FILE, $cur_file) or next;
+        binmode(FILE);
+        # Add elements into hash:
+        #   key: md5 checksum
+        # value: filenames
+        push @{$md5{Digest::MD5->new->addfile(*FILE)->hexdigest()}}, $cur_file;
 
-	# Resulting list
+        close(FILE);
+    }
+
+    # print checksum:filename
+    foreach my $msize (keys %md5) {
+        #print "$msize:";
+
+        foreach my $mfile (@{$md5{$msize}}) {
+            #print $mfile;
+        }
+        #print "\n";
+    }
+
     my @result = ();
 
-    # Loop through list of files by size and check md5 for each file
-    foreach my $size (keys %files) {
-        # skip any entries where there's only one file in the name list
-        if ($#{$files{$size}} < 1) {
-            next;
+    # check if two or more files have the same checksum
+    foreach my $curfile (keys %md5) {
+        if ($#{$md5{$curfile}} >= 1) {
+            push(@result, [@{$md5{$curfile}}]);
+            print "$curfile: [@{$md5{$curfile}}]\n";
         }
-        
-        my %md5;	
-
-	    # Loop through each file of this size and compute the MD5 sum
-	    foreach my $cur_file (@{$files{$size}}) {
-            # Open the file.  Skip the files we can't open
-            open(FILE, $cur_file) or next;
-	        binmode(FILE);
-	        push @{$md5{
-                    Digest::MD5->new->addfile(*FILE)->hexdigest}
-                }, $cur_file;
-           close (FILE);
-       }
-
-	   # Now check for any duplicates in the MD5 hash
-	    foreach my $hash (keys %md5) {
-	        if ($#{$md5{$hash}} >= 1) {
-		        push(@result, [@{$md5{$hash}}]);
-            }
-        }
-    }
-    
-    return @result
-}
-
-my @dups = find_duplicate_files(@ARGV);
-
-foreach my $cur_dup (@dups) {
-    print "Duplicates\n";
-    
-    foreach my $cur_file (@$cur_dup) {
-	    print "\t$cur_file\n";
     }
 }
