@@ -1,10 +1,9 @@
-#!/usr/bin/perl -w
- 
-# a perl getopts example
-# alvin alexander, <a href="http://www.devdaily.com" title="http://www.devdaily.com">http://www.devdaily.com</a>
- 
+#!/usr/bin/env perl
 use strict;
+use warnings;
 use Getopt::Std;
+ 
+# Command line options by using 'getopts' Getopt::Std package.
  
 # declare the perl command line flags/options we want to allow
 my %options=();
