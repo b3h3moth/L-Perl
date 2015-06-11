@@ -15,7 +15,7 @@ my %hash;
 #my $dir = '/var/www';
 my @dir = (@ARGV);
 
-# Find all files inside $dir and push every files into hash:
+# Find all files inside $dir and push each file into hash:
 # hash keys = file size;
 # hash values = filenames.
 find( \&create_hash, @dir );
