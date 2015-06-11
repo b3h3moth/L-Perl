@@ -19,6 +19,7 @@ find( sub {
 );
 
 foreach my $size (keys %hash) {
+    # skip if arrayref < 1
     if ( $#{$hash{$size}} < 1 ) {
         next;
     }
