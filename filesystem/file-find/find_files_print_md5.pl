@@ -19,38 +19,31 @@ find( sub {
 );
 
 foreach my $size (keys %hash) {
-    # skip if arrayref < 1
     if ( $#{$hash{$size}} < 1 ) {
         next;
     }
 
     my %md5;
 
-    #print "$size: ";
-
     foreach my $cur_file (@{$hash{$size}}) {
         #print "$cur_file, ";
 
         open(FILE, $cur_file) or next;
         binmode(FILE);
-
         # Add elements into md5 hash:
         # key:  md5 checksum
         # value: filename
-        push @{$md5{Digest::MD5->new->addfile(*FILE)->hexdigest()}}, $cur_file;
+        push @{$md5{Digest::MD5->new->hexdigest()}}, $cur_file;
+        
         close(FILE);
-
-
     }
-    #print "\n";
-   
-   foreach my $msize (keys %md5) {
-       print "$msize:";
-       
-       foreach my $mfile (@{$md5{$msize}}) {
-           print $mfile;
-       }
-       print "\n";
-   }
-
+    
+    foreach my $msize (keys %md5) {
+        print "$msize:";
+        
+        foreach my $mfile (@{$md5{$msize}}) {
+            print $mfile;
+        }
+        print "\n";
+    }
 }
