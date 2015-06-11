@@ -7,9 +7,9 @@ my %hash = (
     12 => ['maria', 'franca', 'luigia'],
     43 => ['pina', 'maria', 'claudia', 'francesca', 'rossella', 'mara'],
     67 => ['giada'],
-    28 => ['gina'],
+    28 => ['gina', 'fiorella'],
     98 => ['marta'],
-    89 => ['rossana'],
+    89 => ['rossana', 'eva'],
     10 => undef
 );
 
@@ -18,7 +18,8 @@ my %hash = (
 #my $total_hash_values = values %hash;
 
 foreach my $size (keys %hash) {
-    if ( $#{$hash{$size}} < 1 ) {
+    # skip value with array numbers less than 
+    if ( $#{$hash{$size}} < 0 ) {
         next;
     }
 
