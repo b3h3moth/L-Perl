@@ -40,22 +40,19 @@ foreach my $size (keys %hash) {
     }
 
     # print checksum:filename
-    foreach my $msize (keys %md5) {
-        #print "$msize:";
-
-        foreach my $mfile (@{$md5{$msize}}) {
-            #print $mfile;
-        }
-        #print "\n";
-    }
-
-    my @result = ();
+    # foreach my $msize (keys %md5) {
+    #    print "$msize:";
+    #
+    #    foreach my $mfile (@{$md5{$msize}}) {
+    #        print $mfile;
+    #    }
+    #    print "\n";
+    # }
 
     # check if two or more files have the same checksum
     foreach my $curfile (keys %md5) {
         if ($#{$md5{$curfile}} >= 1) {
-            push(@result, [@{$md5{$curfile}}]);
-            print "$curfile: [@{$md5{$curfile}}]\n";
+            print "$curfile: [ @{$md5{$curfile}} ]\n";
         }
     }
 }
