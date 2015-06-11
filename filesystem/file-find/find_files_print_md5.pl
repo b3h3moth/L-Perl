@@ -25,22 +25,21 @@ foreach my $size (keys %hash) {
 
     my %md5;
 
-    foreach my $cur_file (@{$hash{$size}}) {
-        #print "$cur_file, ";
-
-        open(FILE, $cur_file) or next;
+    # 
+    foreach my $current_file (@{$hash{$size}}) {
+        open(FILE, $current_file) or next;
         binmode(FILE);
-        # Add elements into md5 hash:
-        # key:  md5 checksum
-        # value: filename
-        push @{$md5{Digest::MD5->new->hexdigest()}}, $cur_file;
-        
+        # Add elements into hash:
+        #   key: md5 checksum
+        # value: filenames
+        push @{$md5{Digest::MD5->new->hexdigest()}}, $current_file;
+
         close(FILE);
     }
-    
+
     foreach my $msize (keys %md5) {
         print "$msize:";
-        
+
         foreach my $mfile (@{$md5{$msize}}) {
             print $mfile;
         }
