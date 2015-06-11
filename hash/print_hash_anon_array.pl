@@ -18,7 +18,8 @@ my %hash = (
 #my $total_hash_values = values %hash;
 
 foreach my $size (sort keys %hash) {
-    # skip value with array numbers less than 
+    # Skip the value with array numbers less than 0.
+    # (remember that array index starts from 0).
     if ( $#{$hash{$size}} < 0 ) {
         next;
     }
