@@ -18,6 +18,7 @@ find( sub {
     }, @dir_list
 );
 
+# Check if the hash of arrays (%hash) has one element at least.
 foreach my $size (keys %hash) {
     if ( $#{$hash{$size}} < 1 ) {
         next;
@@ -38,6 +39,7 @@ foreach my $size (keys %hash) {
         close(FILE);
     }
 
+    # print checksum:filename
     foreach my $msize (keys %md5) {
         print "$msize:";
 
