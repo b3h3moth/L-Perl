@@ -47,10 +47,13 @@ while (<COLORS>) {
     push (@colors, $_);
 }
 
-foreach my $color (@colors) {
-    format STDOUT = 
+close(COLORS);
+
+format STDOUT =
 @<<<<<<<<<<
-    $color
+    my $color
 .
+
+foreach my $color (@colors) {
     write;
 }
