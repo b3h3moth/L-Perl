@@ -52,7 +52,7 @@ close(COLORS);
 
 foreach my $color (@colors) {
 format STDOUT =
-@<<<<<<<<<<
+@*
     $color
 .
     write;
