@@ -22,7 +22,7 @@ find( sub {
 
 # Check if the hash of arrays (%hash) has one element at least:
 foreach my $size (keys %hash) {
-    if ( $#{$hash{$size}} < 0 ) {
+    if ( $#{$hash{$size}} < 1 ) {
         next;
     }
 
@@ -57,7 +57,11 @@ foreach my $size (keys %hash) {
     # Check if two or more files have the same checksum:
     foreach my $curfile (keys %md5) {
         if ($#{$md5{$curfile}} >= 1) {
-            print "$curfile: [ @{$md5{$curfile}} ]\n";
+            print "$curfile:\n";
+            foreach my $file (@{$md5{$curfile}}) {
+                print "$file\n";
+            }
+            print "\n";
         }
     }
 }
