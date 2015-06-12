@@ -32,7 +32,10 @@ foreach my $size (keys %hash) {
     # filename into hash named %md5:
     foreach my $cur_file (@{$hash{$size}}) {
         open(FILE, $cur_file) or next;
+
+        # It is useful for binary files (pictures, executables, etc.)
         binmode(FILE);
+
         # Add the elements into hash:
         #   key: md5 checksum
         # value: filenames
