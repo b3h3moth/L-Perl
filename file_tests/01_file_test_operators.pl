@@ -15,7 +15,22 @@ use v5.14;
 # -e File or directory name exists;
 # -z File exists and has zero size (always false for directories);
 # -s File or directory exists and has nonzero size (in bytes);
-# -f Entry is a plain file.
+# -f Entry is a plain file;
+# -d Entry is a directory;
+# -l Entry is a symbolic link;
+# -S Entry is a socket;
+# -p Entry is a named pipe (fifo);
+# -b Entry is a block-special file;
+# -c Entry is a character-special file;
+# -u File or directory is setuid;
+# -g File or directory is setgid;
+# -k File or directory has the sticky bit set;
+# -t The filehandle is a TTY;
+# -T File looks like a 'text' file;
+# -B File looks like a 'binary' file;
+# -M Modification age (measured in days);
+# -A Access age (measured in days);
+# -C Inode-modification age (measured in days).
 
 my $filename = '/home/behemoth/.profile';
 
