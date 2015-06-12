@@ -39,3 +39,14 @@ use v5.14;
 # call, respectively, a "regular" or "special" field. The choice of pad 
 # characters determines whether a field is textual or numeric. The tilde 
 # operators are not part of a field.
+
+open (COLORS, 'list_of_colors.txt') or die "Can't open file: $!";
+
+my @colors = qw(white black blu green orange yellow gray purple );
+foreach my $color (@colors) {
+    format STDOUT = 
+@<<<<< @<<<<<<
+    $color, $color
+.
+    write;
+}
