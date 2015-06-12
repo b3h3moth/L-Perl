@@ -42,6 +42,10 @@ use v5.14;
 
 open (COLORS, 'list_of_colors.txt') or die "Can't open file: $!";
 
+while (<COLORS>) {
+    print $_;
+}
+
 my @colors = qw(white black blu green orange yellow gray purple );
 foreach my $color (@colors) {
     format STDOUT = 
