@@ -10,6 +10,7 @@ use Digest::MD5;
 
 my %hash;
 
+# Which directory will be used:
 my @dir_list = (@ARGV);
 
 find( sub {
