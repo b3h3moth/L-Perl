@@ -6,11 +6,11 @@ use Data::Dumper;
 use File::Find;
 use Digest::MD5;
 
-# How to find duplicate files.
+# How to find duplicate files, in this case print out checksum and filename(s).
 
 my %hash;
 
-# Which directory will be used:
+# Which top directory will be used to find files:
 my @dir_list = (@ARGV);
 
 find( sub {
