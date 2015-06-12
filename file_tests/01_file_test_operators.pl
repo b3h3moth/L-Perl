@@ -37,5 +37,7 @@ my $filename = '/home/behemoth/.profile';
 print "$filename:\n";
 print "- exists.\n" if -e $filename;
 print "- is a plain file.\n" if -f $filename;
+print "- exists and has nonzero size\n", if -s $filename;
 print "- is readable\n", if -r $filename;
 print "- is writable\n", if -r $filename;
+print "- is writable\n", if -B $filename;
