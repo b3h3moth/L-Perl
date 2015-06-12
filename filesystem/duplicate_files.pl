@@ -8,7 +8,7 @@ use Digest::MD5;
 
 # How to find duplicate files, in this case print out checksum and filename(s).
 
-die "Usage: $0 <top directory>\n" if (@ARGV < 1);
+die "Usage: $0 <top directory>\n" if (@ARGV != 1);
 
 my %hash;
 
