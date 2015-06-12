@@ -49,11 +49,11 @@ while (<COLORS>) {
 
 close(COLORS);
 
-format STDOUT =
-@<<<<<<<<<<
-    my $color
-.
 
 foreach my $color (@colors) {
+format STDOUT =
+@<<<<<<<<<<
+    $color
+.
     write;
 }
