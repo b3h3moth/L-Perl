@@ -6,8 +6,7 @@ use Data::Dumper;
 use File::Find;
 use Digest::MD5;
 
-# How to create an hash whose keys is the file size and whose values are 
-# their names.
+# How to find duplicate files.
 
 my %hash;
 
@@ -18,7 +17,7 @@ find( sub {
     }, @dir_list
 );
 
-# Check if the hash of arrays (%hash) has two element at least.
+# Check if the hash of arrays (%hash) has one element at least:
 foreach my $size (keys %hash) {
     if ( $#{$hash{$size}} < 0 ) {
         next;
@@ -27,11 +26,11 @@ foreach my $size (keys %hash) {
     my %md5;
 
     # Open each file and calculate its MD5 checksum, then add checksum and 
-    # filename into hash %md5.
+    # filename into hash named %md5:
     foreach my $cur_file (@{$hash{$size}}) {
         open(FILE, $cur_file) or next;
         binmode(FILE);
-        # Add elements into hash:
+        # Add the elements into hash:
         #   key: md5 checksum
         # value: filenames
         push @{$md5{Digest::MD5->new->addfile(*FILE)->hexdigest()}}, $cur_file;
@@ -39,7 +38,7 @@ foreach my $size (keys %hash) {
         close(FILE);
     }
 
-    # print checksum:filename
+    # Print out checksum:filename
     # foreach my $msize (keys %md5) {
     #    print "$msize:";
     #
@@ -49,7 +48,7 @@ foreach my $size (keys %hash) {
     #    print "\n";
     # }
 
-    # check if two or more files have the same checksum
+    # Check if two or more files have the same checksum:
     foreach my $curfile (keys %md5) {
         if ($#{$md5{$curfile}} >= 1) {
             print "$curfile: [ @{$md5{$curfile}} ]\n";
