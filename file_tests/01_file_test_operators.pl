@@ -34,4 +34,8 @@ use v5.14;
 
 my $filename = '/home/behemoth/.profile';
 
-die "Pay attention, $filename exists.\n" if -f $filename;
+print "$filename:\n";
+print "- exists.\n" if -e $filename;
+print "- is a plain file.\n" if -f $filename;
+print "- is readable\n", if -r $filename;
+print "- is writable\n", if -r $filename;
