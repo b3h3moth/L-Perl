@@ -19,4 +19,4 @@ use v5.14;
 
 my $filename = '/home/behemoth/.profile';
 
-die "$filename exists\n" if -f $filename;
+die "Pay attention, $filename exists.\n" if -f $filename;
