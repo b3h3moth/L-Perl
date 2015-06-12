@@ -16,3 +16,7 @@ use v5.14;
 # -z File exists and has zero size (always false for directories);
 # -s File or directory exists and has nonzero size (in bytes);
 # -f Entry is a plain file.
+
+my $filename = '/home/behemoth/.profile';
+
+die "$filename exists\n" if -f $filename;
