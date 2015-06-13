@@ -20,7 +20,7 @@ while(my $file = readdir DH){
     # add directory name to each file
     my $filename = "$dir/$file";
 
-    # push results into list
+    # push results into list, -T stands for only text 'ascii' files:
     push(@files, $filename) if (-T $filename);
 }
 
