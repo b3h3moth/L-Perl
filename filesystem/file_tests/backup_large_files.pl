@@ -10,6 +10,11 @@ my $dir = shift // File::HomeDir->my_home();
 opendir(DH, $dir) or die "Can't open $dir: $!\n";
 
 while(my $file = readdir DH) {
+    # skip current and parent directory
+    if ($file eq '.' or $file eq '..') {
+        next;
+    }
+
     say $file;
 }
 
