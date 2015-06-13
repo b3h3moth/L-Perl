@@ -41,3 +41,5 @@ print "- exists and has nonzero size\n", if -s $filename;
 print "- is readable\n", if -r $filename;
 print "- is writable\n", if -r $filename;
 print "- is writable\n", if -B $filename;
+
+print "$filename has more than ten days\n" if -M $filename > 10;
