@@ -4,7 +4,7 @@ use strict;
 use v5.14;
 
 # File test operator's list:
-# -r File or directory is readable by this (effective) user or group;
+# -r FIle or directory is readable by this (effective) user or group;
 # -w File or directory is writable by this (effective) user or group;
 # -x File or directory is executable by this (effective) user or group;
 # -o File or directory is owned by this (effective) user;
