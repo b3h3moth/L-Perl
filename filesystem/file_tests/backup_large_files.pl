@@ -4,6 +4,8 @@ use strict;
 use v5.14;
 use File::HomeDir;
 
+# Find config files and put them into an array
+
 # Find files inside this directory
 my $dir = shift // File::HomeDir->my_home();
 
@@ -15,7 +17,10 @@ while(my $file = readdir DH) {
         next;
     }
 
-    say $file;
+    if (-d $file) {
+        next;
+    }
+
 }
 
 close(DH);
