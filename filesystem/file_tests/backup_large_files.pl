@@ -11,6 +11,8 @@ my $dir = shift // File::HomeDir->my_home();
 
 opendir(DH, $dir) or die "Can't open $dir: $!\n";
 
+my @config_files = ();
+
 while(my $file = readdir DH) {
     # skip current and parent directory
     if ($file eq '.' or $file eq '..') {
@@ -22,7 +24,7 @@ while(my $file = readdir DH) {
 
     # Print only files that start with a period
     if ("$file" =~ /^\./) {
-        say $file;
+        push @config_files, "$dir/$file";
     }
 
 }
