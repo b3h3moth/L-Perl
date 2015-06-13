@@ -6,9 +6,8 @@ use File::HomeDir;
 
 # Find files inside this directory
 my $dir = shift // File::HomeDir->my_home();
-#my $dir = '/home/behemoth';
 
-opendir(DH, $dir);
+opendir(DH, $dir) or die "Can't open $dir: $!\n";
 
 while(my $file = readdir DH) {
     say $file;
