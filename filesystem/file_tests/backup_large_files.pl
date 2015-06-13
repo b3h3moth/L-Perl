@@ -17,9 +17,11 @@ while(my $file = readdir DH) {
         next;
     }
 
-    if (-d $file) {
+    if ($file =~ /^./) {
         next;
     }
+
+    say $file;
 
 }
 
