@@ -2,14 +2,16 @@
 use warnings;
 use strict;
 use v5.14;
+use File::HomeDir;
 
 # Find files inside this directory
-my $dir = shift // '.';
+my $dir = shift // File::HomeDir->my_home();
+#my $dir = '/home/behemoth';
 
-open(DH, $dir);
+opendir(DH, $dir);
 
-while (readdir DH) {
-    say $_;
+while(my $file = readdir DH) {
+    say $file;
 }
 
 close(DH);
