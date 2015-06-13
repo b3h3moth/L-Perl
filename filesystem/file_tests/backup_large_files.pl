@@ -17,11 +17,13 @@ while(my $file = readdir DH) {
         next;
     }
 
-    if ($file =~ /^./) {
-        next;
-    }
+    # skip if file is a directory
+    next if (-d "$dir/$file");
 
-    say $file;
+    # Print only file that start with a period
+    if ("$file" =~ /^\./) {
+        say $file;
+    }
 
 }
 
