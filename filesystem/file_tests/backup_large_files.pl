@@ -22,7 +22,7 @@ while(my $file = readdir DH) {
     # skip if file is a directory
     next if (-d "$dir/$file");
 
-    # Print only files that start with a period
+    # Push each config file (beginning with a period) in the array
     if ("$file" =~ /^\./) {
         push @config_files, "$dir/$file";
     }
