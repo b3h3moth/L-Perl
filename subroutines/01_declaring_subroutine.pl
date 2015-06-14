@@ -1,7 +1,10 @@
 #!/usr/bin/env perl
 use warnings;
 use v5.14;
-use strict; # <use strict/warning/v5.14> is a prgama. 
+use strict; # use strict;
+            # use warnings;
+            # use v5.14>; 
+            # They are prgama.
             # A pragma is a hint to a compiler, telling it something about the
             # code. In this case, the <use strict> pragma  tells Perl's 
             # internal compiler that it should enforce some good programming 
@@ -15,14 +18,15 @@ use strict; # <use strict/warning/v5.14> is a prgama.
 #    ...
 # }
 sub Usage {
-    say "How to use subroutines in Perl";
-    say "sub functioName {";
-    say "    body";
-    say "}";
-    say "bye";
-
-    exit(0);
+    state $len += 1;
+    say $len;
 }
 
 # Invoking subroutine:
-Usage(); # or &Usage; or Usage; or &Usage();
+Usage(); 
+# or 
+&Usage; 
+# or 
+Usage; 
+# or 
+&Usage();
