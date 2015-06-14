@@ -27,3 +27,8 @@ while(my $file = readdir DIR) {
 }
 
 closedir(DIR);
+
+# Print out each file
+foreach my $filename (@result) {
+    say $filename;
+}
