@@ -30,7 +30,7 @@ while(my $file = readdir DH) {
 
 }
 
-close(DH);
+closedir(DH);
 
 foreach my $filename (@config_files) {
     say $filename;
