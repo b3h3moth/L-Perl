@@ -9,6 +9,7 @@ die "$filename doesn't exist\n" if (! -e $filename);
 my($dev, $ino, $mode, $nlink, $uid, $gid, $rdev,
    $size, $atime, $mtime, $ctime, $blksize, $blocks) = stat($filename);
 
+say "stat($filename)";
 say "    dev: $dev";
 say "    ino: $ino";
 say "   mode: $mode";
