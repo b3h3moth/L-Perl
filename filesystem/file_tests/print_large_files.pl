@@ -10,6 +10,7 @@ use File::HomeDir;
 #die "Usage: $0 <directory>\n" if (@ARGV != 1);
 #my $dir = $ARGV[0];
 
+# Default directory where to listing files
 my $dir = shift // File::HomeDir->my_home();
 
 opendir(DIR, $dir) or die "Can't open $dir: $!\n";
