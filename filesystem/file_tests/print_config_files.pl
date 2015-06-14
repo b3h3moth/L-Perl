@@ -32,7 +32,7 @@ while(my $file = readdir DH) {
 
 closedir(DH);
 
-# Backup in this case stands for print out each file
+# Print out each file
 foreach my $filename (@config_files) {
     say $filename;
 }
