@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
+use v5.14;
 
 # A scalar start with '$' sigil.
 
@@ -28,3 +29,5 @@ my $prossimo_codice = ++$codice;
 print "\n$codice - $prossimo_codice\n";
 my $codice_attuale = $codice++;
 print "\n$codice - $codice_attuale\n";
+my $result = '12' / 3;
+say $result;
