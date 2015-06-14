@@ -7,7 +7,8 @@ use File::HomeDir;
 # Find each file in Home directory, print only file larger than 100 KB and who
 # it has been accessed in the last 30 days.
 
-die "Usage: $0 <directory>\n" if (@ARGV != 1);
+#die "Usage: $0 <directory>\n" if (@ARGV != 1);
+#my $dir = $ARGV[0];
 
 my $dir = shift // File::HomeDir->my_home();
 
