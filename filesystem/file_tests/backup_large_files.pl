@@ -5,7 +5,7 @@ use v5.14;
 use File::HomeDir;
 
 # Find all config files (beginning with a period), put them into an array and
-# finally print them.
+# finally print out them.
 
 # Find files inside this directory
 my $dir = shift // File::HomeDir->my_home();
