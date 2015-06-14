@@ -22,7 +22,7 @@ while(my $file = readdir DIR) {
     # larger than 102400 bytes (100KB)
     # it has been accessed in the last 30 days
     if (-s "$dir/$file" > 102400 and -A "$dir/$file" < 30) {
-        say $file;
+        push @result, "$dir/$file";
     }
 }
 
