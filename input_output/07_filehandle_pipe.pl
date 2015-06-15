@@ -3,6 +3,9 @@ use warnings;
 use strict;
 use v5.14;
 
+# The open() function can be used for more than just plain files; anything that
+# can read from stdin or write to stdout can talk directly to Perl via pipe.
+
 my $file = "$$.txt";
 
 # The filename is interpreted as a command that pipes output.
