@@ -16,3 +16,5 @@ die "Usage: $0 <dirname 1><dirname 2>\n" if (@ARGV != 1);
 
 chomp(my $top_dir = $ARGV[0]);
 chomp(my $sub_dir = $ARGV[1]);
+
+make_path($top_dir, $sub_dir, mode => 0755);
