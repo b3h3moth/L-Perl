@@ -12,4 +12,6 @@ use File::Path qw(make_path);
 # The make_path function creates the given directories if they don't exists
 # before, much like the Unix command mkdir -p.
 
+die "Usage: $0 <top directory>\n" if (@ARGV != 1);
+
 my $top_dir = $ARGV[0];
