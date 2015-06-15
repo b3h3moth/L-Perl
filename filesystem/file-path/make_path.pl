@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 use v5.14;
-use File::Path;
+use File::Path qw(make_path);
 
 # File::Path
 # This module provide a convenient way to create directories of arbitrary depth
