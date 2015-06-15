@@ -3,7 +3,7 @@ use warnings;
 use strict;
 use v5.14;
 
-
+# Sorting an input file.
 
 die "Usage: $0 <filename>\n" if (@ARGV != 1);
 
