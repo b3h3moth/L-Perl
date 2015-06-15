@@ -7,3 +7,7 @@ use File::Path;
 # File::Path
 # This module provide a convenient way to create directories of arbitrary depth
 # and to delete an entire directory subtree from the filesystem.
+
+# make_path() 
+# The make_path function creates the given directories if they don't exists
+# before, much like the Unix command mkdir -p.
