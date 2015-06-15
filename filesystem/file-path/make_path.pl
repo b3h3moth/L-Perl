@@ -17,4 +17,5 @@ die "Usage: $0 <dirname 1><dirname 2>\n" if (@ARGV != 2);
 chomp(my $top_dir = $ARGV[0]);
 chomp(my $sub_dir = $ARGV[1]);
 
+# How to create two directories
 make_path($top_dir, $sub_dir);
