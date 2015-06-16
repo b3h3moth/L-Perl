@@ -1,4 +1,4 @@
-#!/usr/bin/env perl
-use warnings;
+package Shopper::Personal;
+
 use strict;
-use v5.14;
+use warnings;
