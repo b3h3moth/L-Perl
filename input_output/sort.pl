@@ -3,5 +3,8 @@ use warnings;
 use strict;
 use v5.14;
 
-# get data from stdin
+# get data from stdin:
 my $text = <>;
+
+# print out text:
+print sort $text;
