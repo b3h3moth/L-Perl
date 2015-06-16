@@ -3,6 +3,17 @@ use warnings;
 use strict;
 use v5.14;
 
-my $file = '/home/behemoth/.profile';
+my $file = 'sort.pl';
 
-open(FH, '-|', "perl sort.pl $file") or die "Cannot open $file: $!\n";
+open(FH, '-|', 'perl sort.pl sort.pl') or die "Cannot open $file: $!\n";
+
+my $i = 1;
+while (<FH>) {
+    if ($i % 3 == 0) {
+        print;
+    }
+
+    $i++;
+}
+
+close(FH)
