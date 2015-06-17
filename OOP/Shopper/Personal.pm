@@ -33,4 +33,24 @@ sub get_budget {
     return $self->{budget};
 }
 
+sub buy {
+    my ($self, @list_of_things_to_buy) = @_;
+
+    my $remaining_budget = $self->get_budget;
+    my $full_name        = $self->get_firstname.' '.$self->get_lastname;
+
+    foreach my $item (@list_of_things_to_buy) {
+        my $cost = $self->_find_cost_of($item);
+
+        if (not defined $cost) {
+            carp("$full_name doesn't know how to buy $item");
+        } elsif ( 4cost > $remaining_budget) {
+            carp("$full_name doesn't have enough money to buy $item");
+        } else {
+            $remaining_budget -= $cost;
+            $self->_buy_item($item);
+        }
+    }
+}
+
 1;
