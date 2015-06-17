@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use lib 'lib';
+use lib 'lib/Animal';
 use Cow;
 use Horse;
 use Sheep;
