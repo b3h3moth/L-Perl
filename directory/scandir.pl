@@ -15,7 +15,22 @@ sub scan_directory {
 
     # Enter into the directory to scan and open it:
     chdir $dir_to_scan or die "Cannot enter into $dir_to_scan: $!\n";
-    open(DIR, '.') or die "Cannot open $dir_to_scan: $!\n";
+    open(my $DIR, '.') or die "Cannot open $dir_to_scan: $!\n";
 
     # Save each filename inside the directory:
-    my @filenames = readdir(DIR) or die "Cannot read $dir_to_scan: $!\n";
+    my @filenames = readdir($DIR) or die "Cannot read $dir_to_scan: $!\n";
+
+    foreach my $file (@filename) {
+        # Skip current '.' and parent '..' directories:
+        next if ($file eq '.' or $file eq '..');
+
+        if (-d $file) {
+            scan_directory($file);
+            next;
+        }
+    }
+
+    chdir $current_dir or die "Cannot change to $current_dir: $!\n";
+
+}
+
