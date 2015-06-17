@@ -107,4 +107,4 @@ EOF
 
 1;
 __END__
-See main11.pl
+See main.pl
