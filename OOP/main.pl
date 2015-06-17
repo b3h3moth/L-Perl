@@ -6,5 +6,6 @@ use Shopper::Personal;
 
 my $object = Shopper::Personal->new( {
         firstname => 'liuc',
-        lastname => 'behemoth'
-});
+        lastname  => 'behemoth',
+        budget    =>  1000,
+} );
