@@ -17,3 +17,5 @@ sub scan_directory {
     chdir $dir_to_scan or die "Cannot enter into $dir_to_scan: $!\n";
     open(DIR, '.') or die "Cannot open $dir_to_scan: $!\n";
 
+    # Save each filename inside the directory:
+    my @filenames = readdir(DIR) or die "Cannot read $dir_to_scan: $!\n";
