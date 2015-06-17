@@ -2,6 +2,7 @@
 use strict;
 use warnings;
 
+use lib 'lib';
 use Shopper::Personal;
 
 my $shopper = Shopper::Personal->new({
