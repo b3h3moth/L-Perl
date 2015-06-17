@@ -11,8 +11,24 @@ sub new {
 
     return bless {
         firstname => $args->{firstname},
-        lastname => $args->{lastname},
+        lastname  => $args->{lastname},
+        budget    => $args->{budget},
     }, $class;
+}
+
+sub get_firstname {
+    my $self = shift;
+    return $self->{firstname};
+}
+
+sub get_lastname {
+    my $self = shift;
+    return $self->{lastname};
+}
+
+sub get_budget {
+    my $self = shift;
+    return $self->{budget};
 }
 
 1;
