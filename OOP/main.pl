@@ -1,15 +1,24 @@
 #!/usr/bin/env perl
-use warnings;
 use strict;
-use v5.14;
+use warnings;
+
 use Shopper::Personal;
 
-my $object = Shopper::Personal->new( {
-        firstname => 'liuc',
-        lastname  => 'behemoth',
-        budget    =>  1000,
-} );
+my $shopper = Shopper::Personal->new({
+    name   => 'aevar',
+    budget => 10,
+});
+$shopper->buy(
+    'beer',
+    'Ferrari',
+    ('coffee')  x 2,
+    ('ravioli') x 2,
+    'beer',
+);
 
-say $object->get_firstname();
-say $object->get_lastname();
-say $object->get_budget();
+print $shopper->get_invoice;
+
+my $next_shopper = Shopper::Personal->new({
+    name  => 'bob',
+    limit => 10,
+});
