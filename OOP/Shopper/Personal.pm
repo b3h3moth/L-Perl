@@ -2,7 +2,8 @@ package Shopper::Personal;
 
 use strict;
 use warnings;
-use Carp 'carp';
+use Carp qw(croak carp);
+use Scalar::Util qw(looks_like_number);
 
 # For some other OO languages, new() is a keyword used to construct objects. In
 # Perl the new() method is just another method.
