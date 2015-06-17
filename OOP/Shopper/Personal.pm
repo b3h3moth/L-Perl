@@ -7,6 +7,7 @@ use warnings;
 # Perl the new() method is just another method.
 
 sub new {
+    # The classname is passed as the first argument to @_ (automatically)
     my ($class, $args) = @_;
 
     # Blessing an hash reference
