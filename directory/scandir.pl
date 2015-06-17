@@ -20,7 +20,7 @@ sub scan_directory {
     # Save each filename inside the directory:
     my @filenames = readdir($DIR) or die "Cannot read $dir_to_scan: $!\n";
 
-    foreach my $file (@filename) {
+    foreach my $file (@filenames) {
         # Skip current '.' and parent '..' directories:
         next if ($file eq '.' or $file eq '..');
 
