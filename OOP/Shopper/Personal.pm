@@ -45,7 +45,7 @@ sub buy {
 
         if (not defined $cost) {
             carp("$full_name doesn't know how to buy $item");
-        } elsif ( 4cost > $remaining_budget) {
+        } elsif ( $cost > $remaining_budget) {
             carp("$full_name doesn't have enough money to buy $item");
         } else {
             $remaining_budget -= $cost;
