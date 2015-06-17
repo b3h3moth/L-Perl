@@ -8,7 +8,8 @@ use strict;
 sub new {
     my $class = shift;       # The first thing passed is the class name
     my $self = {};           # Hash reference
-    bless $self, $class;     # $self became an object of the class $class
+    bless $self, $class;     # $self became an object of the class $class, in
+                                                         # this case 'Person2'
     return $self;
 }
 
