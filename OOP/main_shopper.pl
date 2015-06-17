@@ -5,20 +5,20 @@ use warnings;
 use Shopper::Personal;
 
 my $shopper = Shopper::Personal->new({
-    name   => 'aevar',
-    budget => 10,
+    name   => 'behemoth',
+    budget => 1500,
 });
 $shopper->buy(
-    'beer',
-    'Ferrari',
-    ('coffee')  x 2,
-    ('ravioli') x 2,
-    'beer',
+    'birra',
+    'ducati',
+    ('caffe')  x 2,
+    ('pizza') x 2,
+    'acqua',
 );
 
 print $shopper->get_invoice;
 
 my $next_shopper = Shopper::Personal->new({
-    name  => 'bob',
-    limit => 10,
+    name  => 'luca',
+    limit => 5,
 });

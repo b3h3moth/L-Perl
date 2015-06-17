@@ -108,10 +108,11 @@ sub _money_spent {
 sub _find_cost_of {
     my ( $class, $item ) = @_;
     my %price_of = (
-        beer    => 1,
-        coffee  => 3.5,
-        ravioli => 1.5,
-        ferrari => 225_000,
+        birra    => 3.5,
+        caffe  => 2.0,
+        pizza => 4,
+        ducati => 105_000,
+        acqua => 1
     );
     return $price_of{lc $item};
 }
