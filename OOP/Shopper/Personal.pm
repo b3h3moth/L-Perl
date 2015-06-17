@@ -11,13 +11,10 @@ use Scalar::Util qw(looks_like_number);
 sub new {
     # The classname is passed as the first argument to @_ (automatically)
     my ($class, $args) = @_;
+    my $self = bless {}, $class;
+    $self->_initialize($args);
 
-    # Blessing an hash reference
-    return bless {
-        firstname => $args->{firstname},
-        lastname  => $args->{lastname},
-        budget    => $args->{budget},
-    }, $class;
+    return $self;
 }
 
 sub get_firstname {
