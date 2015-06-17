@@ -9,6 +9,7 @@ use warnings;
 sub new {
     my ($class, $args) = @_;
 
+    # Blessing an hash reference
     return bless {
         firstname => $args->{firstname},
         lastname  => $args->{lastname},
