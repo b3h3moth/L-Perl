@@ -9,3 +9,7 @@ my $object = Shopper::Personal->new( {
         lastname  => 'behemoth',
         budget    =>  1000,
 } );
+
+say $object->get_firstname();
+say $object->get_lastname();
+say $object->get_budget();
