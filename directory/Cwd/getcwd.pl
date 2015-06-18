@@ -8,4 +8,9 @@ use Cwd;
 # working directory.
 
 # Get pathname of current working directory
-my $current_woring_directory = getcwd();
+my $current_working_directory = getcwd();
+say $current_working_directory;
+
+# same thing
+my $cwd = cwd();
+say $cwd;
