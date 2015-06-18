@@ -7,6 +7,8 @@ use Cwd;
 # The program starts with the requested directory to scan. When the scan is
 # complete it returns to the directory from which it was called.
 
+my @results = ();
+
 sub scan_directory {
     my $dir_to_scan = shift // '.';
 
@@ -32,9 +34,14 @@ sub scan_directory {
             scan_directory($file);
             next;
         }
-        print "\t$file";
+        push @results, $file;
     }
     chdir $current_dir or die "Cannot change to $current_dir: $!\n";
 }
 
 scan_directory('..');
+
+
+foreach (@results) {
+    say $_;
+}
