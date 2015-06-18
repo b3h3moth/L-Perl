@@ -36,7 +36,7 @@ sub scan_directory {
         if (-d $file) {
             push @{$hash{abs_path($file)}}, undef;
             scan_directory($file);
-            next;
+            #next;
         }
 
         foreach my $path (keys %hash) {
