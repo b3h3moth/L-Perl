@@ -30,7 +30,7 @@ sub scan_directory {
         next if ($file =~ /^\./);
 
         if (-d $file) {
-            say "DIR: $file";
+            push @results, "DIR: $file";
             scan_directory($file);
             next;
         }
@@ -41,7 +41,6 @@ sub scan_directory {
 
 scan_directory('..');
 
-
-foreach (@results) {
-    say $_;
+foreach my $line (@results) {
+    say $line;
 }
