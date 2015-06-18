@@ -1,4 +1,4 @@
 ### Directory
 
-### List of files used to testing functions:
-* `getcwd.pl` getcwd()
+### List of modules covered
+* `Cwd`
