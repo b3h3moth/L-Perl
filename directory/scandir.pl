@@ -25,12 +25,14 @@ sub scan_directory {
         # Skip current '.' and parent '..' directories:
         next if ($file eq '.' or $file eq '..');
 
+        next if ($file =~ /^\./);
+
         if (-d $file) {
             say "DIR: $file";
             scan_directory($file);
             next;
         }
-        say $file;
+        print "\t$file";
     }
     chdir $current_dir or die "Cannot change to $current_dir: $!\n";
 }
