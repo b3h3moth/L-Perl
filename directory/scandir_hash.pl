@@ -5,6 +5,7 @@ use v5.14;
 use Cwd;
 use Data::Dumper;
 use Cwd 'abs_path';
+use File::Basename;
 
 # The program starts with the requested directory to scan. When the scan is
 # complete it returns to the directory from which it was called.
@@ -39,8 +40,7 @@ sub scan_directory {
         }
 
         foreach my $path (keys %hash) {
-            say $path;
-            if ($path eq abs_path($file)) {
+            if ($path eq dirname(abs_path($file)) ) {
                 push @{$hash{$path}}, $file;
             }
         }
@@ -50,4 +50,4 @@ sub scan_directory {
 
 scan_directory('..');
 
-#print Dumper \%hash;
+print Dumper \%hash;
