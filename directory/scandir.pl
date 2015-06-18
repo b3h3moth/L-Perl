@@ -3,13 +3,11 @@ use warnings;
 use strict;
 use v5.14;
 use Cwd;
-use Data::Dumper;
 
 # The program starts with the requested directory to scan. When the scan is
 # complete it returns to the directory from which it was called.
 
 my @results = ();
-my %hash = ();
 
 sub scan_directory {
     my $dir_to_scan = shift // '.';
@@ -32,17 +30,17 @@ sub scan_directory {
         next if ($file =~ /^\./);
 
         if (-d $file) {
-            #push @results, "DIR: $file";
-            push @{$hash{$file}};
+            push @results, "DIR: $file";
             scan_directory($file);
             next;
         }
-
-        #push @results, $file;
+        push @results, $file;
     }
     chdir $current_dir or die "Cannot change to $current_dir: $!\n";
 }
 
 scan_directory('..');
 
-print Dumper \%hash;
+foreach my $line (@results) {
+    say $line;
+}
