@@ -53,6 +53,7 @@ sub scan_directory {
     chdir $current_dir or die "Cannot change to $current_dir: $!\n";
 }
 
-scan_directory('..');
+die "Usage: $0 <directory to scan>\n" if (@ARGV != 1);
+chomp(my $dir = $ARGV[0]);
 
-print Dumper \%hash;
+scan_directory($dir);
