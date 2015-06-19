@@ -52,6 +52,8 @@ sub scan_directory {
             }
         }
     }
+
+    # Back to current directory:
     chdir $current_dir or die "Cannot change to $current_dir: $!\n";
 }
 
