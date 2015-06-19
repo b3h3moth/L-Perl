@@ -57,3 +57,5 @@ die "Usage: $0 <directory to scan>\n" if (@ARGV != 1);
 chomp(my $dir = $ARGV[0]);
 
 scan_directory($dir);
+
+print Dumper %hash;
