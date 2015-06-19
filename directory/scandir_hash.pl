@@ -10,7 +10,6 @@ use File::Basename;
 # The program starts with the requested directory to scan. When the scan is
 # complete it returns to the directory from which it was called.
 
-my @results = ();
 my %hash = ();
 
 sub scan_directory {
@@ -28,10 +27,10 @@ sub scan_directory {
     closedir($DIR);
 
     foreach my $file (@filenames) {
-        # Skip current '.' and parent '..' directories:
-        next if ($file eq '.' or $file eq '..');
-
-        next if ($file =~ /^\./);
+        # Skip current '.' directory, 
+        # parent '..' directory 
+        # and hidden files '.*'
+        next if ($file eq '.' or $file eq '..' or $file =~ /^\./);
 
         if (-d $file) {
             push @{$hash{abs_path($file)}}, undef;
