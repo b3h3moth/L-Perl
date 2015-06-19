@@ -22,18 +22,20 @@ sub scan_directory {
     chdir $dir_to_scan or die "Cannot enter into $dir_to_scan: $!\n";
     opendir(my $DIR, '.') or die "Cannot open $dir_to_scan: $!\n";
 
-    # Save each filename of the directory, than close dirhandle:
+    # Save each filename within the directory, than close dirhandle:
     my @filenames = readdir($DIR) or die "Cannot read $dir_to_scan: $!\n";
     closedir($DIR);
 
     foreach my $file (@filenames) {
         # Skip current '.' directory, 
         # parent '..' directory 
-        # and hidden files '.*'
+        # and hidden files '.*':
         next if ($file eq '.' or $file eq '..' or $file =~ /^\./);
 
         if (-d $file) {
             push @{$hash{abs_path($file)}}, undef;
+            
+            # Invoke scan_directory() again for every directory:
             scan_directory($file);
             #next;
         }
