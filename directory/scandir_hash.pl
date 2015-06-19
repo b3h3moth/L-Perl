@@ -34,7 +34,7 @@ sub scan_directory {
 
         if (-d $file) {
             # Create hash keys with the directory absolute path:
-            push @{$hash{abs_path($file)}};
+            push @{$hash{abs_path($file)}}#, undef;
             
             # Invoke scan_directory() again for every directory:
             scan_directory($file);
