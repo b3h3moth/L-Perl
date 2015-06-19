@@ -4,8 +4,8 @@ use strict;
 use v5.14;
 use File::Spec;
 
-#How to concatenate two or more directory names to form an absolute path
-#ending with a directory
+# How to concatenate two or more directory names to form an absolute path
+# ending with a directory
 my @docs = qw(home behemoth docs books);
 my @books = qw(programming perl);
 

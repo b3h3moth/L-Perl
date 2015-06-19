@@ -4,7 +4,7 @@ use strict;
 use v5.14;
 use File::Spec;
 
-#How to get current, root and up directories
+# How to get current, root and up directories
 my $cur_directory = File::Spec->curdir();
 my $root_directory = File::Spec->rootdir();
 my $up_directory = File::Spec->updir();
