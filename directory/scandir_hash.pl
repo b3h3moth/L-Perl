@@ -33,13 +33,17 @@ sub scan_directory {
         next if ($file eq '.' or $file eq '..' or $file =~ /^\./);
 
         if (-d $file) {
+            # Create hash keys with directory absolute path:
             push @{$hash{abs_path($file)}}, undef;
             
             # Invoke scan_directory() again for every directory:
             scan_directory($file);
-            #next;
         }
 
+        # Create hash values with all filenames within directory:
+        # /dir => [file1, file2, ... fileN].
+        # If the directory absolute path is equals to the filename absolute
+        # path, than add each filename into hash value:
         foreach my $path (keys %hash) {
             if ($path eq dirname(abs_path($file)) ) {
                 push @{$hash{$path}}, $file;
