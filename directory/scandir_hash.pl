@@ -33,7 +33,7 @@ sub scan_directory {
         next if ($file eq '.' or $file eq '..' or $file =~ /^\./);
 
         if (-d $file) {
-            # Create hash keys with directory absolute path:
+            # Create hash keys with the directory absolute path:
             push @{$hash{abs_path($file)}}, undef;
             
             # Invoke scan_directory() again for every directory:
