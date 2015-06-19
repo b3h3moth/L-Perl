@@ -38,6 +38,7 @@ sub scan_directory {
             
             # Invoke scan_directory() again for every directory:
             scan_directory($file);
+            next;
         }
 
         # Create hash values with all filenames within directory:
@@ -47,10 +48,9 @@ sub scan_directory {
         foreach my $dir_path (keys %hash) {
             if ($dir_path eq dirname(abs_path($file)) ) {
                 push @{$hash{$dir_path}}, $file;
+                next;
             }
         }
-
-        foreach my
     }
     chdir $current_dir or die "Cannot change to $current_dir: $!\n";
 }
