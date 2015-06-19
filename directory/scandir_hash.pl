@@ -45,9 +45,9 @@ sub scan_directory {
         # /dir => [file1, file2, ... fileN].
         # If the directory absolute path is equals to the filename absolute
         # path, than add each filename into hash value:
-        foreach my $dir_path (sort keys %hash) {
-            if ($dir_path eq dirname(abs_path($file)) ) {
-                push @{$hash{$dir_path}}, $file;
+        for (sort keys %hash) {
+            if ($_ eq dirname(abs_path($file)) ) {
+                push @{$hash{$_}}, $file;
                 next;
             }
         }
