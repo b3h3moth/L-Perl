@@ -4,6 +4,6 @@ use strict;
 use v5.14;
 use File::Spec;
 
-# Returns a string representation null device
+# Returns a string representation of the null device
 my $null_device = File::Spec->devnull();
 say $null_device;
