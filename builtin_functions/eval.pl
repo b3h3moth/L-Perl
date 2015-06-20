@@ -18,3 +18,6 @@ use v5.20.2;
 # providing the benefit of checking the code within BLOCK at compile time.
 
 eval { say("The say() function seems to work.\n"); };
+
+my $code = "chdir('/ops/dir')";
+eval($code) or die"There is a problem with this code: $code\n$! , stopped";
