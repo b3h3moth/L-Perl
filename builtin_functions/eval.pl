@@ -1,4 +1,4 @@
-#!/usrb/bin/env perl
+#!/usr/bin/env perl
 use strict;
 use warnings;
 use v5.20.2;
@@ -16,3 +16,5 @@ use v5.20.2;
 # executed within the context of the current Perl program. This form is
 # typically used to trap exceptions more efficiently than the first, while also
 # providing the benefit of checking the code within BLOCK at compile time.
+
+eval { say("The say() function seems to work.\n"); };
