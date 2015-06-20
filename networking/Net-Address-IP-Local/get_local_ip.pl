@@ -6,4 +6,4 @@ use v5.20.2;
 
 # Get the local system's IP address
 my $local_address = Net::Address::IP::Local->public;
-say $local_address;
+say "my local IP is: ", $local_address;
