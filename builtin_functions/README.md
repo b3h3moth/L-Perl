@@ -7,6 +7,7 @@
 * pos();
 * qw();
 * ref();
-* reverse()
+* reverse():
 * shift();
 * split();
+* eval();
