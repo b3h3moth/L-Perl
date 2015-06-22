@@ -5,4 +5,4 @@ use warnings;
 die "Usage: $0 <firstname> <lastname>" if (@ARGV != 1);
 
 chomp(my $firstname = $ARGV[0]);
-my $lastname = $ARGV[1];
+chomp(my $lastname = $ARGV[1]);
