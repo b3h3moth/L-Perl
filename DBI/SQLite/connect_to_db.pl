@@ -9,3 +9,5 @@ my $db = 'addressbook';
 
 # Connection to DB
 my $db_connection = "DBI::$driver:dbname=$db";
+my $user_id = 'behemoth';
+my $user_pass = '9c6k3tbnf2';
