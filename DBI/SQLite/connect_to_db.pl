@@ -17,7 +17,11 @@ my $dbh = DBI->connect(
     $dsn, 
     $username,
     $password,
-    { RaiseError => 1, PrintError => 0, AutoCommit => 1 }
+    { 
+        RaiseError => 1, 
+        PrintError => 0, 
+        AutoCommit => 1 
+    }
 ) or die "DBI:errstr";
 
 say "\'$db_driver\' opened database \'$db_name\' with success.";
