@@ -5,7 +5,7 @@ use DBI;
 use v5.14;
 
 my $driver = 'SQLite';
-my $db = 'test.db';
+my $db = '';
 my $user_id = '';
 my $user_pass = '';
 
