@@ -18,3 +18,4 @@ my $dbh = DBI->connect(
     { RaiseError => 1 },
 ) or die "DBI:errstr";
 
+say "Database Opened with success";
