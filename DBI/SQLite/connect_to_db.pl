@@ -11,6 +11,8 @@ my $user_pass = '';
 
 # Connection to Database
 my $dsn = "DBI::$driver:dbname=$db";
+
+# Database handle
 my $dbh = DBI->connect(
     $dsn, 
     $user_id, 
