@@ -6,4 +6,6 @@ use v5.14;
 
 my $driver = 'SQLite';
 my $db = 'addressbook';
+
+# Connection to DB
 my $db_connection = "DBI::$driver:dbname=$db";
