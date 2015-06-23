@@ -20,4 +20,4 @@ my $dbh = DBI->connect(
     { RaiseError => 1, PrintError => 0, AutoCommit => 1 }
 ) or die "DBI:errstr";
 
-say "Database Opened with success";
+say "Database \'$db_name\' Opened with success.";
