@@ -9,7 +9,7 @@ my $db = '';
 my $user_id = '';
 my $user_pass = '';
 
-# Connection to DB
+# Connection to Database
 my $dsn = "DBI::$driver:dbname=$db";
 my $dbh = DBI->connect(
     $dsn, 
