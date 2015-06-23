@@ -5,7 +5,7 @@ use DBI;
 use v5.14;
 
 my $driver = 'SQLite';
-my $db = 'addressbook';
+my $db = 'test.db';
 my $user_id = '';
 my $user_pass = '';
 
