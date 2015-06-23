@@ -6,8 +6,8 @@ use v5.14;
 
 my $driver = 'SQLite';
 my $db = 'addressbook';
-my $user_id = 'behemoth';
-my $user_pass = '9c6k3tbnf2';
+my $user_id = '';
+my $user_pass = '';
 
 # Connection to DB
 my $dsn = "DBI::$driver:dbname=$db";
