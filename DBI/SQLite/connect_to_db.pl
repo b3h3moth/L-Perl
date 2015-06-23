@@ -4,13 +4,13 @@ use strict;
 use DBI;
 use v5.14;
 
-my $driver = 'SQLite';
-my $db = '';
+my $db_driver = 'SQLite';
+my $db_name = 'test.db';
 my $username = '';
 my $password = '';
 
 # Data source
-my $dsn = "dbi:SQLite:dbname=test.db";
+my $dsn = "dbi:$db_driver:dbname=$db_name";
 
 # Database handle
 my $dbh = DBI->connect(
