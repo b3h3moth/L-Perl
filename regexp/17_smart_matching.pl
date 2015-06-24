@@ -23,7 +23,7 @@ my @names_b = qw(mario luca gabriele michele maria lucia giovanni);
 
 # Compare two arrays and array element wirth a string
 say "C: The arrays have the same elements" if (@names_a ~~ @names_b);
-say "C: array elememnt" if (@names_a ~~ /lucia/);
+say "C: The array have $& element" if (@names_a ~~ /lucia/);
 
 my %football_team_a = (
     torino => 'juventus',
