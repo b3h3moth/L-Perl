@@ -3,13 +3,11 @@ use warnings;
 use strict;
 use v5.14;
 
-my @names = qw(vanessa rossana maria claudia francesca maria);
+my @names = qw(vanessa rossana maria);
 
 foreach (@names) {
-    say "I'm working...";
-
-    when (/maria/i) {
-        say "maria is in it";
+    when (/ari/i) {
+        say "name has 'ari' in it";
         continue;
     }
 
@@ -18,17 +16,10 @@ foreach (@names) {
         continue;
     }
 
-    when (/giusy/) {
-        say "giusy there is";
+    when (/'maria'/) {
+        say "name is maria";
         continue;
     }
-
-    when (/rossana/) {
-        say "rossana there is";
-        continue;
-    }
-
-    say "Move to default ...";
 
     default {
         say "I don't see anything";
