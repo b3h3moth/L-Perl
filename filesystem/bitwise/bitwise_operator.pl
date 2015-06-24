@@ -15,3 +15,8 @@ say 10 | 8;
 say 10 | 10;
 say 10 | 12;
 
+# Bitwise xor which bits are true in one operand or the other but not both.
+say "Bitwise operator: xor, ^";
+say 10 ^ 8;
+say 10 ^ 10;
+say 10 ^ 12;
