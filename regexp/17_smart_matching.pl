@@ -46,8 +46,9 @@ my %football_team_b = (
     genova => 'genoa',
 );
 
-# Compare hash
+# Compare two hash and hash key
 say "D: hash" if (%football_team_a ~~ %football_team_b);
+say "D: hash key" if (%football_team_a ~~ /torino/);
 
 my @numbers = qw(1 2 3 5 8 13 21 34 55 89);
 my $result = max(@numbers);
