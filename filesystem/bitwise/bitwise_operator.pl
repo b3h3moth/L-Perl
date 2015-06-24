@@ -20,3 +20,17 @@ say "Bitwise operator: xor, ^";
 say 10 ^ 8;
 say 10 ^ 10;
 say 10 ^ 12;
+
+# Bitwise shift left, shift the left operand by the number of bits shown in the
+# right operand, adding zero-bits at the least-significant places.
+say "Bitwise operator: shift left, <<";
+say 10 << 8;
+say 10 << 10;
+say 10 << 12;
+
+# Bitwise shift right, shift the left operand by the number of bits shown in
+# the right operand, discarding the least-significant bits.
+say "Bitwise operator: shift right, >>";
+say 10 >> 8;
+say 10 >> 10;
+say 10 >> 12;
