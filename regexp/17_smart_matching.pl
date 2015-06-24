@@ -36,6 +36,7 @@ my %club_b = (
 
 # Compare strings
 say "A: Find 'perl'" if ($text ~~ /perl/i);
+say "A: The string doesn't match" unless ('linux' ~~ $text);
 
 # Compare numbers
 say "B: The numbers are equals" if ($perl_version ~~ 5.20);
