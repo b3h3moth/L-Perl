@@ -39,6 +39,7 @@ say "A: Find 'perl'" if ($text ~~ /perl/i);
 
 # Compare numbers
 say "B: The numbers are equals" if ($perl_version ~~ 5.20);
+# Compare max value of the array
 say "B: (@numbers) = max is $result" unless @numbers ~~ $result;
 
 # Compare two arrays 
