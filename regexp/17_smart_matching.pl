@@ -23,6 +23,7 @@ my @english_names = qw(mario luca gabriele michele maria lucia giovanni);
 
 # The arrays have the same elements
 say "C: array" if (@italian_names ~~ @english_names);
+say "C: array elememnt" if (@italian_names ~~ /lucia/);
 
 my %football_team_a = (
     torino => 'juventus',
