@@ -18,12 +18,12 @@ my $perl_version = 5.20;
 say "A: strings" if ($text ~~ /perl/i);
 say "B: numbers" if ($perl_version ~~ 5.20);
 
-my @italian_names = qw(mario luca gabriele michele maria lucia giovanni);
-my @english_names = qw(mario luca gabriele michele maria lucia giovanni);
+my @names_a = qw(mario luca gabriele michele maria lucia giovanni);
+my @names_b = qw(mario luca gabriele michele maria lucia giovanni);
 
-# The arrays have the same elements
-say "C: array" if (@italian_names ~~ @english_names);
-say "C: array elememnt" if (@italian_names ~~ /lucia/);
+# Compare two arrays and array element wirth a string
+say "C: The arrays have the same elements" if (@names_a ~~ @names_b);
+say "C: array elememnt" if (@names_a ~~ /lucia/);
 
 my %football_team_a = (
     torino => 'juventus',
