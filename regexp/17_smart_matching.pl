@@ -51,3 +51,5 @@ say "C: The array has $& element" if (@names_a ~~ /lucia/);
 say "D: The hashes have the same pair of key\/values" if (%club_a ~~ %club_b);
 # Compare hash key with a string
 say "D: The hash has $& key" if (%club_a ~~ /torino/);
+# Check if exists an hash key
+say "D: Exists hash key" if ('torino' ~~ %club_a);
