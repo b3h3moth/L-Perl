@@ -11,7 +11,7 @@ use feature "switch";
 die ("Usage: $0 <language programming>\n") if (@ARGV != 1);
 
 given ($ARGV[0]) {
-    when (/perl/i) {
+    when (/^perl$/i) {
         print "Good boy :)\n";
     }
     when (/^c$/i) {
