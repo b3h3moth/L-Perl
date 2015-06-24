@@ -24,11 +24,30 @@ my @english_names = qw(mario luca gabriele michele maria lucia giovanni);
 # The arrays have the same elements
 say "C: array" if (@italian_names ~~ @english_names);
 
-my @ita_football_team = qw(juventus milan inter roma lazio napoli palermo);
-my @eng_football_team = qw(juventus milan inter roma lazio napoli palermo);
+my %football_team_a = (
+    torino => 'juventus',
+    milano => ' milan',
+    torino => 'torino',
+    milano => 'inter',
+    roma => 'roma',
+    genova => 'sampdoria',
+    roma => 'lazio',
+    genova => 'genoa',
+);
 
-# The arrays have the same elements
-say "D: hash" if (@ita_football_team ~~ @eng_football_team);
+my %football_team_b = (
+    torino => 'juventus',
+    milano => ' milan',
+    torino => 'torino',
+    milano => 'inter',
+    roma => 'roma',
+    genova => 'sampdoria',
+    roma => 'lazio',
+    genova => 'genoa',
+);
+
+# Compare hash
+say "D: hash" if (%football_team_a ~~ %football_team_b);
 
 my @numbers = qw(1 2 3 5 8 13 21 34 55 89);
 my $result = max(@numbers);
