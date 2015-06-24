@@ -48,7 +48,7 @@ my %club_b = (
 );
 
 # Compare two hash and hash key
-say "D: The hashes have the same pair of values" if (%club_a ~~ %club_b);
+say "D: The hashes have the same pair of key\/values" if (%club_a ~~ %club_b);
 say "D: The hash has $& key" if (%club_a ~~ /torino/);
 
 my @numbers = qw(1 2 3 5 8 13 21 34 55 89);
