@@ -21,15 +21,15 @@ given ($ARGV[0]) {
         print "Do you like hard OOP? Yeah!\n";
     }
     when (/^awk$/i) {
-        print "I like programming UNIX too\n";
+        print "UNIX guru must knows AWK\n";
     }
     when (/^python$/i) {
-        print "Modern programming is good\n";
+        print "Modern programming is good ... and simple!\n";
     }
     when (/^C#$/i) {
-        print "What? Only serious programmer please. \n";
+        print "I'm sorry but I prefer other stuff.\n";
     }
     default {
-        print "Hey, are you a programmer yes or not?\n";
+        print "Hey, do you a programmer yes or not?\n";
     }
 }
