@@ -34,3 +34,10 @@ say "Bitwise operator: shift right, >>";
 say 14 >> 2;
 say 18 >> 3;
 say 23 >> 4;
+
+# Bitwise negation, also called unary bit complement, return the number with
+# the opposite bit for each bit in the operand.
+say "Bitwise operator: negation, ~";
+say ~1;
+say ~2;
+say ~10;
