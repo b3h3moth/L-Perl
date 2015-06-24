@@ -31,6 +31,6 @@ say 10 << 12;
 # Bitwise shift right, shift the left operand by the number of bits shown in
 # the right operand, discarding the least-significant bits.
 say "Bitwise operator: shift right, >>";
-say 10 >> 8;
-say 10 >> 10;
-say 10 >> 12;
+say 14 >> 2;
+say 18 >> 3;
+say 23 >> 4;
