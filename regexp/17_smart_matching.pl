@@ -12,10 +12,13 @@ use List::Util qw(max);
 # so it keeps you from doing too much typing.
 # Returns a true value if operands match.
 
+# Data for testing purpose
 my $text = "Perl is one the best languages to manage UNIX systems";
 my $perl_version = 5.20;
 my @numbers = qw(1 2 3 5 8 13 21 34 55 89);
 my $result = max(@numbers);
+my @names_a = qw(mario luca gabriele michele maria lucia giovanni);
+my @names_b = qw(mario luca gabriele michele maria lucia giovanni);
 
 my %club_a = (
     torino => 'juventus',
@@ -38,17 +41,12 @@ say "A: Find 'perl'" if ($text ~~ /perl/i);
 say "B: The numbers are equals" if ($perl_version ~~ 5.20);
 say "B: (@numbers) = max is $result" unless @numbers ~~ $result;
 
-my @names_a = qw(mario luca gabriele michele maria lucia giovanni);
-my @names_b = qw(mario luca gabriele michele maria lucia giovanni);
-
 # Compare two arrays 
 say "C: The arrays have the same elements" if (@names_a ~~ @names_b);
 # Compare the array elements with a string
 say "C: The array has $& element" if (@names_a ~~ /lucia/);
 
-
 # Compare two hash
 say "D: The hashes have the same pair of key\/values" if (%club_a ~~ %club_b);
 # Compare hash key with a string
 say "D: The hash has $& key" if (%club_a ~~ /torino/);
-
