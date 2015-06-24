@@ -25,7 +25,7 @@ my @names_b = qw(mario luca gabriele michele maria lucia giovanni);
 say "C: The arrays have the same elements" if (@names_a ~~ @names_b);
 say "C: The array has $& element" if (@names_a ~~ /lucia/);
 
-my %football_team_a = (
+my %club_a = (
     torino => 'juventus',
     milano => ' milan',
     torino => 'torino',
@@ -36,7 +36,7 @@ my %football_team_a = (
     genova => 'genoa',
 );
 
-my %football_team_b = (
+my %club_b = (
     torino => 'juventus',
     milano => ' milan',
     torino => 'torino',
@@ -48,8 +48,8 @@ my %football_team_b = (
 );
 
 # Compare two hash and hash key
-say "D: The hashes have the same pair of values" if (%football_team_a ~~ %football_team_b);
-say "D: The hash has $& key" if (%football_team_a ~~ /torino/);
+say "D: The hashes have the same pair of values" if (%club_a ~~ %club_b);
+say "D: The hash has $& key" if (%club_a ~~ /torino/);
 
 my @numbers = qw(1 2 3 5 8 13 21 34 55 89);
 my $result = max(@numbers);
