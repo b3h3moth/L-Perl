@@ -30,4 +30,4 @@ my %server = (
  );
 
 lock_hash(%server);
-$server{max_user} = 20; # I Can't !
+$server{max_user} = 20; # I Can't
