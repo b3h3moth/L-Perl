@@ -10,6 +10,6 @@ use File::Spec;
 # tempfile() make a temporary files, and save it into /tmp.
 my $filename;
 die "I Cannot make filehandle: $!" unless( my $fh = tempfile() );
-die "I Cannot open $filename" unless ( ($fh, $filename) = tempfile() );
+die "I Cannot open $filename" unless( ($fh, $filename) = tempfile() );
 
-say $filename;
+say 'Temporary file created: ', $filename;
