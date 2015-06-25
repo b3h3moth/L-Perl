@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 use v5.14;
-use Hash::Util;
+use Hash::Util 'lock_hash';
 
 # An hash whose keys or values can't be altered
 my %workstation = (
@@ -24,3 +24,6 @@ my %server = (
      max_user => 100
  );
 
+# Make all key/value read only, I'm working on hash %server
+lock_hash(%server);
+$server{max_user} = 20; # will be a warning message
