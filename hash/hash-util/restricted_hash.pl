@@ -9,7 +9,7 @@ my %workstation = (
      user     => '/etc/passwd',
      group    => '/etc/group',
      homedir  => '/home/myname',
-     max_user => 100
+     max_user => 10
  );
 
 say 'Before: ', $workstation{homedir};
@@ -17,4 +17,10 @@ say 'Before: ', $workstation{homedir};
 $workstation{homedir} = '/home/behemoth';
 say ' After: ', $workstation{homedir};
 
+my %server = (
+     user     => '/etc/passwd',
+     group    => '/etc/group',
+     homedir  => '/var/www/home/behemoth',
+     max_user => 100
+ );
 
