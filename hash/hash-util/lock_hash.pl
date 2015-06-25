@@ -13,10 +13,15 @@ my %workstation = (
  );
 
 say 'Before: ', $workstation{homedir};
+
 # Fix value, I'm working on hash %workstation
 $workstation{homedir} = '/home/behemoth';
+
 say ' After: ', $workstation{homedir};
 
+# lock_hash() locks an entire hash, making all keys and values read-only.
+# No value can be changed, no keys can be added or deleted. All key/value are
+# read only.
 my %server = (
      user     => '/etc/passwd',
      group    => '/etc/group',
@@ -24,6 +29,5 @@ my %server = (
      max_user => 100
  );
 
-# Make all key/value read only, I'm working on hash %server
 lock_hash(%server);
-$server{max_user} = 20; # will be a warning message
+$server{max_user} = 20; # I Can't !
