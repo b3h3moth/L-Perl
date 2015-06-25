@@ -3,3 +3,6 @@ use warnings;
 use strict;
 use v5.14;
 use File::Temp 'tempfile';
+
+# tempfile()
+# The function make temporary files.
