@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 use v5.14;
-use HTTP::SimpleLinkChecker;
+use HTTP::SimpleLinkChecker 'check_link';
 
 my @links = qw(perl.org perl.it perl.com perl.co.uk perl.fr perl.net perl.eu);
 
