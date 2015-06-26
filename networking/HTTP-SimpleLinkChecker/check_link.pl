@@ -4,7 +4,7 @@ use strict;
 use v5.14;
 use HTTP::SimpleLinkChecker 'check_link';
 
-my @links = qw(perl.org perl.it perl.com perl.ne perl.fr perl.net perl.arbour);
+my @links = qw(http:/www.perl.org htp:://www.perl.org perlorg);
 
 my @good_links = grep {
     check_link( $_ );
@@ -12,3 +12,10 @@ my @good_links = grep {
 } @links;
 
 say join ', ', @good_links;
+
+foreach (@links) {
+    die "$HTTP::SimpleLinkChecker::ERROR\n" 
+        unless (my $code = HTTP::SimpleLinkChecker::check_link($_));
+    
+    say $code;
+}
