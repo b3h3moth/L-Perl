@@ -19,7 +19,14 @@ use v5.14;
 
 # The eval is also Perl's primitive exception mechanism.
 
-eval { say("The say() function seems to work.\n"); };
+my $size = 100;
+my $len = 0;
 
-my $code = "chdir('/ops/dir')";
-eval($code) or die"There is a problem with this code: $code\n$! , stopped";
+# How does eval() operate with an illegal division by zero?
+eval { my $average = $size / $len };
+print "A: After eval(): $@" if $@;
+
+eval { say("B: The say() function seems to work."); };
+
+my $code = "chdir('/ttmp')";
+eval($code) or die"C: There is a problem with this code: $code\n$! , stopped";
