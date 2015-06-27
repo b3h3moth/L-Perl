@@ -5,12 +5,12 @@ use v5.14;
 
 # The Perl special variables (part 2)
 #
-# This page concerns: 
-#  6) $@
-#  7) $&
-#  8) $`
-#  9) $+
-# 10) $'
+# List of special variables covered:
+#   $@
+#   $&
+#   $`
+#   $+
+#   $'
 
 # $@ Holds the syntax error message from the last eval() function call.
 say '6) $@';
