@@ -16,7 +16,7 @@ use v5.14;
 say '6) $@';
 
 my $average = eval { 10 / 0 };
-print "Ops: $@\n";
+print "After eval(): $@";
 
 # $& Holds the string that was matched by the last successful pattern match.
 # $` Holds the string that preceded whatever was matched by the last successful pattern match.
