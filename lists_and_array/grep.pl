@@ -30,15 +30,3 @@ my @numbers = (1, -9, 15, 18.9, -64, 4, 2.3, 7, -5, 16, 28.8, 2.4, 0, 83, -2);
 my @result = sort { $a <=> $b } grep { $_ >= 10 } @numbers;
 
 say 'C: '.join ', ', @result;
-
-my @odd_digit_sum = grep digit_sum_is_odd($_), @integers;
-
-sub digit_sum_is_odd {
-    my $input = shift;
-    my @digits = split //, $input; # Assume no nondigit characters
-    my $sum;
-    $sum += $_ for @digits;
-    return $sum % 2;
-}
-
-say @odd_digit_sum;
