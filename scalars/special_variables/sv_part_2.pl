@@ -6,12 +6,24 @@ use v5.14;
 # Five special variables for page (2 part)
 #
 # This page concerns: 
-# 1) 
-# 2) 
-# 3) 
-# 4)
-# 5)
+#  6) $@
+#  7) $&
+#  8) $`
+#  9) $+
+# 10) $'
 
+# $@ Holds the syntax error message from the last eval() function call.
+say '6) $@';
+
+my $average = eval { 10 / 0 };
+print "Ops: $@\n";
+
+# $& Holds the string that was matched by the last successful pattern match.
+# $` Holds the string that preceded whatever was matched by the last successful pattern match.
+# $+ Holds the string matched by the last bracket in the last successful pattern match. For example, the statement /Fieldname: (.*)|Fldname: (.*)/ && ($fName = $+); will find the name of a field even if you don't know which of the two possible spellings will be used.
+# $' Holds the string that followed whatever was matched by the last successful pattern match.
+my $text = 'PerlLanguageProgramming';
+say "$`_$&_$'" if ($text =~ /[Ll]anguage/);
 
 # $# The default format for printed numbers. Normally, it's set to %.20g, but you can use the format specifiers covered in the section "Example: Printing Revisited" in Chapter 9to specify your own default format.
 
@@ -31,14 +43,6 @@ use v5.14;
 
 # $? Holds the status of the last pipe close, back-quote string, or system() function.
 
-# $& Holds the string that was matched by the last successful pattern match.
-# $` Holds the string that preceded whatever was matched by the last successful pattern match.
-# $' Holds the string that followed whatever was matched by the last successful pattern match.
-my $text = 'PerlLanguageProgramming';
-say "$`_$&_$'" if ($text =~ /[Ll]anguage/);
-
-# $+ Holds the string matched by the last bracket in the last successful pattern match. For example, the statement /Fieldname: (.*)|Fldname: (.*)/ && ($fName = $+); will find the name of a field even if you don't know which of the two possible spellings will be used.
-
 # $* Changes the interpretation of the ^ and $ pattern anchors. Setting $* to 1 is the same as using the /m option with the regular expression matching and substitution operators. Normally, $* is equal to 0.
 
 # $0 Holds the name of the file containing the Perl script being executed.
@@ -55,7 +59,6 @@ say "$`_$&_$'" if ($text =~ /[Ll]anguage/);
 
 # $! When used in a numeric context, holds the current value of errno. If used in a string context, will hold the error string associated with errno.
 
-# $@ Holds the syntax error message, if any, from the last eval() function call.
 
 # $< This UNIX-based variable holds the read uid of the current process.
 
