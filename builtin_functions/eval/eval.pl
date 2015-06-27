@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
-use v5.20.2;
+use v5.14;
 
 # eval EXPR
 # eval BLOCK
