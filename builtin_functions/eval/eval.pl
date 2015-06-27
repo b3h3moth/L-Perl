@@ -29,6 +29,9 @@ my $len = 0;
 eval { my $average = $size / $len };
 print "A: After eval(): $@" if $@;
 
+# Another way to calculate an operation safety.
+my $average = eval { $size / $len };
+
 eval { say("B: The say() function seems to work."); };
 
 my $code = "chdir('/ttmp')";
