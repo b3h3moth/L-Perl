@@ -37,3 +37,5 @@ eval { say("B: The say() function seems to work."); };
 
 my $code = "chdir('/ttmp')";
 eval($code) or die"C: There is a problem with this code: $code\n$! , stopped";
+
+# This small program has a lot of warnings
