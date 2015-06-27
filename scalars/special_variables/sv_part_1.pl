@@ -4,7 +4,7 @@ use strict;
 use v5.14;
 
 # The Perl special variables (part 1)
-#
+
 # List of special variables covered:
 #   $_
 #   $. 
