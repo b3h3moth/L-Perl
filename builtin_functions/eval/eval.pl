@@ -22,6 +22,9 @@ use v5.14;
 my $size = 100;
 my $len = 0;
 
+# If an error happens while running code inside an eval block, the block stops
+# executing. But even though the code inside the block is finished, Perl
+# continues running the code right after the eval. 
 # How does eval() operate with an illegal division by zero?
 eval { my $average = $size / $len };
 print "A: After eval(): $@" if $@;
