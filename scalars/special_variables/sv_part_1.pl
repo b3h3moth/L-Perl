@@ -3,14 +3,14 @@ use warnings;
 use strict;
 use v5.14;
 
-# Five special variables for page (1 part)
+# The Perl special variables (part 1)
 #
-# This page concerns: 
-# 1) $_
-# 2) $.
-# 3) $/
-# 4) $,
-# 5) $\
+# List of special variables covered:
+#   $_
+#   $. 
+#   $/
+#   $,
+#   $\
 
 say '1) $_';
 # The default variable is a parameter for a lot of functions.
