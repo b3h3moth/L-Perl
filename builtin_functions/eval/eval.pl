@@ -31,6 +31,7 @@ print "A: After eval(): $@" if $@;
 
 # Another way to calculate an operation safety.
 my $average = eval { $size / $len };
+#say '$average is undef' if ($average eq undef);
 
 eval { say("B: The say() function seems to work."); };
 
