@@ -5,6 +5,6 @@ use diagnostics;
 use v5.14;
 use File::Spec;
 
-my @paths = qw(../../../etc.././home/devel../etc/config);
-File::Spec->no_upwards( @paths );
-say join ', ', @paths;
+opendir(DH, '.') or die "opendir() failed: $!";
+my @files = File::Spec->no_upwards( readdir(DH) );
+say join "\n", @files;
