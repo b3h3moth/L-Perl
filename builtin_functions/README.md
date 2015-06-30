@@ -1,6 +1,7 @@
-## Builting functions
+## Perl (core) builtin functions
 
 ### List of builtin functions covered:
+
 * bless();
 * defined();
 * join();
@@ -11,3 +12,4 @@
 * shift();
 * split();
 * eval();
+* do.
