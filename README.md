@@ -1,8 +1,12 @@
 # L-Perl, stands for Learning Perl
 
 How to Learning Perl in a UNIX way, the purpose of these articles is to
-learn and improve Perl scripting and programming for everyday use on Unix 
+learn and improve Perl scripting and programming for everyday use on the Unix
 systems.
+
+The CPAN modules are directories (I mean in this repository), they are written
+exactly how they are, except for a pair of colon replaced with a dash 
+(i.e. List::Util become List-Util).
 
 ## List of great books about Perl
 
