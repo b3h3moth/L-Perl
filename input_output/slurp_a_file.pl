@@ -7,6 +7,6 @@ my $content = do {
     local $/;
     open (FH, '<', '/proc/cpuinfo') or die "Cannot open file: $!";
     <FH>;
-}; # I'm closing an istrcution, ';' is necessary.
+};
 
 say $content;
