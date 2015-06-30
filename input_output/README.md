@@ -7,4 +7,9 @@
 * Filehandle;
 * glob();
 * select();
-* scalar filehandle.
+* scalar filehandle;
+* slurping a file.
+
+### List of modoules covered
+
+* File::Slurp
