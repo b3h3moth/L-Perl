@@ -7,7 +7,9 @@ use Data::Dumper;
 my @skills = qw(Perl C C++ infoSec SysAdmin);
 my %liuc = map { $_, 1 } @skills;
 
-# With reference
+
+
+# The same thing, but with reference
 sub set_hash_by_reference {
     my $items = shift;
     my %hash = map {$_, 1} @{$items};
