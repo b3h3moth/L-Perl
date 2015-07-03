@@ -4,6 +4,9 @@ use strict;
 use v5.14;
 use Data::Dumper;
 
+my @skills = qw(Perl C C++ infoSec SysAdmin);
+my %liuc = map { $_, 1 } @skills;
+
 # With reference
 sub set_hash_by_reference {
     my $items = shift;
