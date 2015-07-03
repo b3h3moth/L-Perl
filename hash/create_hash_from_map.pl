@@ -4,10 +4,10 @@ use strict;
 use v5.14;
 use Data::Dumper;
 
-my @skills = qw(Perl C C++ infoSec SysAdmin);
+my @skills = qw(Perl C C++ InfoSec Unix SysAdmin);
 my %liuc = map { $_, 1 } @skills;
 
-
+print Dumper \%liuc;
 
 # The same thing, but with reference
 sub set_hash_by_reference {
