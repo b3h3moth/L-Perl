@@ -18,7 +18,8 @@ say $third_ref->[2];
 $first_ref->[0] = "blu";
 say $third_ref->[0];
 
-# Compare elements of the array
+# Compare the numeric forms of the two references, in this case is the unique 
+# memory address of the @array
 if ($first_ref == $second_ref) {
     say "$first_ref address memory and $second_ref are the same";
 }
