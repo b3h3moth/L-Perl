@@ -14,6 +14,11 @@ say $first_ref->[0];
 say $second_ref->[1];
 say $third_ref->[2];
 
-# modify an array elem
+# Modify an array element
 $first_ref->[0] = "blu";
 say $third_ref->[0];
+
+# Compare elements of the array
+if ($first_ref == $second_ref) {
+    say "$first_ref address memory and $second_ref are the same";
+}
