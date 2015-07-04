@@ -14,3 +14,5 @@ say $first_ref->[0];
 say $second_ref->[1];
 say $third_ref->[2];
 
+$first_ref->[0] = "blu";
+say $third_ref->[0];
