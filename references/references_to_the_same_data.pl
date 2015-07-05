@@ -3,7 +3,7 @@ use warnings;
 use strict;
 use v5.14;
 
-my @array = qw(white blue red green black);
+my @array = qw(white gray red green black);
 
 my $first_ref = \@array;
 my $second_ref = $first_ref;
