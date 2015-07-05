@@ -2,11 +2,11 @@
 
 ### List of arguments covered
 
-* Ordinary scalar references;
-* Array references;
-  * Anonymouse array referencess;
-* Hash references;
-  * Anonymouse hash references;
-* Subroutine references;
-  * Anonymouse subroutines references;
-* Filehande references;
+* Ordinary scalar reference
+* Array reference
+  * Anonymous array reference
+* Hash reference
+  * Anonymous hash reference
+* Subroutine reference;
+  * Anonymous subroutine reference
+* Filehande reference
