@@ -24,7 +24,7 @@ if ($first_ref == $second_ref) {
     say "$first_ref address memory and $second_ref address memory are the same";
 }
 
-# print each element
+# Dereferencing an array 
 foreach (@{$third_ref}) {
     say $_;
 }
