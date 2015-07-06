@@ -17,6 +17,8 @@ say $third_ref->[2];
 # Modify an array element
 $first_ref->[0] = "blu";
 say $third_ref->[0];
+${$first_ref}[1] = "orange";
+say ${$first_ref}[1];
 
 # Compare the numeric forms of the two references, in this case is the unique 
 # memory address of the @array
