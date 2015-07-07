@@ -50,6 +50,6 @@ say 'Skipper reference address memory: ', $all_with_names[0];
 say '  Prof. reference address memory: ', $all_with_names[1];
 say 'Gillian reference address memory: ', $all_with_names[2];
 
-# Manage nested references
+# Print out full provision's list
 say "Skipper's provisions: ", join ', ',@{$person->[0][1]};
 say "Gillian's provisions: ", join ', ',@{$all_with_names[2][1]};
