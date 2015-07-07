@@ -52,8 +52,13 @@ my @all_with_names = (
 # $all_with_names[1] is the array reference for the Prof's data
 # $all_with_names[2] is the array reference for the Gillian's data
 
+# for my $person (@all_with_names) {
+#     my $who = $$person[0];
+#     my $provision_ref = $$person[1];
+#     check_required_items($who, $provision_ref);
+# }
+# 
+# Shorten
 for my $person (@all_with_names) {
-    my $who = $$person[0];
-    my $provision_ref = $$person[1];
-    check_required_items($who, $provision_ref);
+    check_required_items(@$person);
 }
