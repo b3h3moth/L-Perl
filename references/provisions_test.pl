@@ -40,5 +40,8 @@ say 'Skipper item 2: '.$$person[0]->[1]->[2];
 # One more rule to improve syntax and source code clarity: drop the arrow
 # because multiple subscripts imply a dereference already.
 # reference for Prof:
-say 'Pderef: '.$all_with_names[1][1][0];
-say 'Pderef: '.$$person[1][1][0];
+say 'Name is: '.$all_with_names[1][0];
+say 'Name is: '.$$person[1][0];
+
+say 'Prof item 3: '.$all_with_names[1][1][2];
+say 'Prof item 3: '.$$person[1][1][2];
