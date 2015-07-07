@@ -25,8 +25,8 @@ say 'Gillian ref: '.${$all_with_names[2]}[0];
 say 'Gillian ref: '.${$$person[2]}[0];
 
 # dereference gillian first item
-say 'Gderef: '.${${$all_with_names[2]}[1]}[0];
-say 'Gderef: '.${${$$person[2]}[1]}[0];
+say 'Gillian deref: '.${${$all_with_names[2]}[1]}[0];
+say 'Gillian deref: '.${${$$person[2]}[1]}[0];
 
 # It's really noisy syntax. We can write NAME->[$x] instead.
 # reference for skipper
