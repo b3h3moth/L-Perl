@@ -49,3 +49,6 @@ say 'Prof item 3: '.$$person[1][1][2];
 say 'Skipper reference address memory: ', $all_with_names[0];
 say '  Prof. reference address memory: ', $all_with_names[1];
 say 'Gillian reference address memory: ', $all_with_names[2];
+
+# Manage nested references
+say "Skipper's provisions: ", join ', ',@{$person->[2][1]};
