@@ -13,12 +13,15 @@ my %juventus = (
 
 my $hash_ref = \%juventus;
 
-# Dereferencing an hash reference to get a value
+# Dereferencing (method 1): an hash reference to get a value
 my $favorite_footbal_club = ${$hash_ref}{'name'};
-say 'My favorite football club is: ', $favorite_footbal_club;
-# Drop the curly braces
+# Dereferencing (method 2): drop the curly braces
 my $city = $$hash_ref{'city'};
-say 'Juventus was born in ', $city;
+# Dereferencing (method 3): arrow form
+my $country = $hash_ref->{'country'};
+
+print 'My favorite football club is: ', $favorite_footbal_club;
+print " from $city ($country)\n";
 
 # On entire hash (keys)
 my @keys = keys %{$hash_ref};
