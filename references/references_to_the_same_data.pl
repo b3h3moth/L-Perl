@@ -30,3 +30,7 @@ if ($first_ref == $second_ref) {
 foreach (@{$third_ref}) {
     say $_;
 }
+
+foreach (@$second_ref) {
+    say $_;
+}
