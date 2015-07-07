@@ -48,6 +48,11 @@ my @all_with_names = (
     \@gillian_with_name,
 );
 
+# 
+# $all_with_names[0] is the array reference for the Skipper's data
+# $all_with_names[1] is the array reference for the Prof's data
+# $all_with_names[2] is the array reference for the Gillian's data
+
 for my $person (@all_with_names) {
     check_required_items(@$person);
 }
