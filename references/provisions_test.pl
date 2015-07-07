@@ -21,21 +21,21 @@ my @all_with_names = (
 my $person = \@all_with_names;
 
 # reference for gillian 
-say 'Gillian ref: '.${$all_with_names[2]}[0];
-say 'Gillian ref: '.${$$person[2]}[0];
+say 'Name is: '.${$all_with_names[2]}[0];
+say 'Name is: '.${$$person[2]}[0];
 
 # dereference gillian first item
-say 'Gillian deref: '.${${$all_with_names[2]}[1]}[0];
-say 'Gillian deref: '.${${$$person[2]}[1]}[0];
+say 'Gillian item 0: '.${${$all_with_names[2]}[1]}[0];
+say 'Gillian item 0: '.${${$$person[2]}[1]}[0];
 
 # It's really noisy syntax. We can write NAME->[$x] instead.
 # reference for skipper
-say 'Sref: '.$all_with_names[2]->[1];
-say 'Sref: '.$$person[2]->[1];
+say 'Name is: '.$all_with_names[0]->[0];
+say 'Name is: '.$$person[0]->[0];
 
 # dereference skipper first item
-say 'Sderef: '.$all_with_names[0]->[1]->[0];
-say 'Sderef: '.$$person[0]->[1]->[0];
+say 'Skipper item 2: '.$all_with_names[0]->[1]->[2];
+say 'Skipper item 2: '.$$person[0]->[1]->[2];
 
 # One more rule to improve syntax and source code clarity: drop the arrow
 # because multiple subscripts imply a dereference already.
