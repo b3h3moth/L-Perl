@@ -34,3 +34,13 @@ say 'C: ', join ', ', @result;
 # make a list, the last digit must be 8
 my @last_digit_is = grep /8$/, @numbers;
 say 'D: ', join', ', @last_digit_is;
+
+# Use grep to compare each element of the arrays
+my @europe_clubs = qw(juventus barcellona chelsea arsenal);
+my @america_clubs = qw('boca junior' 'river plate' 'san lorenzo' juventus);
+
+foreach my $football_club (@europe_clubs) {
+    if (grep $football_club eq $_, @america_clubs) {
+        say "Hey stop, there is a problem with $football_club";
+    }
+}
