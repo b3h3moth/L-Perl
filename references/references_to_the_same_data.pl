@@ -31,6 +31,7 @@ foreach (@{$third_ref}) {
     say $_;
 }
 
+# Method 2 - Dereferencing an array getting curly braces off
 foreach (@$second_ref) {
     say $_;
 }
