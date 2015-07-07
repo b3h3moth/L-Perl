@@ -16,6 +16,9 @@ my $hash_ref = \%juventus;
 # Dereferencing an hash reference to get a value
 my $favorite_footbal_club = ${$hash_ref}{'name'};
 say 'My favorite football club is: ', $favorite_footbal_club;
+# Drop the curly braces
+my $city = $$hash_ref{'city'};
+say 'Juventus was born in ', $city;
 
 # On entire hash (keys)
 my @keys = keys %{$hash_ref};
