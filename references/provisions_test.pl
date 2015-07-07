@@ -21,8 +21,8 @@ my @all_with_names = (
 my $person = \@all_with_names;
 
 # reference for gillian 
-say 'Gref: '.${$all_with_names[2]}[1];
-say 'Gref: '.${$$person[2]}[1];
+say 'Gillian ref: '.${$all_with_names[2]}[0];
+say 'Gillian ref: '.${$$person[2]}[0];
 
 # dereference gillian first item
 say 'Gderef: '.${${$all_with_names[2]}[1]}[0];
