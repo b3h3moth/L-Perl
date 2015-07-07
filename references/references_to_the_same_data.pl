@@ -28,10 +28,10 @@ if ($first_ref == $second_ref) {
 
 # Method 1 - Dereferencing an array with curly braces
 foreach (@{$third_ref}) {
-    say $_;
+    say 'A: ', $_;
 }
 
 # Method 2 - Dereferencing an array getting curly braces off
 foreach (@$second_ref) {
-    say $_;
+    say 'B: ', $_;
 }
