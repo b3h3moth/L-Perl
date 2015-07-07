@@ -51,4 +51,5 @@ say '  Prof. reference address memory: ', $all_with_names[1];
 say 'Gillian reference address memory: ', $all_with_names[2];
 
 # Manage nested references
-say "Skipper's provisions: ", join ', ',@{$person->[2][1]};
+say "Skipper's provisions: ", join ', ',@{$person->[0][1]};
+say "Gillian's provisions: ", join ', ',@{$all_with_names[2][1]};
