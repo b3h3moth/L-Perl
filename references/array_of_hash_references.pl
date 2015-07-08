@@ -7,21 +7,25 @@ my %car = (
     name  => 'ferrari',
     model => 'testa rossa',
     made => 'italy',
-    color => 'red'
 );
 
 my %moto = (
     name => 'ducati',
     model => 'monster',
     made => 'italy',
-    color => ['red', 'white']
 );
 
 # Array of hash references
 my @means_of_transport = (\%car, \%moto);
 
-# The first hash reference is %car get the value of name (method 1)
+# The first hash reference is %car
+# get hash values (method 1)
 say ${ $means_of_transport[0] }{'name'};
+# (method 2)
+say $means_of_transport[0]{'model'};
+# (method 3)
+say $means_of_transport[0]->{'made'};
 
-# The second hash reference is %moto, get the value of name (method 2)
+# The second hash reference is %moto
+# get the name and the model (method 2)
 say $means_of_transport[1]{'name'};
