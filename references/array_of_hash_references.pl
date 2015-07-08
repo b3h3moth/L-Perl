@@ -32,6 +32,8 @@ my $ref = $means_of_transport[1];
 # The second hash reference is %moto
 # get hash values (method 4)
 say 'moto: ', $$ref{'model'};
-
+# These are the same as before
 say 'moto: ', ${$ref}{'name'};
 say 'moto: ', $ref->{'made'};
+
+
