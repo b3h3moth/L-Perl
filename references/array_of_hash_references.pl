@@ -3,7 +3,7 @@ use warnings;
 use strict;
 use v5.14;
 
-my %auto = (
+my %car = (
     name  => 'ferrari',
     model => 'testa rossa',
     made => 'italy',
@@ -17,4 +17,5 @@ my %moto = (
     color => ['red', 'white']
 );
 
-
+# Array of hash references
+my @means_of_transport = (\%car, \%moto);
