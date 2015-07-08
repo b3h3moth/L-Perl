@@ -40,6 +40,6 @@ say 'moto: ', $ref->{'made'};
 my $format = "%-8s %-11s %-6s\n";
 printf $format, qw(Name Model Made);
 
-foreach my $motors (@means_of_transport) {
-    printf $format, $motors->{'name'}, $motors->{'model'}, $motors->{'made'};
+foreach my $mot (@means_of_transport) {
+    printf $format, @$mot{qw(name model made)};
 }
