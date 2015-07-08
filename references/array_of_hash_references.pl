@@ -26,6 +26,9 @@ say 'car: ', $means_of_transport[0]{'model'};
 # (method 3)
 say 'car: ', $means_of_transport[0]->{'made'};
 
+# Make a reference to hash reference
+my $ref = $means_of_transport[1];
+
 # The second hash reference is %moto
-# get the name and the model (method 2)
+# get hash values (method 4)
 say $means_of_transport[1]{'name'};
