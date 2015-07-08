@@ -20,11 +20,11 @@ my @means_of_transport = (\%car, \%moto);
 
 # The first hash reference is %car
 # get hash values (method 1)
-say ${ $means_of_transport[0] }{'name'};
+say 'car: ', ${ $means_of_transport[0] }{'name'};
 # (method 2)
-say $means_of_transport[0]{'model'};
+say 'car: ', $means_of_transport[0]{'model'};
 # (method 3)
-say $means_of_transport[0]->{'made'};
+say 'car: ', $means_of_transport[0]->{'made'};
 
 # The second hash reference is %moto
 # get the name and the model (method 2)
