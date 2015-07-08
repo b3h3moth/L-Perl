@@ -20,7 +20,8 @@ my %moto = (
 # Array of hash references
 my @means_of_transport = (\%car, \%moto);
 
-# The first hash reference is %car, get the value of name
+# The first hash reference is %car get the value of name (method 1)
 say ${ $means_of_transport[0] }{'name'};
-# The second hash reference is %moto, get the value of name
-say ${ $means_of_transport[1] }{'name'};
+
+# The second hash reference is %moto, get the value of name (method 2)
+say $means_of_transport[1]{'name'};
