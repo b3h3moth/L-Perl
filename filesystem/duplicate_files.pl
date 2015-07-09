@@ -57,7 +57,7 @@ foreach my $size (keys %hash) {
     # Check if two or more files have the same checksum:
     foreach my $curfile (keys %md5) {
         if ($#{$md5{$curfile}} >= 1) {
-            print "$curfile:\n";
+            print "[MD5 - $curfile] Files are:\n";
             foreach my $file (@{$md5{$curfile}}) {
                 print "$file\n";
             }
