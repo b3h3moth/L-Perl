@@ -9,9 +9,11 @@ use Digest::MD5;
 # How to create an hash whose keys is the file size and whose values are 
 # their names.
 
+die "Usage: $0 <directory>\n" if (@ARGV != 1);
+
 my %hash;
 
-my @dir_list = (@ARGV);
+my @dir_list = ($ARGV[0]);
 
 find( sub {
         push @{$hash{(stat(_))[7]}}, $File::Find::name if -f;
