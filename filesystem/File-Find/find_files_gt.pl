@@ -4,6 +4,8 @@ use strict;
 use v5.14;
 use File::Find 'find';
 
+# Print out the names of all the files with names longer than 20 characters,
+# followed by the name of the largest file found. Job done.
 
 die "Usage: $0 <directory>\n" if (@ARGV != 1);
 
