@@ -1,6 +1,9 @@
 ## Debugging and Testing Perl
 
-Debugging Perl programs with -d option (i.e. `perl -d prog.pl`)
+The easiest way to debug Perl programs is to invoke a program with a -d switch 
+on the command line.
+
+``$ perl -d prog.pl``
 
 ### List of modules covered
 
