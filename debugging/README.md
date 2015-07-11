@@ -6,3 +6,4 @@ Debugging Perl programs with -d option (i.e. `perl -d prog.pl`)
 
 * Test::More
 * Data::Dumper
+* Data::Dump
