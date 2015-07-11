@@ -4,7 +4,7 @@ use strict;
 use v5.14;
 use Data::Dumper;
 
-#il modulo Data::Dumper e' perfetto per debuggare strutture dati complesse.
+# Data::Dumper is a great module to debugging complex data structures.
 
 my %rubrica = (
     'libro'     => { titolo     => '1984',
@@ -12,7 +12,6 @@ my %rubrica = (
     'film'      => { titolo     => 'Shining',
                      regia      => 'Kubrick'}
 );
-
 
 say 'Output 1';
 say Dumper %rubrica;
