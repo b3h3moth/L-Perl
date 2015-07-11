@@ -7,6 +7,8 @@ on the command line.
 
 ### List of modules covered
 
-* Test::More
-* Data::Dumper
+* B::Deparse
 * Data::Dump
+* Data::Dumper
+* Test::More
+* Data::Printer
