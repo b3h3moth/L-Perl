@@ -1,7 +1,10 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
+use File::Temp 'tempfile';
+use File::Spec;
 use Data::Printer;
+
 
 # Open /etc/group file, split each row, save group data into %unix_user hash,
 # than print results with p() subroutine.
@@ -9,7 +12,11 @@ use Data::Printer;
 my %unix_user;
 
 my $group_file = '/etc/group';
-my $backup_group = 'bck_group.txt';
+
+# Create a temporary file, and save it into /tmp
+my $tmp_file;
+die "I Cannot make filehandle: $!" unless( my $fh = tempfile() );
+die "I Cannot open $tmp_file" unless( ($fh, $tmp_file) = tempfile() );
 
 open(GROUP, '<', $group_file) or die "Unable to open $group_file: $!\n";
 
@@ -21,6 +28,9 @@ while (<GROUP>) {
 close(GROUP);
 
 # Open new file and print the hash dump with p() subroutine.
-open(FILE, '>', $backup_group) or die "Unable to write $backup_group: $!\n";
+open(FILE, '>', $tmp_file) or die "Unable to write $tmp_file: $!\n";
 print FILE p(%unix_user);
 close(FILE);
+
+# Print temporary file path
+print "Hash dump of $group_file: $tmp_file\n";
