@@ -20,4 +20,4 @@ while (<PASSWD>) {
 
 close(PASSWD);
 
-dump \%unix_user;
+dump(\%unix_user);
