@@ -3,21 +3,21 @@ use warnings;
 use strict;
 use Data::Printer;
 
-# Open /etc/passwd file, split each row, save passwd data into %unix_user hash,
-# than dump results.
+# Open /etc/group file, split each row, save group data into %unix_user hash,
+# than print results with p() subroutine.
 
 my %unix_user;
 
-my $passwd_file = '/etc/passwd';
+my $group_file = '/etc/group';
 
-open(PASSWD, '<', $passwd_file) or die "Unable to open $passwd_file: $!\n";
+open(GROUP, '<', $group_file) or die "Unable to open $group_file: $!\n";
 
-while (<PASSWD>) {
+while (<GROUP>) {
   my ($login, $pass, $ID_user, $ID_group, $username, $dir, $shell) = split ':';
   $unix_user{$login} = [$login, $pass, $ID_user, $ID_group, 
                         $username, $dir, $shell];
 }
 
-close(PASSWD);
+close(GROUP);
 
 p(%unix_user);
