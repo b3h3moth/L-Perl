@@ -1,10 +1,10 @@
 #!/Usrb/bin/env perl
 use warnings;
 use strict;
-use Data::Dumper;
+use Data::Dump 'dump';
 
 # Open /etc/passwd file, split each row, save passwd data into %unix_user hash,
-# than Dumper results.
+# than dump results.
 
 my %unix_user;
 
@@ -20,4 +20,4 @@ while (<PASSWD>) {
 
 close(PASSWD);
 
-print Dumper \%unix_user;
+dump \%unix_user;
