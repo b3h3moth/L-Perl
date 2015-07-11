@@ -1,17 +1,16 @@
 #!/Usrb/bin/env perl
 use warnings;
 use strict;
+use Data::Dumper;
 
-my %total_bytes;
-while (<>) {
-  my ($source, $destination, $bytes) = split;
-  $total_bytes{$source}{$destination} += $bytes;
-}
-for my $source (sort keys %total_bytes) {
-  for my $destination (sort keys %{ $total_bytes{$source} }) {
-    print "$source => $destination:",
-     " $total_bytes{$source}{$destination} bytes\n";
-  }
-  print "\n";
+my %unix_user;
+
+my $passwd_file = '/etc/passwd';
+open(PASSWD, '<', $passwd_file) or die "Unable to open $passwd_file: $!\n";
+
+while (PASSWD) {
+  my ($login, $pass, $ID_user, $ID_group, $username, $dir, $shell) = split ':';
+  %unix_user{login} = $login;
 }
 
+print Dumper \%unix_user;
