@@ -1,10 +1,7 @@
 #!/usr/bin/env perl
 use warnings;
 use v5.22.0;
-use strict; # use strict;
-            # use warnings;
-            # use v5.14>; 
-            # They are prgama.
+use strict; # 'use strict', 'use warnings' and 'use v5.22.0' are pragma.
             # A pragma is a hint to a compiler, telling it something about the
             # code. In this case, the <use strict> pragma  tells Perl's 
             # internal compiler that it should enforce some good programming 
@@ -18,7 +15,7 @@ use strict; # use strict;
 #    ...
 # }
 sub Usage {
-    state $len += 1;
+    $len += 1;
     say $len;
 }
 
