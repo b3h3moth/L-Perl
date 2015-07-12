@@ -9,3 +9,15 @@ use v5.22.0;
 
 # The last evaluated expression in the body of the subroutine is the return 
 # value.
+
+my $length = 10;
+my $weigth = 5;
+
+my $total = &sum;
+ 
+say "\$total is $total";
+
+sub sum {
+    print "you called sum subroutines\n";
+    $length + $weigth;
+}
