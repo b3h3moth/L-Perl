@@ -15,7 +15,7 @@ use strict; # 'use strict', 'use warnings' and 'use v5.22.0' are pragma.
 #    ...
 # }
 sub Usage {
-    $len += 1;
+    state $len += 1;
     say $len;
 }
 
