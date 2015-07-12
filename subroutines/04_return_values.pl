@@ -7,3 +7,5 @@ use v5.22.0;
 # those that return values and those that don't. Not all Perl subroutines have
 # a useful return value.
 
+# The last evaluated expression in the body of the subroutine is the return 
+# value.
