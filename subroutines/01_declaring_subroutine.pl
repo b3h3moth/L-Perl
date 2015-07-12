@@ -18,6 +18,7 @@ sub Usage {
 
 # Invoking a subroutine:
 &Usage;
-Usage(); 
-Usage; 
-&Usage();
+
+# Usage(); 
+# Usage; 
+# &Usage();
