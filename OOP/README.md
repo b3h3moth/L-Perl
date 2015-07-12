@@ -12,3 +12,7 @@
     * Each class is tested by `mainN.pl`
     * `Person.pm` is the final full class
       * tested by `main.pl`
+
+### List of builtin functions covered
+
+* bless()
