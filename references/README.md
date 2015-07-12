@@ -10,3 +10,7 @@
 * Subroutine reference;
   * Anonymous subroutine reference
 * Filehande reference
+
+### List of builtin functions covered
+
+* ref()
