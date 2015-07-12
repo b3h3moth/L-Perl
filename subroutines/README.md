@@ -1,5 +1,5 @@
 ## Subroutines
 
-### Useful builtin functions
+### List of builtin functions covered
 
 * caller()
