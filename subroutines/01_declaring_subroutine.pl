@@ -19,6 +19,11 @@ sub Usage {
 # Invoking a subroutine:
 &Usage;
 
+# There are other methods to invoke a subroutine:
 # Usage(); 
 # Usage; 
 # &Usage();
+
+__END__
+Official documentation on Perl subroutines:
+$ perldoc perlsub
