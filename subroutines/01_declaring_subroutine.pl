@@ -8,22 +8,16 @@ use strict; # 'use strict', 'use warnings' and 'use v5.22.0' are pragma.
             # rules for the rest of this block or source file.
 
 
-# We need to create a block of code and give it a name using 'sub' keyword:
-# sub function_name {
-#    ...
-#    body of function
-#    ...
-# }
+# We need to create a block of code and give it a name using 'sub' keyword.
+# Subroutine definitions are global;
+
 sub Usage {
     state $len += 1;
     say $len;
 }
 
-# Invoking subroutine:
+# Invoking a subroutine:
+&Usage;
 Usage(); 
-# or 
-&Usage; 
-# or 
 Usage; 
-# or 
 &Usage();
