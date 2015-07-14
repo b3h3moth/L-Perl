@@ -35,4 +35,4 @@ sub last_expression_is {
     print "Ops";
 }
 
-my $new_tot = &sum; # Check the warning 
+my $new_tot = &sum; # Check the warnings
