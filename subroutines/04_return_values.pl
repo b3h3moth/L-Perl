@@ -21,3 +21,5 @@ sub sum {
     print "you called sum subroutines\n";
     $length + $weigth;
 }
+
+# the sum of $length and $weigth is the return value
