@@ -26,3 +26,13 @@ sub sum {
 
 my $molt = 10 * &sum;
 say $molt;
+
+# Note that the last evaluated expression means the last expression that Perl
+# evaluates, rather than the last statement in the subroutine
+sub last_expression_is {
+    print "Hi";
+    $length + $weigth;
+    print "Ops";
+}
+
+my $new_tot = &sum; # Check the warning 
