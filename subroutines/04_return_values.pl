@@ -23,3 +23,6 @@ sub sum {
 }
 
 # the sum of $length and $weigth is the return value
+
+my $molt = 10 * &sum;
+say $molt;
