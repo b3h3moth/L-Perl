@@ -11,4 +11,6 @@ sub mult {
     $_[0] * $_[1];
 }
 
-say ( my $total = &mult(10, 20) );
+say ( &mult(10) );
+say ( &mult(10, 20) );
+say ( &mult(10, 20, 30) );
