@@ -3,6 +3,8 @@ use warnings;
 use strict;
 use v5.14;
 
+# Private or Lexical variables
+
 # my VARIABLE;
 # my (LIST OF VARIABLES);
 #
@@ -11,7 +13,6 @@ use v5.14;
 #
 # If more than one value is listed, the list must be placed in parentheses.
 
-
 { 
     my $os = 'Debian';
     say 'My Operating System is: ', $os;
@@ -19,8 +20,6 @@ use v5.14;
 
 # say $os
 # Compilation error: Global symbol "$os" requires explicit package name
-
-# Outside of the block $os vaariable doesn't exist
 
 sub max {
     my ($x, $y) = @_;
@@ -31,3 +30,6 @@ sub max {
         $y;
     }
 }
+
+# All variables declared are scoped to the ecnlosing block. Outside of the 
+# block these variables don't exist.
