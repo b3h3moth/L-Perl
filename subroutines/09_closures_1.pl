@@ -1,11 +1,13 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
-use v5.14;
+use v5.22.0;
 
-#Closure is a notion out of the Lisp world that says if you define an anonymous
-#function in a particular lexical context, it pretends to run in that context
-#even when it's called outside the context.
+# Closure is a notion out of the Lisp world that says:
+#   if you define an anonymous function in a 
+#   particular lexical context, it pretends 
+#   to run in that context even when it's 
+#   called outside the context.
 
 sub print_out {
     my $salute = shift;
@@ -15,16 +17,21 @@ sub print_out {
         print "$salute, $target!\n";
     };
 
-    #return a closure
+    # return a closure
     return $newfunc;
 }
 
-#create a closure
+# create a closure
 my $h = print_out("Hello");
 
-$h->("world");
-#&$h("world");
+$h->();
+$h->("first");
+$h->("second");
+$h->("third");
+$h->("World");
+# &$h("world");
 
-#$x continues to refer to the value passed into print_out() despite "my $x"
-#having gone out of scope by the time the anonymous subroutine runs.
-#That's what a closure is all about.
+# $h continues to refer to the value passed into print_out() despite "my $h"
+# having gone out of scope by the time the anonymous subroutine runs.
+
+# That's what a closure is all about.
