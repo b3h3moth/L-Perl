@@ -22,6 +22,7 @@ use v5.14;
 # Compilation error: Global symbol "$os" requires explicit package name
 
 sub max {
+    # It creates private variables and sets their value
     my ($x, $y) = @_;
 
     if ($x > $y) { 
