@@ -13,5 +13,13 @@ use v5.14;
 #
 # Note that a file is a block.
 
-sub mult
-my $name = 'behemoth';
+
+{ 
+    my $os = 'Debian';
+    say 'My Operating System is: ', $os;
+}
+
+# say $os
+# Compilation error: Global symbol "$os" requires explicit package name
+
+# Outside of the block $os doesn't exist
