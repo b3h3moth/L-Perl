@@ -9,6 +9,9 @@ use v5.22.0;
 #   to run in that context even when it's 
 #   called outside the context.
 
+# In Perl terms closure is a subroutine that references a lexical varaiable 
+# that has gone out of scope.
+
 sub print_out {
     my $salute = shift;
 
