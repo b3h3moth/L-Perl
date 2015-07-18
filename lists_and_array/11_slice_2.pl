@@ -10,7 +10,7 @@ while (<FH>) {
     my @item = split /:/;
     # slice
     my ($user, $shell) = ($item[0], $item[5]);
-    print "%-20 %-20\n", $user, $shell;
+    printf "%-20s %s\n", $user, $shell;
 }
 
 
