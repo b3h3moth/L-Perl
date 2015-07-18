@@ -8,3 +8,5 @@ my $object = Crypt::PBKDF2->new;
 my $pass = "weak_password";
 
 my $encrypted_pass = $object->generate($pass);
+
+say $encrypted_pass;
