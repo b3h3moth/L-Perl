@@ -4,3 +4,4 @@
 * Crypt::GPG
 * GnuPG
 * Crypt::UnixCrypt
+* Crypt::PBKDF2
