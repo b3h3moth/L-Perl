@@ -9,9 +9,9 @@ my $object = Crypt::PBKDF2->new(
     hash_args   => {
         sha_size => 512,
     },
-    iterations  =>  1500,       # default is 1000
+    iterations  =>  5000,       # default is 1000
     salt_len    =>  5,          # default is 4
-    encoding    =>  'crypt',     # default is 'ldap'
+    encoding    =>  'crypt',    # default is 'ldap'
     output_len  =>  20
 );
 
