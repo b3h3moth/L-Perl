@@ -34,3 +34,6 @@ sub max {
 
 # All variables declared are scoped to the ecnlosing block. Outside of the 
 # block these variables don't exist.
+
+# From 5.012 version Perl will insist that you declare every new variable, 
+# usually done with 'my'.
