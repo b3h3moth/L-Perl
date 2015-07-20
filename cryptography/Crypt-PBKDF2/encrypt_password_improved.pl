@@ -11,6 +11,7 @@ my $object = Crypt::PBKDF2->new(
     },
     iterations  =>  1500,       # default is 1000
     salt_len    =>  5,          # default is 4
+    encoding    =>  'crypt',     # default is 'ldap'
     output_len  =>  20
 );
 
