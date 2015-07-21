@@ -20,4 +20,7 @@ my $string = Data::Dumper->Dump(
     [ qw(*ita_football_club *eng_football_club) ]
 );
 
-print $string;
+
+my $data = $string;
+
+print $data;
