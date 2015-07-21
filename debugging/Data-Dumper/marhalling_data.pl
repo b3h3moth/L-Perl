@@ -9,8 +9,8 @@ use Data::Dumper;
 # typically used when data must be moved between different parts of a computer
 # program or from one program to another. It is similar to serialization.
 
-my @ita_football_club = qw(juventus torino inter milan sampdoria genoa);
-my @eng_football_club = qw(chelsea arsenal liverpool city united leeds);
+my @ita_football_club = qw(juventus torino inter genoa);
+my @eng_football_club = qw(chelsea arsenal liverpool);
 
 push @eng_football_club, \@ita_football_club;
 push @ita_football_club, \@eng_football_club;
