@@ -15,6 +15,9 @@ my @eng_football_club = qw(chelsea arsenal liverpool);
 push @eng_football_club, \@ita_football_club;
 push @ita_football_club, \@eng_football_club;
 
-my $string = Dumper(\@ita_football_club, \@eng_football_club);
+my $string = Data::Dumper->Dump(
+    [\@ita_football_club, \@eng_football_club],
+    [ qw(*ita_football_club *eng_football_club) ]
+);
 
 print $string;
