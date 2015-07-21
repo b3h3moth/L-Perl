@@ -16,3 +16,5 @@ push @eng_football_club, \@ita_football_club;
 push @ita_football_club, \@eng_football_club;
 
 my $string = Dumper(\@ita_football_club, \@eng_football_club);
+
+print $string;
