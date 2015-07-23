@@ -7,5 +7,8 @@ use Data::Dumper;
 my $string = 'Dumping';
 my $text = 'Dumping data in Perl';
 
+# Dumping unique string
 print Dumper($string);
-print Dumper([$string]);
+
+# Dumping two strings
+print Dumper($string, $text);
