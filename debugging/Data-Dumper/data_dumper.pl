@@ -18,3 +18,5 @@ print Dumper($string, $text);
 
 # Dumping string reference
 print Dumper([$string, $text]);
+
+print Dumper({$string => $text});
