@@ -21,6 +21,9 @@ my $string = Data::Dumper->Dump(
 );
 
 
-my $data = $string;
+my $data = eval $string;
 
 print $data;
+
+# Historical note: Data Marshalling is so named because it was first studied in
+# 1962 by Edwars Waire Marshalll.
