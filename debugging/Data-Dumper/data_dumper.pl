@@ -16,7 +16,8 @@ print Dumper($string);
 # Dumping two strings
 print Dumper($string, $text);
 
-# Dumping string reference
-print Dumper([$string, $text]);
+# Dumping reference
+print Dumper([$string]);
 
+# Dumping Hash
 print Dumper({$string => $text});
