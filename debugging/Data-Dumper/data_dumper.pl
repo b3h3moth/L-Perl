@@ -9,6 +9,12 @@ use Data::Dumper;
 
 my $string = 'behemoth';
 my $text = 'Dumping data in Perl';
+my %hash = (
+    1 => 10,
+    2 => 20,
+    3 => 30,
+    4 => 40
+);
 
 # Dumping unique string
 print Dumper($string);
@@ -20,4 +26,4 @@ print Dumper($string, $text);
 print Dumper([$string]);
 
 # Dumping Hash
-print Dumper({$string => $text});
+print Dumper(\%hash);
