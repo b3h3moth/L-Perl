@@ -1,8 +1,7 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
-use v5.22.0;
-use Data::Dumper;
+use v5.14;
 
 my @colors = qw(blue red white black);
 
@@ -30,6 +29,3 @@ foreach my $i (0 .. $array_len) {
     my $color = $aref->[$i];
     say $color;
 }
-
-my @colori = ['bianco', 'blu', 'rosso', 'verde', 'giallo'];
-print Dumper @colori;
