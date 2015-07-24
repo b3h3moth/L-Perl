@@ -4,7 +4,7 @@ use strict;
 use v5.22.0;
 use Data::Dumper;
 
-$Data::Dumper::Indent = 0;
+#$Data::Dumper::Indent = 0;
 
 # Marhalling in computer science is the process of transforming the memory of
 # an object to a data format suitable for storage or transmission, and it is
@@ -23,7 +23,7 @@ my $dumper_a = Data::Dumper->new( [$dog_name], [qw(dog_name)] );
 my $dumper_b = Data::Dumper->new( [$colors], [qw(colors)] );
 
 # Dump the Perl values out into a variable
-my $dumped_val = $dumper_a->Dump()."\n".$dumper_b->Dump();
+my $dumped_val = $dumper_a->Dump().$dumper_b->Dump();
 
 # Show what Data::Dumper has made of the variables
 say "\n\nPerl Data::Dumper:";
@@ -34,7 +34,7 @@ $dog_name = 'aaa';
 $colors = ['xxx','yyy','zzz','kkk','jjj','www','hhh','iii'];
 
 # Print out the new values
-say "\nPrint out the new values:";
+say "Print out the new values:";
 print '$dog_name = ', $dog_name, "\n";
 print '$colors = [', join ', ',@$colors, ']';
 
