@@ -28,5 +28,9 @@ my $dumped_val = $dumper_a->Dump()."\n".$dumper_b->Dump();
 say "\nPerl Data::Dumper:";
 print $dumped_val, "\n";
 
+# Reset the variables
+$dog_name = 'weak';
+$colors = ['weak','weak','weak','weak','weak','weak'];
+
 # Historical note: Data Marshalling is so named because it was first studied in
 # 1962 by Edwars Waire Marshalll.
