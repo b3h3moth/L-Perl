@@ -18,6 +18,8 @@ print '$district = [', join ', ',@$colors, ']';
 # new Data::Dumper object
 my $dumper = Data::Dumper->new( [$dog_name, $colors], [qw(dog_name colors)] );
 
+# Dump the Perl values out into a variable
+my $dumped_val = $dumper->Dump();
 
 
 # Historical note: Data Marshalling is so named because it was first studied in
