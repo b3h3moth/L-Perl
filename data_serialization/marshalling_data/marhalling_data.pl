@@ -21,6 +21,9 @@ my $dumper = Data::Dumper->new( [$dog_name, $colors], [qw(dog_name colors)] );
 # Dump the Perl values out into a variable
 my $dumped_val = $dumper->Dump();
 
+# Show what Data::Dumper has made of the variables!
+say "\nPerl Data::Dumper:";
+print $dumped_val, "\n";
 
 # Historical note: Data Marshalling is so named because it was first studied in
 # 1962 by Edwars Waire Marshalll.
