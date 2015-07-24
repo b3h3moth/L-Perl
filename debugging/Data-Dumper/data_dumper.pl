@@ -30,4 +30,6 @@ print Dumper(\%hash);
 
 # output on the same line
 $Data::Dumper::Indent = 0;
+# output with sorted keys
+$Data::Dumper::Sortkeys = 1;
 print Dumper(\%hash);
