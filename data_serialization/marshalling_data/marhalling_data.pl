@@ -15,5 +15,10 @@ my $colors = ['black', 'green', 'gray', 'blu', 'red', 'white'];
 print '$dog_name = ', $dog_name, "\n";
 print '$district = [', join ', ',@$colors, ']';
 
+# new Data::Dumper object
+my $dumper = Data::Dumper->new( [$dog_name, $colors], [qw(dog_name colors)] );
+
+
+
 # Historical note: Data Marshalling is so named because it was first studied in
 # 1962 by Edwars Waire Marshalll.
