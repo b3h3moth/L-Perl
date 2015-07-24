@@ -32,5 +32,10 @@ print $dumped_val, "\n";
 $dog_name = 'weak';
 $colors = ['weak','weak','weak','weak','weak','weak'];
 
+# Print out the new values
+print '$dog_name = ', $dog_name, "\n";
+print '$district = [', join ', ',@$colors, ']';
+
+
 # Historical note: Data Marshalling is so named because it was first studied in
 # 1962 by Edwars Waire Marshalll.
