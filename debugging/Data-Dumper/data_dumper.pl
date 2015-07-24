@@ -27,3 +27,7 @@ print Dumper([$string]);
 
 # Dumping Hash
 print Dumper(\%hash);
+
+# output on the same line
+$Data::Dumper::Indent = 0;
+print Dumper(\%hash);
