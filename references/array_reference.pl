@@ -29,3 +29,5 @@ foreach my $i (0 .. $array_len) {
     my $color = $aref->[$i];
     say $color;
 }
+
+my @colori = ['bianco', 'blu', 'rosso', 'verde', 'giallo'];
