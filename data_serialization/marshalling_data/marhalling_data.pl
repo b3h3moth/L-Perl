@@ -25,25 +25,25 @@ my $dumper_b = Data::Dumper->new( [$colors], [qw(colors)] );
 # Dump the Perl values out into a variable
 my $dumped_val = $dumper_a->Dump()."\n".$dumper_b->Dump();
 
-# Show what Data::Dumper has made of the variables!
+# Show what Data::Dumper has made of the variables
 say "\n\nPerl Data::Dumper:";
 print $dumped_val, "\n";
 
-# Reset the variables
-$dog_name = 'weak';
-$colors = ['weak','weak','weak','weak','weak','weak'];
+# Reset each value of the variables
+$dog_name = 'aaa';
+$colors = ['xxx','yyy','zzz','kkk','jjj','www','hhh','iii'];
 
 # Print out the new values
 say "\nPrint out the new values:";
 print '$dog_name = ', $dog_name, "\n";
-print '$district = [', join ', ',@$colors, ']';
+print '$colors = [', join ', ',@$colors, ']';
 
 # eval() the dumped values to load up the Perl variables
 eval $dumped_val;
 
-say "\n\nPrint out the old values (after eval):";
+say "\n\nPrint out the original values - after eval() invocation:";
 print '$dog_name = ', $dog_name, "\n";
-print '$district = [', join ', ',@$colors, ']';
+print '$colors = [', join ', ',@$colors, ']';
 
 # Historical note: Data Marshalling is so named because it was first studied in
 # 1962 by Edwars Waire Marshalll.
