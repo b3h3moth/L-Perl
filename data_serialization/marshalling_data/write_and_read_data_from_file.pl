@@ -26,6 +26,10 @@ my $dumper_b = Data::Dumper->new( [$colors], [qw(colors)] );
 # Dump the Perl values out into a variable
 my $dumped_val = $dumper_a->Dump().$dumper_b->Dump();
 
+# Show what Data::Dumper has made of the variables
+say "\n\nPerl Data::Dumper:";
+print $dumped_val, "\n";
+
 open(MYDUMP, '>', $file_dump) or die "cannot write file\n";
 print MYDUMP $dumped_val;
 close(MYDUMP);
@@ -35,7 +39,7 @@ $dog_name = 'aaa';
 $colors = ['xxx','yyy','zzz','kkk','jjj','www','hhh','iii'];
 
 # Print out the new values
-say "\n\nPrint out the new values:";
+say "Print out the new values:";
 print '$dog_name = ', $dog_name, "\n";
 print '$colors = [', join ', ',@$colors, ']';
 
