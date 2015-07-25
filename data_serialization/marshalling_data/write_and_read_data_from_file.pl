@@ -4,7 +4,7 @@ use strict;
 use v5.22.0;
 use Data::Dumper;
 
-#$Data::Dumper::Indent = 0;
+$Data::Dumper::Indent = 0;
 
 # Marhalling in computer science is the process of transforming the memory of
 # an object to a data format suitable for storage or transmission, and it is
@@ -34,7 +34,7 @@ $dog_name = 'aaa';
 $colors = ['xxx','yyy','zzz','kkk','jjj','www','hhh','iii'];
 
 # Print out the new values
-say "\nPrint out the new values:";
+say "\n\nPrint out the new values:";
 print '$dog_name = ', $dog_name, "\n";
 print '$colors = [', join ', ',@$colors, ']';
 
@@ -43,7 +43,6 @@ my $data = do {
     local $/;
     open(GETDUMP, '<', 'new.txt') or die "cannot read file\n";
     <GETDUMP>;
-    close(GETDUMP);
 };
 
 $dumped_val = eval $data;
