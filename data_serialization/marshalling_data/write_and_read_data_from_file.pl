@@ -4,7 +4,8 @@ use strict;
 use v5.22.0;
 use Data::Dumper;
 
-$Data::Dumper::Indent = 0;
+#$Data::Dumper::Indent = 0;
+my $file_dump = 'dumped_structure.txt';
 
 # Marhalling in computer science is the process of transforming the memory of
 # an object to a data format suitable for storage or transmission, and it is
@@ -25,7 +26,7 @@ my $dumper_b = Data::Dumper->new( [$colors], [qw(colors)] );
 # Dump the Perl values out into a variable
 my $dumped_val = $dumper_a->Dump().$dumper_b->Dump();
 
-open(MYDUMP, '>', 'new.txt') or die "cannot write file\n";
+open(MYDUMP, '>', $file_dump) or die "cannot write file\n";
 print MYDUMP $dumped_val;
 close(MYDUMP);
 
@@ -41,7 +42,7 @@ print '$colors = [', join ', ',@$colors, ']';
 # slurp!
 my $data = do {
     local $/;
-    open(GETDUMP, '<', 'new.txt') or die "cannot read file\n";
+    open(GETDUMP, '<', $file_dump) or die "cannot read file\n";
     <GETDUMP>;
 };
 
