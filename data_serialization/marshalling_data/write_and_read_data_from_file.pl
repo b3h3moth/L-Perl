@@ -12,8 +12,8 @@ my $file_dump = 'dumped_structure.txt';
 # typically used when data must be moved between different parts of a computer
 # program or from one program to another. It is similar to serialization.
 
-my $dog_name = 'luna';
-my $colors = ['black', 'green', 'gray', 'blu', 'red', 'white'];
+my $dog_name = 'sid';
+my $colors = ['magenta', 'cyan', 'orange', 'yellow', 'gray', 'blu'];
 
 say "Print out the original values:";
 print '$dog_name = ', $dog_name, "\n";
