@@ -39,14 +39,18 @@ say "\n\nPrint out the new values:";
 print '$dog_name = ', $dog_name, "\n";
 print '$colors = [', join ', ',@$colors, ']';
 
-# slurp!
+open(GETDUMP, '<', $file_dump) or die "cannot read file\n";
+
 my $data = do {
+    # slurp!
     local $/;
-    open(GETDUMP, '<', $file_dump) or die "cannot read file\n";
     <GETDUMP>;
 };
 
+close(GETDUMP);
+
 $dumped_val = eval $data;
+
 say "\n\nPrint out the original values - after eval() invocation:";
 print '$dog_name = ', $dog_name, "\n";
 print '$colors = [', join ', ',@$colors, ']';
