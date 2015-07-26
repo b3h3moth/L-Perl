@@ -22,14 +22,14 @@ my @id2 = @employee{ qw/luca maria fiorenza/ };
 say join ',', @id2;
 
 my %employee2 = (
-    #Name, Employee Id, Department, Location
+    # Name, Employee Id, Department, Location
     luca => [980144,'Hacking','Rome'],
     maria => [128756,'Operating Systems', 'NewYork'],
     fiorenza => [903610, 'Web Development', 'Campobasso']
 );
 
-#Retrive the location of all employees
+# Retrive the location of all employees
 my @location = ($employee2{"luca"}->[2], $employee2{"maria"}->[2], $employee2{"fiorenza"}->[2]);
 
-#Print all employee's location
+# Print all employee's location
 say join ',', @location;
