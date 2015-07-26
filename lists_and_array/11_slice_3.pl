@@ -29,7 +29,11 @@ my %employee2 = (
 );
 
 # Retrive the location of all employees
-my @location = ($employee2{"luca"}->[2], $employee2{"maria"}->[2], $employee2{"fiorenza"}->[2]);
+my @location = ( 
+    $employee2{"luca"}->[2], 
+    $employee2{"maria"}->[2], 
+    $employee2{"fiorenza"}->[2]
+);
 
 # Print all employee's location
 say join ',', @location;
