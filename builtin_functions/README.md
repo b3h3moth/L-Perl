@@ -12,4 +12,5 @@
 * shift();
 * split();
 * eval();
-* do.
+* do();
+* int().
