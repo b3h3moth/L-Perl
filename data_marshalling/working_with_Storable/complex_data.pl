@@ -10,4 +10,7 @@ my @en_colors = qw(green white red);
 push @en_colors, \@it_colors;
 push @it_colors, \@en_colors;
 
+# Serializing to memory
 my $data = freeze [\@it_colors, \@en_colors];
+
+say $data;
