@@ -6,7 +6,8 @@ use Data::Dumper;
 use File::Find;
 use Digest::MD5;
 
-# How to find duplicate files, in this case print out checksum and filename(s).
+# How to find duplicate files, in this case print out the checksum and 
+# the filename(s).
 
 die "Usage: $0 <top directory>\n" if (@ARGV != 1);
 
