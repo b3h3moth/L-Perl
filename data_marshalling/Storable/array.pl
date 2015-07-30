@@ -32,8 +32,9 @@ store(\$data, $filename);
 # Store binary representation into a file (n stands for network order)
 nstore(\$data, $filename_binary);
 
-say "\n----- data (retrieve)";
 # Reconstitute the data structure
 my $array_ref = retrieve($filename);
+
+say "\n----- data (retrieve)";
 # Print out data on the stdout (retrieve)
 store_fd(\$array_ref, \*STDOUT);

@@ -32,9 +32,9 @@ store(\%rgb_table_color, $filename);
 # Store binary representation into a file (n stands for network order)
 nstore(\%rgb_table_color, $filename_binary);
 
-say "\n----- data (retrieve)";
-say 'data (original hash)';
 # Reconstitute the data structure
 my $hash_ref = retrieve($filename);
+
+say "\n----- data (retrieve)";
 # Print out data on the stdout (retrieve) 
 store_fd(\$hash_ref, \*STDOUT);
