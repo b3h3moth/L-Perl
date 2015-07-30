@@ -19,10 +19,10 @@ my %rgb_table_color = (
     125 => 'gray'
 );
 
-my $color_ref = 'rgb_table.txt';
+my $filename = 'rgb_table.txt';
 
 # Save the data into a file
-nstore(\%rgb_table_color, $color_ref);
+nstore(\%rgb_table_color, $filename);
 
 # Print out the Data on the stdout
 store_fd(\%rgb_table_color, \*STDOUT);
