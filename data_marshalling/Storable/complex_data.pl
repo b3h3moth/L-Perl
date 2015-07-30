@@ -4,6 +4,9 @@ use strict;
 use v5.22.0;
 use Storable qw(freeze store_fd nstore);
 
+# File which will store data
+my $filename = 'rgb_table.txt';
+
 my @it_colors = qw(verde bianco rosso);
 my @en_colors = qw(green white red);
 
@@ -19,7 +22,6 @@ my %rgb_table_color = (
     125 => 'gray'
 );
 
-my $filename = 'rgb_table.txt';
 
 # Save the data into a file
 nstore(\%rgb_table_color, $filename);
