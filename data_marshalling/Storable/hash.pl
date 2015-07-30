@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 use v5.22.0;
-use Storable qw(freeze store_fd store nstore);
+use Storable qw(freeze store_fd store nstore retrieve thaw); 
 
 # File which will store data
 my $filename = 'hash.txt';
@@ -13,6 +13,9 @@ my %rgb_table_color = (
     0   => 'black',
     125 => 'gray'
 );
+
+# Serializing to memory
+my $data = freeze(\%rgb_table_color);
 
 # Print out data on the stdout
 store_fd(\%rgb_table_color, \*STDOUT);
