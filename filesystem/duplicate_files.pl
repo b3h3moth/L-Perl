@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
-use v5.14;
+use v5.22.0;
 use Data::Dumper;
 use File::Find;
 use Digest::MD5;
@@ -12,7 +12,7 @@ use Digest::MD5;
 die "Usage: $0 <top directory>\n" if (@ARGV != 1);
 
 my %hash;
-
+my $cur_date = gmtime();
 # Which top directory will be used to find files:
 my @dir_list = (@ARGV);
 
@@ -58,7 +58,7 @@ foreach my $size (keys %hash) {
     # Check if two or more files have the same checksum:
     foreach my $curfile (keys %md5) {
         if ($#{$md5{$curfile}} >= 1) {
-            print "[MD5 - $curfile] Duplicate filenames are:\n";
+            print "[MD5 - $curfile] $cur_date\nDuplicate filenames are:\n";
             foreach my $file (@{$md5{$curfile}}) {
                 print "$file\n";
             }
