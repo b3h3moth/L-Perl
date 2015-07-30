@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 use v5.22.0;
-use Storable qw(freeze store_fd store nstore);
+use Storable qw(freeze store_fd store nstore retrieve);
 
 # File which will store data
 my $filename = 'array.txt';
@@ -23,7 +23,8 @@ store_fd(\$data, \*STDOUT);
  # Store data into a file
 store(\$data, $filename);
 
-# Store binary representation into a file
+# Store binary representation into a file (n stands for network order)
 nstore(\$data, $filename_binary);
 
+# Reconstitute the data structure
 my $array_ref = retrieve $filename;
