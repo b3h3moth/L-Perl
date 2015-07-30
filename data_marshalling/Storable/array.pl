@@ -17,11 +17,11 @@ push @it_colors, \@en_colors;
 # Serializing to memory
 my $data = freeze [\@it_colors, \@en_colors];
 
-# Print out the Data on the stdout
+# Print out data on the stdout
 store_fd(\$data, \*STDOUT);
 
-# Save the data into a file
+ # Store data into a file
 store(\$data, $filename);
 
-# Save the data into a file
+# Store binary representation into a file
 nstore(\$data, $filename_binary);
