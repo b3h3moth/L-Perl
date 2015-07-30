@@ -25,3 +25,5 @@ store(\$data, $filename);
 
 # Store binary representation into a file
 nstore(\$data, $filename_binary);
+
+my $array_ref = retrieve $filename;

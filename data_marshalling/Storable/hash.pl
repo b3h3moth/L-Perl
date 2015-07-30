@@ -20,5 +20,5 @@ store_fd(\%rgb_table_color, \*STDOUT);
 # Store data into a file
 store(\%rgb_table_color, $filename);
 
-# Store binary representation into a file
+# Store binary representation into a file (n stands for network order)
 nstore(\%rgb_table_color, $filename_binary);
