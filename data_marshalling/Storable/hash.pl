@@ -16,8 +16,9 @@ my %rgb_table_color = (
 
 # Serializing to memory
 my $data = freeze(\%rgb_table_color);
+# Reconstitute the data structure
+my %hash_clone = %{thaw($data)};
 
-# Print out data on the stdout
 store_fd(\%rgb_table_color, \*STDOUT);
 
 # Store data into a file
