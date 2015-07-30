@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 use v5.22.0;
-use Storable qw(freeze store_fd store);
+use Storable qw(freeze store_fd nstore);
 
 my @it_colors = qw(verde bianco rosso);
 my @en_colors = qw(green white red);
@@ -23,6 +23,6 @@ my %rgb_table_color = (
 my $color_ref = 'rgb_table.txt';
 
 # save into file
-store(\%rgb_table_color, $color_ref);
+nstore(\%rgb_table_color, $color_ref);
 # print out on stdout
 store_fd(\%rgb_table_color, \*STDOUT);
