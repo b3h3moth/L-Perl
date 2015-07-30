@@ -19,7 +19,8 @@ my $data = freeze(\%rgb_table_color);
 # Reconstitute the data structure
 my %hash_clone = %{thaw($data)};
 
-store_fd(\%rgb_table_color, \*STDOUT);
+# # Print out data on the stdout (clone)
+store_fd(\%hash_clone, \*STDOUT);
 
 # Store data into a file
 store(\%rgb_table_color, $filename);
