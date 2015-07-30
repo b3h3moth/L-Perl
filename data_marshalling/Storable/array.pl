@@ -19,8 +19,10 @@ my $data = freeze [\@it_colors, \@en_colors];
 # Reconstitute the data structure
 my $array_clone = thaw($data);
 
+say "----- data (clone)";
 # Print out data on the stdout (clone)
 store_fd(\$array_clone, \*STDOUT);
+say "\n----- data (original hash)";
 # Print out data on the stdout (original)
 store_fd(\$data, \*STDOUT);
 
@@ -30,6 +32,7 @@ store(\$data, $filename);
 # Store binary representation into a file (n stands for network order)
 nstore(\$data, $filename_binary);
 
+say "\n----- data (retrieve)";
 # Reconstitute the data structure
 my $array_ref = retrieve($filename);
 # Print out data on the stdout (retrieve)
