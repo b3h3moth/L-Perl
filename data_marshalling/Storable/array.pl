@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 use v5.22.0;
-use Storable qw(freeze store_fd store nstore retrieve);
+use Storable qw(freeze store_fd store nstore retrieve thaw);
 
 # File which will store data
 my $filename = 'array.txt';
@@ -16,8 +16,12 @@ push @it_colors, \@en_colors;
 
 # Serializing to memory
 my $data = freeze [\@it_colors, \@en_colors];
+# Reconstitute the data structure
+my $array_clone = thaw($data);
 
-# Print out data on the stdout
+# Print out data on the stdout (clone)
+store_fd(\$array_clone, \*STDOUT);
+# Print out data on the stdout (original)
 store_fd(\$data, \*STDOUT);
 
  # Store data into a file
@@ -27,4 +31,6 @@ store(\$data, $filename);
 nstore(\$data, $filename_binary);
 
 # Reconstitute the data structure
-my $array_ref = retrieve $filename;
+my $array_ref = retrieve($filename);
+# Print out data on the stdout (retrieve)
+store_fd(\$array_ref, \*STDOUT);
