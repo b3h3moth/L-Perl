@@ -19,11 +19,18 @@ my $data = freeze(\%rgb_table_color);
 # Reconstitute the data structure
 my %hash_clone = %{thaw($data)};
 
-# # Print out data on the stdout (clone)
+# Print out data on the stdout (clone)
 store_fd(\%hash_clone, \*STDOUT);
+# Print out data on the stdout (original)
+store_fd(\%rgb_table_color, \*STDOUT);
 
 # Store data into a file
 store(\%rgb_table_color, $filename);
 
 # Store binary representation into a file (n stands for network order)
 nstore(\%rgb_table_color, $filename_binary);
+
+# Reconstitute the data structure
+my $hash_ref = retrieve($filename);
+# Print out data on the stdout (retrieve) 
+store_fd(\$hash_ref, \*STDOUT);
