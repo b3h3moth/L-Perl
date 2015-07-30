@@ -12,7 +12,6 @@ push @it_colors, \@en_colors;
 
 # Serializing to memory
 my $data = freeze [\@it_colors, \@en_colors];
-# say $data;
 
 my %rgb_table_color = (
     255 => 'white',
@@ -27,3 +26,4 @@ nstore(\%rgb_table_color, $color_ref);
 
 # Print out the Data on the stdout
 store_fd(\%rgb_table_color, \*STDOUT);
+
