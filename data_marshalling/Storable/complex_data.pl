@@ -22,7 +22,8 @@ my %rgb_table_color = (
 
 my $color_ref = 'rgb_table.txt';
 
-# save into file
+# Save the data into a file
 nstore(\%rgb_table_color, $color_ref);
-# print out on stdout
+
+# Print out the Data on the stdout
 store_fd(\%rgb_table_color, \*STDOUT);
