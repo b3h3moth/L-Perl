@@ -27,9 +27,8 @@ sub get_budget {
 }
 
 sub set_name {
-    my $self = shift;
-    my $temp_budget = shift;
-    $self->{budget} = $temp_budget;
+    my ($self, $new_name) = @_;
+    $self->{name} = $new_name;
 }
 
 1;
