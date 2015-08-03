@@ -15,4 +15,14 @@ sub new {
     }, $class;
 }
 
+sub get_name {
+    my $self = shift;
+    return $self->{name};
+}
+
+sub get_budget {
+    my $self = shift;
+    return $self->{budget};
+}
+
 1;
