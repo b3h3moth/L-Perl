@@ -1,11 +1,11 @@
-package Shopper::Personal;
+package Shopper::Personal2;
 
 use warnings;
 use strict;
 
 # Pass a list to te new() constructor
 sub new {
-    my ( $class, $args ) = @_;
+    my ( $class, $name, $budget ) = @_;
 
     return bless {
         name    => $name,
