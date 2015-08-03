@@ -15,6 +15,7 @@ sub new {
     }, $class;
 }
 
+# Get/Set object methods
 sub get_name {
     my $self = shift;
     return $self->{name};
@@ -23,6 +24,12 @@ sub get_name {
 sub get_budget {
     my $self = shift;
     return $self->{budget};
+}
+
+sub set_name {
+    my $self = shift;
+    my $temp_budget = shift;
+    $self->{budget} = $temp_budget;
 }
 
 1;
