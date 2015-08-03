@@ -10,7 +10,7 @@ my $marco = Shopper::Personal1->new({
         budget  => 100
  });
 
-print $marco->get_name;
-print $marco->get_budget;
+say 'Personal Shopper name: ', $marco->get_name;
+say 'Budget: ', $marco->get_budget;
 $marco->set_name('Fiorenza');
-print $marco->get_name;
+say 'New Personal Shopper name: ',$marco->get_name;
