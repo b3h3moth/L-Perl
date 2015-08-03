@@ -14,3 +14,5 @@ say 'Personal Shopper name: ', $marco->get_name;
 say 'Budget: ', $marco->get_budget;
 $marco->set_name('Fiorenza');
 say 'New Personal Shopper name: ',$marco->get_name;
+$marco->set_budget(580);
+say 'new Budget: ', $marco->get_budget;
