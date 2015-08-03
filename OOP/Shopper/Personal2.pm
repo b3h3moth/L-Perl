@@ -19,7 +19,7 @@ sub new {
 sub name {
     my $self = shift;
 
-    if (@_ > 0) {
+    if (@_) {
         $self->{name} = shift;
     }
 
@@ -28,7 +28,8 @@ sub name {
 
 sub budget {
     my $self = shift;
-    
+
+    # It's the same thing as above
     if (@_ > 0) {
         $self->{budget} = shift;
     }
