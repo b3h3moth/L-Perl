@@ -11,7 +11,7 @@ sub new {
     # work with a hash reference.
     return bless {
         name    => $args->{name},
-        budget  => $args->{budget}
+        budget  => $args->{budget},
     }, $class;
 }
 
