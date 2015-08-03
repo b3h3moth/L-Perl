@@ -11,3 +11,5 @@ sub new {
         budget  => $args->{budget}
     }, $class;
 }
+
+1;
