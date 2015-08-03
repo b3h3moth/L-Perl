@@ -3,7 +3,7 @@ package Shopper::Personal2;
 use warnings;
 use strict;
 
-# Pass a list to te new() constructor
+# Pass a list to the new() constructor
 sub new {
     my ( $class, $name, $budget ) = @_;
 
