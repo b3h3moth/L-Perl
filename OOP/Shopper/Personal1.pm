@@ -31,4 +31,9 @@ sub set_name {
     $self->{name} = $new_name;
 }
 
+sub set_budget {
+    my ($self, $new_budget) = @_;
+    $self->{name} = $new_budget;
+}
+
 1;
