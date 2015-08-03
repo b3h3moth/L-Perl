@@ -1,4 +1,4 @@
-package Shopper::Personal;
+package Shopper::Personal1;
 
 use warnings;
 use strict;
