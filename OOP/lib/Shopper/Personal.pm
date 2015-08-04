@@ -24,6 +24,7 @@ sub _initialize {
     $self->{money_spent}     = 0;
 
     my $name = delete $args{name};
+
     unless ( defined $name ) {
         croak("$class requires a name to be set");
     }
@@ -98,7 +99,9 @@ sub buy {
     }
 }
 
-sub _purchased_items { @{ shift->{purchased_items} } }
+sub _purchased_items { 
+    @{ shift->{purchased_items} }; 
+}
 
 sub _money_spent {
     my $self = shift;
