@@ -7,29 +7,29 @@ use Scalar::Util 'looks_like_number';
 our $VERSION = '0.01';
 
 sub new {
-    my ( $class, $arg_for ) = @_;
+    my ( $class, $args ) = @_;
     my $self = bless {}, $class;
-    $self->_initialize(%$arg_for);
+    $self->_initialize(%$args);
     return $self;
 }
 
 sub _initialize {
-    my ( $self, %arg_for ) = @_;
+    my ( $self, %args ) = @_;
     my $class = ref $self;
 
     $self->{purchased_items} = [];
     $self->{money_spent}     = 0;
 
-    my $name = delete $arg_for{name};
+    my $name = delete $args{name};
     unless ( defined $name ) {
         croak("$class requires a name to be set");
     }
 
-    $self->set_budget( delete $arg_for{budget} );
+    $self->set_budget( delete $args{budget} );
 
     $self->{attributes}{name} = $name;
 
-    if ( my $remaining = join ', ', keys %arg_for ) {
+    if ( my $remaining = join ', ', keys %args ) {
         croak("Unknown keys to $class\::new: $remaining");
     }
 }
