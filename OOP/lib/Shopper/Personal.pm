@@ -1,10 +1,11 @@
 package Shopper::Personal;
+
 use strict;
 use warnings;
 use Carp qw(croak carp);
 use Scalar::Util 'looks_like_number';
 
-our $VERSION = '0.01';
+our $VERSION = '1.01';
 
 sub new {
     my ( $class, $args ) = @_;
