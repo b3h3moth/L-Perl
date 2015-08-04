@@ -9,6 +9,8 @@ our $VERSION = '0.01';
 sub new {
     my ( $class, $args ) = @_;
     my $self = bless {}, $class;
+
+    # Pass control to _initialize
     $self->_initialize(%$args);
     return $self;
 }
