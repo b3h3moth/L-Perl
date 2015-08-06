@@ -8,11 +8,11 @@ use Scalar::Util 'dualvar';
 # Returns a scalar that has the value NUM in a numeric context and the value 
 # STRING in a string context.
 
-my $juventus = dualvar 2012, "Serie A";
-my $num = $juventus + 3;
-my $str = $juventus." Champion";
+my $str_and_num = dualvar 2012, "Serie A";
+my $num = $str_and_num + 3;
+my $str = $str_and_num." Champion";
 say $num;
 say $str;
 
-my @team = (10, 20, $juventus, 20, 10);
+my @team = (10, 20, $str_and_num, 20, 10);
 say @team;
