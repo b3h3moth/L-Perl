@@ -13,3 +13,6 @@ my $num = $juventus + 3;
 my $str = $juventus." Champion";
 say $num;
 say $str;
+
+my @team = (10, 20, $juventus, 20, 10);
+say @team;
