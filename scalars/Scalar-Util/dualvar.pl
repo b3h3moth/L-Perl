@@ -8,9 +8,9 @@ use Scalar::Util 'dualvar';
 # Returns a scalar that has the value NUM in a numeric context and the value 
 # STRING in a string context.
 
-my $str_and_num = dualvar 2012, "Serie A";
-my $num = $str_and_num + 3;
-my $str = $str_and_num." Champion";
+my $str_and_num = dualvar 4, "The Perl";
+my $num = $str_and_num + 1;
+my $str = $str_and_num." Programming";
 say $num;
 say $str;
 
