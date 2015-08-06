@@ -13,5 +13,5 @@ my $num = $str_and_num + 1;
 my $str = $str_and_num." Programming";
 say "I'm working on $str version $num";
 
-my @team = (10, 20, $str_and_num, 20, 10);
-say @team;
+my @languages = ($str_and_num, "C", "C++", "Bash", "Zsh", "Python");
+say join ', ', @languages;
