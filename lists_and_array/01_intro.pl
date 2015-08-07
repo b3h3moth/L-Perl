@@ -4,7 +4,7 @@ use strict;
 
 # A list is an ordered collection of scalars.
 # An array is a variable that contains a list.
-
+#
 # An array is an ordered list of scalars, accessed by the scalar's position in
 # the list. The list may contain numbers, strings, or a mixture of both.
 # It might also contain references to subarrays or subhashes.
