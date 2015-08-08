@@ -11,4 +11,4 @@ sub kernel_version {
 # Basic subroutine call
 kernel_version('3.2.0-4-powerpc');
 
-
+my $ref_to_kver = \&kernel_version;
