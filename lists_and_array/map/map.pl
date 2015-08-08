@@ -20,7 +20,7 @@ my @upper = map { uc } @lower;
 
 say join ', ',@upper;
 
-# Increment default list by one
+# increment default list by one
 my @default = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
 my @increment = map { $_ + 1 } @default;
 
@@ -30,5 +30,3 @@ say join ', ',@increment;
 my @colors = qw(blue red white black gray green orange);
 my %tshirts = map { $_, 1} @colors;
 say Dumper \%tshirts;
-
-# 
