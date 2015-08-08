@@ -44,3 +44,8 @@ foreach my $football_club (@europe_clubs) {
         say "Hey stop, there is a problem with $football_club";
     }
 }
+
+my @num = (1, 2, 4, 8, 16, 32, 64);
+my @ind = 0 .. $#num;
+say join ', ',@ind;
+
