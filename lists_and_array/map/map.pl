@@ -26,7 +26,9 @@ my @increment = map { $_ + 1 } @default;
 
 say join ', ',@increment;
 
-# create hash
+# create an hash
 my @colors = qw(blue red white black gray green orange);
 my %tshirts = map { $_, 1} @colors;
 say Dumper \%tshirts;
+
+# 
