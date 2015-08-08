@@ -7,3 +7,5 @@ sub kernel_version {
     my $version = shift;
     say "My kernel version is: $version";
 }
+
+kernel_version('3.2.0-4-powerpc');
