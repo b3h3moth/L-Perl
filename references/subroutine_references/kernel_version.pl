@@ -8,4 +8,7 @@ sub kernel_version {
     say "My kernel version is: $version";
 }
 
+# Basic subroutine call
 kernel_version('3.2.0-4-powerpc');
+
+
