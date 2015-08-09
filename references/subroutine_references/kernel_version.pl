@@ -8,6 +8,8 @@ sub kernel_version {
     say "My kernel version is: $version";
 }
 
+
+
 # Basic subroutine call
 kernel_version('3.2.0-4-powerpc');
 
@@ -15,3 +17,7 @@ kernel_version('3.2.0-4-powerpc');
 my $ref_to_kver = \&kernel_version;
 # Dereference a code reference
 &kernel_version('3.2.68-1+deb7u2');
+
+for my $version (\&kernel_version, \&kernel_version) {
+    $version->('');
+}
