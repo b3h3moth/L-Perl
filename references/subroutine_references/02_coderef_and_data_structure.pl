@@ -22,3 +22,9 @@ sub mara_greets {
     my $who = shift;
     say "Mara: Hi $who";
 }
+
+my %greets = (
+    Luca    => \&luca_greets,
+    Giusy   => \&giusy_greets,
+    Mara    => \&mara_greets,
+);
