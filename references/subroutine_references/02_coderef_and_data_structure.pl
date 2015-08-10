@@ -5,7 +5,7 @@ use v5.22.0;
 
 sub luca_greets {
     my $who = shift;
-    say "Luca: Hey, $who";
+    say "Luca: Hey $who";
 }
 
 sub giusy_greets {
@@ -16,4 +16,9 @@ sub giusy_greets {
     } else {
         say "Giusy: Ciao $who";
     }
+}
+
+sub mara_greets {
+    my $who = shift;
+    say "Mara: Hi $who";
 }
