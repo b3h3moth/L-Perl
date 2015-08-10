@@ -22,11 +22,9 @@ sub giusy_greets {
 luca_greets('Giusy');
 giusy_greets('Luca');
 
-# Take a reference to the subroutine (coderef)
-my $ref_to_kver = \&kernel_version;
-# Dereference a code reference
-&kernel_version('3.2.68-1+deb7u2');
+# Take a reference to the subroutine, its name is coderef. In this case '&' is
+# mandatory.
+my $ref_to_greeter = \&luca_greets;
+say $ref_to_greeter;    # Output is CODE(0x106efe90)
 
-for my $version (\&kernel_version, \&os_name) {
-    $version->('reference');
-}
+# Dereference a code reference
