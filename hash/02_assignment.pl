@@ -5,23 +5,27 @@ use Data::Dumper;
 
 my %job;
 
-#assignment
+# assignment
 $job{luca} = 'Programmer';
 $job{mamy} = 'Student';
 $job{albi} = 'Professor';
 $job{papi} = 'Doctor';
 
-#multiple assignment, method 1
+# multiple assignment, method 1
 %job = ('carla', 'actress', 'francesco', 'actor', 'maria', 'barman');
-#multiple assignment, method 2
+print Dumper \%job;
+
+# multiple assignment, method 2
 %job = (
     'papi', 'Software developer',
     'albi', 'driver'
 );
-#in both cases the keys of hash are immediately followed by their respective
-#values
+print Dumper \%job;
 
-#multiple assignment, method 3
+# in both cases the keys of hash are immediately followed by their respective
+# values
+
+# multiple assignment, method 3
 %job = (
     franco => 'student',
     gina   => 'professor'
