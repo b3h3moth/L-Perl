@@ -12,7 +12,7 @@ sub giusy_greets {
     my $who = shift;
 
     if ($who eq "Luca") {
-        say "Giusy: fuck you $who";
+        say "Giusy: $who?";
     } else {
         say "Giusy: hi $who";
     }
@@ -22,3 +22,11 @@ sub giusy_greets {
 luca_greets('Giusy');
 giusy_greets('Luca');
 
+# Take a reference to the subroutine (coderef)
+my $ref_to_kver = \&kernel_version;
+# Dereference a code reference
+&kernel_version('3.2.68-1+deb7u2');
+
+for my $version (\&kernel_version, \&os_name) {
+    $version->('reference');
+}
