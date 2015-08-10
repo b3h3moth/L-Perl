@@ -27,4 +27,7 @@ giusy_greets('Luca');
 my $ref_to_greeter = \&luca_greets;
 say $ref_to_greeter;    # Output is CODE(0x106efe90)
 
-# Dereference a code reference
+# To get back to the original subroutine, you must dereference a code 
+# reference.
+&luca_greets('Giusy');
+
