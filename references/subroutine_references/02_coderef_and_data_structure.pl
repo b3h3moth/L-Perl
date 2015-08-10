@@ -28,3 +28,8 @@ my %greets = (
     Giusy   => \&giusy_greets,
     Mara    => \&mara_greets,
 );
+
+for my $who (qw(Luca Mara Giusy)) {
+    $greets{$who}->('Francesca');
+    # &{$greets{$who}}('Francesca');
+}
