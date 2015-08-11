@@ -29,3 +29,15 @@ my %greets = (
     Mara    => \&mara_greets,
 );
 
+my @house;
+
+for my $who (qw(Luca Mara Giusy)) {
+    say "$who comes into the house";
+
+    for my $house_who (@house) {
+        $greets{$who}->($house_who);
+        $greets{$house_who}->($who);
+    }
+
+    push @house, $who;
+}
