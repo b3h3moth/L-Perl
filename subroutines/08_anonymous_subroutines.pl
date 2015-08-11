@@ -16,10 +16,10 @@ my $login = sub {
     }
 }; # We need a semicolon to (en)close the statement.
 
+$login->('BEHEMOTH');
 
 my $login_name = 'behemoth';
-my $access = sub { say $login_name };
-&$access();
+# &$login();
 # &{$access}();
 # &{$access};
 # &$access;
