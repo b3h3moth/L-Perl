@@ -7,10 +7,12 @@ use v5.14;
 # named subroutine but the only way to deal with it is by reference.
 
 my $login = sub { 
-    my $username = shift;
+    my $username = shift // 'noname';
     
     if ($username eq "behemoth") {
         say "Access granted as '$username'";
+    } elsif ($username eq "noname") {
+        say "Access granted as '$username' (read only)";
     } else {
         say "Access denied as '$username'";
     }
@@ -19,10 +21,8 @@ my $login = sub {
 $login->('BEHEMOTH');
 
 my $user = 'behemoth';
-&$login($user);
-&{$login}('luca');
 
-# &{$access}();
-# &{$access};
-# &$access;
+&$login($user);
+&{$login}('luca'); 
+&$login;
 
