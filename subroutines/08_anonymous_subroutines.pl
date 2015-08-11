@@ -7,7 +7,7 @@ use v5.14;
 # named subroutine but the only way to deal with it is by reference.
 
 my $login = sub { 
-    my $username = shift // 'noname';
+    my $username = shift // 'anon';
     
     if ($username eq "behemoth") {
         say "Access granted as '$username'";
@@ -24,5 +24,6 @@ my $user = 'behemoth';
 
 &$login($user);
 &{$login}('luca'); 
+&$login('anon');
 &$login;
 
