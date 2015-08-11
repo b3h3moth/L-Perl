@@ -11,7 +11,7 @@ my $login = sub {
     
     if ($username eq "behemoth") {
         say "Access granted as '$username'";
-    } elsif ($username eq "noname") {
+    } elsif ($username eq "anon") {
         say "Access granted as '$username' (read only)";
     } else {
         say "Access denied as '$username'";
