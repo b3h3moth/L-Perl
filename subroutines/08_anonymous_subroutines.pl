@@ -10,16 +10,17 @@ my $login = sub {
     my $username = shift;
     
     if ($username eq "behemoth") {
-        say "Access granted as $username";
+        say "Access granted as '$username'";
     } else {
-        say "Access denied $username";
+        say "Access denied as '$username'";
     }
 }; # We need a semicolon to (en)close the statement.
 
 $login->('BEHEMOTH');
 
-my $login_name = 'behemoth';
-# &$login();
+my $user = 'behemoth';
+&$login($user);
+
 # &{$access}();
 # &{$access};
 # &$access;
