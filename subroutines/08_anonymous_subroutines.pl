@@ -20,6 +20,7 @@ $login->('BEHEMOTH');
 
 my $user = 'behemoth';
 &$login($user);
+&{$login}('luca');
 
 # &{$access}();
 # &{$access};
