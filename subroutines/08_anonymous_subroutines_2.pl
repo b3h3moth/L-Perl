@@ -33,6 +33,8 @@ my %greets = (
     }
 );
 
+print Dumper \%greets;
+
 my @room;
 
 for my $person (qw(Franca Antonella Giulia Luca)) {
