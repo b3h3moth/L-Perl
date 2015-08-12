@@ -3,9 +3,9 @@ use warnings;
 use strict;
 use v5.22.0;
 
-#caller() returns the context of the current subroutine call.
+# caller() returns the context of the current subroutine call.
 
-#Without arguments, in list context, returns:
+# Without arguments, in list context, returns:
 # ($package, $filename, $line) = caller
 #  0         1          2
 package metaverso;
