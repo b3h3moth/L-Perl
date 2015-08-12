@@ -6,17 +6,19 @@ use Data::Dumper;
 
 # Anonymous subroutines example
 
+# The hash 'greets' stores data in this way; 
+# key => Anonymous subroutines
 my %greets = (
 
     Franca => sub {
         my $person = shift;
-        say "Franca: hey there, $person!";
+        say "Franca: Ciao, $person!";
     },
 
     Antonella => sub {
         my $person = shift;
         if ($person eq 'Antonella') {
-            say "Antonella: yes, $person";
+            say "Antonella: $person?";
         } else {
             say "Antonella: Hi, $person";
         }
@@ -24,12 +26,12 @@ my %greets = (
 
     Giulia => sub {
         my $person = shift;
-        say "Giulia: you're $person";
+        say "Giulia: Buongiorno, $person";
     },
 
     Luca => sub {
         my $person = shift;
-        say "Luca: well hello $person";
+        say "Luca: Hello, $person";
     }
 );
 
