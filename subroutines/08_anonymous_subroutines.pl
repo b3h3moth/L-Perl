@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
-use v5.14;
+use v5.22.0;
 
 # An anonymous subroutine is a subroutine without a name, it behaves like a 
 # named subroutine but the only way to deal with it is by reference.
