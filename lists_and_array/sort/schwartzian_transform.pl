@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use v5.22.0;
 
-my @tedx_feeds = qw{
+my @english_adjectives = qw{
 different
 used
 important
@@ -534,6 +534,6 @@ resident } ;
 
 my @sorted = map { $_->[0] } 
              sort { $a->[1] <=> $b->[1] } 
-             map { [ $_ , length $_ ] } @tedx_feeds ;
+             map { [ $_ , length $_ ] } @english_adjectives ;
 
 say join "\n" , @sorted ;
