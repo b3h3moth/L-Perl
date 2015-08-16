@@ -2,6 +2,8 @@
 use strict;
 use warnings;
 use v5.22.0;
+use file::Slurp;
+
 
 my @english_adjectives = qw{
 different
