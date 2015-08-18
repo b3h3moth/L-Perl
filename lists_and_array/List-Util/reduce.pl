@@ -23,3 +23,10 @@ say "max: $max";
 my $min = reduce { $a > $b ? $b : $a } @numbers;
 say "min: $min";
 
+# how to get maximum string
+my $max_str = reduce { $a gt $b ? $a : $b } 'a'..'z';
+say "max str: $max_str";
+
+# how to get minimum string
+my $min_str = reduce { $a lt $b ? $a : $b } 'a'..'z';
+say "min str: $min_str";
