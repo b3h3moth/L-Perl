@@ -7,7 +7,7 @@ use File::Find;
 my @starting_dir = '.';
 
 find ( 
-    sub { 
+sub { 
         print "$File::Find::name\n";
     }, @starting_dir, 
 );
