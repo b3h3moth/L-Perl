@@ -11,3 +11,10 @@ use File::Path;
 # rmtree($dir, ...)
 # It deletes the given directories and any files and subdirectories they might
 # contain, much like the Unix command 'rm -r', so it's dangerous.
+
+die "Usage: $0 <dir> to delete\n" if (@ARGV != 1);
+
+chomp(my $dir = $ARGV[0]);
+
+# delete directory stored in $dir
+warn "Err.: $!" if !rmtree($dir);
