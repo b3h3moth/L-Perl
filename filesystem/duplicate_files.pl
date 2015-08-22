@@ -59,7 +59,7 @@ foreach my $size (keys %hash) {
     foreach my $curfile (keys %md5) {
         if ($#{$md5{$curfile}} >= 1) {
             print "[MD5 - $curfile] $cur_date\nDuplicate filenames are:\n";
-            foreach my $file (@{$md5{$curfile}}) {
+            foreach my $file (sort @{$md5{$curfile}}) {
                 print "$file\n";
             }
             print "\n";
