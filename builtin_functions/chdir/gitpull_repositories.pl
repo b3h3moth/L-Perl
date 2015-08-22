@@ -8,13 +8,14 @@ die "Usage: $0 [pull | push]\n" if (@ARGV != 1);
 
 my $git_option = $ARGV[0];
 
-my @dirs = qw(/home/behemoth/devel/L-LP /home/behemoth/devel/L-C
-              /home/behemoth/devel/L-Perl /home/behemoth/devel/L-ASD
-              /home/behemoth/devel/L-CPP);
+my @git_repositories = qw(/home/behemoth/devel/L-LP /home/behemoth/devel/L-C
+                         /home/behemoth/devel/L-Perl /home/behemoth/devel/L-ASD
+                         /home/behemoth/devel/L-CPP);
 
-foreach (@dirs) {
+foreach (@git_repositories) {
     chdir $_;
     say getcwd();
-    `git status`;
     `git $git_option origin master`;
+    `git log -n 2`;
+    `git status`;
 }
