@@ -17,4 +17,4 @@ die "Usage: $0 <dir> to delete\n" if (@ARGV != 1);
 chomp(my $dir = $ARGV[0]);
 
 # delete directory stored in $dir
-warn "Err.: $!" if !rmtree($dir);
+warn "Warning: $!" if !rmtree($dir);
