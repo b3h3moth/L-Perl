@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
-use v5.20.0;
+use v5.22.0;
 use Cwd;
 
 die "Usage: $0 [pull | push]\n" if (@ARGV != 1);
