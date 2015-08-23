@@ -9,7 +9,7 @@ use v5.22.0;
 #   to run in that context even when it's 
 #   called outside the context.
 
-# In Perl terms closure is a subroutine that references a lexical varaiable 
+# In Perl terms closure is a subroutine that references a lexical variaable 
 # that has gone out of scope.
 
 sub print_out {
