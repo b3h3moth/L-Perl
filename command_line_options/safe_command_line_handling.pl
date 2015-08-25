@@ -12,3 +12,5 @@ use v5.22.0;
 while (<<>>) {
     print $_;
 }
+
+# interprets the command-line arguments as literal filenames
