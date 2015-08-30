@@ -3,14 +3,15 @@
 ### List of builtin functions covered:
 
 * bless();
+* chdir();
 * defined();
+* do();
+* eval();
+* int();
 * join();
 * pos();
 * qw();
 * ref();
 * reverse():
 * shift();
-* split();
-* eval();
-* do();
-* int().
+* split().

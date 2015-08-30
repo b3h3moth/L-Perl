@@ -9,15 +9,15 @@ use v5.22.0;
 #   to run in that context even when it's 
 #   called outside the context.
 
-# In Perl terms closure is a subroutine that references a lexical varaiable 
+# In Perl terms closure is a subroutine that references a lexical variaable 
 # that has gone out of scope.
 
 sub print_out {
     my $salute = shift;
 
     my $newfunc = sub {
-        my $target = shift;
-        print "$salute, $target!\n";
+        my $target = shift // "world";
+        print "$salute, $target\n";
     };
 
     # return a closure
@@ -31,7 +31,7 @@ $h->();
 $h->("first");
 $h->("second");
 $h->("third");
-$h->("World");
+$h->("World!");
 # &$h("world");
 
 # $h continues to refer to the value passed into print_out() despite "my $h"
