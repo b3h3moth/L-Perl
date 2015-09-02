@@ -23,8 +23,3 @@ say 'E: ', join ', ', @languages;
 
 pop @languages;
 say 'F: ', join ', ', @languages;
-
-# unshift e shift aggiungono e rimuovono dalla testa
-unshift @languages, qw(droga sesso rockNroll);
-shift @languages;
-say "@languages";
