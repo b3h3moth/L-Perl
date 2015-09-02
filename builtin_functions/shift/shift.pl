@@ -1,14 +1,16 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
-use v5.14;
+use v5.22.0;
 
-#shift function perform actions on the start of the array (the left side).
+# The shift() function perform actions on the start of the array (left side).
+# It removes/shifts the first value of the array off and returns it.
 my @club = qw(Juventus Barcellona RealMadrid Bayern);
 
-#Juventus is really my favorite club :)
+# Juventus is really my favorite club :)
 my $my_favorite_club = shift(@club);
-#now there is Barcellona etc...
+
+# now there is Barcellona etc...
 my $next_club = shift(@club);
 
 say $my_favorite_club;
