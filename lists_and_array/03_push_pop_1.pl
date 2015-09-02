@@ -1,22 +1,23 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
-use v5.10;
+use v5.22.0;
 
-#push e pop aggiungo e rimuovono dalla coda
-#pop uno per volta
-my @hobby = qw(calcio security programmazione unix cinema libri);
-my @altri = qw(palestra teatro yoga);
+# push ARRAY,LIST
+# It appends the value of LIST to the end of ARRAY.
+my @languages = qw(C C++ Perl AWK Python Lisp);
+my @shell_scripting = qw(bash zsh);
 
-push @hobby, 'bicicletta';
-push @hobby, @altri;
-say "@hobby";
 
-pop @hobby;
-pop @hobby;
-say "@hobby";
+push @languages, 'Prolog';
+push @languages, @shell_scripting;
+say join ', ', @languages;
 
-#unshift e shift aggiungono e rimuovono dalla testa
-unshift @hobby, qw(droga sesso rockNroll);
-shift @hobby;
-say "@hobby";
+pop @languages;
+pop @languages;
+say join ', ', @languages;
+
+# unshift e shift aggiungono e rimuovono dalla testa
+unshift @languages, qw(droga sesso rockNroll);
+shift @languages;
+say "@languages";
