@@ -14,3 +14,6 @@ mkpath($dir);
 # The "remove_tree" function deletes the given directories and any files and 
 # subdirectories they might contain. It's like the unix commands "rm -r".
 die "Err.:$!\n" if !remove_tree($dir, 1, 1);
+
+# Error
+die "Err.:$!\n" if !remove_tree($dir, 1, 1);
