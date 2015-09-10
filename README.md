@@ -5,7 +5,7 @@ learn and improve Perl scripting and programming for everyday use on the Unix
 systems.
 
 The CPAN modules are directories (I mean in this repository), they are written
-exactly how they are, except for a pair of colon replaced with a dash:
+exactly how they are, except of colon replaced with a dash:
 (i.e. List::Util become List-Util).
 
 ## Perl version
