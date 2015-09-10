@@ -8,6 +8,10 @@ The CPAN modules are directories (I mean in this repository), they are written
 exactly how they are, except for a pair of colon replaced with a dash:
 (i.e. List::Util become List-Util).
 
+## Perl version
+
+* Perl v5.22.0.
+
 ## List of great books about Perl
 
 * **Programming Perl**, *Fourth Edition* (`O'Reilly, 2012`)
