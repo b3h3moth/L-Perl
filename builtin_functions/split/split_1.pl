@@ -2,7 +2,8 @@
 use warnings;
 use strict;
 
-#split(); splits a string into a list of strings and returns that list.
+# split()
+# It splits a string into a list of strings and returns that list.
 
 my $string = "take   a    walk  on    the    wild    side";
 
