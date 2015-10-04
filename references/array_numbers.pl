@@ -11,3 +11,9 @@ my $ref_to_numbers = \@numbers;
 for my $item (@{$ref_to_numbers}) {
     say $item;
 }
+
+my @colors = qw(red cyan yellow black white);
+my $ref_to_colors = \@colors;
+for my $color (@{$ref_to_colors}) {
+    say $color;
+}
