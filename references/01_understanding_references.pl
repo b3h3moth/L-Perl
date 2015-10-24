@@ -13,7 +13,7 @@ sub numbers {
 }
 
 # The simplest way to create a reference is with the backslash operator '\'. It
-# works on any kind of variable name and hash/array elements.
+# works on any kind of variable name and hash/array element.
 my $scalar_ref     = \$year;
 my $array_ref      = \@colors;
 my $hash_ref       = \%country;
