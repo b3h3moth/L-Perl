@@ -1,8 +1,10 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
-use Test::More;
+use Test::More tests => 8;
 use v5.22.0;
+
+my $number_of_tests_run;
 
 # Framework for writing test scripts
 my $x = 10;
@@ -17,4 +19,5 @@ ok('', 'it should be false');
 is(30, $x + $y, 'it should be true');
 is(-10, $x - $y, 'it should be true');
 is(10, $x - $y, 'it should be false');
-done_testing();
+
+done_testing($number_of_tests_run);
