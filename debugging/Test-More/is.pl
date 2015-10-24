@@ -7,10 +7,10 @@ use v5.22.0;
 # Test::More is a Framework for writing test scripts
 my $number_of_tests_run;
 
-
-# is() is similar to ok(). is() and isnt() compare their two arguments with 
-# eq and ne respectively and use the result of that to determine if the test
-# succeeded or failed.
+# is()
+# It is similar to ok(). is() and isnt() compare their two arguments with 
+# 'eq' (equals) and 'ne' (not equals) respectively and use the result of that
+# to determine if the test succeeded or failed (true, false).
 
 my $x = 10;
 my $y = 20;

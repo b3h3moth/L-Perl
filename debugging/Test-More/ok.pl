@@ -7,6 +7,10 @@ use v5.22.0;
 # Test::More is a Framework for writing test scripts
 my $number_of_tests_run;
 
+# ok()
+# The purpose of ok() is to print out either "ok" or "not ok" depending on if
+# a given test succeeded or failed (true or false).
+
 my $x = 10;
 my $y = 20;
 
