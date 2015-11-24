@@ -1,7 +1,7 @@
 ## Debugging and Testing Perl
 
-The easiest way to debug Perl programs is to invoke a program with a -d switch 
-on the command line.
+The easiest way to debug Perl source code is to invoke a program with a -d 
+switch on the command line.
 
 ``$ perl -d prog.pl``
 
@@ -10,5 +10,5 @@ on the command line.
 * B::Deparse
 * Data::Dump
 * Data::Dumper
-* Test::More
 * Data::Printer
+* Test::More
