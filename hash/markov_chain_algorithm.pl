@@ -32,4 +32,3 @@ for (my $i = 0; $i < $MAXGEN; $i++) {
     # Catena di markov
     ($w1, $w2) = ($w2, $t);
 }
-
