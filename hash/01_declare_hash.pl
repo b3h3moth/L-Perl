@@ -2,9 +2,9 @@
 use warnings;
 use strict;
 use Data::Dumper;
-use v5.14;
+use v5.22.0;
 
-#in older version of Perl these were also know as associative arrays
+# In older Perl version these were also know as associative arrays
 
 #declare a new hash
 my %my_hash; #now is empty
